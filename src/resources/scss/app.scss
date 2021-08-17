@@ -1,0 +1,19 @@
+@import url("/src/public/fonts/Sequel-Regular.ttf");
+@import "variables";
+
+@font-face {
+    font-family: "Sequel-Regular";
+    src: url("fonts/Sequel-Regular.ttf") format("truetype");
+}
+$font-main: "Sequel-Regular", sans-serif;
+
+body {
+    font-family: $font-main;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 4.2vw;
+    text-transform: uppercase;
+    line-height: 0.9;
+}
