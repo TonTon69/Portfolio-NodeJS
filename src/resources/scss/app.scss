@@ -32,9 +32,26 @@ html {
     src: local("Sequel"), url("/src/public/fonts/Sequel-Bold.otf") format("otf");
 }
 
+.is-devider-200 {
+    height: 200px;
+}
+
+.is-devider-100 {
+    height: 100px;
+}
+
+.is-devider-20 {
+    height: 20px;
+}
+
+::selection {
+    background: rgba(200, 200, 200, 0.99);
+    color: $black-color;
+}
+
 body {
-    background: $black-background-color;
-    color: $white-color;
+    background: $white-background-color;
+    color: $black-color;
     font-size: 16px;
     font-family: "Sequel", sans-serif;
     font-weight: weight(bold);
@@ -51,6 +68,11 @@ body {
 
     .app {
         .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 12000;
             padding: 1.875rem 1.875rem;
             justify-content: space-between;
             @include flexCenter;
@@ -72,7 +94,7 @@ body {
             }
 
             &__brand {
-                color: $white-color;
+                color: $black-color;
                 font-weight: weight(bold);
                 text-transform: uppercase;
                 letter-spacing: 0.2em;
@@ -92,7 +114,7 @@ body {
             }
 
             &__nav-link {
-                color: $white-color;
+                color: $black-color;
                 font-size: 0.775rem;
                 font-weight: weight(medium);
                 font-family: "Oswald", sans-serif;
@@ -120,6 +142,8 @@ body {
         }
 
         .portfolio {
+            padding-top: 100px;
+
             &__header {
                 @include flexCenter;
                 min-height: 550px;
@@ -151,9 +175,10 @@ body {
                         width: 445px;
                         height: 445px;
                         border: none;
-                        border-radius: 0;
+                        border-radius: calc(0.25rem - 1px);
                         cursor: pointer;
                         overflow: hidden;
+                        margin-bottom: 32px;
 
                         &:hover {
                             .card-img-overlay {
@@ -179,6 +204,7 @@ body {
                         }
 
                         &-img {
+                            height: 100%;
                             transform: scale(1.2);
                             transition: all 0.5s ease;
                         }
@@ -196,6 +222,190 @@ body {
                         }
                     }
                 }
+
+                &-brand {
+                    position: relative;
+
+                    .currently {
+                        position: absolute;
+                        top: -26%;
+                        left: -2.4%;
+                        font-weight: weight(bold);
+                        font-size: 10rem;
+                        line-height: 0.9;
+                        text-transform: uppercase;
+                        color: transparent;
+                        -webkit-text-stroke: 1px $white-color;
+                    }
+
+                    .card {
+                        border-radius: calc(0.25rem - 1px);
+                        border: none;
+
+                        &-img {
+                            height: 462px;
+                            object-fit: cover;
+                        }
+
+                        &-img-overlay {
+                            @include flexCenter;
+
+                            .card-title {
+                                font-size: 5.575rem;
+                                font-weight: weight(bold);
+                                margin: 0 0.875rem;
+                                text-transform: uppercase;
+                                letter-spacing: -6px;
+                                line-height: 0.8;
+
+                                span {
+                                    display: block;
+                                }
+                            }
+
+                            .card-text {
+                                position: absolute;
+                                bottom: 32px;
+                                right: 48px;
+                                text-transform: uppercase;
+                                font-size: 0.775rem;
+                                font-weight: weight(medium);
+                                font-family: "Oswald", sans-serif;
+                                letter-spacing: 0.5em;
+
+                                &:hover {
+                                    a::after {
+                                        transform: scaleX(1);
+                                        transform-origin: center left;
+                                    }
+                                }
+
+                                a {
+                                    color: $white-color;
+
+                                    &::after {
+                                        content: "";
+                                        display: block;
+                                        width: calc(100% - 0.5em);
+                                        height: 40%;
+                                        position: absolute;
+                                        top: 60%;
+                                        left: 0;
+                                        background-color: rgb(68, 68, 68);
+                                        transform: scaleX(0);
+                                        transform-origin: center right;
+                                        transition: transform 0.6s
+                                            cubic-bezier(0.55, 0, 0.1, 1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer {
+            max-width: 100rem;
+            padding-right: 3.75rem;
+            padding-left: 3.75rem;
+
+            &__contact {
+                &-title {
+                    text-transform: uppercase;
+                    font-size: 0.775rem;
+                    font-weight: weight(medium);
+                    font-family: "Oswald", sans-serif;
+                    letter-spacing: 0.5em;
+                }
+
+                &-socials {
+                    text-transform: uppercase;
+                    font-size: 3rem;
+                    font-weight: weight(bold);
+                    letter-spacing: -4px;
+
+                    a {
+                        color: $white-color;
+                        margin-right: 12px;
+                        margin-left: -4px;
+                    }
+
+                    .ig {
+                        &::after {
+                            content: ".";
+                            color: #e112fc;
+                        }
+
+                        &:hover {
+                            color: #e112fc;
+                        }
+                    }
+
+                    .ln {
+                        &::after {
+                            content: ".";
+                            color: #094290;
+                        }
+
+                        &:hover {
+                            color: #094290;
+                        }
+                    }
+
+                    .gh {
+                        &::after {
+                            content: ".";
+                            color: #444;
+                        }
+
+                        &:hover {
+                            color: #444;
+                        }
+                    }
+                }
+
+                &-more {
+                    text-transform: uppercase;
+                    font-size: 3rem;
+                    font-weight: weight(bold);
+                    letter-spacing: -4px;
+                    line-height: 0.9;
+
+                    a {
+                        color: $white-color;
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            height: 0.35em;
+                            position: absolute;
+                            top: 70%;
+                            left: 0px;
+                            background: currentcolor;
+                            opacity: 0.4;
+                        }
+                    }
+                }
+            }
+        }
+
+        .to-top {
+            text-transform: uppercase;
+            font-size: 0.775rem;
+            font-weight: weight(regular);
+            font-family: "Oswald", sans-serif;
+            margin-right: 15px;
+            line-height: 1;
+            letter-spacing: 0.5em;
+            opacity: 0.4;
+
+            span {
+                padding: 2.5rem;
+                cursor: url("../img/to-top.svg"), auto;
+                transition: all 0.3s ease 0s;
             }
         }
     }
@@ -203,6 +413,17 @@ body {
 
 @keyframes textclip {
     to {
-        background-position: 200% center;
+        background-position: -200% center;
+    }
+}
+
+body.show {
+    background: $black-background-color;
+    color: $white-color;
+    transition: all 0.9s ease;
+
+    .header__brand,
+    .header__nav-link {
+        color: $white-color;
     }
 }

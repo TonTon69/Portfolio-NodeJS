@@ -17,9 +17,22 @@ html {
   font-weight: 800;
   src: local("Sequel"), url("/src/public/fonts/Sequel-Bold.otf") format("otf"); }
 
+.is-devider-200 {
+  height: 200px; }
+
+.is-devider-100 {
+  height: 100px; }
+
+.is-devider-20 {
+  height: 20px; }
+
+::selection {
+  background: rgba(200, 200, 200, 0.99);
+  color: black; }
+
 body {
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   font-size: 16px;
   font-family: "Sequel", sans-serif;
   font-weight: 800; }
@@ -30,6 +43,11 @@ body {
     border-radius: 20px;
     border: 3px solid #b4bcc3; }
   body .app .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 12000;
     padding: 1.875rem 1.875rem;
     justify-content: space-between;
     display: flex;
@@ -44,7 +62,7 @@ body {
         visibility: visible;
         transform: translateX(0); }
     body .app .header__brand {
-      color: white;
+      color: black;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.2em;
@@ -56,7 +74,7 @@ body {
       transform: scaleX(1);
       transform-origin: center left; }
     body .app .header__nav-link {
-      color: white;
+      color: black;
       font-size: 0.775rem;
       font-weight: 500;
       font-family: "Oswald", sans-serif;
@@ -78,58 +96,192 @@ body {
         transform: scaleX(0);
         transform-origin: center right;
         transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
-  body .app .portfolio__header {
-    display: flex;
-    align-items: center;
-    min-height: 550px;
-    position: relative; }
-    body .app .portfolio__header-title {
+  body .app .portfolio {
+    padding-top: 100px; }
+    body .app .portfolio__header {
+      display: flex;
+      align-items: center;
+      min-height: 550px;
+      position: relative; }
+      body .app .portfolio__header-title {
+        max-width: 100rem;
+        padding-right: 3.75rem;
+        padding-left: 3.75rem; }
+        body .app .portfolio__header-title h1 {
+          font-size: 5.575rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          line-height: 0.8;
+          letter-spacing: -6px; }
+    body .app .portfolio__main {
       max-width: 100rem;
       padding-right: 3.75rem;
       padding-left: 3.75rem; }
-      body .app .portfolio__header-title h1 {
-        font-size: 5.575rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        line-height: 0.8;
-        letter-spacing: -6px; }
-  body .app .portfolio__main {
+      body .app .portfolio__main-project .card {
+        position: relative;
+        width: 445px;
+        height: 445px;
+        border: none;
+        border-radius: calc(0.25rem - 1px);
+        cursor: pointer;
+        overflow: hidden;
+        margin-bottom: 32px; }
+        body .app .portfolio__main-project .card:hover .card-img-overlay {
+          background: unset; }
+        body .app .portfolio__main-project .card:hover .card-img {
+          transform: scale(1); }
+        body .app .portfolio__main-project .card:hover .card-title {
+          background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #57d75b 60%);
+          background-size: auto auto;
+          background-clip: border-box;
+          background-size: 200% auto;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: textclip 1.5s linear infinite; }
+        body .app .portfolio__main-project .card-img {
+          height: 100%;
+          transform: scale(1.2);
+          transition: all 0.5s ease; }
+        body .app .portfolio__main-project .card-img-overlay {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #1a1a1a;
+          transition: all 0.5s ease; }
+          body .app .portfolio__main-project .card-img-overlay .card-title {
+            text-transform: uppercase;
+            letter-spacing: 6px; }
+      body .app .portfolio__main-brand {
+        position: relative; }
+        body .app .portfolio__main-brand .currently {
+          position: absolute;
+          top: -26%;
+          left: -2.4%;
+          font-weight: 800;
+          font-size: 10rem;
+          line-height: 0.9;
+          text-transform: uppercase;
+          color: transparent;
+          -webkit-text-stroke: 1px white; }
+        body .app .portfolio__main-brand .card {
+          border-radius: calc(0.25rem - 1px);
+          border: none; }
+          body .app .portfolio__main-brand .card-img {
+            height: 462px;
+            object-fit: cover; }
+          body .app .portfolio__main-brand .card-img-overlay {
+            display: flex;
+            align-items: center; }
+            body .app .portfolio__main-brand .card-img-overlay .card-title {
+              font-size: 5.575rem;
+              font-weight: 800;
+              margin: 0 0.875rem;
+              text-transform: uppercase;
+              letter-spacing: -6px;
+              line-height: 0.8; }
+              body .app .portfolio__main-brand .card-img-overlay .card-title span {
+                display: block; }
+            body .app .portfolio__main-brand .card-img-overlay .card-text {
+              position: absolute;
+              bottom: 32px;
+              right: 48px;
+              text-transform: uppercase;
+              font-size: 0.775rem;
+              font-weight: 500;
+              font-family: "Oswald", sans-serif;
+              letter-spacing: 0.5em; }
+              body .app .portfolio__main-brand .card-img-overlay .card-text:hover a::after {
+                transform: scaleX(1);
+                transform-origin: center left; }
+              body .app .portfolio__main-brand .card-img-overlay .card-text a {
+                color: white; }
+                body .app .portfolio__main-brand .card-img-overlay .card-text a::after {
+                  content: "";
+                  display: block;
+                  width: calc(100% - 0.5em);
+                  height: 40%;
+                  position: absolute;
+                  top: 60%;
+                  left: 0;
+                  background-color: #444444;
+                  transform: scaleX(0);
+                  transform-origin: center right;
+                  transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
+  body .app .footer {
     max-width: 100rem;
     padding-right: 3.75rem;
     padding-left: 3.75rem; }
-    body .app .portfolio__main-project .card {
-      position: relative;
-      width: 445px;
-      height: 445px;
-      border: none;
-      border-radius: 0;
-      cursor: pointer;
-      overflow: hidden; }
-      body .app .portfolio__main-project .card:hover .card-img-overlay {
-        background: unset; }
-      body .app .portfolio__main-project .card:hover .card-img {
-        transform: scale(1); }
-      body .app .portfolio__main-project .card:hover .card-title {
-        background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #57d75b 60%);
-        background-size: auto auto;
-        background-clip: border-box;
-        background-size: 200% auto;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: textclip 1.5s linear infinite; }
-      body .app .portfolio__main-project .card-img {
-        transform: scale(1.2);
-        transition: all 0.5s ease; }
-      body .app .portfolio__main-project .card-img-overlay {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #1a1a1a;
-        transition: all 0.5s ease; }
-        body .app .portfolio__main-project .card-img-overlay .card-title {
-          text-transform: uppercase;
-          letter-spacing: 6px; }
+    body .app .footer__contact-title {
+      text-transform: uppercase;
+      font-size: 0.775rem;
+      font-weight: 500;
+      font-family: "Oswald", sans-serif;
+      letter-spacing: 0.5em; }
+    body .app .footer__contact-socials {
+      text-transform: uppercase;
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -4px; }
+      body .app .footer__contact-socials a {
+        color: white;
+        margin-right: 12px;
+        margin-left: -4px; }
+      body .app .footer__contact-socials .ig::after {
+        content: ".";
+        color: #e112fc; }
+      body .app .footer__contact-socials .ig:hover {
+        color: #e112fc; }
+      body .app .footer__contact-socials .ln::after {
+        content: ".";
+        color: #094290; }
+      body .app .footer__contact-socials .ln:hover {
+        color: #094290; }
+      body .app .footer__contact-socials .gh::after {
+        content: ".";
+        color: #444; }
+      body .app .footer__contact-socials .gh:hover {
+        color: #444; }
+    body .app .footer__contact-more {
+      text-transform: uppercase;
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -4px;
+      line-height: 0.9; }
+      body .app .footer__contact-more a {
+        color: white;
+        position: relative; }
+        body .app .footer__contact-more a::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 0.35em;
+          position: absolute;
+          top: 70%;
+          left: 0px;
+          background: currentcolor;
+          opacity: 0.4; }
+  body .app .to-top {
+    text-transform: uppercase;
+    font-size: 0.775rem;
+    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+    margin-right: 15px;
+    line-height: 1;
+    letter-spacing: 0.5em;
+    opacity: 0.4; }
+    body .app .to-top span {
+      padding: 2.5rem;
+      cursor: url("../img/to-top.svg"), auto;
+      transition: all 0.3s ease 0s; }
 
 @keyframes textclip {
   to {
-    background-position: 200% center; } }
+    background-position: -200% center; } }
+
+body.show {
+  background: black;
+  color: white;
+  transition: all 0.9s ease; }
+  body.show .header__brand,
+  body.show .header__nav-link {
+    color: white; }
