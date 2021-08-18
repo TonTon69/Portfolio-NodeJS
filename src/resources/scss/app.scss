@@ -1,11 +1,10 @@
-@import url("/src/public/fonts/Sequel-Regular.ttf");
 @import "variables";
 
 @font-face {
-    font-family: "Sequel-Regular";
-    src: url("fonts/Sequel-Regular.ttf") format("truetype");
+    font-family: "Sequel";
+    src: url("/src/public/fonts/Sequel.ttf") format("truetype");
 }
-$font-main: "Sequel-Regular", sans-serif;
+$font-main: "Sequel", sans-serif;
 
 body {
     font-family: $font-main;

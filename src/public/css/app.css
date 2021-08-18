@@ -1,10 +1,9 @@
-@import url("/src/public/fonts/Sequel-Regular.ttf");
 @font-face {
-  font-family: "Sequel-Regular";
-  src: url("fonts/Sequel-Regular.ttf") format("truetype"); }
+  font-family: "Sequel";
+  src: url("/src/public/fonts/Sequel.ttf") format("truetype"); }
 
 body {
-  font-family: "Sequel-Regular", sans-serif; }
+  font-family: "Sequel", sans-serif; }
 
 h1 {
   font-weight: 800;
