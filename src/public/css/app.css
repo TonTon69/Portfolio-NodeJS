@@ -1,12 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+html {
+  scroll-behavior: smooth; }
+
 @font-face {
   font-family: "Sequel";
-  src: url("/src/public/fonts/Sequel.ttf") format("truetype"); }
+  font-style: normal;
+  font-weight: 800;
+  src: local("Sequel"), url("/src/public/fonts/Sequel-Bold.otf") format("otf"); }
 
 body {
-  font-family: "Sequel", sans-serif; }
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-family: "Sequel", sans-serif;
+  font-weight: 800; }
+  body::-webkit-scrollbar {
+    width: 12px; }
+  body::-webkit-scrollbar-thumb {
+    background: #b4bcc3;
+    border-radius: 20px;
+    border: 3px solid #b4bcc3; }
+  body .app .header {
+    padding: 1.875rem 1.875rem;
+    justify-content: space-between;
+    display: flex;
+    align-items: center; }
+    body .app .header__logo {
+      display: flex;
+      align-items: center; }
+      body .app .header__logo img {
+        margin-right: 20px; }
+      body .app .header__logo:hover .header__brand {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0); }
+    body .app .header__brand {
+      color: white;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      transform: translateX(50px);
+      transition: all 0.5s ease;
+      opacity: 0;
+      visibility: hidden; }
+    body .app .header__nav:hover .header__nav-link::after {
+      transform: scaleX(1);
+      transform-origin: center left; }
+    body .app .header__nav-link {
+      color: white;
+      font-size: 0.775rem;
+      font-weight: 500;
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: 0.5em;
+      display: inline-block;
+      position: relative; }
+      body .app .header__nav-link::after {
+        content: "";
+        display: block;
+        width: calc(100% - 0.5em);
+        height: 40%;
+        position: absolute;
+        z-index: -1;
+        top: 60%;
+        left: 0;
+        background-color: #444;
+        transform: scaleX(0);
+        transform-origin: center right;
+        transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
+  body .app .portfolio__header {
+    display: flex;
+    align-items: center;
+    min-height: 550px;
+    position: relative; }
+    body .app .portfolio__header-title {
+      max-width: 100rem;
+      padding-right: 3.75rem;
+      padding-left: 3.75rem; }
+      body .app .portfolio__header-title h1 {
+        font-size: 5.575rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 0.8;
+        letter-spacing: -6px; }
+  body .app .portfolio__main {
+    max-width: 100rem;
+    padding-right: 3.75rem;
+    padding-left: 3.75rem; }
+    body .app .portfolio__main-project .card {
+      position: relative;
+      width: 445px;
+      height: 445px;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      overflow: hidden; }
+      body .app .portfolio__main-project .card:hover .card-img-overlay {
+        background: unset; }
+      body .app .portfolio__main-project .card:hover .card-img {
+        transform: scale(1); }
+      body .app .portfolio__main-project .card:hover .card-title {
+        background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #57d75b 60%);
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 1.5s linear infinite; }
+      body .app .portfolio__main-project .card-img {
+        transform: scale(1.2);
+        transition: all 0.5s ease; }
+      body .app .portfolio__main-project .card-img-overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #1a1a1a;
+        transition: all 0.5s ease; }
+        body .app .portfolio__main-project .card-img-overlay .card-title {
+          text-transform: uppercase;
+          letter-spacing: 6px; }
 
-h1 {
-  font-weight: 800;
-  font-size: 4.2vw;
-  text-transform: uppercase;
-  line-height: 0.9; }
+@keyframes textclip {
+  to {
+    background-position: 200% center; } }
