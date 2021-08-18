@@ -74,7 +74,6 @@ body {
             right: 0;
             z-index: 12000;
             padding: 1.875rem 1.875rem;
-            justify-content: space-between;
             @include flexCenter;
 
             &__logo {
@@ -103,51 +102,60 @@ body {
                 opacity: 0;
                 visibility: hidden;
             }
-
-            &__nav {
-                &:hover {
-                    .header__nav-link::after {
-                        transform: scaleX(1);
-                        transform-origin: center left;
-                    }
-                }
-            }
-
-            &__nav-link {
-                color: $black-color;
-                font-size: 0.775rem;
-                font-weight: weight(medium);
-                font-family: "Oswald", sans-serif;
-                text-transform: uppercase;
-                line-height: 1;
-                letter-spacing: 0.5em;
-                display: inline-block;
-                position: relative;
-
-                &::after {
-                    content: "";
-                    display: block;
-                    width: calc(100% - 0.5em);
-                    height: 40%;
-                    position: absolute;
-                    z-index: -1;
-                    top: 60%;
-                    left: 0;
-                    background-color: #444;
-                    transform: scaleX(0);
-                    transform-origin: center right;
-                    transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-                }
-            }
         }
 
-        .portfolio {
+        .portfolio,
+        .about {
             padding-top: 100px;
 
             &__header {
                 @include flexCenter;
                 min-height: 550px;
                 position: relative;
+
+                .nav {
+                    position: fixed;
+                    top: 46px;
+                    right: 34px;
+                    z-index: 120001;
+
+                    &:hover {
+                        .nav-link::after {
+                            transform: scaleX(1);
+                            transform-origin: center left;
+                        }
+                    }
+
+                    &-link {
+                        color: $black-color;
+                        font-size: 0.775rem;
+                        font-weight: weight(medium);
+                        font-family: "Oswald", sans-serif;
+                        text-transform: uppercase;
+                        line-height: 1;
+                        letter-spacing: 0.5em;
+                        display: inline-block;
+                        position: relative;
+                        padding: 0;
+                        transition: all 0.5s ease;
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: calc(100% - 0.5em);
+                            height: 40%;
+                            position: absolute;
+                            z-index: -1;
+                            top: 60%;
+                            left: 0;
+                            background-color: #444;
+                            transform: scaleX(0);
+                            transform-origin: center right;
+                            transition: transform 0.6s
+                                cubic-bezier(0.55, 0, 0.1, 1);
+                        }
+                    }
+                }
 
                 &-title {
                     max-width: 100rem;
@@ -422,8 +430,12 @@ body.show {
     color: $white-color;
     transition: all 0.9s ease;
 
-    .header__brand,
-    .header__nav-link {
+    .header__brand {
         color: $white-color;
+    }
+    .nav {
+        &-link {
+            color: $white-color !important;
+        }
     }
 }

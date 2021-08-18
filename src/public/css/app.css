@@ -49,7 +49,6 @@ body {
     right: 0;
     z-index: 12000;
     padding: 1.875rem 1.875rem;
-    justify-content: space-between;
     display: flex;
     align-items: center; }
     body .app .header__logo {
@@ -70,54 +69,71 @@ body {
       transition: all 0.5s ease;
       opacity: 0;
       visibility: hidden; }
-    body .app .header__nav:hover .header__nav-link::after {
-      transform: scaleX(1);
-      transform-origin: center left; }
-    body .app .header__nav-link {
-      color: black;
-      font-size: 0.775rem;
-      font-weight: 500;
-      font-family: "Oswald", sans-serif;
-      text-transform: uppercase;
-      line-height: 1;
-      letter-spacing: 0.5em;
-      display: inline-block;
-      position: relative; }
-      body .app .header__nav-link::after {
-        content: "";
-        display: block;
-        width: calc(100% - 0.5em);
-        height: 40%;
-        position: absolute;
-        z-index: -1;
-        top: 60%;
-        left: 0;
-        background-color: #444;
-        transform: scaleX(0);
-        transform-origin: center right;
-        transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
-  body .app .portfolio {
+  body .app .portfolio,
+  body .app .about {
     padding-top: 100px; }
-    body .app .portfolio__header {
+    body .app .portfolio__header,
+    body .app .about__header {
       display: flex;
       align-items: center;
       min-height: 550px;
       position: relative; }
-      body .app .portfolio__header-title {
+      body .app .portfolio__header .nav,
+      body .app .about__header .nav {
+        position: fixed;
+        top: 46px;
+        right: 34px;
+        z-index: 120001; }
+        body .app .portfolio__header .nav:hover .nav-link::after,
+        body .app .about__header .nav:hover .nav-link::after {
+          transform: scaleX(1);
+          transform-origin: center left; }
+        body .app .portfolio__header .nav-link,
+        body .app .about__header .nav-link {
+          color: black;
+          font-size: 0.775rem;
+          font-weight: 500;
+          font-family: "Oswald", sans-serif;
+          text-transform: uppercase;
+          line-height: 1;
+          letter-spacing: 0.5em;
+          display: inline-block;
+          position: relative;
+          padding: 0;
+          transition: all 0.5s ease; }
+          body .app .portfolio__header .nav-link::after,
+          body .app .about__header .nav-link::after {
+            content: "";
+            display: block;
+            width: calc(100% - 0.5em);
+            height: 40%;
+            position: absolute;
+            z-index: -1;
+            top: 60%;
+            left: 0;
+            background-color: #444;
+            transform: scaleX(0);
+            transform-origin: center right;
+            transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
+      body .app .portfolio__header-title,
+      body .app .about__header-title {
         max-width: 100rem;
         padding-right: 3.75rem;
         padding-left: 3.75rem; }
-        body .app .portfolio__header-title h1 {
+        body .app .portfolio__header-title h1,
+        body .app .about__header-title h1 {
           font-size: 5.575rem;
           font-weight: 800;
           text-transform: uppercase;
           line-height: 0.8;
           letter-spacing: -6px; }
-    body .app .portfolio__main {
+    body .app .portfolio__main,
+    body .app .about__main {
       max-width: 100rem;
       padding-right: 3.75rem;
       padding-left: 3.75rem; }
-      body .app .portfolio__main-project .card {
+      body .app .portfolio__main-project .card,
+      body .app .about__main-project .card {
         position: relative;
         width: 445px;
         height: 445px;
@@ -126,11 +142,14 @@ body {
         cursor: pointer;
         overflow: hidden;
         margin-bottom: 32px; }
-        body .app .portfolio__main-project .card:hover .card-img-overlay {
+        body .app .portfolio__main-project .card:hover .card-img-overlay,
+        body .app .about__main-project .card:hover .card-img-overlay {
           background: unset; }
-        body .app .portfolio__main-project .card:hover .card-img {
+        body .app .portfolio__main-project .card:hover .card-img,
+        body .app .about__main-project .card:hover .card-img {
           transform: scale(1); }
-        body .app .portfolio__main-project .card:hover .card-title {
+        body .app .portfolio__main-project .card:hover .card-title,
+        body .app .about__main-project .card:hover .card-title {
           background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #57d75b 60%);
           background-size: auto auto;
           background-clip: border-box;
@@ -138,22 +157,27 @@ body {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           animation: textclip 1.5s linear infinite; }
-        body .app .portfolio__main-project .card-img {
+        body .app .portfolio__main-project .card-img,
+        body .app .about__main-project .card-img {
           height: 100%;
           transform: scale(1.2);
           transition: all 0.5s ease; }
-        body .app .portfolio__main-project .card-img-overlay {
+        body .app .portfolio__main-project .card-img-overlay,
+        body .app .about__main-project .card-img-overlay {
           display: flex;
           align-items: center;
           justify-content: center;
           background: #1a1a1a;
           transition: all 0.5s ease; }
-          body .app .portfolio__main-project .card-img-overlay .card-title {
+          body .app .portfolio__main-project .card-img-overlay .card-title,
+          body .app .about__main-project .card-img-overlay .card-title {
             text-transform: uppercase;
             letter-spacing: 6px; }
-      body .app .portfolio__main-brand {
+      body .app .portfolio__main-brand,
+      body .app .about__main-brand {
         position: relative; }
-        body .app .portfolio__main-brand .currently {
+        body .app .portfolio__main-brand .currently,
+        body .app .about__main-brand .currently {
           position: absolute;
           top: -26%;
           left: -2.4%;
@@ -163,25 +187,31 @@ body {
           text-transform: uppercase;
           color: transparent;
           -webkit-text-stroke: 1px white; }
-        body .app .portfolio__main-brand .card {
+        body .app .portfolio__main-brand .card,
+        body .app .about__main-brand .card {
           border-radius: calc(0.25rem - 1px);
           border: none; }
-          body .app .portfolio__main-brand .card-img {
+          body .app .portfolio__main-brand .card-img,
+          body .app .about__main-brand .card-img {
             height: 462px;
             object-fit: cover; }
-          body .app .portfolio__main-brand .card-img-overlay {
+          body .app .portfolio__main-brand .card-img-overlay,
+          body .app .about__main-brand .card-img-overlay {
             display: flex;
             align-items: center; }
-            body .app .portfolio__main-brand .card-img-overlay .card-title {
+            body .app .portfolio__main-brand .card-img-overlay .card-title,
+            body .app .about__main-brand .card-img-overlay .card-title {
               font-size: 5.575rem;
               font-weight: 800;
               margin: 0 0.875rem;
               text-transform: uppercase;
               letter-spacing: -6px;
               line-height: 0.8; }
-              body .app .portfolio__main-brand .card-img-overlay .card-title span {
+              body .app .portfolio__main-brand .card-img-overlay .card-title span,
+              body .app .about__main-brand .card-img-overlay .card-title span {
                 display: block; }
-            body .app .portfolio__main-brand .card-img-overlay .card-text {
+            body .app .portfolio__main-brand .card-img-overlay .card-text,
+            body .app .about__main-brand .card-img-overlay .card-text {
               position: absolute;
               bottom: 32px;
               right: 48px;
@@ -190,12 +220,15 @@ body {
               font-weight: 500;
               font-family: "Oswald", sans-serif;
               letter-spacing: 0.5em; }
-              body .app .portfolio__main-brand .card-img-overlay .card-text:hover a::after {
+              body .app .portfolio__main-brand .card-img-overlay .card-text:hover a::after,
+              body .app .about__main-brand .card-img-overlay .card-text:hover a::after {
                 transform: scaleX(1);
                 transform-origin: center left; }
-              body .app .portfolio__main-brand .card-img-overlay .card-text a {
+              body .app .portfolio__main-brand .card-img-overlay .card-text a,
+              body .app .about__main-brand .card-img-overlay .card-text a {
                 color: white; }
-                body .app .portfolio__main-brand .card-img-overlay .card-text a::after {
+                body .app .portfolio__main-brand .card-img-overlay .card-text a::after,
+                body .app .about__main-brand .card-img-overlay .card-text a::after {
                   content: "";
                   display: block;
                   width: calc(100% - 0.5em);
@@ -282,6 +315,7 @@ body.show {
   background: black;
   color: white;
   transition: all 0.9s ease; }
-  body.show .header__brand,
-  body.show .header__nav-link {
+  body.show .header__brand {
     color: white; }
+  body.show .nav-link {
+    color: white !important; }

@@ -17,8 +17,8 @@ app.use(express.json());
 app.use(morgan("combined"));
 
 // Template engine
+app.set("views", path.join(__dirname, "resources", "views"));
 app.set("view engine", "pug");
-app.set("views", path.join(__dirname, "resources/views"));
 
 // Route init
 route(app);
