@@ -4,6 +4,10 @@ const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
 
+const methodOverride = require("method-override");
+
+const moment = require("moment");
+
 const route = require("./routes");
 const db = require("./config/db");
 
@@ -23,8 +27,12 @@ app.use(express.json());
 app.use(morgan("combined"));
 
 // Template engine
-app.set("views", path.join(__dirname, "resources", "views"));
 app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "resources", "views"));
+
+app.use(methodOverride("_method"));
+
+app.locals.moment = moment;
 
 // Route init
 route(app);

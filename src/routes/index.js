@@ -1,11 +1,11 @@
 const siteRouter = require("./site");
 const projectsRouter = require("./projects");
-const adminRouter = require("./admin");
+const meRouter = require("./me");
 
 function route(app) {
     app.use("/", siteRouter);
     app.use("/projects", projectsRouter);
-    app.use("/admin", adminRouter);
+    app.use("/me", meRouter);
 }
 
 module.exports = route;

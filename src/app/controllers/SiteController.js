@@ -1,4 +1,5 @@
 const Project = require("../models/Project");
+const Contact = require("../models/Contact");
 
 class SiteController {
     // [GET]/

@@ -108,7 +108,9 @@ body {
             }
         }
 
+        .stored-projects,
         .project-create,
+        .project-edit,
         .portfolio,
         .about {
             padding-top: 100px;
@@ -426,6 +428,39 @@ body {
                         }
                     }
                 }
+
+                .stored-projects__table {
+                    color: $white-color;
+                    font-family: "Source Serif Pro", serif;
+                    font-size: 1.3125rem;
+                    font-weight: weight(medium);
+
+                    tbody {
+                        tr {
+                            vertical-align: middle;
+
+                            img {
+                                object-fit: cover;
+                            }
+                        }
+                    }
+
+                    .btn-primary {
+                        font-size: 1.2rem;
+                        padding: 0.5rem 2rem;
+                        border-radius: 2px;
+                        background: #212b36;
+                        border-color: #212b36;
+
+                        &:focus {
+                            box-shadow: none;
+                        }
+
+                        &:hover {
+                            background: #171f27;
+                        }
+                    }
+                }
             }
         }
 
@@ -522,7 +557,8 @@ body {
             }
         }
 
-        .project-create {
+        .project-create,
+        .project-edit {
             &__main {
                 form {
                     font-family: "Source Serif Pro", serif;

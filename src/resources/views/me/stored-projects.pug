@@ -1,0 +1,34 @@
+extends ../layouts/common
+block content   
+    seaction#stored-projects.stored-projects
+        header.stored-projects__header 
+            nav.nav
+                a(href="/").nav-link portfolio
+            .stored-projects__header-title
+                h1 
+                    span stored projects
+        main.stored-projects__main
+            table.table.stored-projects__table
+                thead
+                    tr
+                        th(scope='col') #
+                        th(scope='col') Name
+                        th(scope='col') Banner
+                        th(scope='col') Url
+                        th(scope='col') Created At
+                        th(scope='col') Action
+                tbody
+                    - var count = 0;
+                    each project in projects
+                        - count++;
+                        tr
+                            th(scope='row')=count
+                            td=project.name
+                            td 
+                                img(src=project.banner, width=350, height=180)
+                            td=project.url
+                            td=moment(project.createdAt).format('DD-MM-YYYY')
+                            td
+                                a(href="/projects/" + project._id + "/edit").btn.btn-primary.me-2 Edit
+                                a(href="/").btn.btn-primary Delete
+                    

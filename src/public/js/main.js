@@ -1,10 +1,6 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-const bgLight = $(".bg-light");
-const navLink = $(".nav-link");
-console.log(navLink);
-
 window.onscroll = function () {
     if (this.scrollY > 20) {
         document.body.classList.add("show");

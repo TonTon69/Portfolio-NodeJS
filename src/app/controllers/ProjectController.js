@@ -11,7 +11,21 @@ class ProjectController {
         const project = new Project(req.body);
         project
             .save()
-            .then(() => res.redirect("/"))
+            .then(() => res.redirect("/me/stored/projects"))
+            .catch(next);
+    }
+
+    // [GET]/projects/:id/edit
+    edit(req, res, next) {
+        Project.findById(req.params.id)
+            .then((project) => res.render("projects/edit", { project }))
+            .catch(next);
+    }
+
+    // [PUT]/projects/:id
+    update(req, res, next) {
+        Project.updateOne({ _id: req.params.id }, req.body)
+            .then(() => res.redirect("/me/stored/projects"))
             .catch(next);
     }
 }
