@@ -23,6 +23,9 @@ html {
 .is-devider-100 {
   height: 100px; }
 
+.is-devider-40 {
+  height: 40px; }
+
 .is-devider-20 {
   height: 20px; }
 
@@ -287,7 +290,8 @@ body {
             font-family: "Oswald", sans-serif;
             text-transform: uppercase;
             letter-spacing: 0.5em;
-            margin-bottom: 10px; }
+            margin-bottom: 10px;
+            opacity: 0.6; }
           body .app .portfolio__main .about__main-content .education__content,
           body .app .portfolio__main .about__main-content .experience__content,
           body .app .portfolio__main .about__main-content .contact__content,
@@ -410,6 +414,33 @@ body {
       line-height: 2.5; }
       body .app .bg-light .about__expertise-skill--item {
         display: block; }
+  body .app .bg-dark {
+    background: black !important; }
+    body .app .bg-dark .about__awards {
+      max-width: 100rem;
+      padding-right: 3.75rem;
+      padding-left: 3.75rem; }
+      body .app .bg-dark .about__awards-title {
+        margin-left: -30px;
+        font-weight: 800;
+        font-size: 10rem;
+        line-height: 0.9;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-text-stroke: 1px #fff; }
+      body .app .bg-dark .about__awards-table {
+        color: white;
+        font-family: "Source Serif Pro", serif;
+        font-size: 1.3125rem;
+        font-weight: 500; }
+        body .app .bg-dark .about__awards-table tbody tr {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+          body .app .bg-dark .about__awards-table tbody tr td {
+            padding: 20px 0; }
+            body .app .bg-dark .about__awards-table tbody tr td span {
+              font-family: "Sequel", sans-serif;
+              font-weight: 800;
+              text-transform: uppercase; }
   body .app .footer {
     max-width: 100rem;
     padding-right: 3.75rem;
