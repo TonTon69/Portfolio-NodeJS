@@ -28,6 +28,13 @@ class ProjectController {
             .then(() => res.redirect("/me/stored/projects"))
             .catch(next);
     }
+
+    // [DELETE]/projects/:id
+    delete(req, res, next) {
+        Project.deleteOne({ _id: req.params.id })
+            .then(() => res.redirect("back"))
+            .catch(next);
+    }
 }
 
 module.exports = new ProjectController();
