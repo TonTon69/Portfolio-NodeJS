@@ -1,7 +1,15 @@
+const Project = require("../models/Project");
+
 class SiteController {
     // [GET]/
-    index(req, res) {
-        res.render("index");
+    index(req, res, next) {
+        Project.find({})
+            .then((projects) => {
+                res.render("index", {
+                    projects,
+                });
+            })
+            .catch(next);
     }
 
     // [GET]/about

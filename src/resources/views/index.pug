@@ -11,27 +11,14 @@ block content
                     span hi, i'm minh hoang.
         main.portfolio__main
             .portfolio__main-project
-                .row    
-                    .col-md-4
-                        a.card.bg-dark.text-white(href="/")
-                            img.card-img(src='https://www.anthonydesigner.com/static/da0f57ff1496bb0354fa8bcec3ca0673/78cc5/motiv.webp', alt='...')
-                            .card-img-overlay
-                                h1.card-title dashboard ui
-                    .col-md-4
-                        a.card.bg-dark.text-white(href="/")
-                            img.card-img(src='https://www.anthonydesigner.com/static/da0f57ff1496bb0354fa8bcec3ca0673/78cc5/motiv.webp', alt='...')
-                            .card-img-overlay
-                                h1.card-title dashboard ui
-                    .col-md-4
-                        a.card.bg-dark.text-white(href="/")
-                            img.card-img(src='https://www.anthonydesigner.com/static/da0f57ff1496bb0354fa8bcec3ca0673/78cc5/motiv.webp', alt='...')
-                            .card-img-overlay
-                                h1.card-title dashboard ui
-                    .col-md-4
-                        a.card.bg-dark.text-white(href="/")
-                            img.card-img(src='https://www.anthonydesigner.com/static/da0f57ff1496bb0354fa8bcec3ca0673/78cc5/motiv.webp', alt='...')
-                            .card-img-overlay
-                                h1.card-title dashboard ui
+                .row 
+                    each project in projects  
+                        .col-md-4
+                            a.card.bg-dark.text-white(href=project.url)
+                                img.card-img(src=project.banner, alt=project.name)
+                                .card-img-overlay
+                                    h1.card-title=project.name
+                    
             .is-devider-200
             .portfolio__main-brand
                 span.currently currently

@@ -108,6 +108,7 @@ body {
             }
         }
 
+        .project-create,
         .portfolio,
         .about {
             padding-top: 100px;
@@ -515,6 +516,43 @@ body {
                                     text-transform: uppercase;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+
+        .project-create {
+            &__main {
+                form {
+                    font-family: "Source Serif Pro", serif;
+                    font-size: 1.3125rem;
+                    font-weight: weight(medium);
+
+                    input {
+                        border-radius: 2px;
+                        padding: 1.375rem 1.75rem;
+                        font-size: 1.2rem;
+
+                        &:focus {
+                            border-color: #000;
+                            box-shadow: 0 0 10px rgb(255, 255, 255);
+                        }
+                    }
+
+                    .btn-primary {
+                        font-size: 1.2rem;
+                        padding: 0.5rem 2rem;
+                        border-radius: 2px;
+                        background: #212b36;
+                        border-color: #212b36;
+
+                        &:focus {
+                            box-shadow: none;
+                        }
+
+                        &:hover {
+                            background: #171f27;
                         }
                     }
                 }

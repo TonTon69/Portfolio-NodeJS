@@ -72,25 +72,30 @@ body {
       transition: all 0.5s ease;
       opacity: 0;
       visibility: hidden; }
+  body .app .project-create,
   body .app .portfolio,
   body .app .about {
     padding-top: 100px; }
+    body .app .project-create__header,
     body .app .portfolio__header,
     body .app .about__header {
       display: flex;
       align-items: center;
       min-height: 650px;
       position: relative; }
+      body .app .project-create__header .nav,
       body .app .portfolio__header .nav,
       body .app .about__header .nav {
         position: fixed;
         top: 46px;
         right: 34px;
         z-index: 120001; }
+        body .app .project-create__header .nav:hover .nav-link::after,
         body .app .portfolio__header .nav:hover .nav-link::after,
         body .app .about__header .nav:hover .nav-link::after {
           transform: scaleX(1);
           transform-origin: center left; }
+        body .app .project-create__header .nav-link,
         body .app .portfolio__header .nav-link,
         body .app .about__header .nav-link {
           color: black;
@@ -104,6 +109,7 @@ body {
           position: relative;
           padding: 0;
           transition: all 0.5s ease; }
+          body .app .project-create__header .nav-link::after,
           body .app .portfolio__header .nav-link::after,
           body .app .about__header .nav-link::after {
             content: "";
@@ -118,11 +124,13 @@ body {
             transform: scaleX(0);
             transform-origin: center right;
             transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
+      body .app .project-create__header-title,
       body .app .portfolio__header-title,
       body .app .about__header-title {
         max-width: 100rem;
         padding-right: 3.75rem;
         padding-left: 3.75rem; }
+        body .app .project-create__header-title h1,
         body .app .portfolio__header-title h1,
         body .app .about__header-title h1 {
           font-size: 5.575rem;
@@ -130,11 +138,13 @@ body {
           text-transform: uppercase;
           line-height: 0.9;
           letter-spacing: -6px; }
+    body .app .project-create__main,
     body .app .portfolio__main,
     body .app .about__main {
       max-width: 100rem;
       padding-right: 3.75rem;
       padding-left: 3.75rem; }
+      body .app .project-create__main-project .card,
       body .app .portfolio__main-project .card,
       body .app .about__main-project .card {
         position: relative;
@@ -145,12 +155,15 @@ body {
         cursor: pointer;
         overflow: hidden;
         margin-bottom: 32px; }
+        body .app .project-create__main-project .card:hover .card-img-overlay,
         body .app .portfolio__main-project .card:hover .card-img-overlay,
         body .app .about__main-project .card:hover .card-img-overlay {
           background: unset; }
+        body .app .project-create__main-project .card:hover .card-img,
         body .app .portfolio__main-project .card:hover .card-img,
         body .app .about__main-project .card:hover .card-img {
           transform: scale(1); }
+        body .app .project-create__main-project .card:hover .card-title,
         body .app .portfolio__main-project .card:hover .card-title,
         body .app .about__main-project .card:hover .card-title {
           background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #57d75b 60%);
@@ -160,11 +173,13 @@ body {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           animation: textclip 1.5s linear infinite; }
+        body .app .project-create__main-project .card-img,
         body .app .portfolio__main-project .card-img,
         body .app .about__main-project .card-img {
           height: 100%;
           transform: scale(1.2);
           transition: all 0.5s ease; }
+        body .app .project-create__main-project .card-img-overlay,
         body .app .portfolio__main-project .card-img-overlay,
         body .app .about__main-project .card-img-overlay {
           display: flex;
@@ -172,13 +187,16 @@ body {
           justify-content: center;
           background: #1a1a1a;
           transition: all 0.5s ease; }
+          body .app .project-create__main-project .card-img-overlay .card-title,
           body .app .portfolio__main-project .card-img-overlay .card-title,
           body .app .about__main-project .card-img-overlay .card-title {
             text-transform: uppercase;
             letter-spacing: 6px; }
+      body .app .project-create__main-brand,
       body .app .portfolio__main-brand,
       body .app .about__main-brand {
         position: relative; }
+        body .app .project-create__main-brand .currently,
         body .app .portfolio__main-brand .currently,
         body .app .about__main-brand .currently {
           position: absolute;
@@ -190,18 +208,22 @@ body {
           text-transform: uppercase;
           color: transparent;
           -webkit-text-stroke: 1px white; }
+        body .app .project-create__main-brand .card,
         body .app .portfolio__main-brand .card,
         body .app .about__main-brand .card {
           border-radius: calc(0.25rem - 1px);
           border: none; }
+          body .app .project-create__main-brand .card-img,
           body .app .portfolio__main-brand .card-img,
           body .app .about__main-brand .card-img {
             height: 462px;
             object-fit: cover; }
+          body .app .project-create__main-brand .card-img-overlay,
           body .app .portfolio__main-brand .card-img-overlay,
           body .app .about__main-brand .card-img-overlay {
             display: flex;
             align-items: center; }
+            body .app .project-create__main-brand .card-img-overlay .card-title,
             body .app .portfolio__main-brand .card-img-overlay .card-title,
             body .app .about__main-brand .card-img-overlay .card-title {
               font-size: 5.575rem;
@@ -210,9 +232,11 @@ body {
               text-transform: uppercase;
               letter-spacing: -6px;
               line-height: 0.8; }
+              body .app .project-create__main-brand .card-img-overlay .card-title span,
               body .app .portfolio__main-brand .card-img-overlay .card-title span,
               body .app .about__main-brand .card-img-overlay .card-title span {
                 display: block; }
+            body .app .project-create__main-brand .card-img-overlay .card-text,
             body .app .portfolio__main-brand .card-img-overlay .card-text,
             body .app .about__main-brand .card-img-overlay .card-text {
               position: absolute;
@@ -223,13 +247,16 @@ body {
               font-weight: 500;
               font-family: "Oswald", sans-serif;
               letter-spacing: 0.5em; }
+              body .app .project-create__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .portfolio__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .about__main-brand .card-img-overlay .card-text:hover a::after {
                 transform: scaleX(1);
                 transform-origin: center left; }
+              body .app .project-create__main-brand .card-img-overlay .card-text a,
               body .app .portfolio__main-brand .card-img-overlay .card-text a,
               body .app .about__main-brand .card-img-overlay .card-text a {
                 color: white; }
+                body .app .project-create__main-brand .card-img-overlay .card-text a::after,
                 body .app .portfolio__main-brand .card-img-overlay .card-text a::after,
                 body .app .about__main-brand .card-img-overlay .card-text a::after {
                   content: "";
@@ -243,15 +270,18 @@ body {
                   transform: scaleX(0);
                   transform-origin: center right;
                   transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
+      body .app .project-create__main .about__main-content,
       body .app .portfolio__main .about__main-content,
       body .app .about__main .about__main-content {
         font-family: "Source Serif Pro", serif;
         font-size: 1.3125rem;
         line-height: 1.8;
         font-weight: 500; }
+        body .app .project-create__main .about__main-content p,
         body .app .portfolio__main .about__main-content p,
         body .app .about__main .about__main-content p {
           margin-bottom: 40px; }
+        body .app .project-create__main .about__main-content .download-cv,
         body .app .portfolio__main .about__main-content .download-cv,
         body .app .about__main .about__main-content .download-cv {
           font-size: 0.775rem;
@@ -261,6 +291,7 @@ body {
           letter-spacing: 0.5em;
           color: white;
           position: relative; }
+          body .app .project-create__main .about__main-content .download-cv::after,
           body .app .portfolio__main .about__main-content .download-cv::after,
           body .app .about__main .about__main-content .download-cv::after {
             content: "";
@@ -272,6 +303,9 @@ body {
             left: 0px;
             background: currentcolor;
             opacity: 0.4; }
+        body .app .project-create__main .about__main-content .education,
+        body .app .project-create__main .about__main-content .experience,
+        body .app .project-create__main .about__main-content .contact,
         body .app .portfolio__main .about__main-content .education,
         body .app .portfolio__main .about__main-content .experience,
         body .app .portfolio__main .about__main-content .contact,
@@ -279,6 +313,9 @@ body {
         body .app .about__main .about__main-content .experience,
         body .app .about__main .about__main-content .contact {
           margin-bottom: 40px; }
+          body .app .project-create__main .about__main-content .education__title,
+          body .app .project-create__main .about__main-content .experience__title,
+          body .app .project-create__main .about__main-content .contact__title,
           body .app .portfolio__main .about__main-content .education__title,
           body .app .portfolio__main .about__main-content .experience__title,
           body .app .portfolio__main .about__main-content .contact__title,
@@ -292,6 +329,9 @@ body {
             letter-spacing: 0.5em;
             margin-bottom: 10px;
             opacity: 0.6; }
+          body .app .project-create__main .about__main-content .education__content,
+          body .app .project-create__main .about__main-content .experience__content,
+          body .app .project-create__main .about__main-content .contact__content,
           body .app .portfolio__main .about__main-content .education__content,
           body .app .portfolio__main .about__main-content .experience__content,
           body .app .portfolio__main .about__main-content .contact__content,
@@ -303,6 +343,9 @@ body {
             font-weight: 800;
             text-transform: uppercase;
             line-height: 1.5; }
+            body .app .project-create__main .about__main-content .education__content a,
+            body .app .project-create__main .about__main-content .experience__content a,
+            body .app .project-create__main .about__main-content .contact__content a,
             body .app .portfolio__main .about__main-content .education__content a,
             body .app .portfolio__main .about__main-content .experience__content a,
             body .app .portfolio__main .about__main-content .contact__content a,
@@ -311,6 +354,9 @@ body {
             body .app .about__main .about__main-content .contact__content a {
               color: white;
               margin-right: 12px; }
+            body .app .project-create__main .about__main-content .education__content .ig::after,
+            body .app .project-create__main .about__main-content .experience__content .ig::after,
+            body .app .project-create__main .about__main-content .contact__content .ig::after,
             body .app .portfolio__main .about__main-content .education__content .ig::after,
             body .app .portfolio__main .about__main-content .experience__content .ig::after,
             body .app .portfolio__main .about__main-content .contact__content .ig::after,
@@ -319,6 +365,9 @@ body {
             body .app .about__main .about__main-content .contact__content .ig::after {
               content: ".";
               color: #e112fc; }
+            body .app .project-create__main .about__main-content .education__content .ig:hover,
+            body .app .project-create__main .about__main-content .experience__content .ig:hover,
+            body .app .project-create__main .about__main-content .contact__content .ig:hover,
             body .app .portfolio__main .about__main-content .education__content .ig:hover,
             body .app .portfolio__main .about__main-content .experience__content .ig:hover,
             body .app .portfolio__main .about__main-content .contact__content .ig:hover,
@@ -326,6 +375,9 @@ body {
             body .app .about__main .about__main-content .experience__content .ig:hover,
             body .app .about__main .about__main-content .contact__content .ig:hover {
               color: #e112fc; }
+            body .app .project-create__main .about__main-content .education__content .ln::after,
+            body .app .project-create__main .about__main-content .experience__content .ln::after,
+            body .app .project-create__main .about__main-content .contact__content .ln::after,
             body .app .portfolio__main .about__main-content .education__content .ln::after,
             body .app .portfolio__main .about__main-content .experience__content .ln::after,
             body .app .portfolio__main .about__main-content .contact__content .ln::after,
@@ -334,6 +386,9 @@ body {
             body .app .about__main .about__main-content .contact__content .ln::after {
               content: ".";
               color: #094290; }
+            body .app .project-create__main .about__main-content .education__content .ln:hover,
+            body .app .project-create__main .about__main-content .experience__content .ln:hover,
+            body .app .project-create__main .about__main-content .contact__content .ln:hover,
             body .app .portfolio__main .about__main-content .education__content .ln:hover,
             body .app .portfolio__main .about__main-content .experience__content .ln:hover,
             body .app .portfolio__main .about__main-content .contact__content .ln:hover,
@@ -341,6 +396,9 @@ body {
             body .app .about__main .about__main-content .experience__content .ln:hover,
             body .app .about__main .about__main-content .contact__content .ln:hover {
               color: #094290; }
+            body .app .project-create__main .about__main-content .education__content .gh::after,
+            body .app .project-create__main .about__main-content .experience__content .gh::after,
+            body .app .project-create__main .about__main-content .contact__content .gh::after,
             body .app .portfolio__main .about__main-content .education__content .gh::after,
             body .app .portfolio__main .about__main-content .experience__content .gh::after,
             body .app .portfolio__main .about__main-content .contact__content .gh::after,
@@ -349,6 +407,9 @@ body {
             body .app .about__main .about__main-content .contact__content .gh::after {
               content: ".";
               color: #444; }
+            body .app .project-create__main .about__main-content .education__content .gh:hover,
+            body .app .project-create__main .about__main-content .experience__content .gh:hover,
+            body .app .project-create__main .about__main-content .contact__content .gh:hover,
             body .app .portfolio__main .about__main-content .education__content .gh:hover,
             body .app .portfolio__main .about__main-content .experience__content .gh:hover,
             body .app .portfolio__main .about__main-content .contact__content .gh:hover,
@@ -356,6 +417,9 @@ body {
             body .app .about__main .about__main-content .experience__content .gh:hover,
             body .app .about__main .about__main-content .contact__content .gh:hover {
               color: #444; }
+            body .app .project-create__main .about__main-content .education__content .email,
+            body .app .project-create__main .about__main-content .experience__content .email,
+            body .app .project-create__main .about__main-content .contact__content .email,
             body .app .portfolio__main .about__main-content .education__content .email,
             body .app .portfolio__main .about__main-content .experience__content .email,
             body .app .portfolio__main .about__main-content .contact__content .email,
@@ -363,6 +427,9 @@ body {
             body .app .about__main .about__main-content .experience__content .email,
             body .app .about__main .about__main-content .contact__content .email {
               position: relative; }
+              body .app .project-create__main .about__main-content .education__content .email::after,
+              body .app .project-create__main .about__main-content .experience__content .email::after,
+              body .app .project-create__main .about__main-content .contact__content .email::after,
               body .app .portfolio__main .about__main-content .education__content .email::after,
               body .app .portfolio__main .about__main-content .experience__content .email::after,
               body .app .portfolio__main .about__main-content .contact__content .email::after,
@@ -441,6 +508,27 @@ body {
               font-family: "Sequel", sans-serif;
               font-weight: 800;
               text-transform: uppercase; }
+  body .app .project-create__main form {
+    font-family: "Source Serif Pro", serif;
+    font-size: 1.3125rem;
+    font-weight: 500; }
+    body .app .project-create__main form input {
+      border-radius: 2px;
+      padding: 1.375rem 1.75rem;
+      font-size: 1.2rem; }
+      body .app .project-create__main form input:focus {
+        border-color: #000;
+        box-shadow: 0 0 10px white; }
+    body .app .project-create__main form .btn-primary {
+      font-size: 1.2rem;
+      padding: 0.5rem 2rem;
+      border-radius: 2px;
+      background: #212b36;
+      border-color: #212b36; }
+      body .app .project-create__main form .btn-primary:focus {
+        box-shadow: none; }
+      body .app .project-create__main form .btn-primary:hover {
+        background: #171f27; }
   body .app .footer {
     max-width: 100rem;
     padding-right: 3.75rem;

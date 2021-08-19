@@ -1,0 +1,30 @@
+extends ../layouts/common
+block content 
+    seaction#project-create.project-create
+        header.project-create__header 
+            nav.nav
+                a(href="/").nav-link portfolio
+            .project-create__header-title
+                h1 
+                    span create a new project
+        main.project-create__main
+            form(method="POST", action="/projects/create")
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='name') Name
+                    .col-sm-10
+                        input#name.form-control(type='text', name='name', placeholder='Enter project name')
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='banner') Banner
+                    .col-sm-10
+                        input#banner.form-control(type='text', name='banner', placeholder='Enter project banner')
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='url') Url
+                    .col-sm-10
+                        input#url.form-control(type='text', name='url', placeholder='Enter project url')
+                .is-devider-20 
+                .mb-3.row
+                    label.col-sm-2.col-form-label
+                    .col-sm-10
+                        button.btn.btn-primary(type='submit') Create
