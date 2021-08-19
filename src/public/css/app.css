@@ -76,7 +76,7 @@ body {
     body .app .about__header {
       display: flex;
       align-items: center;
-      min-height: 550px;
+      min-height: 650px;
       position: relative; }
       body .app .portfolio__header .nav,
       body .app .about__header .nav {
@@ -125,7 +125,7 @@ body {
           font-size: 5.575rem;
           font-weight: 800;
           text-transform: uppercase;
-          line-height: 0.8;
+          line-height: 0.9;
           letter-spacing: -6px; }
     body .app .portfolio__main,
     body .app .about__main {
@@ -240,6 +240,176 @@ body {
                   transform: scaleX(0);
                   transform-origin: center right;
                   transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
+      body .app .portfolio__main .about__main-content,
+      body .app .about__main .about__main-content {
+        font-family: "Source Serif Pro", serif;
+        font-size: 1.3125rem;
+        line-height: 1.8;
+        font-weight: 500; }
+        body .app .portfolio__main .about__main-content p,
+        body .app .about__main .about__main-content p {
+          margin-bottom: 40px; }
+        body .app .portfolio__main .about__main-content .download-cv,
+        body .app .about__main .about__main-content .download-cv {
+          font-size: 0.775rem;
+          font-weight: 500;
+          font-family: "Oswald", sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 0.5em;
+          color: white;
+          position: relative; }
+          body .app .portfolio__main .about__main-content .download-cv::after,
+          body .app .about__main .about__main-content .download-cv::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 0.35em;
+            position: absolute;
+            top: 70%;
+            left: 0px;
+            background: currentcolor;
+            opacity: 0.4; }
+        body .app .portfolio__main .about__main-content .education,
+        body .app .portfolio__main .about__main-content .experience,
+        body .app .portfolio__main .about__main-content .contact,
+        body .app .about__main .about__main-content .education,
+        body .app .about__main .about__main-content .experience,
+        body .app .about__main .about__main-content .contact {
+          margin-bottom: 40px; }
+          body .app .portfolio__main .about__main-content .education__title,
+          body .app .portfolio__main .about__main-content .experience__title,
+          body .app .portfolio__main .about__main-content .contact__title,
+          body .app .about__main .about__main-content .education__title,
+          body .app .about__main .about__main-content .experience__title,
+          body .app .about__main .about__main-content .contact__title {
+            font-size: 0.775rem;
+            font-weight: 500;
+            font-family: "Oswald", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5em;
+            margin-bottom: 10px; }
+          body .app .portfolio__main .about__main-content .education__content,
+          body .app .portfolio__main .about__main-content .experience__content,
+          body .app .portfolio__main .about__main-content .contact__content,
+          body .app .about__main .about__main-content .education__content,
+          body .app .about__main .about__main-content .experience__content,
+          body .app .about__main .about__main-content .contact__content {
+            font-size: 1.2rem;
+            font-family: "Sequel", sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.5; }
+            body .app .portfolio__main .about__main-content .education__content a,
+            body .app .portfolio__main .about__main-content .experience__content a,
+            body .app .portfolio__main .about__main-content .contact__content a,
+            body .app .about__main .about__main-content .education__content a,
+            body .app .about__main .about__main-content .experience__content a,
+            body .app .about__main .about__main-content .contact__content a {
+              color: white;
+              margin-right: 12px; }
+            body .app .portfolio__main .about__main-content .education__content .ig::after,
+            body .app .portfolio__main .about__main-content .experience__content .ig::after,
+            body .app .portfolio__main .about__main-content .contact__content .ig::after,
+            body .app .about__main .about__main-content .education__content .ig::after,
+            body .app .about__main .about__main-content .experience__content .ig::after,
+            body .app .about__main .about__main-content .contact__content .ig::after {
+              content: ".";
+              color: #e112fc; }
+            body .app .portfolio__main .about__main-content .education__content .ig:hover,
+            body .app .portfolio__main .about__main-content .experience__content .ig:hover,
+            body .app .portfolio__main .about__main-content .contact__content .ig:hover,
+            body .app .about__main .about__main-content .education__content .ig:hover,
+            body .app .about__main .about__main-content .experience__content .ig:hover,
+            body .app .about__main .about__main-content .contact__content .ig:hover {
+              color: #e112fc; }
+            body .app .portfolio__main .about__main-content .education__content .ln::after,
+            body .app .portfolio__main .about__main-content .experience__content .ln::after,
+            body .app .portfolio__main .about__main-content .contact__content .ln::after,
+            body .app .about__main .about__main-content .education__content .ln::after,
+            body .app .about__main .about__main-content .experience__content .ln::after,
+            body .app .about__main .about__main-content .contact__content .ln::after {
+              content: ".";
+              color: #094290; }
+            body .app .portfolio__main .about__main-content .education__content .ln:hover,
+            body .app .portfolio__main .about__main-content .experience__content .ln:hover,
+            body .app .portfolio__main .about__main-content .contact__content .ln:hover,
+            body .app .about__main .about__main-content .education__content .ln:hover,
+            body .app .about__main .about__main-content .experience__content .ln:hover,
+            body .app .about__main .about__main-content .contact__content .ln:hover {
+              color: #094290; }
+            body .app .portfolio__main .about__main-content .education__content .gh::after,
+            body .app .portfolio__main .about__main-content .experience__content .gh::after,
+            body .app .portfolio__main .about__main-content .contact__content .gh::after,
+            body .app .about__main .about__main-content .education__content .gh::after,
+            body .app .about__main .about__main-content .experience__content .gh::after,
+            body .app .about__main .about__main-content .contact__content .gh::after {
+              content: ".";
+              color: #444; }
+            body .app .portfolio__main .about__main-content .education__content .gh:hover,
+            body .app .portfolio__main .about__main-content .experience__content .gh:hover,
+            body .app .portfolio__main .about__main-content .contact__content .gh:hover,
+            body .app .about__main .about__main-content .education__content .gh:hover,
+            body .app .about__main .about__main-content .experience__content .gh:hover,
+            body .app .about__main .about__main-content .contact__content .gh:hover {
+              color: #444; }
+            body .app .portfolio__main .about__main-content .education__content .email,
+            body .app .portfolio__main .about__main-content .experience__content .email,
+            body .app .portfolio__main .about__main-content .contact__content .email,
+            body .app .about__main .about__main-content .education__content .email,
+            body .app .about__main .about__main-content .experience__content .email,
+            body .app .about__main .about__main-content .contact__content .email {
+              position: relative; }
+              body .app .portfolio__main .about__main-content .education__content .email::after,
+              body .app .portfolio__main .about__main-content .experience__content .email::after,
+              body .app .portfolio__main .about__main-content .contact__content .email::after,
+              body .app .about__main .about__main-content .education__content .email::after,
+              body .app .about__main .about__main-content .experience__content .email::after,
+              body .app .about__main .about__main-content .contact__content .email::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 0.35em;
+                position: absolute;
+                top: 70%;
+                left: 0px;
+                background: currentcolor;
+                opacity: 0.4; }
+  body .app .bg-light .about__expertise {
+    position: relative;
+    max-width: 100rem;
+    padding-right: 3.75rem;
+    padding-left: 3.75rem;
+    color: black; }
+    body .app .bg-light .about__expertise #expertise {
+      position: absolute;
+      top: -19%;
+      left: 1.6%;
+      font-weight: 800;
+      font-size: 10rem;
+      line-height: 0.9;
+      text-transform: uppercase;
+      color: transparent;
+      -webkit-text-stroke: 1px #000; }
+    body .app .bg-light .about__expertise-title {
+      font-weight: 800;
+      font-size: 3rem;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: -4px; }
+    body .app .bg-light .about__expertise-description {
+      font-family: "Source Serif Pro", serif;
+      font-size: 1.3125rem;
+      line-height: 1.8;
+      font-weight: 500;
+      padding-right: 4rem;
+      text-align: justify; }
+    body .app .bg-light .about__expertise-skill {
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 2.5; }
+      body .app .bg-light .about__expertise-skill--item {
+        display: block; }
   body .app .footer {
     max-width: 100rem;
     padding-right: 3.75rem;
