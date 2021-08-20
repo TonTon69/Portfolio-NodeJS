@@ -14,7 +14,7 @@ block content
                 .row 
                     each project in projects  
                         .col-md-4.col-sm-6.col-xs-12
-                            a.card.bg-dark.text-white(href=project.url)
+                            a.card.bg-dark.text-white(href=project.url, target="_blank")
                                 img.card-img(src=project.banner, alt=project.name)
                                 .card-img-overlay
                                     h1.card-title=project.name
@@ -29,4 +29,4 @@ block content
                             span helping
                             span brands win.
                         p.card-text 
-                            a(href="/") visit ad minhhoang
+                            a(href="javascript:void(0)") visit ad minhhoang

@@ -60,9 +60,9 @@ body {
       body .app .header__logo img {
         margin-right: 20px; }
       body .app .header__logo:hover .header__brand {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(0); }
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateX(0) !important; }
     body .app .header__brand {
       color: black;
       font-weight: 800;
@@ -222,6 +222,7 @@ body {
           body .app .project-edit__main-project .card-img-overlay .card-title,
           body .app .portfolio__main-project .card-img-overlay .card-title,
           body .app .about__main-project .card-img-overlay .card-title {
+            text-align: center;
             text-transform: uppercase;
             letter-spacing: 6px; }
       body .app .stored-projects__main-brand,

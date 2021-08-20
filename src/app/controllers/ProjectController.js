@@ -11,7 +11,10 @@ class ProjectController {
         const project = new Project(req.body);
         project
             .save()
-            .then(() => res.redirect("/me/stored/projects"))
+            .then(() => {
+                req.flash("success", "Create a new project successfully!");
+                res.redirect("/me/stored/projects");
+            })
             .catch(next);
     }
 
@@ -35,7 +38,10 @@ class ProjectController {
     // [DELETE]/projects/:id
     delete(req, res, next) {
         Project.deleteOne({ _id: req.params.id })
-            .then(() => res.redirect("back"))
+            .then(() => {
+                req.flash("success", "Delete project successfully!");
+                res.redirect("back");
+            })
             .catch(next);
     }
 }
