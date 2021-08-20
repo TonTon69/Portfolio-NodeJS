@@ -37,9 +37,9 @@ class ProjectController {
 
     // [DELETE]/projects/:id
     delete(req, res, next) {
-        Project.deleteOne({ _id: req.params.id })
+        Project.delete({ _id: req.params.id })
             .then(() => {
-                req.flash("success", "Delete project successfully!");
+                req.flash("success", "Successfully saved to trash!");
                 res.redirect("back");
             })
             .catch(next);

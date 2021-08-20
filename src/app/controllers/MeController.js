@@ -12,6 +12,17 @@ class MeController {
             })
             .catch(next);
     }
+
+    // [GET]/me/trash/projects
+    trashProjects(req, res, next) {
+        Project.findDeleted({})
+            .then((projects) => {
+                res.render("me/trash-projects", {
+                    projects,
+                });
+            })
+            .catch(next);
+    }
 }
 
 module.exports = new MeController();

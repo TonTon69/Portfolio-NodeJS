@@ -6,12 +6,11 @@ block content
                 a(href="/").nav-link portfolio
             .stored-projects__header-title
                 h1 
-                    span stored projects
+                    span deleted project
         main.stored-projects__main
             div 
-                a(href="/me/trash/projects")
-                    i.far.fa-trash-alt
-                    span Recycle Bin
+                a(href="/me/stored/projects")
+                    span Stored Projects
             table.table.stored-projects__table
                 thead
                     tr
@@ -54,24 +53,6 @@ block content
                                             button#btn-delete-project.btn.btn-danger(type='button') Delete
                     else
                         tr
-                            td.text-center(colspan='6') You haven't posted any projects yet?
-                                a(href="/projects/create") Create a new project
-    if success.length > 0
-        - var msg = success
-
-    script(src="/js/project.js")
-    script.
-        let msgToast = '#{msg}';
-        if(msgToast != ''){
-            Eggy({
-                title:  'Success',
-                message:  msgToast,
-                //- position: 'bottom-right',
-                type: 'success',
-                duration: 5000,
-            });
-        }
-        
-  
-        
-        
+                            td.text-center(colspan='6') Empty trash can?
+                                a(href="/me/stored/projects") Stored Projects
+    script(src="/js/project.js")        
