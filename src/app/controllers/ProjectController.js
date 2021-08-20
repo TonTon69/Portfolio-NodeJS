@@ -25,7 +25,10 @@ class ProjectController {
     // [PUT]/projects/:id
     update(req, res, next) {
         Project.updateOne({ _id: req.params.id }, req.body)
-            .then(() => res.redirect("/me/stored/projects"))
+            .then(() => {
+                req.flash("success", "Update project successfully!");
+                res.redirect("/me/stored/projects");
+            })
             .catch(next);
     }
 

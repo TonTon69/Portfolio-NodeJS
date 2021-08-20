@@ -22,7 +22,7 @@ block content
                     each project in projects
                         - count++;
                         tr
-                            th(scope='row')=count
+                            th(scope='row') #{count}
                             td=project.name
                             td 
                                 img(src=project.banner, width=350, height=180)
@@ -48,4 +48,22 @@ block content
                                         .modal-footer
                                             button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
                                             button#btn-delete-project.btn.btn-danger(type='button') Delete
-    script(src="/js/project.js")                 
+    if success.length > 0
+        - var msg = success
+
+    script(src="/js/project.js")
+    script.
+        let msgToast = '#{msg}';
+        if(msgToast != ''){
+            Eggy({
+                title:  'Success',
+                message:  msgToast,
+                //- position: 'bottom-right',
+                type: 'success',
+                duration: 5000,
+            });
+        }
+        
+  
+        
+        

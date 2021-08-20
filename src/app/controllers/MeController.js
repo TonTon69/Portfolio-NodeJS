@@ -7,6 +7,7 @@ class MeController {
             .then((projects) => {
                 res.render("me/stored-projects", {
                     projects,
+                    success: req.flash("success"),
                 });
             })
             .catch(next);

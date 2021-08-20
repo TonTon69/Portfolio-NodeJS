@@ -5,8 +5,9 @@ const express = require("express");
 const morgan = require("morgan");
 
 const methodOverride = require("method-override");
-
 const moment = require("moment");
+const session = require("express-session");
+const flash = require("connect-flash");
 
 const route = require("./routes");
 const db = require("./config/db");
@@ -33,6 +34,17 @@ app.set("views", path.join(__dirname, "resources", "views"));
 app.use(methodOverride("_method"));
 
 app.locals.moment = moment;
+
+//
+app.use(
+    session({
+        cookie: { maxAge: 60000 },
+        saveUninitialized: true,
+        resave: "true",
+        secret: "secret",
+    })
+);
+app.use(flash());
 
 // Route init
 route(app);
