@@ -12,9 +12,10 @@ block content
                 a(href="/projects/create").btn.btn-primary
                     i.fas.fa-plus
                     span.ms-2 Create A New Project
-                a(href="/me/trash/projects").btn.btn-primary.ms-2
+                a(href="/me/trash/projects").btn.btn-primary.ms-2.position-relative
                     i.far.fa-trash-alt
                     span.ms-2 Recycle Bin
+                    span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger #{deletedCount}
             table.table.stored-projects__table
                 thead
                     tr

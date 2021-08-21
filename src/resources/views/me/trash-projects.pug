@@ -9,16 +9,17 @@ block content
                     span deleted project
         main.stored-projects__main
             div.text-end.mb-4
-                a(href="/me/stored/projects").btn.btn-primary
+                a(href="/me/stored/projects").btn.btn-primary.position-relative
                     i.fab.fa-app-store
                     span.ms-2 Stored Projects
+                    span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger #{storedProjectsCount}
             table.table.stored-projects__table
                 thead
                     tr
                         th(scope='col') #
                         th(scope='col') Name
                         th(scope='col') Url
-                        th(scope='col') Created At
+                        th(scope='col') Deleted At
                         th(scope='col')
                 tbody
                     - var count = 0;
@@ -30,7 +31,7 @@ block content
                                 span.project-name=project.name
                                     img.project-banner(src=project.banner)
                             td=project.url
-                            td=moment(project.createdAt).format('DD-MM-YYYY')
+                            td=moment(project.deletedAt).format('DD-MM-YYYY')
                             td
                                 a(href="#", data-bs-id=project._id).btn.btn-primary.btn-restore.me-2 Restore
                                 a(href="#", data-bs-toggle="modal", data-bs-target="#delete-project-modal", data-bs-id=project._id).btn.btn-primary.btn-delete Delete
