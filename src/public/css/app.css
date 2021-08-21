@@ -11,6 +11,27 @@ a {
 html {
   scroll-behavior: smooth; }
 
+.btn.btn-primary,
+.btn.btn-delete {
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
+  border-radius: 2px; }
+  .btn.btn-primary:focus,
+  .btn.btn-delete:focus {
+    box-shadow: none; }
+
+.btn.btn-primary {
+  background: #212b36;
+  border-color: #212b36; }
+  .btn.btn-primary:hover {
+    background: #171f27; }
+
+.btn.btn-delete {
+  background: #dc3545;
+  border-color: #dc3545; }
+  .btn.btn-delete:hover {
+    background: #bb2d3b; }
+
 @font-face {
   font-family: "Sequel";
   font-style: normal;
@@ -65,8 +86,9 @@ body {
         transform: translateX(0) !important; }
     body .app .header__brand {
       color: black;
+      font-family: "Rouge Script", cursive;
+      font-size: 1.6rem;
       font-weight: 800;
-      text-transform: uppercase;
       letter-spacing: 0.2em;
       transform: translateX(50px);
       transition: all 0.5s ease;
@@ -595,34 +617,33 @@ body {
         body .app .portfolio__main .stored-projects__table tbody tr,
         body .app .about__main .stored-projects__table tbody tr {
           vertical-align: middle; }
-          body .app .stored-projects__main .stored-projects__table tbody tr img,
-          body .app .project-create__main .stored-projects__table tbody tr img,
-          body .app .project-edit__main .stored-projects__table tbody tr img,
-          body .app .portfolio__main .stored-projects__table tbody tr img,
-          body .app .about__main .stored-projects__table tbody tr img {
-            object-fit: cover; }
-        body .app .stored-projects__main .stored-projects__table .btn-primary,
-        body .app .project-create__main .stored-projects__table .btn-primary,
-        body .app .project-edit__main .stored-projects__table .btn-primary,
-        body .app .portfolio__main .stored-projects__table .btn-primary,
-        body .app .about__main .stored-projects__table .btn-primary {
-          font-size: 1.2rem;
-          padding: 0.5rem 2rem;
-          border-radius: 2px;
-          background: #212b36;
-          border-color: #212b36; }
-          body .app .stored-projects__main .stored-projects__table .btn-primary:focus,
-          body .app .project-create__main .stored-projects__table .btn-primary:focus,
-          body .app .project-edit__main .stored-projects__table .btn-primary:focus,
-          body .app .portfolio__main .stored-projects__table .btn-primary:focus,
-          body .app .about__main .stored-projects__table .btn-primary:focus {
-            box-shadow: none; }
-          body .app .stored-projects__main .stored-projects__table .btn-primary:hover,
-          body .app .project-create__main .stored-projects__table .btn-primary:hover,
-          body .app .project-edit__main .stored-projects__table .btn-primary:hover,
-          body .app .portfolio__main .stored-projects__table .btn-primary:hover,
-          body .app .about__main .stored-projects__table .btn-primary:hover {
-            background: #171f27; }
+        body .app .stored-projects__main .stored-projects__table tbody .project-name,
+        body .app .project-create__main .stored-projects__table tbody .project-name,
+        body .app .project-edit__main .stored-projects__table tbody .project-name,
+        body .app .portfolio__main .stored-projects__table tbody .project-name,
+        body .app .about__main .stored-projects__table tbody .project-name {
+          text-transform: uppercase;
+          position: relative;
+          cursor: pointer; }
+          body .app .stored-projects__main .stored-projects__table tbody .project-name .project-banner,
+          body .app .project-create__main .stored-projects__table tbody .project-name .project-banner,
+          body .app .project-edit__main .stored-projects__table tbody .project-name .project-banner,
+          body .app .portfolio__main .stored-projects__table tbody .project-name .project-banner,
+          body .app .about__main .stored-projects__table tbody .project-name .project-banner {
+            width: 200px;
+            height: 120px;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: none;
+            z-index: 9999; }
+          body .app .stored-projects__main .stored-projects__table tbody .project-name:hover .project-banner,
+          body .app .project-create__main .stored-projects__table tbody .project-name:hover .project-banner,
+          body .app .project-edit__main .stored-projects__table tbody .project-name:hover .project-banner,
+          body .app .portfolio__main .stored-projects__table tbody .project-name:hover .project-banner,
+          body .app .about__main .stored-projects__table tbody .project-name:hover .project-banner {
+            display: block; }
   body .app .bg-light .about__expertise {
     position: relative;
     max-width: 100rem;
@@ -700,19 +721,6 @@ body {
       body .app .project-edit__main form input:focus {
         border-color: #000;
         box-shadow: 0 0 10px white; }
-    body .app .project-create__main form .btn-primary,
-    body .app .project-edit__main form .btn-primary {
-      font-size: 1.2rem;
-      padding: 0.5rem 2rem;
-      border-radius: 2px;
-      background: #212b36;
-      border-color: #212b36; }
-      body .app .project-create__main form .btn-primary:focus,
-      body .app .project-edit__main form .btn-primary:focus {
-        box-shadow: none; }
-      body .app .project-create__main form .btn-primary:hover,
-      body .app .project-edit__main form .btn-primary:hover {
-        background: #171f27; }
   body .app .footer {
     max-width: 100rem;
     padding-right: 3.75rem;

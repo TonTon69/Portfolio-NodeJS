@@ -8,35 +8,35 @@ block content
                 h1 
                     span deleted project
         main.stored-projects__main
-            div 
-                a(href="/me/stored/projects")
-                    span Stored Projects
+            div.text-end.mb-4
+                a(href="/me/stored/projects").btn.btn-primary
+                    i.fab.fa-app-store
+                    span.ms-2 Stored Projects
             table.table.stored-projects__table
                 thead
                     tr
                         th(scope='col') #
                         th(scope='col') Name
-                        th(scope='col') Banner
                         th(scope='col') Url
                         th(scope='col') Created At
-                        th(scope='col') Action
+                        th(scope='col')
                 tbody
                     - var count = 0;
                     each project in projects
                         - count++;
                         tr
                             th(scope='row') #{count}
-                            td=project.name
-                            td 
-                                img(src=project.banner, width=350, height=180)
+                            td
+                                span.project-name=project.name
+                                    img.project-banner(src=project.banner)
                             td=project.url
                             td=moment(project.createdAt).format('DD-MM-YYYY')
                             td
-                                a(href="/projects/" + project._id + "/edit").btn.btn-primary.me-2 Edit
-                                a(href="#", data-bs-toggle="modal", data-bs-target="#delete-project-modal", data-bs-id=project._id).btn.btn-primary Delete
+                                a(href="#", data-bs-id=project._id).btn.btn-primary.btn-restore.me-2 Restore
+                                a(href="#", data-bs-toggle="modal", data-bs-target="#delete-project-modal", data-bs-id=project._id).btn.btn-primary.btn-delete Delete
                             
-                            // Delete hidden form
                             form(name="delete-project-form", method="POST")
+                            form(name="restore-project-form", method="POST")
 
                             // Confirm delete project
                             #delete-project-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='delete-project-label', aria-hidden='true')
@@ -53,6 +53,6 @@ block content
                                             button#btn-delete-project.btn.btn-danger(type='button') Delete
                     else
                         tr
-                            td.text-center(colspan='6') Empty trash can?
+                            td.text-center(colspan='5') Empty trash can?
                                 a(href="/me/stored/projects") Stored Projects
     script(src="/js/project.js")        

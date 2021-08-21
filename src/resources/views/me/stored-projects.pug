@@ -8,33 +8,35 @@ block content
                 h1 
                     span stored projects
         main.stored-projects__main
-            div 
-                a(href="/me/trash/projects")
+            div.text-end.mb-4
+                a(href="/projects/create").btn.btn-primary
+                    i.fas.fa-plus
+                    span.ms-2 Create A New Project
+                a(href="/me/trash/projects").btn.btn-primary.ms-2
                     i.far.fa-trash-alt
-                    span Recycle Bin
+                    span.ms-2 Recycle Bin
             table.table.stored-projects__table
                 thead
                     tr
                         th(scope='col') #
                         th(scope='col') Name
-                        th(scope='col') Banner
                         th(scope='col') Url
                         th(scope='col') Created At
-                        th(scope='col') Action
+                        th(scope='col')
                 tbody
                     - var count = 0;
                     each project in projects
                         - count++;
                         tr
                             th(scope='row') #{count}
-                            td=project.name
-                            td 
-                                img(src=project.banner, width=350, height=180)
+                            td
+                                span.project-name=project.name
+                                    img.project-banner(src=project.banner)
                             td=project.url
                             td=moment(project.createdAt).format('DD-MM-YYYY')
                             td
                                 a(href="/projects/" + project._id + "/edit").btn.btn-primary.me-2 Edit
-                                a(href="#", data-bs-toggle="modal", data-bs-target="#delete-project-modal", data-bs-id=project._id).btn.btn-primary Delete
+                                a(href="#", data-bs-toggle="modal", data-bs-target="#delete-project-modal", data-bs-id=project._id).btn.btn-primary.btn-delete Trash
                             
                             // Delete hidden form
                             form(name="delete-project-form", method="POST")
@@ -44,17 +46,17 @@ block content
                                 .modal-dialog.modal-dialog-centered(style="max-width: 600px;")
                                     .modal-content.bg-dark(style='box-shadow: 0 .5rem 1rem rgba(250,250,250,0.15); font-family: "Source Serif Pro", serif;')
                                         .modal-header
-                                            h5#delete-project-label.modal-title.text-uppercase Delete project
+                                            h5#delete-project-label.modal-title.text-uppercase move the project to the trash
                                         .modal-body
                                             .is-devider-20                                  
-                                            h4 Are you sure you want to delete this project?
+                                            h4 Are you sure you want to move this project to the trash???
                                             .is-devider-20 
                                         .modal-footer
                                             button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
-                                            button#btn-delete-project.btn.btn-danger(type='button') Delete
+                                            button#btn-delete-project.btn.btn-danger(type='button') Move to trash
                     else
                         tr
-                            td.text-center(colspan='6') You haven't posted any projects yet?
+                            td.text-center(colspan='5') You haven't posted any projects yet?
                                 a(href="/projects/create") Create a new project
     if success.length > 0
         - var msg = success

@@ -44,6 +44,16 @@ class ProjectController {
             })
             .catch(next);
     }
+
+    // [PATCH]/projects/:id/restore
+    restore(req, res, next) {
+        Project.restore({ _id: req.params.id })
+            .then(() => {
+                req.flash("success", "Restore this project successfully!");
+                res.redirect("/me/stored/projects");
+            })
+            .catch(next);
+    }
 }
 
 module.exports = new ProjectController();
