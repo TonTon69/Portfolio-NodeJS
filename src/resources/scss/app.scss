@@ -148,6 +148,9 @@ body {
         .stored-contacts,
         .contact-create,
         .contact-edit,
+        .stored-awards,
+        .award-create,
+        .award-edit,
         .portfolio,
         .about {
             padding-top: 100px;
@@ -488,6 +491,7 @@ body {
         }
 
         .stored-projects,
+        .stored-awards,
         .stored-contacts {
             &__table {
                 color: $white-color;
@@ -623,6 +627,8 @@ body {
             }
         }
 
+        .award-create,
+        .award-edit,
         .contact-create,
         .contact-edit,
         .project-create,

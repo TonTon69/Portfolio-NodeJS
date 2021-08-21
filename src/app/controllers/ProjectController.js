@@ -6,7 +6,7 @@ class ProjectController {
         res.render("projects/create");
     }
 
-    // [POST]/projects/store
+    // [POST]/projects/create
     postCreate(req, res, next) {
         const project = new Project(req.body);
         project

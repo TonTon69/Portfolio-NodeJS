@@ -5,9 +5,9 @@ const mongooseDelete = require("mongoose-delete");
 
 const Contact = new Schema(
     {
-        field: { type: String, require: true },
-        sign: { type: String, require: true },
-        value: { type: String, require: true },
+        field: { type: String },
+        sign: { type: String },
+        value: { type: String },
     },
     {
         timestamps: true,

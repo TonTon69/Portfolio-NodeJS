@@ -6,7 +6,7 @@ class ContactController {
         res.render("contacts/create");
     }
 
-    // [POST]/contacts/store
+    // [POST]/contacts/create
     postCreate(req, res, next) {
         const contact = new Contact(req.body);
         contact

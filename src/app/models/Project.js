@@ -5,9 +5,9 @@ const mongooseDelete = require("mongoose-delete");
 
 const Project = new Schema(
     {
-        name: { type: String, require: true },
-        banner: { type: String, require: true },
-        url: { type: String, require: true },
+        name: { type: String },
+        banner: { type: String },
+        url: { type: String },
     },
     {
         timestamps: true,

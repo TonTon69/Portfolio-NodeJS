@@ -1,0 +1,35 @@
+extends ../layouts/common
+block content 
+    seaction#award-edit.award-edit
+        header.award-edit__header 
+            nav.nav
+                a(href="/").nav-link portfolio
+            .award-edit__header-title
+                h1 edit award 
+        main.award-edit__main
+            form(action=`/awards/${award._id}?_method=PUT`, method="POST")
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='name') Name
+                    .col-sm-10
+                        input#name.form-control(type='text', name='name', placeholder='Enter award name' value=award.name required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='subject') Level/Subject
+                    .col-sm-10
+                        input#subject.form-control(type='text', name='subject', placeholder='Enter award level/subject (Ex: Faculty Level, Chess...)' value=award.subject required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='prize') Prize
+                    .col-sm-10
+                        input#prize.form-control(type='text', name='prize', placeholder='Enter award prize (Ex: Achieved, Golden...)' value=award.prize required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='year') Year
+                    .col-sm-10
+                        input#year.form-control(type='text', name='year', placeholder='Enter award year' value=award.year required)
+                .is-devider-20 
+                .mb-3.row
+                    label.col-sm-2.col-form-label
+                    .col-sm-10
+                        a.btn.btn-primary.me-4(href='/me/stored/awards') Close
+                        button.btn.btn-primary(type='submit') Save

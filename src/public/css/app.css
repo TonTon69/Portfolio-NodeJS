@@ -103,6 +103,9 @@ body {
   body .app .stored-contacts,
   body .app .contact-create,
   body .app .contact-edit,
+  body .app .stored-awards,
+  body .app .award-create,
+  body .app .award-edit,
   body .app .portfolio,
   body .app .about {
     padding-top: 100px; }
@@ -112,6 +115,9 @@ body {
     body .app .stored-contacts__header,
     body .app .contact-create__header,
     body .app .contact-edit__header,
+    body .app .stored-awards__header,
+    body .app .award-create__header,
+    body .app .award-edit__header,
     body .app .portfolio__header,
     body .app .about__header {
       display: flex;
@@ -124,6 +130,9 @@ body {
       body .app .stored-contacts__header .nav,
       body .app .contact-create__header .nav,
       body .app .contact-edit__header .nav,
+      body .app .stored-awards__header .nav,
+      body .app .award-create__header .nav,
+      body .app .award-edit__header .nav,
       body .app .portfolio__header .nav,
       body .app .about__header .nav {
         position: fixed;
@@ -136,6 +145,9 @@ body {
         body .app .stored-contacts__header .nav:hover .nav-link::after,
         body .app .contact-create__header .nav:hover .nav-link::after,
         body .app .contact-edit__header .nav:hover .nav-link::after,
+        body .app .stored-awards__header .nav:hover .nav-link::after,
+        body .app .award-create__header .nav:hover .nav-link::after,
+        body .app .award-edit__header .nav:hover .nav-link::after,
         body .app .portfolio__header .nav:hover .nav-link::after,
         body .app .about__header .nav:hover .nav-link::after {
           transform: scaleX(1);
@@ -146,6 +158,9 @@ body {
         body .app .stored-contacts__header .nav-link,
         body .app .contact-create__header .nav-link,
         body .app .contact-edit__header .nav-link,
+        body .app .stored-awards__header .nav-link,
+        body .app .award-create__header .nav-link,
+        body .app .award-edit__header .nav-link,
         body .app .portfolio__header .nav-link,
         body .app .about__header .nav-link {
           color: black;
@@ -165,6 +180,9 @@ body {
           body .app .stored-contacts__header .nav-link::after,
           body .app .contact-create__header .nav-link::after,
           body .app .contact-edit__header .nav-link::after,
+          body .app .stored-awards__header .nav-link::after,
+          body .app .award-create__header .nav-link::after,
+          body .app .award-edit__header .nav-link::after,
           body .app .portfolio__header .nav-link::after,
           body .app .about__header .nav-link::after {
             content: "";
@@ -185,6 +203,9 @@ body {
       body .app .stored-contacts__header-title,
       body .app .contact-create__header-title,
       body .app .contact-edit__header-title,
+      body .app .stored-awards__header-title,
+      body .app .award-create__header-title,
+      body .app .award-edit__header-title,
       body .app .portfolio__header-title,
       body .app .about__header-title {
         max-width: 100rem;
@@ -196,6 +217,9 @@ body {
         body .app .stored-contacts__header-title h1,
         body .app .contact-create__header-title h1,
         body .app .contact-edit__header-title h1,
+        body .app .stored-awards__header-title h1,
+        body .app .award-create__header-title h1,
+        body .app .award-edit__header-title h1,
         body .app .portfolio__header-title h1,
         body .app .about__header-title h1 {
           font-size: 5.575rem;
@@ -209,6 +233,9 @@ body {
     body .app .stored-contacts__main,
     body .app .contact-create__main,
     body .app .contact-edit__main,
+    body .app .stored-awards__main,
+    body .app .award-create__main,
+    body .app .award-edit__main,
     body .app .portfolio__main,
     body .app .about__main {
       max-width: 100rem;
@@ -220,6 +247,9 @@ body {
       body .app .stored-contacts__main-project,
       body .app .contact-create__main-project,
       body .app .contact-edit__main-project,
+      body .app .stored-awards__main-project,
+      body .app .award-create__main-project,
+      body .app .award-edit__main-project,
       body .app .portfolio__main-project,
       body .app .about__main-project {
         position: relative; }
@@ -229,6 +259,9 @@ body {
         body .app .stored-contacts__main-project .projects,
         body .app .contact-create__main-project .projects,
         body .app .contact-edit__main-project .projects,
+        body .app .stored-awards__main-project .projects,
+        body .app .award-create__main-project .projects,
+        body .app .award-edit__main-project .projects,
         body .app .portfolio__main-project .projects,
         body .app .about__main-project .projects {
           position: absolute;
@@ -246,6 +279,9 @@ body {
         body .app .stored-contacts__main-project .card,
         body .app .contact-create__main-project .card,
         body .app .contact-edit__main-project .card,
+        body .app .stored-awards__main-project .card,
+        body .app .award-create__main-project .card,
+        body .app .award-edit__main-project .card,
         body .app .portfolio__main-project .card,
         body .app .about__main-project .card {
           position: relative;
@@ -262,6 +298,9 @@ body {
           body .app .stored-contacts__main-project .card:hover .card-img-overlay,
           body .app .contact-create__main-project .card:hover .card-img-overlay,
           body .app .contact-edit__main-project .card:hover .card-img-overlay,
+          body .app .stored-awards__main-project .card:hover .card-img-overlay,
+          body .app .award-create__main-project .card:hover .card-img-overlay,
+          body .app .award-edit__main-project .card:hover .card-img-overlay,
           body .app .portfolio__main-project .card:hover .card-img-overlay,
           body .app .about__main-project .card:hover .card-img-overlay {
             background: unset; }
@@ -271,6 +310,9 @@ body {
           body .app .stored-contacts__main-project .card:hover .card-img,
           body .app .contact-create__main-project .card:hover .card-img,
           body .app .contact-edit__main-project .card:hover .card-img,
+          body .app .stored-awards__main-project .card:hover .card-img,
+          body .app .award-create__main-project .card:hover .card-img,
+          body .app .award-edit__main-project .card:hover .card-img,
           body .app .portfolio__main-project .card:hover .card-img,
           body .app .about__main-project .card:hover .card-img {
             transform: scale(1); }
@@ -280,6 +322,9 @@ body {
           body .app .stored-contacts__main-project .card:hover .card-title,
           body .app .contact-create__main-project .card:hover .card-title,
           body .app .contact-edit__main-project .card:hover .card-title,
+          body .app .stored-awards__main-project .card:hover .card-title,
+          body .app .award-create__main-project .card:hover .card-title,
+          body .app .award-edit__main-project .card:hover .card-title,
           body .app .portfolio__main-project .card:hover .card-title,
           body .app .about__main-project .card:hover .card-title {
             background-image: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
@@ -295,6 +340,9 @@ body {
           body .app .stored-contacts__main-project .card-img,
           body .app .contact-create__main-project .card-img,
           body .app .contact-edit__main-project .card-img,
+          body .app .stored-awards__main-project .card-img,
+          body .app .award-create__main-project .card-img,
+          body .app .award-edit__main-project .card-img,
           body .app .portfolio__main-project .card-img,
           body .app .about__main-project .card-img {
             height: 100%;
@@ -308,6 +356,9 @@ body {
           body .app .stored-contacts__main-project .card-img-overlay,
           body .app .contact-create__main-project .card-img-overlay,
           body .app .contact-edit__main-project .card-img-overlay,
+          body .app .stored-awards__main-project .card-img-overlay,
+          body .app .award-create__main-project .card-img-overlay,
+          body .app .award-edit__main-project .card-img-overlay,
           body .app .portfolio__main-project .card-img-overlay,
           body .app .about__main-project .card-img-overlay {
             display: flex;
@@ -322,6 +373,9 @@ body {
             body .app .stored-contacts__main-project .card-img-overlay .card-title,
             body .app .contact-create__main-project .card-img-overlay .card-title,
             body .app .contact-edit__main-project .card-img-overlay .card-title,
+            body .app .stored-awards__main-project .card-img-overlay .card-title,
+            body .app .award-create__main-project .card-img-overlay .card-title,
+            body .app .award-edit__main-project .card-img-overlay .card-title,
             body .app .portfolio__main-project .card-img-overlay .card-title,
             body .app .about__main-project .card-img-overlay .card-title {
               text-align: center;
@@ -333,6 +387,9 @@ body {
       body .app .stored-contacts__main-brand,
       body .app .contact-create__main-brand,
       body .app .contact-edit__main-brand,
+      body .app .stored-awards__main-brand,
+      body .app .award-create__main-brand,
+      body .app .award-edit__main-brand,
       body .app .portfolio__main-brand,
       body .app .about__main-brand {
         position: relative; }
@@ -342,6 +399,9 @@ body {
         body .app .stored-contacts__main-brand .currently,
         body .app .contact-create__main-brand .currently,
         body .app .contact-edit__main-brand .currently,
+        body .app .stored-awards__main-brand .currently,
+        body .app .award-create__main-brand .currently,
+        body .app .award-edit__main-brand .currently,
         body .app .portfolio__main-brand .currently,
         body .app .about__main-brand .currently {
           position: absolute;
@@ -359,6 +419,9 @@ body {
         body .app .stored-contacts__main-brand .card,
         body .app .contact-create__main-brand .card,
         body .app .contact-edit__main-brand .card,
+        body .app .stored-awards__main-brand .card,
+        body .app .award-create__main-brand .card,
+        body .app .award-edit__main-brand .card,
         body .app .portfolio__main-brand .card,
         body .app .about__main-brand .card {
           border-radius: calc(0.25rem - 1px);
@@ -369,6 +432,9 @@ body {
           body .app .stored-contacts__main-brand .card-img,
           body .app .contact-create__main-brand .card-img,
           body .app .contact-edit__main-brand .card-img,
+          body .app .stored-awards__main-brand .card-img,
+          body .app .award-create__main-brand .card-img,
+          body .app .award-edit__main-brand .card-img,
           body .app .portfolio__main-brand .card-img,
           body .app .about__main-brand .card-img {
             height: 462px;
@@ -379,6 +445,9 @@ body {
           body .app .stored-contacts__main-brand .card-img-overlay,
           body .app .contact-create__main-brand .card-img-overlay,
           body .app .contact-edit__main-brand .card-img-overlay,
+          body .app .stored-awards__main-brand .card-img-overlay,
+          body .app .award-create__main-brand .card-img-overlay,
+          body .app .award-edit__main-brand .card-img-overlay,
           body .app .portfolio__main-brand .card-img-overlay,
           body .app .about__main-brand .card-img-overlay {
             display: flex;
@@ -389,6 +458,9 @@ body {
             body .app .stored-contacts__main-brand .card-img-overlay .card-title,
             body .app .contact-create__main-brand .card-img-overlay .card-title,
             body .app .contact-edit__main-brand .card-img-overlay .card-title,
+            body .app .stored-awards__main-brand .card-img-overlay .card-title,
+            body .app .award-create__main-brand .card-img-overlay .card-title,
+            body .app .award-edit__main-brand .card-img-overlay .card-title,
             body .app .portfolio__main-brand .card-img-overlay .card-title,
             body .app .about__main-brand .card-img-overlay .card-title {
               font-size: 5.575rem;
@@ -403,6 +475,9 @@ body {
               body .app .stored-contacts__main-brand .card-img-overlay .card-title span,
               body .app .contact-create__main-brand .card-img-overlay .card-title span,
               body .app .contact-edit__main-brand .card-img-overlay .card-title span,
+              body .app .stored-awards__main-brand .card-img-overlay .card-title span,
+              body .app .award-create__main-brand .card-img-overlay .card-title span,
+              body .app .award-edit__main-brand .card-img-overlay .card-title span,
               body .app .portfolio__main-brand .card-img-overlay .card-title span,
               body .app .about__main-brand .card-img-overlay .card-title span {
                 display: block; }
@@ -412,6 +487,9 @@ body {
             body .app .stored-contacts__main-brand .card-img-overlay .card-text,
             body .app .contact-create__main-brand .card-img-overlay .card-text,
             body .app .contact-edit__main-brand .card-img-overlay .card-text,
+            body .app .stored-awards__main-brand .card-img-overlay .card-text,
+            body .app .award-create__main-brand .card-img-overlay .card-text,
+            body .app .award-edit__main-brand .card-img-overlay .card-text,
             body .app .portfolio__main-brand .card-img-overlay .card-text,
             body .app .about__main-brand .card-img-overlay .card-text {
               position: absolute;
@@ -428,6 +506,9 @@ body {
               body .app .stored-contacts__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .contact-create__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .contact-edit__main-brand .card-img-overlay .card-text:hover a::after,
+              body .app .stored-awards__main-brand .card-img-overlay .card-text:hover a::after,
+              body .app .award-create__main-brand .card-img-overlay .card-text:hover a::after,
+              body .app .award-edit__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .portfolio__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .about__main-brand .card-img-overlay .card-text:hover a::after {
                 transform: scaleX(1);
@@ -438,6 +519,9 @@ body {
               body .app .stored-contacts__main-brand .card-img-overlay .card-text a,
               body .app .contact-create__main-brand .card-img-overlay .card-text a,
               body .app .contact-edit__main-brand .card-img-overlay .card-text a,
+              body .app .stored-awards__main-brand .card-img-overlay .card-text a,
+              body .app .award-create__main-brand .card-img-overlay .card-text a,
+              body .app .award-edit__main-brand .card-img-overlay .card-text a,
               body .app .portfolio__main-brand .card-img-overlay .card-text a,
               body .app .about__main-brand .card-img-overlay .card-text a {
                 color: white; }
@@ -447,6 +531,9 @@ body {
                 body .app .stored-contacts__main-brand .card-img-overlay .card-text a::after,
                 body .app .contact-create__main-brand .card-img-overlay .card-text a::after,
                 body .app .contact-edit__main-brand .card-img-overlay .card-text a::after,
+                body .app .stored-awards__main-brand .card-img-overlay .card-text a::after,
+                body .app .award-create__main-brand .card-img-overlay .card-text a::after,
+                body .app .award-edit__main-brand .card-img-overlay .card-text a::after,
                 body .app .portfolio__main-brand .card-img-overlay .card-text a::after,
                 body .app .about__main-brand .card-img-overlay .card-text a::after {
                   content: "";
@@ -466,6 +553,9 @@ body {
       body .app .stored-contacts__main .about__main-content,
       body .app .contact-create__main .about__main-content,
       body .app .contact-edit__main .about__main-content,
+      body .app .stored-awards__main .about__main-content,
+      body .app .award-create__main .about__main-content,
+      body .app .award-edit__main .about__main-content,
       body .app .portfolio__main .about__main-content,
       body .app .about__main .about__main-content {
         font-family: "Source Serif Pro", serif;
@@ -478,6 +568,9 @@ body {
         body .app .stored-contacts__main .about__main-content p,
         body .app .contact-create__main .about__main-content p,
         body .app .contact-edit__main .about__main-content p,
+        body .app .stored-awards__main .about__main-content p,
+        body .app .award-create__main .about__main-content p,
+        body .app .award-edit__main .about__main-content p,
         body .app .portfolio__main .about__main-content p,
         body .app .about__main .about__main-content p {
           margin-bottom: 40px; }
@@ -487,6 +580,9 @@ body {
         body .app .stored-contacts__main .about__main-content .download-cv,
         body .app .contact-create__main .about__main-content .download-cv,
         body .app .contact-edit__main .about__main-content .download-cv,
+        body .app .stored-awards__main .about__main-content .download-cv,
+        body .app .award-create__main .about__main-content .download-cv,
+        body .app .award-edit__main .about__main-content .download-cv,
         body .app .portfolio__main .about__main-content .download-cv,
         body .app .about__main .about__main-content .download-cv {
           font-size: 0.775rem;
@@ -502,6 +598,9 @@ body {
           body .app .stored-contacts__main .about__main-content .download-cv::after,
           body .app .contact-create__main .about__main-content .download-cv::after,
           body .app .contact-edit__main .about__main-content .download-cv::after,
+          body .app .stored-awards__main .about__main-content .download-cv::after,
+          body .app .award-create__main .about__main-content .download-cv::after,
+          body .app .award-edit__main .about__main-content .download-cv::after,
           body .app .portfolio__main .about__main-content .download-cv::after,
           body .app .about__main .about__main-content .download-cv::after {
             content: "";
@@ -531,6 +630,15 @@ body {
         body .app .contact-edit__main .about__main-content .education,
         body .app .contact-edit__main .about__main-content .experience,
         body .app .contact-edit__main .about__main-content .contact,
+        body .app .stored-awards__main .about__main-content .education,
+        body .app .stored-awards__main .about__main-content .experience,
+        body .app .stored-awards__main .about__main-content .contact,
+        body .app .award-create__main .about__main-content .education,
+        body .app .award-create__main .about__main-content .experience,
+        body .app .award-create__main .about__main-content .contact,
+        body .app .award-edit__main .about__main-content .education,
+        body .app .award-edit__main .about__main-content .experience,
+        body .app .award-edit__main .about__main-content .contact,
         body .app .portfolio__main .about__main-content .education,
         body .app .portfolio__main .about__main-content .experience,
         body .app .portfolio__main .about__main-content .contact,
@@ -556,6 +664,15 @@ body {
           body .app .contact-edit__main .about__main-content .education__title,
           body .app .contact-edit__main .about__main-content .experience__title,
           body .app .contact-edit__main .about__main-content .contact__title,
+          body .app .stored-awards__main .about__main-content .education__title,
+          body .app .stored-awards__main .about__main-content .experience__title,
+          body .app .stored-awards__main .about__main-content .contact__title,
+          body .app .award-create__main .about__main-content .education__title,
+          body .app .award-create__main .about__main-content .experience__title,
+          body .app .award-create__main .about__main-content .contact__title,
+          body .app .award-edit__main .about__main-content .education__title,
+          body .app .award-edit__main .about__main-content .experience__title,
+          body .app .award-edit__main .about__main-content .contact__title,
           body .app .portfolio__main .about__main-content .education__title,
           body .app .portfolio__main .about__main-content .experience__title,
           body .app .portfolio__main .about__main-content .contact__title,
@@ -587,6 +704,15 @@ body {
           body .app .contact-edit__main .about__main-content .education__content,
           body .app .contact-edit__main .about__main-content .experience__content,
           body .app .contact-edit__main .about__main-content .contact__content,
+          body .app .stored-awards__main .about__main-content .education__content,
+          body .app .stored-awards__main .about__main-content .experience__content,
+          body .app .stored-awards__main .about__main-content .contact__content,
+          body .app .award-create__main .about__main-content .education__content,
+          body .app .award-create__main .about__main-content .experience__content,
+          body .app .award-create__main .about__main-content .contact__content,
+          body .app .award-edit__main .about__main-content .education__content,
+          body .app .award-edit__main .about__main-content .experience__content,
+          body .app .award-edit__main .about__main-content .contact__content,
           body .app .portfolio__main .about__main-content .education__content,
           body .app .portfolio__main .about__main-content .experience__content,
           body .app .portfolio__main .about__main-content .contact__content,
@@ -616,6 +742,15 @@ body {
             body .app .contact-edit__main .about__main-content .education__content a,
             body .app .contact-edit__main .about__main-content .experience__content a,
             body .app .contact-edit__main .about__main-content .contact__content a,
+            body .app .stored-awards__main .about__main-content .education__content a,
+            body .app .stored-awards__main .about__main-content .experience__content a,
+            body .app .stored-awards__main .about__main-content .contact__content a,
+            body .app .award-create__main .about__main-content .education__content a,
+            body .app .award-create__main .about__main-content .experience__content a,
+            body .app .award-create__main .about__main-content .contact__content a,
+            body .app .award-edit__main .about__main-content .education__content a,
+            body .app .award-edit__main .about__main-content .experience__content a,
+            body .app .award-edit__main .about__main-content .contact__content a,
             body .app .portfolio__main .about__main-content .education__content a,
             body .app .portfolio__main .about__main-content .experience__content a,
             body .app .portfolio__main .about__main-content .contact__content a,
@@ -642,6 +777,15 @@ body {
             body .app .contact-edit__main .about__main-content .education__content .ig::after,
             body .app .contact-edit__main .about__main-content .experience__content .ig::after,
             body .app .contact-edit__main .about__main-content .contact__content .ig::after,
+            body .app .stored-awards__main .about__main-content .education__content .ig::after,
+            body .app .stored-awards__main .about__main-content .experience__content .ig::after,
+            body .app .stored-awards__main .about__main-content .contact__content .ig::after,
+            body .app .award-create__main .about__main-content .education__content .ig::after,
+            body .app .award-create__main .about__main-content .experience__content .ig::after,
+            body .app .award-create__main .about__main-content .contact__content .ig::after,
+            body .app .award-edit__main .about__main-content .education__content .ig::after,
+            body .app .award-edit__main .about__main-content .experience__content .ig::after,
+            body .app .award-edit__main .about__main-content .contact__content .ig::after,
             body .app .portfolio__main .about__main-content .education__content .ig::after,
             body .app .portfolio__main .about__main-content .experience__content .ig::after,
             body .app .portfolio__main .about__main-content .contact__content .ig::after,
@@ -668,6 +812,15 @@ body {
             body .app .contact-edit__main .about__main-content .education__content .ig:hover,
             body .app .contact-edit__main .about__main-content .experience__content .ig:hover,
             body .app .contact-edit__main .about__main-content .contact__content .ig:hover,
+            body .app .stored-awards__main .about__main-content .education__content .ig:hover,
+            body .app .stored-awards__main .about__main-content .experience__content .ig:hover,
+            body .app .stored-awards__main .about__main-content .contact__content .ig:hover,
+            body .app .award-create__main .about__main-content .education__content .ig:hover,
+            body .app .award-create__main .about__main-content .experience__content .ig:hover,
+            body .app .award-create__main .about__main-content .contact__content .ig:hover,
+            body .app .award-edit__main .about__main-content .education__content .ig:hover,
+            body .app .award-edit__main .about__main-content .experience__content .ig:hover,
+            body .app .award-edit__main .about__main-content .contact__content .ig:hover,
             body .app .portfolio__main .about__main-content .education__content .ig:hover,
             body .app .portfolio__main .about__main-content .experience__content .ig:hover,
             body .app .portfolio__main .about__main-content .contact__content .ig:hover,
@@ -693,6 +846,15 @@ body {
             body .app .contact-edit__main .about__main-content .education__content .ln::after,
             body .app .contact-edit__main .about__main-content .experience__content .ln::after,
             body .app .contact-edit__main .about__main-content .contact__content .ln::after,
+            body .app .stored-awards__main .about__main-content .education__content .ln::after,
+            body .app .stored-awards__main .about__main-content .experience__content .ln::after,
+            body .app .stored-awards__main .about__main-content .contact__content .ln::after,
+            body .app .award-create__main .about__main-content .education__content .ln::after,
+            body .app .award-create__main .about__main-content .experience__content .ln::after,
+            body .app .award-create__main .about__main-content .contact__content .ln::after,
+            body .app .award-edit__main .about__main-content .education__content .ln::after,
+            body .app .award-edit__main .about__main-content .experience__content .ln::after,
+            body .app .award-edit__main .about__main-content .contact__content .ln::after,
             body .app .portfolio__main .about__main-content .education__content .ln::after,
             body .app .portfolio__main .about__main-content .experience__content .ln::after,
             body .app .portfolio__main .about__main-content .contact__content .ln::after,
@@ -719,6 +881,15 @@ body {
             body .app .contact-edit__main .about__main-content .education__content .ln:hover,
             body .app .contact-edit__main .about__main-content .experience__content .ln:hover,
             body .app .contact-edit__main .about__main-content .contact__content .ln:hover,
+            body .app .stored-awards__main .about__main-content .education__content .ln:hover,
+            body .app .stored-awards__main .about__main-content .experience__content .ln:hover,
+            body .app .stored-awards__main .about__main-content .contact__content .ln:hover,
+            body .app .award-create__main .about__main-content .education__content .ln:hover,
+            body .app .award-create__main .about__main-content .experience__content .ln:hover,
+            body .app .award-create__main .about__main-content .contact__content .ln:hover,
+            body .app .award-edit__main .about__main-content .education__content .ln:hover,
+            body .app .award-edit__main .about__main-content .experience__content .ln:hover,
+            body .app .award-edit__main .about__main-content .contact__content .ln:hover,
             body .app .portfolio__main .about__main-content .education__content .ln:hover,
             body .app .portfolio__main .about__main-content .experience__content .ln:hover,
             body .app .portfolio__main .about__main-content .contact__content .ln:hover,
@@ -744,6 +915,15 @@ body {
             body .app .contact-edit__main .about__main-content .education__content .gh::after,
             body .app .contact-edit__main .about__main-content .experience__content .gh::after,
             body .app .contact-edit__main .about__main-content .contact__content .gh::after,
+            body .app .stored-awards__main .about__main-content .education__content .gh::after,
+            body .app .stored-awards__main .about__main-content .experience__content .gh::after,
+            body .app .stored-awards__main .about__main-content .contact__content .gh::after,
+            body .app .award-create__main .about__main-content .education__content .gh::after,
+            body .app .award-create__main .about__main-content .experience__content .gh::after,
+            body .app .award-create__main .about__main-content .contact__content .gh::after,
+            body .app .award-edit__main .about__main-content .education__content .gh::after,
+            body .app .award-edit__main .about__main-content .experience__content .gh::after,
+            body .app .award-edit__main .about__main-content .contact__content .gh::after,
             body .app .portfolio__main .about__main-content .education__content .gh::after,
             body .app .portfolio__main .about__main-content .experience__content .gh::after,
             body .app .portfolio__main .about__main-content .contact__content .gh::after,
@@ -770,6 +950,15 @@ body {
             body .app .contact-edit__main .about__main-content .education__content .gh:hover,
             body .app .contact-edit__main .about__main-content .experience__content .gh:hover,
             body .app .contact-edit__main .about__main-content .contact__content .gh:hover,
+            body .app .stored-awards__main .about__main-content .education__content .gh:hover,
+            body .app .stored-awards__main .about__main-content .experience__content .gh:hover,
+            body .app .stored-awards__main .about__main-content .contact__content .gh:hover,
+            body .app .award-create__main .about__main-content .education__content .gh:hover,
+            body .app .award-create__main .about__main-content .experience__content .gh:hover,
+            body .app .award-create__main .about__main-content .contact__content .gh:hover,
+            body .app .award-edit__main .about__main-content .education__content .gh:hover,
+            body .app .award-edit__main .about__main-content .experience__content .gh:hover,
+            body .app .award-edit__main .about__main-content .contact__content .gh:hover,
             body .app .portfolio__main .about__main-content .education__content .gh:hover,
             body .app .portfolio__main .about__main-content .experience__content .gh:hover,
             body .app .portfolio__main .about__main-content .contact__content .gh:hover,
@@ -795,6 +984,15 @@ body {
             body .app .contact-edit__main .about__main-content .education__content .email,
             body .app .contact-edit__main .about__main-content .experience__content .email,
             body .app .contact-edit__main .about__main-content .contact__content .email,
+            body .app .stored-awards__main .about__main-content .education__content .email,
+            body .app .stored-awards__main .about__main-content .experience__content .email,
+            body .app .stored-awards__main .about__main-content .contact__content .email,
+            body .app .award-create__main .about__main-content .education__content .email,
+            body .app .award-create__main .about__main-content .experience__content .email,
+            body .app .award-create__main .about__main-content .contact__content .email,
+            body .app .award-edit__main .about__main-content .education__content .email,
+            body .app .award-edit__main .about__main-content .experience__content .email,
+            body .app .award-edit__main .about__main-content .contact__content .email,
             body .app .portfolio__main .about__main-content .education__content .email,
             body .app .portfolio__main .about__main-content .experience__content .email,
             body .app .portfolio__main .about__main-content .contact__content .email,
@@ -820,6 +1018,15 @@ body {
               body .app .contact-edit__main .about__main-content .education__content .email::after,
               body .app .contact-edit__main .about__main-content .experience__content .email::after,
               body .app .contact-edit__main .about__main-content .contact__content .email::after,
+              body .app .stored-awards__main .about__main-content .education__content .email::after,
+              body .app .stored-awards__main .about__main-content .experience__content .email::after,
+              body .app .stored-awards__main .about__main-content .contact__content .email::after,
+              body .app .award-create__main .about__main-content .education__content .email::after,
+              body .app .award-create__main .about__main-content .experience__content .email::after,
+              body .app .award-create__main .about__main-content .contact__content .email::after,
+              body .app .award-edit__main .about__main-content .education__content .email::after,
+              body .app .award-edit__main .about__main-content .experience__content .email::after,
+              body .app .award-edit__main .about__main-content .contact__content .email::after,
               body .app .portfolio__main .about__main-content .education__content .email::after,
               body .app .portfolio__main .about__main-content .experience__content .email::after,
               body .app .portfolio__main .about__main-content .contact__content .email::after,
@@ -836,23 +1043,28 @@ body {
                 background: currentcolor;
                 opacity: 0.4; }
   body .app .stored-projects__table,
+  body .app .stored-awards__table,
   body .app .stored-contacts__table {
     color: white;
     font-family: "Source Serif Pro", serif;
     font-size: 1.3125rem;
     font-weight: 500; }
     body .app .stored-projects__table tbody tr,
+    body .app .stored-awards__table tbody tr,
     body .app .stored-contacts__table tbody tr {
       vertical-align: middle; }
       body .app .stored-projects__table tbody tr td,
+      body .app .stored-awards__table tbody tr td,
       body .app .stored-contacts__table tbody tr td {
         padding: 1.5rem 0.5rem; }
     body .app .stored-projects__table tbody .project-name,
+    body .app .stored-awards__table tbody .project-name,
     body .app .stored-contacts__table tbody .project-name {
       text-transform: uppercase;
       position: relative;
       cursor: pointer; }
       body .app .stored-projects__table tbody .project-name .project-banner,
+      body .app .stored-awards__table tbody .project-name .project-banner,
       body .app .stored-contacts__table tbody .project-name .project-banner {
         width: 200px;
         height: 120px;
@@ -863,6 +1075,7 @@ body {
         display: none;
         z-index: 9999; }
       body .app .stored-projects__table tbody .project-name:hover .project-banner,
+      body .app .stored-awards__table tbody .project-name:hover .project-banner,
       body .app .stored-contacts__table tbody .project-name:hover .project-banner {
         display: block; }
   body .app .bg-light .about__expertise {
@@ -928,6 +1141,8 @@ body {
               font-family: "Sequel", sans-serif;
               font-weight: 800;
               text-transform: uppercase; }
+  body .app .award-create__main form,
+  body .app .award-edit__main form,
   body .app .contact-create__main form,
   body .app .contact-edit__main form,
   body .app .project-create__main form,
@@ -935,6 +1150,8 @@ body {
     font-family: "Source Serif Pro", serif;
     font-size: 1.3125rem;
     font-weight: 500; }
+    body .app .award-create__main form input,
+    body .app .award-edit__main form input,
     body .app .contact-create__main form input,
     body .app .contact-edit__main form input,
     body .app .project-create__main form input,
@@ -942,6 +1159,8 @@ body {
       border-radius: 2px;
       padding: 1.375rem 1.75rem;
       font-size: 1.2rem; }
+      body .app .award-create__main form input:focus,
+      body .app .award-edit__main form input:focus,
       body .app .contact-create__main form input:focus,
       body .app .contact-edit__main form input:focus,
       body .app .project-create__main form input:focus,
