@@ -19,6 +19,7 @@ class MeController {
             .then((projects) => {
                 res.render("me/trash-projects", {
                     projects,
+                    success: req.flash("success"),
                 });
             })
             .catch(next);

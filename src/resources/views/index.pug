@@ -9,8 +9,10 @@ block content
                     span welcome to my website
                     br
                     span hi, i'm minh hoang.
+        .is-devider-100
         main.portfolio__main
             .portfolio__main-project
+                span.projects projects
                 .row 
                     each project in projects  
                         .col-md-4.col-sm-6.col-xs-12
@@ -18,8 +20,7 @@ block content
                                 img.card-img(src=project.banner, alt=project.name)
                                 .card-img-overlay
                                     h1.card-title=project.name
-                    
-            .is-devider-200
+            .is-devider-300
             .portfolio__main-brand
                 span.currently currently
                 .card.bg-dark.text-white(href="/")

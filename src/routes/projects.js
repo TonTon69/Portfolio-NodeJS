@@ -9,5 +9,6 @@ router.get("/:id/edit", projectController.edit);
 router.put("/:id", projectController.update);
 router.patch("/:id/restore", projectController.restore);
 router.delete("/:id", projectController.delete);
+router.delete("/:id/force", projectController.forceDelete);
 
 module.exports = router;

@@ -54,6 +54,16 @@ class ProjectController {
             })
             .catch(next);
     }
+
+    // [DELETE]/projects/:id/force
+    forceDelete(req, res, next) {
+        Project.deleteOne({ _id: req.params.id })
+            .then(() => {
+                req.flash("success", "Delete this project successfully!");
+                res.redirect("back");
+            })
+            .catch(next);
+    }
 }
 
 module.exports = new ProjectController();

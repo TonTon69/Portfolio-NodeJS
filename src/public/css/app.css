@@ -38,6 +38,9 @@ html {
   font-weight: 800;
   src: local("Sequel"), url("/src/public/fonts/Sequel-Bold.otf") format("otf"); }
 
+.is-devider-300 {
+  height: 300px; }
+
 .is-devider-200 {
   height: 200px; }
 
@@ -184,69 +187,92 @@ body {
       max-width: 100rem;
       padding-right: 3.75rem;
       padding-left: 3.75rem; }
-      body .app .stored-projects__main-project .card,
-      body .app .project-create__main-project .card,
-      body .app .project-edit__main-project .card,
-      body .app .portfolio__main-project .card,
-      body .app .about__main-project .card {
-        position: relative;
-        width: 445px;
-        height: 445px;
-        border: none;
-        border-radius: calc(0.25rem - 1px);
-        cursor: pointer;
-        overflow: hidden;
-        margin-bottom: 32px; }
-        body .app .stored-projects__main-project .card:hover .card-img-overlay,
-        body .app .project-create__main-project .card:hover .card-img-overlay,
-        body .app .project-edit__main-project .card:hover .card-img-overlay,
-        body .app .portfolio__main-project .card:hover .card-img-overlay,
-        body .app .about__main-project .card:hover .card-img-overlay {
-          background: unset; }
-        body .app .stored-projects__main-project .card:hover .card-img,
-        body .app .project-create__main-project .card:hover .card-img,
-        body .app .project-edit__main-project .card:hover .card-img,
-        body .app .portfolio__main-project .card:hover .card-img,
-        body .app .about__main-project .card:hover .card-img {
-          transform: scale(1); }
-        body .app .stored-projects__main-project .card:hover .card-title,
-        body .app .project-create__main-project .card:hover .card-title,
-        body .app .project-edit__main-project .card:hover .card-title,
-        body .app .portfolio__main-project .card:hover .card-title,
-        body .app .about__main-project .card:hover .card-title {
-          background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #57d75b 60%);
-          background-size: auto auto;
-          background-clip: border-box;
-          background-size: 200% auto;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          animation: textclip 1.5s linear infinite; }
-        body .app .stored-projects__main-project .card-img,
-        body .app .project-create__main-project .card-img,
-        body .app .project-edit__main-project .card-img,
-        body .app .portfolio__main-project .card-img,
-        body .app .about__main-project .card-img {
-          height: 100%;
-          transform: scale(1.2);
-          transition: all 0.5s ease; }
-        body .app .stored-projects__main-project .card-img-overlay,
-        body .app .project-create__main-project .card-img-overlay,
-        body .app .project-edit__main-project .card-img-overlay,
-        body .app .portfolio__main-project .card-img-overlay,
-        body .app .about__main-project .card-img-overlay {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: #1a1a1a;
-          transition: all 0.5s ease; }
-          body .app .stored-projects__main-project .card-img-overlay .card-title,
-          body .app .project-create__main-project .card-img-overlay .card-title,
-          body .app .project-edit__main-project .card-img-overlay .card-title,
-          body .app .portfolio__main-project .card-img-overlay .card-title,
-          body .app .about__main-project .card-img-overlay .card-title {
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 6px; }
+      body .app .stored-projects__main-project,
+      body .app .project-create__main-project,
+      body .app .project-edit__main-project,
+      body .app .portfolio__main-project,
+      body .app .about__main-project {
+        position: relative; }
+        body .app .stored-projects__main-project .projects,
+        body .app .project-create__main-project .projects,
+        body .app .project-edit__main-project .projects,
+        body .app .portfolio__main-project .projects,
+        body .app .about__main-project .projects {
+          position: absolute;
+          top: -26%;
+          left: -2.4%;
+          font-weight: 800;
+          font-size: 10rem;
+          line-height: 0.9;
+          text-transform: uppercase;
+          color: transparent;
+          -webkit-text-stroke: 1px white; }
+        body .app .stored-projects__main-project .card,
+        body .app .project-create__main-project .card,
+        body .app .project-edit__main-project .card,
+        body .app .portfolio__main-project .card,
+        body .app .about__main-project .card {
+          position: relative;
+          width: 445px;
+          height: 445px;
+          border: none;
+          border-radius: 0;
+          cursor: pointer;
+          overflow: hidden;
+          margin-bottom: 32px; }
+          body .app .stored-projects__main-project .card:hover .card-img-overlay,
+          body .app .project-create__main-project .card:hover .card-img-overlay,
+          body .app .project-edit__main-project .card:hover .card-img-overlay,
+          body .app .portfolio__main-project .card:hover .card-img-overlay,
+          body .app .about__main-project .card:hover .card-img-overlay {
+            background: unset; }
+          body .app .stored-projects__main-project .card:hover .card-img,
+          body .app .project-create__main-project .card:hover .card-img,
+          body .app .project-edit__main-project .card:hover .card-img,
+          body .app .portfolio__main-project .card:hover .card-img,
+          body .app .about__main-project .card:hover .card-img {
+            transform: scale(1); }
+          body .app .stored-projects__main-project .card:hover .card-title,
+          body .app .project-create__main-project .card:hover .card-title,
+          body .app .project-edit__main-project .card:hover .card-title,
+          body .app .portfolio__main-project .card:hover .card-title,
+          body .app .about__main-project .card:hover .card-title {
+            background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #57d75b 60%);
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 1.5s linear infinite; }
+          body .app .stored-projects__main-project .card-img,
+          body .app .project-create__main-project .card-img,
+          body .app .project-edit__main-project .card-img,
+          body .app .portfolio__main-project .card-img,
+          body .app .about__main-project .card-img {
+            height: 100%;
+            transform: scale(1.2);
+            transition: all 0.5s ease;
+            object-fit: cover;
+            border-radius: 0; }
+          body .app .stored-projects__main-project .card-img-overlay,
+          body .app .project-create__main-project .card-img-overlay,
+          body .app .project-edit__main-project .card-img-overlay,
+          body .app .portfolio__main-project .card-img-overlay,
+          body .app .about__main-project .card-img-overlay {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1a1a1a;
+            transition: all 0.5s ease;
+            border-radius: 0; }
+            body .app .stored-projects__main-project .card-img-overlay .card-title,
+            body .app .project-create__main-project .card-img-overlay .card-title,
+            body .app .project-edit__main-project .card-img-overlay .card-title,
+            body .app .portfolio__main-project .card-img-overlay .card-title,
+            body .app .about__main-project .card-img-overlay .card-title {
+              text-align: center;
+              text-transform: uppercase;
+              letter-spacing: 6px; }
       body .app .stored-projects__main-brand,
       body .app .project-create__main-brand,
       body .app .project-edit__main-brand,
@@ -617,6 +643,12 @@ body {
         body .app .portfolio__main .stored-projects__table tbody tr,
         body .app .about__main .stored-projects__table tbody tr {
           vertical-align: middle; }
+          body .app .stored-projects__main .stored-projects__table tbody tr td,
+          body .app .project-create__main .stored-projects__table tbody tr td,
+          body .app .project-edit__main .stored-projects__table tbody tr td,
+          body .app .portfolio__main .stored-projects__table tbody tr td,
+          body .app .about__main .stored-projects__table tbody tr td {
+            padding: 1.5rem 0.5rem; }
         body .app .stored-projects__main .stored-projects__table tbody .project-name,
         body .app .project-create__main .stored-projects__table tbody .project-name,
         body .app .project-edit__main .stored-projects__table tbody .project-name,
