@@ -29,7 +29,7 @@ class ProjectController {
     update(req, res, next) {
         Project.updateOne({ _id: req.params.id }, req.body)
             .then(() => {
-                req.flash("success", "Update project successfully!");
+                req.flash("success", "Update this project successfully!");
                 res.redirect("/me/stored/projects");
             })
             .catch(next);
@@ -39,7 +39,10 @@ class ProjectController {
     delete(req, res, next) {
         Project.delete({ _id: req.params.id })
             .then(() => {
-                req.flash("success", "Successfully saved to trash!");
+                req.flash(
+                    "success",
+                    "Successfully saved this project to trash!"
+                );
                 res.redirect("back");
             })
             .catch(next);

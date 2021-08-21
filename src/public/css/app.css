@@ -100,12 +100,18 @@ body {
   body .app .stored-projects,
   body .app .project-create,
   body .app .project-edit,
+  body .app .stored-contacts,
+  body .app .contact-create,
+  body .app .contact-edit,
   body .app .portfolio,
   body .app .about {
     padding-top: 100px; }
     body .app .stored-projects__header,
     body .app .project-create__header,
     body .app .project-edit__header,
+    body .app .stored-contacts__header,
+    body .app .contact-create__header,
+    body .app .contact-edit__header,
     body .app .portfolio__header,
     body .app .about__header {
       display: flex;
@@ -115,6 +121,9 @@ body {
       body .app .stored-projects__header .nav,
       body .app .project-create__header .nav,
       body .app .project-edit__header .nav,
+      body .app .stored-contacts__header .nav,
+      body .app .contact-create__header .nav,
+      body .app .contact-edit__header .nav,
       body .app .portfolio__header .nav,
       body .app .about__header .nav {
         position: fixed;
@@ -124,6 +133,9 @@ body {
         body .app .stored-projects__header .nav:hover .nav-link::after,
         body .app .project-create__header .nav:hover .nav-link::after,
         body .app .project-edit__header .nav:hover .nav-link::after,
+        body .app .stored-contacts__header .nav:hover .nav-link::after,
+        body .app .contact-create__header .nav:hover .nav-link::after,
+        body .app .contact-edit__header .nav:hover .nav-link::after,
         body .app .portfolio__header .nav:hover .nav-link::after,
         body .app .about__header .nav:hover .nav-link::after {
           transform: scaleX(1);
@@ -131,6 +143,9 @@ body {
         body .app .stored-projects__header .nav-link,
         body .app .project-create__header .nav-link,
         body .app .project-edit__header .nav-link,
+        body .app .stored-contacts__header .nav-link,
+        body .app .contact-create__header .nav-link,
+        body .app .contact-edit__header .nav-link,
         body .app .portfolio__header .nav-link,
         body .app .about__header .nav-link {
           color: black;
@@ -147,6 +162,9 @@ body {
           body .app .stored-projects__header .nav-link::after,
           body .app .project-create__header .nav-link::after,
           body .app .project-edit__header .nav-link::after,
+          body .app .stored-contacts__header .nav-link::after,
+          body .app .contact-create__header .nav-link::after,
+          body .app .contact-edit__header .nav-link::after,
           body .app .portfolio__header .nav-link::after,
           body .app .about__header .nav-link::after {
             content: "";
@@ -164,6 +182,9 @@ body {
       body .app .stored-projects__header-title,
       body .app .project-create__header-title,
       body .app .project-edit__header-title,
+      body .app .stored-contacts__header-title,
+      body .app .contact-create__header-title,
+      body .app .contact-edit__header-title,
       body .app .portfolio__header-title,
       body .app .about__header-title {
         max-width: 100rem;
@@ -172,6 +193,9 @@ body {
         body .app .stored-projects__header-title h1,
         body .app .project-create__header-title h1,
         body .app .project-edit__header-title h1,
+        body .app .stored-contacts__header-title h1,
+        body .app .contact-create__header-title h1,
+        body .app .contact-edit__header-title h1,
         body .app .portfolio__header-title h1,
         body .app .about__header-title h1 {
           font-size: 5.575rem;
@@ -182,6 +206,9 @@ body {
     body .app .stored-projects__main,
     body .app .project-create__main,
     body .app .project-edit__main,
+    body .app .stored-contacts__main,
+    body .app .contact-create__main,
+    body .app .contact-edit__main,
     body .app .portfolio__main,
     body .app .about__main {
       max-width: 100rem;
@@ -190,12 +217,18 @@ body {
       body .app .stored-projects__main-project,
       body .app .project-create__main-project,
       body .app .project-edit__main-project,
+      body .app .stored-contacts__main-project,
+      body .app .contact-create__main-project,
+      body .app .contact-edit__main-project,
       body .app .portfolio__main-project,
       body .app .about__main-project {
         position: relative; }
         body .app .stored-projects__main-project .projects,
         body .app .project-create__main-project .projects,
         body .app .project-edit__main-project .projects,
+        body .app .stored-contacts__main-project .projects,
+        body .app .contact-create__main-project .projects,
+        body .app .contact-edit__main-project .projects,
         body .app .portfolio__main-project .projects,
         body .app .about__main-project .projects {
           position: absolute;
@@ -210,6 +243,9 @@ body {
         body .app .stored-projects__main-project .card,
         body .app .project-create__main-project .card,
         body .app .project-edit__main-project .card,
+        body .app .stored-contacts__main-project .card,
+        body .app .contact-create__main-project .card,
+        body .app .contact-edit__main-project .card,
         body .app .portfolio__main-project .card,
         body .app .about__main-project .card {
           position: relative;
@@ -223,21 +259,30 @@ body {
           body .app .stored-projects__main-project .card:hover .card-img-overlay,
           body .app .project-create__main-project .card:hover .card-img-overlay,
           body .app .project-edit__main-project .card:hover .card-img-overlay,
+          body .app .stored-contacts__main-project .card:hover .card-img-overlay,
+          body .app .contact-create__main-project .card:hover .card-img-overlay,
+          body .app .contact-edit__main-project .card:hover .card-img-overlay,
           body .app .portfolio__main-project .card:hover .card-img-overlay,
           body .app .about__main-project .card:hover .card-img-overlay {
             background: unset; }
           body .app .stored-projects__main-project .card:hover .card-img,
           body .app .project-create__main-project .card:hover .card-img,
           body .app .project-edit__main-project .card:hover .card-img,
+          body .app .stored-contacts__main-project .card:hover .card-img,
+          body .app .contact-create__main-project .card:hover .card-img,
+          body .app .contact-edit__main-project .card:hover .card-img,
           body .app .portfolio__main-project .card:hover .card-img,
           body .app .about__main-project .card:hover .card-img {
             transform: scale(1); }
           body .app .stored-projects__main-project .card:hover .card-title,
           body .app .project-create__main-project .card:hover .card-title,
           body .app .project-edit__main-project .card:hover .card-title,
+          body .app .stored-contacts__main-project .card:hover .card-title,
+          body .app .contact-create__main-project .card:hover .card-title,
+          body .app .contact-edit__main-project .card:hover .card-title,
           body .app .portfolio__main-project .card:hover .card-title,
           body .app .about__main-project .card:hover .card-title {
-            background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #57d75b 60%);
+            background-image: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
             background-size: auto auto;
             background-clip: border-box;
             background-size: 200% auto;
@@ -247,6 +292,9 @@ body {
           body .app .stored-projects__main-project .card-img,
           body .app .project-create__main-project .card-img,
           body .app .project-edit__main-project .card-img,
+          body .app .stored-contacts__main-project .card-img,
+          body .app .contact-create__main-project .card-img,
+          body .app .contact-edit__main-project .card-img,
           body .app .portfolio__main-project .card-img,
           body .app .about__main-project .card-img {
             height: 100%;
@@ -257,6 +305,9 @@ body {
           body .app .stored-projects__main-project .card-img-overlay,
           body .app .project-create__main-project .card-img-overlay,
           body .app .project-edit__main-project .card-img-overlay,
+          body .app .stored-contacts__main-project .card-img-overlay,
+          body .app .contact-create__main-project .card-img-overlay,
+          body .app .contact-edit__main-project .card-img-overlay,
           body .app .portfolio__main-project .card-img-overlay,
           body .app .about__main-project .card-img-overlay {
             display: flex;
@@ -268,6 +319,9 @@ body {
             body .app .stored-projects__main-project .card-img-overlay .card-title,
             body .app .project-create__main-project .card-img-overlay .card-title,
             body .app .project-edit__main-project .card-img-overlay .card-title,
+            body .app .stored-contacts__main-project .card-img-overlay .card-title,
+            body .app .contact-create__main-project .card-img-overlay .card-title,
+            body .app .contact-edit__main-project .card-img-overlay .card-title,
             body .app .portfolio__main-project .card-img-overlay .card-title,
             body .app .about__main-project .card-img-overlay .card-title {
               text-align: center;
@@ -276,12 +330,18 @@ body {
       body .app .stored-projects__main-brand,
       body .app .project-create__main-brand,
       body .app .project-edit__main-brand,
+      body .app .stored-contacts__main-brand,
+      body .app .contact-create__main-brand,
+      body .app .contact-edit__main-brand,
       body .app .portfolio__main-brand,
       body .app .about__main-brand {
         position: relative; }
         body .app .stored-projects__main-brand .currently,
         body .app .project-create__main-brand .currently,
         body .app .project-edit__main-brand .currently,
+        body .app .stored-contacts__main-brand .currently,
+        body .app .contact-create__main-brand .currently,
+        body .app .contact-edit__main-brand .currently,
         body .app .portfolio__main-brand .currently,
         body .app .about__main-brand .currently {
           position: absolute;
@@ -296,6 +356,9 @@ body {
         body .app .stored-projects__main-brand .card,
         body .app .project-create__main-brand .card,
         body .app .project-edit__main-brand .card,
+        body .app .stored-contacts__main-brand .card,
+        body .app .contact-create__main-brand .card,
+        body .app .contact-edit__main-brand .card,
         body .app .portfolio__main-brand .card,
         body .app .about__main-brand .card {
           border-radius: calc(0.25rem - 1px);
@@ -303,6 +366,9 @@ body {
           body .app .stored-projects__main-brand .card-img,
           body .app .project-create__main-brand .card-img,
           body .app .project-edit__main-brand .card-img,
+          body .app .stored-contacts__main-brand .card-img,
+          body .app .contact-create__main-brand .card-img,
+          body .app .contact-edit__main-brand .card-img,
           body .app .portfolio__main-brand .card-img,
           body .app .about__main-brand .card-img {
             height: 462px;
@@ -310,6 +376,9 @@ body {
           body .app .stored-projects__main-brand .card-img-overlay,
           body .app .project-create__main-brand .card-img-overlay,
           body .app .project-edit__main-brand .card-img-overlay,
+          body .app .stored-contacts__main-brand .card-img-overlay,
+          body .app .contact-create__main-brand .card-img-overlay,
+          body .app .contact-edit__main-brand .card-img-overlay,
           body .app .portfolio__main-brand .card-img-overlay,
           body .app .about__main-brand .card-img-overlay {
             display: flex;
@@ -317,6 +386,9 @@ body {
             body .app .stored-projects__main-brand .card-img-overlay .card-title,
             body .app .project-create__main-brand .card-img-overlay .card-title,
             body .app .project-edit__main-brand .card-img-overlay .card-title,
+            body .app .stored-contacts__main-brand .card-img-overlay .card-title,
+            body .app .contact-create__main-brand .card-img-overlay .card-title,
+            body .app .contact-edit__main-brand .card-img-overlay .card-title,
             body .app .portfolio__main-brand .card-img-overlay .card-title,
             body .app .about__main-brand .card-img-overlay .card-title {
               font-size: 5.575rem;
@@ -328,12 +400,18 @@ body {
               body .app .stored-projects__main-brand .card-img-overlay .card-title span,
               body .app .project-create__main-brand .card-img-overlay .card-title span,
               body .app .project-edit__main-brand .card-img-overlay .card-title span,
+              body .app .stored-contacts__main-brand .card-img-overlay .card-title span,
+              body .app .contact-create__main-brand .card-img-overlay .card-title span,
+              body .app .contact-edit__main-brand .card-img-overlay .card-title span,
               body .app .portfolio__main-brand .card-img-overlay .card-title span,
               body .app .about__main-brand .card-img-overlay .card-title span {
                 display: block; }
             body .app .stored-projects__main-brand .card-img-overlay .card-text,
             body .app .project-create__main-brand .card-img-overlay .card-text,
             body .app .project-edit__main-brand .card-img-overlay .card-text,
+            body .app .stored-contacts__main-brand .card-img-overlay .card-text,
+            body .app .contact-create__main-brand .card-img-overlay .card-text,
+            body .app .contact-edit__main-brand .card-img-overlay .card-text,
             body .app .portfolio__main-brand .card-img-overlay .card-text,
             body .app .about__main-brand .card-img-overlay .card-text {
               position: absolute;
@@ -347,6 +425,9 @@ body {
               body .app .stored-projects__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .project-create__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .project-edit__main-brand .card-img-overlay .card-text:hover a::after,
+              body .app .stored-contacts__main-brand .card-img-overlay .card-text:hover a::after,
+              body .app .contact-create__main-brand .card-img-overlay .card-text:hover a::after,
+              body .app .contact-edit__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .portfolio__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .about__main-brand .card-img-overlay .card-text:hover a::after {
                 transform: scaleX(1);
@@ -354,12 +435,18 @@ body {
               body .app .stored-projects__main-brand .card-img-overlay .card-text a,
               body .app .project-create__main-brand .card-img-overlay .card-text a,
               body .app .project-edit__main-brand .card-img-overlay .card-text a,
+              body .app .stored-contacts__main-brand .card-img-overlay .card-text a,
+              body .app .contact-create__main-brand .card-img-overlay .card-text a,
+              body .app .contact-edit__main-brand .card-img-overlay .card-text a,
               body .app .portfolio__main-brand .card-img-overlay .card-text a,
               body .app .about__main-brand .card-img-overlay .card-text a {
                 color: white; }
                 body .app .stored-projects__main-brand .card-img-overlay .card-text a::after,
                 body .app .project-create__main-brand .card-img-overlay .card-text a::after,
                 body .app .project-edit__main-brand .card-img-overlay .card-text a::after,
+                body .app .stored-contacts__main-brand .card-img-overlay .card-text a::after,
+                body .app .contact-create__main-brand .card-img-overlay .card-text a::after,
+                body .app .contact-edit__main-brand .card-img-overlay .card-text a::after,
                 body .app .portfolio__main-brand .card-img-overlay .card-text a::after,
                 body .app .about__main-brand .card-img-overlay .card-text a::after {
                   content: "";
@@ -376,6 +463,9 @@ body {
       body .app .stored-projects__main .about__main-content,
       body .app .project-create__main .about__main-content,
       body .app .project-edit__main .about__main-content,
+      body .app .stored-contacts__main .about__main-content,
+      body .app .contact-create__main .about__main-content,
+      body .app .contact-edit__main .about__main-content,
       body .app .portfolio__main .about__main-content,
       body .app .about__main .about__main-content {
         font-family: "Source Serif Pro", serif;
@@ -385,12 +475,18 @@ body {
         body .app .stored-projects__main .about__main-content p,
         body .app .project-create__main .about__main-content p,
         body .app .project-edit__main .about__main-content p,
+        body .app .stored-contacts__main .about__main-content p,
+        body .app .contact-create__main .about__main-content p,
+        body .app .contact-edit__main .about__main-content p,
         body .app .portfolio__main .about__main-content p,
         body .app .about__main .about__main-content p {
           margin-bottom: 40px; }
         body .app .stored-projects__main .about__main-content .download-cv,
         body .app .project-create__main .about__main-content .download-cv,
         body .app .project-edit__main .about__main-content .download-cv,
+        body .app .stored-contacts__main .about__main-content .download-cv,
+        body .app .contact-create__main .about__main-content .download-cv,
+        body .app .contact-edit__main .about__main-content .download-cv,
         body .app .portfolio__main .about__main-content .download-cv,
         body .app .about__main .about__main-content .download-cv {
           font-size: 0.775rem;
@@ -403,6 +499,9 @@ body {
           body .app .stored-projects__main .about__main-content .download-cv::after,
           body .app .project-create__main .about__main-content .download-cv::after,
           body .app .project-edit__main .about__main-content .download-cv::after,
+          body .app .stored-contacts__main .about__main-content .download-cv::after,
+          body .app .contact-create__main .about__main-content .download-cv::after,
+          body .app .contact-edit__main .about__main-content .download-cv::after,
           body .app .portfolio__main .about__main-content .download-cv::after,
           body .app .about__main .about__main-content .download-cv::after {
             content: "";
@@ -423,6 +522,15 @@ body {
         body .app .project-edit__main .about__main-content .education,
         body .app .project-edit__main .about__main-content .experience,
         body .app .project-edit__main .about__main-content .contact,
+        body .app .stored-contacts__main .about__main-content .education,
+        body .app .stored-contacts__main .about__main-content .experience,
+        body .app .stored-contacts__main .about__main-content .contact,
+        body .app .contact-create__main .about__main-content .education,
+        body .app .contact-create__main .about__main-content .experience,
+        body .app .contact-create__main .about__main-content .contact,
+        body .app .contact-edit__main .about__main-content .education,
+        body .app .contact-edit__main .about__main-content .experience,
+        body .app .contact-edit__main .about__main-content .contact,
         body .app .portfolio__main .about__main-content .education,
         body .app .portfolio__main .about__main-content .experience,
         body .app .portfolio__main .about__main-content .contact,
@@ -439,6 +547,15 @@ body {
           body .app .project-edit__main .about__main-content .education__title,
           body .app .project-edit__main .about__main-content .experience__title,
           body .app .project-edit__main .about__main-content .contact__title,
+          body .app .stored-contacts__main .about__main-content .education__title,
+          body .app .stored-contacts__main .about__main-content .experience__title,
+          body .app .stored-contacts__main .about__main-content .contact__title,
+          body .app .contact-create__main .about__main-content .education__title,
+          body .app .contact-create__main .about__main-content .experience__title,
+          body .app .contact-create__main .about__main-content .contact__title,
+          body .app .contact-edit__main .about__main-content .education__title,
+          body .app .contact-edit__main .about__main-content .experience__title,
+          body .app .contact-edit__main .about__main-content .contact__title,
           body .app .portfolio__main .about__main-content .education__title,
           body .app .portfolio__main .about__main-content .experience__title,
           body .app .portfolio__main .about__main-content .contact__title,
@@ -461,6 +578,15 @@ body {
           body .app .project-edit__main .about__main-content .education__content,
           body .app .project-edit__main .about__main-content .experience__content,
           body .app .project-edit__main .about__main-content .contact__content,
+          body .app .stored-contacts__main .about__main-content .education__content,
+          body .app .stored-contacts__main .about__main-content .experience__content,
+          body .app .stored-contacts__main .about__main-content .contact__content,
+          body .app .contact-create__main .about__main-content .education__content,
+          body .app .contact-create__main .about__main-content .experience__content,
+          body .app .contact-create__main .about__main-content .contact__content,
+          body .app .contact-edit__main .about__main-content .education__content,
+          body .app .contact-edit__main .about__main-content .experience__content,
+          body .app .contact-edit__main .about__main-content .contact__content,
           body .app .portfolio__main .about__main-content .education__content,
           body .app .portfolio__main .about__main-content .experience__content,
           body .app .portfolio__main .about__main-content .contact__content,
@@ -481,6 +607,15 @@ body {
             body .app .project-edit__main .about__main-content .education__content a,
             body .app .project-edit__main .about__main-content .experience__content a,
             body .app .project-edit__main .about__main-content .contact__content a,
+            body .app .stored-contacts__main .about__main-content .education__content a,
+            body .app .stored-contacts__main .about__main-content .experience__content a,
+            body .app .stored-contacts__main .about__main-content .contact__content a,
+            body .app .contact-create__main .about__main-content .education__content a,
+            body .app .contact-create__main .about__main-content .experience__content a,
+            body .app .contact-create__main .about__main-content .contact__content a,
+            body .app .contact-edit__main .about__main-content .education__content a,
+            body .app .contact-edit__main .about__main-content .experience__content a,
+            body .app .contact-edit__main .about__main-content .contact__content a,
             body .app .portfolio__main .about__main-content .education__content a,
             body .app .portfolio__main .about__main-content .experience__content a,
             body .app .portfolio__main .about__main-content .contact__content a,
@@ -498,6 +633,15 @@ body {
             body .app .project-edit__main .about__main-content .education__content .ig::after,
             body .app .project-edit__main .about__main-content .experience__content .ig::after,
             body .app .project-edit__main .about__main-content .contact__content .ig::after,
+            body .app .stored-contacts__main .about__main-content .education__content .ig::after,
+            body .app .stored-contacts__main .about__main-content .experience__content .ig::after,
+            body .app .stored-contacts__main .about__main-content .contact__content .ig::after,
+            body .app .contact-create__main .about__main-content .education__content .ig::after,
+            body .app .contact-create__main .about__main-content .experience__content .ig::after,
+            body .app .contact-create__main .about__main-content .contact__content .ig::after,
+            body .app .contact-edit__main .about__main-content .education__content .ig::after,
+            body .app .contact-edit__main .about__main-content .experience__content .ig::after,
+            body .app .contact-edit__main .about__main-content .contact__content .ig::after,
             body .app .portfolio__main .about__main-content .education__content .ig::after,
             body .app .portfolio__main .about__main-content .experience__content .ig::after,
             body .app .portfolio__main .about__main-content .contact__content .ig::after,
@@ -515,6 +659,15 @@ body {
             body .app .project-edit__main .about__main-content .education__content .ig:hover,
             body .app .project-edit__main .about__main-content .experience__content .ig:hover,
             body .app .project-edit__main .about__main-content .contact__content .ig:hover,
+            body .app .stored-contacts__main .about__main-content .education__content .ig:hover,
+            body .app .stored-contacts__main .about__main-content .experience__content .ig:hover,
+            body .app .stored-contacts__main .about__main-content .contact__content .ig:hover,
+            body .app .contact-create__main .about__main-content .education__content .ig:hover,
+            body .app .contact-create__main .about__main-content .experience__content .ig:hover,
+            body .app .contact-create__main .about__main-content .contact__content .ig:hover,
+            body .app .contact-edit__main .about__main-content .education__content .ig:hover,
+            body .app .contact-edit__main .about__main-content .experience__content .ig:hover,
+            body .app .contact-edit__main .about__main-content .contact__content .ig:hover,
             body .app .portfolio__main .about__main-content .education__content .ig:hover,
             body .app .portfolio__main .about__main-content .experience__content .ig:hover,
             body .app .portfolio__main .about__main-content .contact__content .ig:hover,
@@ -531,6 +684,15 @@ body {
             body .app .project-edit__main .about__main-content .education__content .ln::after,
             body .app .project-edit__main .about__main-content .experience__content .ln::after,
             body .app .project-edit__main .about__main-content .contact__content .ln::after,
+            body .app .stored-contacts__main .about__main-content .education__content .ln::after,
+            body .app .stored-contacts__main .about__main-content .experience__content .ln::after,
+            body .app .stored-contacts__main .about__main-content .contact__content .ln::after,
+            body .app .contact-create__main .about__main-content .education__content .ln::after,
+            body .app .contact-create__main .about__main-content .experience__content .ln::after,
+            body .app .contact-create__main .about__main-content .contact__content .ln::after,
+            body .app .contact-edit__main .about__main-content .education__content .ln::after,
+            body .app .contact-edit__main .about__main-content .experience__content .ln::after,
+            body .app .contact-edit__main .about__main-content .contact__content .ln::after,
             body .app .portfolio__main .about__main-content .education__content .ln::after,
             body .app .portfolio__main .about__main-content .experience__content .ln::after,
             body .app .portfolio__main .about__main-content .contact__content .ln::after,
@@ -548,6 +710,15 @@ body {
             body .app .project-edit__main .about__main-content .education__content .ln:hover,
             body .app .project-edit__main .about__main-content .experience__content .ln:hover,
             body .app .project-edit__main .about__main-content .contact__content .ln:hover,
+            body .app .stored-contacts__main .about__main-content .education__content .ln:hover,
+            body .app .stored-contacts__main .about__main-content .experience__content .ln:hover,
+            body .app .stored-contacts__main .about__main-content .contact__content .ln:hover,
+            body .app .contact-create__main .about__main-content .education__content .ln:hover,
+            body .app .contact-create__main .about__main-content .experience__content .ln:hover,
+            body .app .contact-create__main .about__main-content .contact__content .ln:hover,
+            body .app .contact-edit__main .about__main-content .education__content .ln:hover,
+            body .app .contact-edit__main .about__main-content .experience__content .ln:hover,
+            body .app .contact-edit__main .about__main-content .contact__content .ln:hover,
             body .app .portfolio__main .about__main-content .education__content .ln:hover,
             body .app .portfolio__main .about__main-content .experience__content .ln:hover,
             body .app .portfolio__main .about__main-content .contact__content .ln:hover,
@@ -564,6 +735,15 @@ body {
             body .app .project-edit__main .about__main-content .education__content .gh::after,
             body .app .project-edit__main .about__main-content .experience__content .gh::after,
             body .app .project-edit__main .about__main-content .contact__content .gh::after,
+            body .app .stored-contacts__main .about__main-content .education__content .gh::after,
+            body .app .stored-contacts__main .about__main-content .experience__content .gh::after,
+            body .app .stored-contacts__main .about__main-content .contact__content .gh::after,
+            body .app .contact-create__main .about__main-content .education__content .gh::after,
+            body .app .contact-create__main .about__main-content .experience__content .gh::after,
+            body .app .contact-create__main .about__main-content .contact__content .gh::after,
+            body .app .contact-edit__main .about__main-content .education__content .gh::after,
+            body .app .contact-edit__main .about__main-content .experience__content .gh::after,
+            body .app .contact-edit__main .about__main-content .contact__content .gh::after,
             body .app .portfolio__main .about__main-content .education__content .gh::after,
             body .app .portfolio__main .about__main-content .experience__content .gh::after,
             body .app .portfolio__main .about__main-content .contact__content .gh::after,
@@ -581,6 +761,15 @@ body {
             body .app .project-edit__main .about__main-content .education__content .gh:hover,
             body .app .project-edit__main .about__main-content .experience__content .gh:hover,
             body .app .project-edit__main .about__main-content .contact__content .gh:hover,
+            body .app .stored-contacts__main .about__main-content .education__content .gh:hover,
+            body .app .stored-contacts__main .about__main-content .experience__content .gh:hover,
+            body .app .stored-contacts__main .about__main-content .contact__content .gh:hover,
+            body .app .contact-create__main .about__main-content .education__content .gh:hover,
+            body .app .contact-create__main .about__main-content .experience__content .gh:hover,
+            body .app .contact-create__main .about__main-content .contact__content .gh:hover,
+            body .app .contact-edit__main .about__main-content .education__content .gh:hover,
+            body .app .contact-edit__main .about__main-content .experience__content .gh:hover,
+            body .app .contact-edit__main .about__main-content .contact__content .gh:hover,
             body .app .portfolio__main .about__main-content .education__content .gh:hover,
             body .app .portfolio__main .about__main-content .experience__content .gh:hover,
             body .app .portfolio__main .about__main-content .contact__content .gh:hover,
@@ -597,6 +786,15 @@ body {
             body .app .project-edit__main .about__main-content .education__content .email,
             body .app .project-edit__main .about__main-content .experience__content .email,
             body .app .project-edit__main .about__main-content .contact__content .email,
+            body .app .stored-contacts__main .about__main-content .education__content .email,
+            body .app .stored-contacts__main .about__main-content .experience__content .email,
+            body .app .stored-contacts__main .about__main-content .contact__content .email,
+            body .app .contact-create__main .about__main-content .education__content .email,
+            body .app .contact-create__main .about__main-content .experience__content .email,
+            body .app .contact-create__main .about__main-content .contact__content .email,
+            body .app .contact-edit__main .about__main-content .education__content .email,
+            body .app .contact-edit__main .about__main-content .experience__content .email,
+            body .app .contact-edit__main .about__main-content .contact__content .email,
             body .app .portfolio__main .about__main-content .education__content .email,
             body .app .portfolio__main .about__main-content .experience__content .email,
             body .app .portfolio__main .about__main-content .contact__content .email,
@@ -613,6 +811,15 @@ body {
               body .app .project-edit__main .about__main-content .education__content .email::after,
               body .app .project-edit__main .about__main-content .experience__content .email::after,
               body .app .project-edit__main .about__main-content .contact__content .email::after,
+              body .app .stored-contacts__main .about__main-content .education__content .email::after,
+              body .app .stored-contacts__main .about__main-content .experience__content .email::after,
+              body .app .stored-contacts__main .about__main-content .contact__content .email::after,
+              body .app .contact-create__main .about__main-content .education__content .email::after,
+              body .app .contact-create__main .about__main-content .experience__content .email::after,
+              body .app .contact-create__main .about__main-content .contact__content .email::after,
+              body .app .contact-edit__main .about__main-content .education__content .email::after,
+              body .app .contact-edit__main .about__main-content .experience__content .email::after,
+              body .app .contact-edit__main .about__main-content .contact__content .email::after,
               body .app .portfolio__main .about__main-content .education__content .email::after,
               body .app .portfolio__main .about__main-content .experience__content .email::after,
               body .app .portfolio__main .about__main-content .contact__content .email::after,
@@ -628,54 +835,36 @@ body {
                 left: 0px;
                 background: currentcolor;
                 opacity: 0.4; }
-      body .app .stored-projects__main .stored-projects__table,
-      body .app .project-create__main .stored-projects__table,
-      body .app .project-edit__main .stored-projects__table,
-      body .app .portfolio__main .stored-projects__table,
-      body .app .about__main .stored-projects__table {
-        color: white;
-        font-family: "Source Serif Pro", serif;
-        font-size: 1.3125rem;
-        font-weight: 500; }
-        body .app .stored-projects__main .stored-projects__table tbody tr,
-        body .app .project-create__main .stored-projects__table tbody tr,
-        body .app .project-edit__main .stored-projects__table tbody tr,
-        body .app .portfolio__main .stored-projects__table tbody tr,
-        body .app .about__main .stored-projects__table tbody tr {
-          vertical-align: middle; }
-          body .app .stored-projects__main .stored-projects__table tbody tr td,
-          body .app .project-create__main .stored-projects__table tbody tr td,
-          body .app .project-edit__main .stored-projects__table tbody tr td,
-          body .app .portfolio__main .stored-projects__table tbody tr td,
-          body .app .about__main .stored-projects__table tbody tr td {
-            padding: 1.5rem 0.5rem; }
-        body .app .stored-projects__main .stored-projects__table tbody .project-name,
-        body .app .project-create__main .stored-projects__table tbody .project-name,
-        body .app .project-edit__main .stored-projects__table tbody .project-name,
-        body .app .portfolio__main .stored-projects__table tbody .project-name,
-        body .app .about__main .stored-projects__table tbody .project-name {
-          text-transform: uppercase;
-          position: relative;
-          cursor: pointer; }
-          body .app .stored-projects__main .stored-projects__table tbody .project-name .project-banner,
-          body .app .project-create__main .stored-projects__table tbody .project-name .project-banner,
-          body .app .project-edit__main .stored-projects__table tbody .project-name .project-banner,
-          body .app .portfolio__main .stored-projects__table tbody .project-name .project-banner,
-          body .app .about__main .stored-projects__table tbody .project-name .project-banner {
-            width: 200px;
-            height: 120px;
-            object-fit: cover;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            display: none;
-            z-index: 9999; }
-          body .app .stored-projects__main .stored-projects__table tbody .project-name:hover .project-banner,
-          body .app .project-create__main .stored-projects__table tbody .project-name:hover .project-banner,
-          body .app .project-edit__main .stored-projects__table tbody .project-name:hover .project-banner,
-          body .app .portfolio__main .stored-projects__table tbody .project-name:hover .project-banner,
-          body .app .about__main .stored-projects__table tbody .project-name:hover .project-banner {
-            display: block; }
+  body .app .stored-projects__table,
+  body .app .stored-contacts__table {
+    color: white;
+    font-family: "Source Serif Pro", serif;
+    font-size: 1.3125rem;
+    font-weight: 500; }
+    body .app .stored-projects__table tbody tr,
+    body .app .stored-contacts__table tbody tr {
+      vertical-align: middle; }
+      body .app .stored-projects__table tbody tr td,
+      body .app .stored-contacts__table tbody tr td {
+        padding: 1.5rem 0.5rem; }
+    body .app .stored-projects__table tbody .project-name,
+    body .app .stored-contacts__table tbody .project-name {
+      text-transform: uppercase;
+      position: relative;
+      cursor: pointer; }
+      body .app .stored-projects__table tbody .project-name .project-banner,
+      body .app .stored-contacts__table tbody .project-name .project-banner {
+        width: 200px;
+        height: 120px;
+        object-fit: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: none;
+        z-index: 9999; }
+      body .app .stored-projects__table tbody .project-name:hover .project-banner,
+      body .app .stored-contacts__table tbody .project-name:hover .project-banner {
+        display: block; }
   body .app .bg-light .about__expertise {
     position: relative;
     max-width: 100rem;
@@ -739,16 +928,22 @@ body {
               font-family: "Sequel", sans-serif;
               font-weight: 800;
               text-transform: uppercase; }
+  body .app .contact-create__main form,
+  body .app .contact-edit__main form,
   body .app .project-create__main form,
   body .app .project-edit__main form {
     font-family: "Source Serif Pro", serif;
     font-size: 1.3125rem;
     font-weight: 500; }
+    body .app .contact-create__main form input,
+    body .app .contact-edit__main form input,
     body .app .project-create__main form input,
     body .app .project-edit__main form input {
       border-radius: 2px;
       padding: 1.375rem 1.75rem;
       font-size: 1.2rem; }
+      body .app .contact-create__main form input:focus,
+      body .app .contact-edit__main form input:focus,
       body .app .project-create__main form input:focus,
       body .app .project-edit__main form input:focus {
         border-color: #000;

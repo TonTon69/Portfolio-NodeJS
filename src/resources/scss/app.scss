@@ -145,6 +145,9 @@ body {
         .stored-projects,
         .project-create,
         .project-edit,
+        .stored-contacts,
+        .contact-create,
+        .contact-edit,
         .portfolio,
         .about {
             padding-top: 100px;
@@ -251,11 +254,12 @@ body {
                                 transform: scale(1);
                             }
                             .card-title {
-                                background: linear-gradient(
+                                background-image: linear-gradient(
                                     to right,
-                                    #095fab 10%,
-                                    #25abe8 50%,
-                                    #57d75b 60%
+                                    #09f1b8,
+                                    #00a2ff,
+                                    #ff00d2,
+                                    #fed90f
                                 );
                                 background-size: auto auto;
                                 background-clip: border-box;
@@ -480,44 +484,45 @@ body {
                         }
                     }
                 }
+            }
+        }
 
-                .stored-projects {
-                    &__table {
-                        color: $white-color;
-                        font-family: "Source Serif Pro", serif;
-                        font-size: 1.3125rem;
-                        font-weight: weight(medium);
+        .stored-projects,
+        .stored-contacts {
+            &__table {
+                color: $white-color;
+                font-family: "Source Serif Pro", serif;
+                font-size: 1.3125rem;
+                font-weight: weight(medium);
 
-                        tbody {
-                            tr {
-                                vertical-align: middle;
+                tbody {
+                    tr {
+                        vertical-align: middle;
 
-                                td {
-                                    padding: 1.5rem 0.5rem;
-                                }
-                            }
+                        td {
+                            padding: 1.5rem 0.5rem;
+                        }
+                    }
 
-                            .project-name {
-                                text-transform: uppercase;
-                                position: relative;
-                                cursor: pointer;
+                    .project-name {
+                        text-transform: uppercase;
+                        position: relative;
+                        cursor: pointer;
 
-                                .project-banner {
-                                    width: 200px;
-                                    height: 120px;
-                                    object-fit: cover;
-                                    position: absolute;
-                                    top: 50%;
-                                    left: 50%;
-                                    display: none;
-                                    z-index: 9999;
-                                }
+                        .project-banner {
+                            width: 200px;
+                            height: 120px;
+                            object-fit: cover;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            display: none;
+                            z-index: 9999;
+                        }
 
-                                &:hover {
-                                    .project-banner {
-                                        display: block;
-                                    }
-                                }
+                        &:hover {
+                            .project-banner {
+                                display: block;
                             }
                         }
                     }
@@ -618,6 +623,8 @@ body {
             }
         }
 
+        .contact-create,
+        .contact-edit,
         .project-create,
         .project-edit {
             &__main {

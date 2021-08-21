@@ -1,0 +1,30 @@
+extends ../layouts/common
+block content 
+    seaction#contact-create.contact-create
+        header.contact-create__header 
+            nav.nav
+                a(href="/").nav-link portfolio
+            .contact-create__header-title
+                h1 create a new contact
+        main.contact-create__main
+            form(method="POST", action="/contacts/create")
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='field') Field
+                    .col-sm-10
+                        input#field.form-control(type='text', name='field', placeholder='Enter contact field (Ex: email)' required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='sign') Sign
+                    .col-sm-10
+                        input#sign.form-control(type='text', name='sign', placeholder='Enter contact sign (Ex: em)' required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='value') Value
+                    .col-sm-10
+                        input#value.form-control(type='text', name='value', placeholder='Enter contact value (Ex: demo@gmail.com)' required)
+                .is-devider-20 
+                .mb-3.row
+                    label.col-sm-2.col-form-label
+                    .col-sm-10
+                        a.btn.btn-primary.me-4(href='/me/stored/contacts') Close
+                        button.btn.btn-primary(type='submit') Create

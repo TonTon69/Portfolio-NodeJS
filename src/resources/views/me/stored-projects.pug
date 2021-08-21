@@ -39,7 +39,6 @@ block content
                                 a(href="/projects/" + project._id + "/edit").btn.btn-primary.me-2 Edit
                                 a(href="#", data-bs-toggle="modal", data-bs-target="#delete-project-modal", data-bs-id=project._id).btn.btn-primary.btn-delete Trash
                             
-                            // Delete hidden form
                             form(name="delete-project-form", method="POST")
 
                             // Confirm delete project

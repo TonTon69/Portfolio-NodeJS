@@ -4,10 +4,11 @@ const Contact = require("../models/Contact");
 class SiteController {
     // [GET]/
     index(req, res, next) {
-        Project.find({})
-            .then((projects) => {
+        Promise.all([Project.find({}), Contact.find({})])
+            .then(([projects, contacts]) => {
                 res.render("index", {
                     projects,
+                    contacts,
                 });
             })
             .catch(next);
