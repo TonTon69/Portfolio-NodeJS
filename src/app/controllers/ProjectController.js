@@ -67,6 +67,26 @@ class ProjectController {
             })
             .catch(next);
     }
+
+    // [POST]/projects/handle-form-actions
+    handleFormActions(req, res, next) {
+        switch (req.body.action) {
+            case "delete":
+                Project.delete({ _id: { $in: req.body.projectIds } })
+                    .then(() => {
+                        req.flash(
+                            "success",
+                            "All projects have been successfully saved to the trash!"
+                        );
+                        res.redirect("back");
+                    })
+                    .catch(next);
+                break;
+            default:
+                req.flash("error", "Action is invalid!");
+                res.redirect("back");
+        }
+    }
 }
 
 module.exports = new ProjectController();

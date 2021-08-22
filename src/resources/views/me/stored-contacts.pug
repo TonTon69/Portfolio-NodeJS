@@ -85,19 +85,6 @@ block content
                 deleteContactForm.submit();
             };
 
-            // Restore btn clicked
-            for (let item of restoreBtn) {
-                item.onclick = function (e) {
-                    e.preventDefault();
-                    var contactId = item.getAttribute("data-bs-id");
-                    restoreContactForm.setAttribute(
-                        "action",
-                        "/contacts/" + contactId + "/restore?_method=PATCH"
-                    );
-                    restoreContactForm.submit();
-                };
-            }
-
             // toast message
             let msgToast = '#{msg}';
             if(msgToast != ''){

@@ -87,19 +87,6 @@ block content
                 deleteAwardForm.submit();
             };
 
-            // Restore btn clicked
-            for (let item of restoreBtn) {
-                item.onclick = function (e) {
-                    e.preventDefault();
-                    var awardId = item.getAttribute("data-bs-id");
-                    restoreAwardForm.setAttribute(
-                        "action",
-                        "/awards/" + awardId + "/restore?_method=PATCH"
-                    );
-                    restoreAwardForm.submit();
-                };
-            }
-
             // toast message
             let msgToast = '#{msg}';
             if(msgToast != ''){

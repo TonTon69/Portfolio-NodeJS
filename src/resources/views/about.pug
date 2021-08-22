@@ -38,11 +38,13 @@ block content
                         .contact
                             .contact__title contact
                             .contact__content
-                                a(href="/").ig ig
-                                a(href="/").ln ln
-                                a(href="/").gh gh
-                                .is-devider-20
-                                a(href="mailto:hoanghuynh0609@gmail.com").email email
+                                each contact in contacts
+                                    - var fieldMe = contact.field
+                                    if fieldMe !== "email"
+                                        a(href=contact.value, class=contact.sign, target="_blank")=contact.sign
+                                    else
+                                        .is-devider-20
+                                        a(href=`mailto:${contact.value}`, class=contact.field)=contact.field
                 .is-devider-200
         .bg-light
             .is-devider-100
@@ -89,21 +91,12 @@ block content
                 .is-devider-40
                 table.table.about__awards-table
                     tbody
-                        tr
-                            td 
-                                span Student of 5 merits
-                            td Faculty Level
-                            td Achieved
-                            td 2020
-                        tr
-                            td
-                                span scientific sports festival
-                            td Chess
-                            td Golden
-                            td 2019
-                        tr
-                            td
-                                span scientific sports festival
-                            td Chess
-                            td Golden
-                            td 2018
+                        each award in awards
+                            tr
+                                td 
+                                    span=award.name
+                                td=award.subject
+                                td=award.prize
+                                td=award.year
+                        else
+                            p.text-center.develop-note Updating, please try again. Thanks...

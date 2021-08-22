@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Sequel";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Sequel"), url("/src/public/fonts/Sequel-Bold.otf") format("otf"); }
+
 * {
   margin: 0;
   padding: 0;
@@ -32,11 +38,82 @@ html {
   .btn.btn-delete:hover {
     background: #bb2d3b; }
 
-@font-face {
-  font-family: "Sequel";
-  font-style: normal;
-  font-weight: 800;
-  src: local("Sequel"), url("/src/public/fonts/Sequel-Bold.otf") format("otf"); }
+.develop-note, body .app .stored-projects__header .nav-link,
+body .app .project-create__header .nav-link,
+body .app .project-edit__header .nav-link,
+body .app .stored-contacts__header .nav-link,
+body .app .contact-create__header .nav-link,
+body .app .contact-edit__header .nav-link,
+body .app .stored-awards__header .nav-link,
+body .app .award-create__header .nav-link,
+body .app .award-edit__header .nav-link,
+body .app .portfolio__header .nav-link,
+body .app .about__header .nav-link, body .app .stored-projects__main-brand .card-img-overlay .card-text,
+body .app .project-create__main-brand .card-img-overlay .card-text,
+body .app .project-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-contacts__main-brand .card-img-overlay .card-text,
+body .app .contact-create__main-brand .card-img-overlay .card-text,
+body .app .contact-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-awards__main-brand .card-img-overlay .card-text,
+body .app .award-create__main-brand .card-img-overlay .card-text,
+body .app .award-edit__main-brand .card-img-overlay .card-text,
+body .app .portfolio__main-brand .card-img-overlay .card-text,
+body .app .about__main-brand .card-img-overlay .card-text, body .app .stored-projects__main .about__main-content .download-cv,
+body .app .project-create__main .about__main-content .download-cv,
+body .app .project-edit__main .about__main-content .download-cv,
+body .app .stored-contacts__main .about__main-content .download-cv,
+body .app .contact-create__main .about__main-content .download-cv,
+body .app .contact-edit__main .about__main-content .download-cv,
+body .app .stored-awards__main .about__main-content .download-cv,
+body .app .award-create__main .about__main-content .download-cv,
+body .app .award-edit__main .about__main-content .download-cv,
+body .app .portfolio__main .about__main-content .download-cv,
+body .app .about__main .about__main-content .download-cv, body .app .stored-projects__main .about__main-content .education__title,
+body .app .stored-projects__main .about__main-content .experience__title,
+body .app .stored-projects__main .about__main-content .contact__title,
+body .app .project-create__main .about__main-content .education__title,
+body .app .project-create__main .about__main-content .experience__title,
+body .app .project-create__main .about__main-content .contact__title,
+body .app .project-edit__main .about__main-content .education__title,
+body .app .project-edit__main .about__main-content .experience__title,
+body .app .project-edit__main .about__main-content .contact__title,
+body .app .stored-contacts__main .about__main-content .education__title,
+body .app .stored-contacts__main .about__main-content .experience__title,
+body .app .stored-contacts__main .about__main-content .contact__title,
+body .app .contact-create__main .about__main-content .education__title,
+body .app .contact-create__main .about__main-content .experience__title,
+body .app .contact-create__main .about__main-content .contact__title,
+body .app .contact-edit__main .about__main-content .education__title,
+body .app .contact-edit__main .about__main-content .experience__title,
+body .app .contact-edit__main .about__main-content .contact__title,
+body .app .stored-awards__main .about__main-content .education__title,
+body .app .stored-awards__main .about__main-content .experience__title,
+body .app .stored-awards__main .about__main-content .contact__title,
+body .app .award-create__main .about__main-content .education__title,
+body .app .award-create__main .about__main-content .experience__title,
+body .app .award-create__main .about__main-content .contact__title,
+body .app .award-edit__main .about__main-content .education__title,
+body .app .award-edit__main .about__main-content .experience__title,
+body .app .award-edit__main .about__main-content .contact__title,
+body .app .portfolio__main .about__main-content .education__title,
+body .app .portfolio__main .about__main-content .experience__title,
+body .app .portfolio__main .about__main-content .contact__title,
+body .app .about__main .about__main-content .education__title,
+body .app .about__main .about__main-content .experience__title,
+body .app .about__main .about__main-content .contact__title, body .app .footer__contact-title, body .app .to-top {
+  text-transform: uppercase;
+  font-size: 0.775rem;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.5em;
+  line-height: 1; }
+
+input[type="checkbox"] {
+  border-radius: 0.15rem;
+  border: 2px solid #637381;
+  width: 1em;
+  height: 1em;
+  cursor: pointer; }
 
 .is-devider-300 {
   height: 300px; }
@@ -164,12 +241,6 @@ body {
         body .app .portfolio__header .nav-link,
         body .app .about__header .nav-link {
           color: black;
-          font-size: 0.775rem;
-          font-weight: 500;
-          font-family: "Oswald", sans-serif;
-          text-transform: uppercase;
-          line-height: 1;
-          letter-spacing: 0.5em;
           display: inline-block;
           position: relative;
           padding: 0;
@@ -494,12 +565,7 @@ body {
             body .app .about__main-brand .card-img-overlay .card-text {
               position: absolute;
               bottom: 32px;
-              right: 48px;
-              text-transform: uppercase;
-              font-size: 0.775rem;
-              font-weight: 500;
-              font-family: "Oswald", sans-serif;
-              letter-spacing: 0.5em; }
+              right: 48px; }
               body .app .stored-projects__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .project-create__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .project-edit__main-brand .card-img-overlay .card-text:hover a::after,
@@ -585,11 +651,6 @@ body {
         body .app .award-edit__main .about__main-content .download-cv,
         body .app .portfolio__main .about__main-content .download-cv,
         body .app .about__main .about__main-content .download-cv {
-          font-size: 0.775rem;
-          font-weight: 500;
-          font-family: "Oswald", sans-serif;
-          text-transform: uppercase;
-          letter-spacing: 0.5em;
           color: white;
           position: relative; }
           body .app .stored-projects__main .about__main-content .download-cv::after,
@@ -679,11 +740,6 @@ body {
           body .app .about__main .about__main-content .education__title,
           body .app .about__main .about__main-content .experience__title,
           body .app .about__main .about__main-content .contact__title {
-            font-size: 0.775rem;
-            font-weight: 500;
-            font-family: "Oswald", sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 0.5em;
             margin-bottom: 10px;
             opacity: 0.6; }
           body .app .stored-projects__main .about__main-content .education__content,
@@ -966,6 +1022,75 @@ body {
             body .app .about__main .about__main-content .experience__content .gh:hover,
             body .app .about__main .about__main-content .contact__content .gh:hover {
               color: #444; }
+            body .app .stored-projects__main .about__main-content .education__content .fb::after,
+            body .app .stored-projects__main .about__main-content .experience__content .fb::after,
+            body .app .stored-projects__main .about__main-content .contact__content .fb::after,
+            body .app .project-create__main .about__main-content .education__content .fb::after,
+            body .app .project-create__main .about__main-content .experience__content .fb::after,
+            body .app .project-create__main .about__main-content .contact__content .fb::after,
+            body .app .project-edit__main .about__main-content .education__content .fb::after,
+            body .app .project-edit__main .about__main-content .experience__content .fb::after,
+            body .app .project-edit__main .about__main-content .contact__content .fb::after,
+            body .app .stored-contacts__main .about__main-content .education__content .fb::after,
+            body .app .stored-contacts__main .about__main-content .experience__content .fb::after,
+            body .app .stored-contacts__main .about__main-content .contact__content .fb::after,
+            body .app .contact-create__main .about__main-content .education__content .fb::after,
+            body .app .contact-create__main .about__main-content .experience__content .fb::after,
+            body .app .contact-create__main .about__main-content .contact__content .fb::after,
+            body .app .contact-edit__main .about__main-content .education__content .fb::after,
+            body .app .contact-edit__main .about__main-content .experience__content .fb::after,
+            body .app .contact-edit__main .about__main-content .contact__content .fb::after,
+            body .app .stored-awards__main .about__main-content .education__content .fb::after,
+            body .app .stored-awards__main .about__main-content .experience__content .fb::after,
+            body .app .stored-awards__main .about__main-content .contact__content .fb::after,
+            body .app .award-create__main .about__main-content .education__content .fb::after,
+            body .app .award-create__main .about__main-content .experience__content .fb::after,
+            body .app .award-create__main .about__main-content .contact__content .fb::after,
+            body .app .award-edit__main .about__main-content .education__content .fb::after,
+            body .app .award-edit__main .about__main-content .experience__content .fb::after,
+            body .app .award-edit__main .about__main-content .contact__content .fb::after,
+            body .app .portfolio__main .about__main-content .education__content .fb::after,
+            body .app .portfolio__main .about__main-content .experience__content .fb::after,
+            body .app .portfolio__main .about__main-content .contact__content .fb::after,
+            body .app .about__main .about__main-content .education__content .fb::after,
+            body .app .about__main .about__main-content .experience__content .fb::after,
+            body .app .about__main .about__main-content .contact__content .fb::after {
+              content: ".";
+              color: #097ceb; }
+            body .app .stored-projects__main .about__main-content .education__content .fb:hover,
+            body .app .stored-projects__main .about__main-content .experience__content .fb:hover,
+            body .app .stored-projects__main .about__main-content .contact__content .fb:hover,
+            body .app .project-create__main .about__main-content .education__content .fb:hover,
+            body .app .project-create__main .about__main-content .experience__content .fb:hover,
+            body .app .project-create__main .about__main-content .contact__content .fb:hover,
+            body .app .project-edit__main .about__main-content .education__content .fb:hover,
+            body .app .project-edit__main .about__main-content .experience__content .fb:hover,
+            body .app .project-edit__main .about__main-content .contact__content .fb:hover,
+            body .app .stored-contacts__main .about__main-content .education__content .fb:hover,
+            body .app .stored-contacts__main .about__main-content .experience__content .fb:hover,
+            body .app .stored-contacts__main .about__main-content .contact__content .fb:hover,
+            body .app .contact-create__main .about__main-content .education__content .fb:hover,
+            body .app .contact-create__main .about__main-content .experience__content .fb:hover,
+            body .app .contact-create__main .about__main-content .contact__content .fb:hover,
+            body .app .contact-edit__main .about__main-content .education__content .fb:hover,
+            body .app .contact-edit__main .about__main-content .experience__content .fb:hover,
+            body .app .contact-edit__main .about__main-content .contact__content .fb:hover,
+            body .app .stored-awards__main .about__main-content .education__content .fb:hover,
+            body .app .stored-awards__main .about__main-content .experience__content .fb:hover,
+            body .app .stored-awards__main .about__main-content .contact__content .fb:hover,
+            body .app .award-create__main .about__main-content .education__content .fb:hover,
+            body .app .award-create__main .about__main-content .experience__content .fb:hover,
+            body .app .award-create__main .about__main-content .contact__content .fb:hover,
+            body .app .award-edit__main .about__main-content .education__content .fb:hover,
+            body .app .award-edit__main .about__main-content .experience__content .fb:hover,
+            body .app .award-edit__main .about__main-content .contact__content .fb:hover,
+            body .app .portfolio__main .about__main-content .education__content .fb:hover,
+            body .app .portfolio__main .about__main-content .experience__content .fb:hover,
+            body .app .portfolio__main .about__main-content .contact__content .fb:hover,
+            body .app .about__main .about__main-content .education__content .fb:hover,
+            body .app .about__main .about__main-content .experience__content .fb:hover,
+            body .app .about__main .about__main-content .contact__content .fb:hover {
+              color: #097ceb; }
             body .app .stored-projects__main .about__main-content .education__content .email,
             body .app .stored-projects__main .about__main-content .experience__content .email,
             body .app .stored-projects__main .about__main-content .contact__content .email,
@@ -1078,6 +1203,62 @@ body {
       body .app .stored-awards__table tbody .project-name:hover .project-banner,
       body .app .stored-contacts__table tbody .project-name:hover .project-banner {
         display: block; }
+  body .app .stored-projects__link,
+  body .app .stored-awards__link,
+  body .app .stored-contacts__link {
+    position: relative; }
+    body .app .stored-projects__link .delete-select-all,
+    body .app .stored-awards__link .delete-select-all,
+    body .app .stored-contacts__link .delete-select-all {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      top: -100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 3rem;
+      background: #212b36;
+      color: white;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease; }
+      body .app .stored-projects__link .delete-select-all span,
+      body .app .stored-awards__link .delete-select-all span,
+      body .app .stored-contacts__link .delete-select-all span {
+        font-weight: 500;
+        font-size: 1.2rem; }
+      body .app .stored-projects__link .delete-select-all button,
+      body .app .stored-awards__link .delete-select-all button,
+      body .app .stored-contacts__link .delete-select-all button {
+        outline: none;
+        border: none;
+        background: transparent;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%; }
+        body .app .stored-projects__link .delete-select-all button:hover,
+        body .app .stored-awards__link .delete-select-all button:hover,
+        body .app .stored-contacts__link .delete-select-all button:hover {
+          background: #171f27; }
+        body .app .stored-projects__link .delete-select-all button i,
+        body .app .stored-awards__link .delete-select-all button i,
+        body .app .stored-contacts__link .delete-select-all button i {
+          font-size: 1.4rem;
+          color: white;
+          cursor: pointer; }
+  body .app .stored-projects__link.delete-all-show .delete-select-all,
+  body .app .stored-awards__link.delete-all-show .delete-select-all,
+  body .app .stored-contacts__link.delete-all-show .delete-select-all {
+    opacity: 1;
+    visibility: visible; }
+  body .app .stored-projects__link.delete-all-show a,
+  body .app .stored-awards__link.delete-all-show a,
+  body .app .stored-contacts__link.delete-all-show a {
+    opacity: 0; }
   body .app .bg-light .about__expertise {
     position: relative;
     max-width: 100rem;
@@ -1171,12 +1352,6 @@ body {
     max-width: 100rem;
     padding-right: 3.75rem;
     padding-left: 3.75rem; }
-    body .app .footer__contact-title {
-      text-transform: uppercase;
-      font-size: 0.775rem;
-      font-weight: 500;
-      font-family: "Oswald", sans-serif;
-      letter-spacing: 0.5em; }
     body .app .footer__contact-socials {
       text-transform: uppercase;
       font-size: 3rem;
@@ -1221,13 +1396,7 @@ body {
           background: currentcolor;
           opacity: 0.4; }
   body .app .to-top {
-    text-transform: uppercase;
-    font-size: 0.775rem;
-    font-weight: 400;
-    font-family: "Oswald", sans-serif;
     margin-right: 15px;
-    line-height: 1;
-    letter-spacing: 0.5em;
     opacity: 0.4; }
     body .app .to-top span {
       padding: 2.5rem;

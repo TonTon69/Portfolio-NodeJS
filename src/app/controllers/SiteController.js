@@ -1,5 +1,6 @@
 const Project = require("../models/Project");
 const Contact = require("../models/Contact");
+const Award = require("../models/Award");
 
 class SiteController {
     // [GET]/
@@ -15,8 +16,15 @@ class SiteController {
     }
 
     // [GET]/about
-    about(req, res) {
-        res.render("about");
+    about(req, res, next) {
+        Promise.all([Award.find({}).sort({ year: -1 }), Contact.find({})])
+            .then(([awards, contacts]) => {
+                res.render("about", {
+                    awards,
+                    contacts,
+                });
+            })
+            .catch(next);
     }
 }
 
