@@ -775,6 +775,17 @@ body {
                             color: #444;
                         }
                     }
+
+                    .fb {
+                        &::after {
+                            content: ".";
+                            color: #097ceb;
+                        }
+
+                        &:hover {
+                            color: #097ceb;
+                        }
+                    }
                 }
 
                 &-more {

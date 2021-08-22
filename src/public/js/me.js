@@ -54,6 +54,17 @@ document.addEventListener("DOMContentLoaded", function () {
     var btnRestoreProject = $("#btn-restore-project");
     var btnForceDeleteProject = $("#btn-force-delete-project");
 
+    // toast message
+    let msgToast = "#{msg}";
+    if (msgToast != "") {
+        Eggy({
+            title: "Success",
+            message: msgToast,
+            type: "success",
+            duration: 3000,
+        });
+    }
+
     deleteAwardModal.addEventListener("show.bs.modal", function (event) {
         // Button that triggered the modal
         var button = event.relatedTarget;

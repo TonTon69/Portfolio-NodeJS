@@ -1376,6 +1376,11 @@ body {
         color: #444; }
       body .app .footer__contact-socials .gh:hover {
         color: #444; }
+      body .app .footer__contact-socials .fb::after {
+        content: ".";
+        color: #097ceb; }
+      body .app .footer__contact-socials .fb:hover {
+        color: #097ceb; }
     body .app .footer__contact-more {
       text-transform: uppercase;
       font-size: 3rem;
