@@ -5,6 +5,7 @@ const awardController = require("../app/controllers/AwardController");
 
 router.get("/create", awardController.create);
 router.post("/create", awardController.postCreate);
+router.post("/handle-form-actions", awardController.handleFormActions);
 router.get("/:id/edit", awardController.edit);
 router.put("/:id", awardController.update);
 router.patch("/:id/restore", awardController.restore);

@@ -64,6 +64,47 @@ class AwardController {
             })
             .catch(next);
     }
+
+    // [POST]/awards/handle-form-actions
+    handleFormActions(req, res, next) {
+        switch (req.body.action) {
+            case "delete":
+                Award.delete({ _id: { $in: req.body.awardIds } })
+                    .then(() => {
+                        req.flash(
+                            "success",
+                            "All awards have been successfully saved to the trash!"
+                        );
+                        res.redirect("back");
+                    })
+                    .catch(next);
+                break;
+            case "restore":
+                Award.restore({ _id: { $in: req.body.awardIds } })
+                    .then(() => {
+                        req.flash(
+                            "success",
+                            "All awards have been restored successfully!"
+                        );
+                        res.redirect("back");
+                    })
+                    .catch(next);
+                break;
+            case "force-delete":
+                Award.deleteMany({ _id: { $in: req.body.awardIds } })
+                    .then(() => {
+                        req.flash(
+                            "success",
+                            "All awards have been deleted successfully!"
+                        );
+                        res.redirect("back");
+                    })
+                    .catch(next);
+                break;
+            default:
+                res.json(req.body);
+        }
+    }
 }
 
 module.exports = new AwardController();

@@ -8,58 +8,70 @@ block content
                 h1 
                     span stored awards
         main.stored-awards__main
-            div.text-end.mb-4
-                a(href="/awards/create").btn.btn-primary
-                    i.fas.fa-plus
-                    span.ms-2 Create A New Award
-                a(href="/me/trash/awards").btn.btn-primary.ms-2.position-relative
-                    i.far.fa-trash-alt
-                    span.ms-2 Recycle Bin
-                    span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger #{deletedCount}
-            table.table.stored-awards__table
-                thead
-                    tr
-                        th(scope='col') #
-                        th(scope='col') Name
-                        th(scope='col') Level/Subject
-                        th(scope='col') Prize
-                        th(scope='col') Year
-                        th(scope='col') Created At
-                        th(scope='col')
-                tbody
-                    - var count = 0;
-                    each award in awards
-                        - count++;
-                        tr
-                            th(scope='row') #{count}
-                            td=award.name
-                            td=award.subject
-                            td=award.prize
-                            td=award.year
-                            td=moment(award.createdAt).format('DD-MM-YYYY')
-                            td
-                                a(href="/awards/" + award._id + "/edit").btn.btn-primary.me-2 Edit
-                                a(href="#", data-bs-toggle="modal", data-bs-target="#delete-award-modal", data-bs-id=award._id).btn.btn-primary.btn-delete Trash
-                            
-                            form(name="delete-award-form", method="POST")
+            form(method="POST", action="/awards/handle-form-actions")
+                .stored-awards__link.text-end.mb-4
+                    div
+                        a(href="/awards/create").btn.btn-primary
+                            i.fas.fa-plus
+                            span.ms-2 Create A New Award
+                        a(href="/me/trash/awards").btn.btn-primary.ms-2.position-relative
+                            i.far.fa-trash-alt
+                            span.ms-2 Recycle Bin
+                            span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger #{deletedCount}
+                    .delete-select-all
+                        span
+                        select.d-none(name='action')
+                            option(value='delete')
+                        button
+                            i.far.fa-trash-alt
+                table.table.stored-awards__table
+                    thead
+                        tr.align-middle
+                            th(scope='col')
+                                input#checkbox-all(type='checkbox')
+                            th(scope='col') #
+                            th(scope='col') Name
+                            th(scope='col') Level/Subject
+                            th(scope='col') Prize
+                            th(scope='col') Year
+                            th(scope='col') Created At
+                            th(scope='col')
+                    tbody
+                        - var count = 0;
+                        each award in awards
+                            - count++;
+                            tr
+                                th(scope='row')
+                                    input(type='checkbox', name='awardIds[]', value=award._id)
+                                th(scope='row') #{count}
+                                td=award.name
+                                td=award.subject
+                                td=award.prize
+                                td=award.year
+                                td=moment(award.createdAt).format('DD-MM-YYYY')
+                                td
+                                    a(href="/awards/" + award._id + "/edit").btn.btn-primary.me-2 Edit
+                                    a(href="#", data-bs-toggle="modal", data-bs-target="#delete-award-modal", data-bs-id=award._id).btn.btn-primary.btn-delete Trash
+                                
+                                form(name="delete-award-form", method="POST")
 
-                            // Confirm delete award
-                            #delete-award-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='delete-award-label', aria-hidden='true')
-                                .modal-dialog.modal-dialog-centered(style="max-width: 600px;")
-                                    .modal-content.bg-dark(style='box-shadow: 0 .5rem 1rem rgba(250,250,250,0.15); font-family: "Source Serif Pro", serif;')
-                                        .modal-header
-                                            h5#delete-award-label.modal-title.text-uppercase move the award to the trash
-                                        .modal-body
-                                            .is-devider-20                                  
-                                            h4 Are you sure you want to move this award to the trash???
-                                            .is-devider-20 
-                                        .modal-footer
-                                            button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
-                                            button#btn-delete-award.btn.btn-danger(type='button') Move to trash
-                    else
-                        tr
-                            td.text-center(colspan='7') You haven't posted any awards yet?
-                                a(href="/awards/create").ms-2.text-warning Create a new award
+                                // Confirm delete award
+                                #delete-award-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='delete-award-label', aria-hidden='true')
+                                    .modal-dialog.modal-dialog-centered(style="max-width: 600px;")
+                                        .modal-content.bg-dark(style='box-shadow: 0 .5rem 1rem rgba(250,250,250,0.15); font-family: "Source Serif Pro", serif;')
+                                            .modal-header
+                                                h5#delete-award-label.modal-title.text-uppercase move the award to the trash
+                                            .modal-body
+                                                .is-devider-20                                  
+                                                h4 Are you sure you want to move this award to the trash???
+                                                .is-devider-20 
+                                            .modal-footer
+                                                button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+                                                button#btn-delete-award.btn.btn-danger(type='button') Move to trash
+                        else
+                            tr
+                                td.text-center(colspan='8') You haven't posted any awards yet?
+                                    a(href="/awards/create").ms-2.text-warning Create a new award
     if success.length > 0
         - var msg = success
 
@@ -71,6 +83,19 @@ block content
             var restoreAwardForm = document.forms["restore-award-form"];
             var btnDeleteAward = $("#btn-delete-award");
             var restoreBtn = $$(".btn-restore");
+            var checkboxAll = $("#checkbox-all");
+            var awardItemCheckbox = $$('input[name="awardIds[]"]');
+
+            // toast message
+            let msgToast = '#{msg}';
+            if(msgToast != ''){
+                Eggy({
+                    title:  'Success',
+                    message:  msgToast,
+                    type: 'success',
+                    duration: 3000,
+                });
+            }
 
             deleteAwardModal.addEventListener("show.bs.modal", function (event) {
                 // Button that triggered the modal
@@ -87,16 +112,39 @@ block content
                 deleteAwardForm.submit();
             };
 
-            // toast message
-            let msgToast = '#{msg}';
-            if(msgToast != ''){
-                Eggy({
-                    title:  'Success',
-                    message:  msgToast,
-                    type: 'success',
-                    duration: 3000,
-                });
-            }
+            //Checkbox all changed
+            checkboxAll.onchange = function() {
+                for (let awardItem of awardItemCheckbox) {
+                    awardItem.checked = this.checked;
+                }
+                renderSelectedAction();
+            };
+
+            // Project item checkbox changed
+            for (let awardItem of awardItemCheckbox) {
+                awardItem.onchange = function () {
+                    var isCheckedAll = awardItemCheckbox.length === $$('input[name="awardIds[]"]:checked').length;
+                    checkboxAll.checked = isCheckedAll;
+                    renderSelectedAction();
+                };
+            };
+
+            window.onload = function() {
+                renderSelectedAction()
+            };
+
+            //Re-render checked all submit button
+            function renderSelectedAction() {
+                var checkedCount = $$('input[name="awardIds[]"]:checked').length;
+                var storedAwardsLink = $(".stored-awards__link");
+
+                if (checkedCount > 0) {
+                    storedAwardsLink.classList.add("delete-all-show");
+                    $(".delete-select-all span").innerText = checkedCount + " selected";
+                } else {
+                    storedAwardsLink.classList.remove("delete-all-show");
+                }
+            }; 
         });
 
         

@@ -67,6 +67,47 @@ class ContactController {
             })
             .catch(next);
     }
+
+    // [POST]/contacts/handle-form-actions
+    handleFormActions(req, res, next) {
+        switch (req.body.action) {
+            case "delete":
+                Contact.delete({ _id: { $in: req.body.contactIds } })
+                    .then(() => {
+                        req.flash(
+                            "success",
+                            "All contacts have been successfully saved to the trash!"
+                        );
+                        res.redirect("back");
+                    })
+                    .catch(next);
+                break;
+            case "restore":
+                Contact.restore({ _id: { $in: req.body.contactIds } })
+                    .then(() => {
+                        req.flash(
+                            "success",
+                            "All contacts have been restored successfully!"
+                        );
+                        res.redirect("back");
+                    })
+                    .catch(next);
+                break;
+            case "force-delete":
+                Contact.deleteMany({ _id: { $in: req.body.contactIds } })
+                    .then(() => {
+                        req.flash(
+                            "success",
+                            "All contacts have been deleted successfully!"
+                        );
+                        res.redirect("back");
+                    })
+                    .catch(next);
+                break;
+            default:
+                res.json(req.body);
+        }
+    }
 }
 
 module.exports = new ContactController();
