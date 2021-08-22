@@ -8,54 +8,68 @@ block content
                 h1 
                     span deleted projects
         main.stored-projects__main
-            div.text-end.mb-4
-                a(href="/me/stored/projects").btn.btn-primary.position-relative
-                    i.fab.fa-app-store
-                    span.ms-2 Stored Projects
-                    span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger #{storedProjectsCount}
-            table.table.stored-projects__table
-                thead
-                    tr
-                        th(scope='col') #
-                        th(scope='col') Name
-                        th(scope='col') Url
-                        th(scope='col') Deleted At
-                        th(scope='col')
-                tbody
-                    - var count = 0;
-                    each project in projects
-                        - count++;
-                        tr
-                            th(scope='row') #{count}
-                            td
-                                span.project-name=project.name
-                                    img.project-banner(src=project.banner)
-                            td=project.url
-                            td=moment(project.deletedAt).format('DD-MM-YYYY')
-                            td
-                                a(href="#", data-bs-id=project._id).btn.btn-primary.btn-restore.me-2 Restore
-                                a(href="#", data-bs-toggle="modal", data-bs-target="#delete-project-modal", data-bs-id=project._id).btn.btn-primary.btn-delete Delete
-                            
-                            form(name="delete-project-form", method="POST")
-                            form(name="restore-project-form", method="POST")
+            form(method="POST", action="/projects/handle-form-actions")
+                .stored-projects__link.text-end.mb-4
+                    a(href="/me/stored/projects").btn.btn-primary.position-relative
+                        i.fab.fa-app-store
+                        span.ms-2 Stored Projects
+                        span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger #{storedProjectsCount}
+                    .delete-select-all
+                        span
+                        select.d-none(name='action')
+                            option(value='restore')
+                        div
+                            button#btn-restore-project
+                                i.fas.fa-trash-restore
+                            button#btn-force-delete-project.ms-4
+                                i.far.fa-trash-alt
+                table.table.stored-projects__table
+                    thead
+                        tr.align-middle
+                            th(scope='col')
+                                input#checkbox-all(type='checkbox')
+                            th(scope='col') #
+                            th(scope='col') Name
+                            th(scope='col') Url
+                            th(scope='col') Deleted At
+                            th(scope='col')
+                    tbody
+                        - var count = 0;
+                        each project in projects
+                            - count++;
+                            tr
+                                th(scope='row')
+                                    input(type='checkbox', name='projectIds[]', value=project._id)
+                                th(scope='row') #{count}
+                                td
+                                    span.project-name=project.name
+                                        img.project-banner(src=project.banner)
+                                td=project.url
+                                td=moment(project.deletedAt).format('DD-MM-YYYY')
+                                td
+                                    a(href="#", data-bs-id=project._id).btn.btn-primary.btn-restore.me-2 Restore
+                                    a(href="#", data-bs-toggle="modal", data-bs-target="#delete-project-modal", data-bs-id=project._id).btn.btn-primary.btn-delete Delete
+                                
+                                form(name="delete-project-form", method="POST")
+                                form(name="restore-project-form", method="POST")
 
-                            // Confirm delete project
-                            #delete-project-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='delete-project-label', aria-hidden='true')
-                                .modal-dialog.modal-dialog-centered(style="max-width: 600px;")
-                                    .modal-content.bg-dark(style='box-shadow: 0 .5rem 1rem rgba(250,250,250,0.15); font-family: "Source Serif Pro", serif;')
-                                        .modal-header
-                                            h5#delete-project-label.modal-title.text-uppercase Delete project
-                                        .modal-body
-                                            .is-devider-20                                  
-                                            h4 This action cannot be restore. Are you sure you want to delete this project?
-                                            .is-devider-20 
-                                        .modal-footer
-                                            button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
-                                            button#btn-delete-project.btn.btn-danger(type='button') Delete
-                    else
-                        tr
-                            td.text-center(colspan='5') Empty trash can?
-                                a(href="/me/stored/projects").ms-2.text-warning Stored projects
+                                // Confirm delete project
+                                #delete-project-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='delete-project-label', aria-hidden='true')
+                                    .modal-dialog.modal-dialog-centered(style="max-width: 600px;")
+                                        .modal-content.bg-dark(style='box-shadow: 0 .5rem 1rem rgba(250,250,250,0.15); font-family: "Source Serif Pro", serif;')
+                                            .modal-header
+                                                h5#delete-project-label.modal-title.text-uppercase Delete project
+                                            .modal-body
+                                                .is-devider-20                                  
+                                                h4 This action cannot be restore. Are you sure you want to delete this project?
+                                                .is-devider-20 
+                                            .modal-footer
+                                                button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+                                                button#btn-delete-project.btn.btn-danger(type='button') Delete
+                        else
+                            tr
+                                td.text-center(colspan='6') Empty trash can?
+                                    a(href="/me/stored/projects").ms-2.text-warning Stored projects
     if success.length > 0
         - var msg = success
 
@@ -67,6 +81,21 @@ block content
             var restoreProjectForm = document.forms["restore-project-form"];
             var btnDeleteProject = $("#btn-delete-project");
             var restoreBtn = $$(".btn-restore");
+            var checkboxAll = $("#checkbox-all");
+            var projectItemCheckbox = $$('input[name="projectIds[]"]');
+            var btnRestoreProject = $("#btn-restore-project");
+            var btnForceDeleteProject = $("#btn-force-delete-project");
+
+            // toast message
+            let msgToast = '#{msg}';
+            if(msgToast != ''){
+                Eggy({
+                    title:  'Success',
+                    message:  msgToast,
+                    type: 'success',
+                    duration: 3000,
+                });
+            }
 
             deleteProjectModal.addEventListener("show.bs.modal", function (event) {
                 // Button that triggered the modal
@@ -96,15 +125,47 @@ block content
                 };
             }
 
-            // toast message
-            let msgToast = '#{msg}';
-            if(msgToast != ''){
-                Eggy({
-                    title:  'Success',
-                    message:  msgToast,
-                    type: 'success',
-                    duration: 3000,
-                });
+            //Checkbox all changed
+            checkboxAll.onchange = function() {
+                for (let projectItem of projectItemCheckbox) {
+                    projectItem.checked = this.checked;
+                }
+                renderSelectedAction();
+            };
+
+            // Project item checkbox changed
+            for (let projectItem of projectItemCheckbox) {
+                projectItem.onchange = function () {
+                    var isCheckedAll = projectItemCheckbox.length === $$('input[name="projectIds[]"]:checked').length;
+                    checkboxAll.checked = isCheckedAll;
+                    renderSelectedAction();
+                };
+            };
+
+            window.onload = function() {
+                renderSelectedAction()
+            }
+
+            //Re-render checked all submit button
+            function renderSelectedAction() {
+                var checkedCount = $$('input[name="projectIds[]"]:checked').length;
+                var storedProjectsLink = $(".stored-projects__link");
+
+                if (checkedCount > 0) {
+                    storedProjectsLink.classList.add("delete-all-show");
+                    $(".delete-select-all span").innerText = checkedCount + " selected";
+                } else {
+                    storedProjectsLink.classList.remove("delete-all-show");
+                }
+            };
+
+            // Set value to handle submit form
+            btnRestoreProject.onclick = function () {
+                $("select option").value = "restore";
+            }
+
+            btnForceDeleteProject.onclick = function () {
+                $("select option").value = "force-delete";
             }
         });
 

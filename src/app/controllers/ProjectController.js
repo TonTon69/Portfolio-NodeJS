@@ -82,9 +82,30 @@ class ProjectController {
                     })
                     .catch(next);
                 break;
+            case "restore":
+                Project.restore({ _id: { $in: req.body.projectIds } })
+                    .then(() => {
+                        req.flash(
+                            "success",
+                            "All projects have been restored successfully!"
+                        );
+                        res.redirect("back");
+                    })
+                    .catch(next);
+                break;
+            case "force-delete":
+                Project.deleteMany({ _id: { $in: req.body.projectIds } })
+                    .then(() => {
+                        req.flash(
+                            "success",
+                            "All projects have been deleted successfully!"
+                        );
+                        res.redirect("back");
+                    })
+                    .catch(next);
+                break;
             default:
-                req.flash("error", "Action is invalid!");
-                res.redirect("back");
+                res.json(req.body);
         }
     }
 }

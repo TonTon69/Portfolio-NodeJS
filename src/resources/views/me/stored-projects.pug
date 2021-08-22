@@ -123,6 +123,10 @@ block content
                 };
             };
 
+            window.onload = function() {
+                renderSelectedAction()
+            }
+
             //Re-render checked all submit button
             function renderSelectedAction() {
                 var checkedCount = $$('input[name="projectIds[]"]:checked').length;
