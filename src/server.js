@@ -3,11 +3,14 @@ require("dotenv").config();
 const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
+const pug = require("pug");
 
 const methodOverride = require("method-override");
 const moment = require("moment");
 const session = require("express-session");
 const flash = require("connect-flash");
+
+const SortMiddleware = require("./app/middlewares/SortMiddleware");
 
 const route = require("./routes");
 const db = require("./config/db");
@@ -34,6 +37,9 @@ app.set("views", path.join(__dirname, "resources", "views"));
 app.use(methodOverride("_method"));
 
 app.locals.moment = moment;
+
+// Custom middleware
+app.use(SortMiddleware);
 
 //
 app.use(

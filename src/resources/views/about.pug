@@ -39,10 +39,10 @@ block content
                             .contact__title contact
                             .contact__content
                                 each contact in contacts
-                                    - var fieldMe = contact.field
-                                    if fieldMe !== "email"
+                                    if contact.field !== 'email'
                                         a(href=contact.value, class=contact.sign, target="_blank")=contact.sign
-                                    else
+                                each contact in contacts
+                                    if contact.field === 'email'
                                         .is-devider-20
                                         a(href=`mailto:${contact.value}`, class=contact.field)=contact.field
                 .is-devider-200

@@ -5,7 +5,14 @@ const Award = require("../models/Award");
 class MeController {
     // [GET]/me/strored/projects
     storedProjects(req, res, next) {
-        Promise.all([Project.find({}), Project.countDocumentsDeleted()])
+        let projectQuery = Project.find({});
+        if (req.query.hasOwnProperty("_sort")) {
+            projectQuery = projectQuery.sort({
+                [req.params.column]: req.query.type,
+            });
+        }
+
+        Promise.all([projectQuery, Project.countDocumentsDeleted()])
             .then(([projects, deletedCount]) => {
                 res.render("me/stored-projects", {
                     projects,
