@@ -1,0 +1,33 @@
+extends ../layouts/admin
+block content 
+    seaction#education-create.education-create
+        header.education-create__header 
+            .education-create__header-title
+                h1 create a new education
+        main.education-create__main
+            form(method="POST", action="/educations/create")
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='school') School
+                    .col-sm-10
+                        input#school.form-control(type='text', name='school', placeholder='Enter education school' required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='degree') Degree
+                    .col-sm-10
+                        input#degree.form-control(type='text', name='degree', placeholder='Enter education degree' required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='startYear') Start Year
+                    .col-sm-10
+                        input#startYear.form-control(type='number', name='startYear', placeholder='Enter education start year' required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='endYear') End Year
+                    .col-sm-10
+                        input#endYear.form-control(type='number', name='endYear', placeholder='Enter education end year' required)
+                .is-devider-20 
+                .mb-3.row
+                    label.col-sm-2.col-form-label
+                    .col-sm-10
+                        a.btn.btn-primary.me-4(href='/me/stored/educations') Close
+                        button.btn.btn-primary(type='submit') Create

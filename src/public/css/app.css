@@ -38,7 +38,10 @@ html {
   .btn.btn-delete:hover {
     background: #bb2d3b; }
 
-.develop-note, body .app .header .nav-link, body .app .stored-projects__main-brand .card-img-overlay .card-text,
+.develop-note, body .app .header .nav-link, body .app .stored-educations__main-brand .card-img-overlay .card-text,
+body .app .education-create__main-brand .card-img-overlay .card-text,
+body .app .education-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-projects__main-brand .card-img-overlay .card-text,
 body .app .project-create__main-brand .card-img-overlay .card-text,
 body .app .project-edit__main-brand .card-img-overlay .card-text,
 body .app .stored-contacts__main-brand .card-img-overlay .card-text,
@@ -48,7 +51,10 @@ body .app .stored-awards__main-brand .card-img-overlay .card-text,
 body .app .award-create__main-brand .card-img-overlay .card-text,
 body .app .award-edit__main-brand .card-img-overlay .card-text,
 body .app .portfolio__main-brand .card-img-overlay .card-text,
-body .app .about__main-brand .card-img-overlay .card-text, body .app .stored-projects__main .about__main-content .download-cv,
+body .app .about__main-brand .card-img-overlay .card-text, body .app .stored-educations__main .about__main-content .download-cv,
+body .app .education-create__main .about__main-content .download-cv,
+body .app .education-edit__main .about__main-content .download-cv,
+body .app .stored-projects__main .about__main-content .download-cv,
 body .app .project-create__main .about__main-content .download-cv,
 body .app .project-edit__main .about__main-content .download-cv,
 body .app .stored-contacts__main .about__main-content .download-cv,
@@ -58,7 +64,16 @@ body .app .stored-awards__main .about__main-content .download-cv,
 body .app .award-create__main .about__main-content .download-cv,
 body .app .award-edit__main .about__main-content .download-cv,
 body .app .portfolio__main .about__main-content .download-cv,
-body .app .about__main .about__main-content .download-cv, body .app .stored-projects__main .about__main-content .education__title,
+body .app .about__main .about__main-content .download-cv, body .app .stored-educations__main .about__main-content .education__title,
+body .app .stored-educations__main .about__main-content .experience__title,
+body .app .stored-educations__main .about__main-content .contact__title,
+body .app .education-create__main .about__main-content .education__title,
+body .app .education-create__main .about__main-content .experience__title,
+body .app .education-create__main .about__main-content .contact__title,
+body .app .education-edit__main .about__main-content .education__title,
+body .app .education-edit__main .about__main-content .experience__title,
+body .app .education-edit__main .about__main-content .contact__title,
+body .app .stored-projects__main .about__main-content .education__title,
 body .app .stored-projects__main .about__main-content .experience__title,
 body .app .stored-projects__main .about__main-content .contact__title,
 body .app .project-create__main .about__main-content .education__title,
@@ -189,6 +204,9 @@ body {
         transform: scaleX(0);
         transform-origin: center right;
         transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
+  body .app .stored-educations,
+  body .app .education-create,
+  body .app .education-edit,
   body .app .stored-projects,
   body .app .project-create,
   body .app .project-edit,
@@ -201,6 +219,9 @@ body {
   body .app .portfolio,
   body .app .about {
     padding-top: 100px; }
+    body .app .stored-educations__header,
+    body .app .education-create__header,
+    body .app .education-edit__header,
     body .app .stored-projects__header,
     body .app .project-create__header,
     body .app .project-edit__header,
@@ -216,6 +237,9 @@ body {
       align-items: center;
       min-height: 650px;
       position: relative; }
+      body .app .stored-educations__header-title,
+      body .app .education-create__header-title,
+      body .app .education-edit__header-title,
       body .app .stored-projects__header-title,
       body .app .project-create__header-title,
       body .app .project-edit__header-title,
@@ -230,6 +254,9 @@ body {
         max-width: 100rem;
         padding-right: 3.75rem;
         padding-left: 3.75rem; }
+        body .app .stored-educations__header-title h1,
+        body .app .education-create__header-title h1,
+        body .app .education-edit__header-title h1,
         body .app .stored-projects__header-title h1,
         body .app .project-create__header-title h1,
         body .app .project-edit__header-title h1,
@@ -246,6 +273,9 @@ body {
           text-transform: uppercase;
           line-height: 0.9;
           letter-spacing: -6px; }
+    body .app .stored-educations__main,
+    body .app .education-create__main,
+    body .app .education-edit__main,
     body .app .stored-projects__main,
     body .app .project-create__main,
     body .app .project-edit__main,
@@ -260,6 +290,9 @@ body {
       max-width: 100rem;
       padding-right: 3.75rem;
       padding-left: 3.75rem; }
+      body .app .stored-educations__main-project,
+      body .app .education-create__main-project,
+      body .app .education-edit__main-project,
       body .app .stored-projects__main-project,
       body .app .project-create__main-project,
       body .app .project-edit__main-project,
@@ -272,6 +305,9 @@ body {
       body .app .portfolio__main-project,
       body .app .about__main-project {
         position: relative; }
+        body .app .stored-educations__main-project .projects,
+        body .app .education-create__main-project .projects,
+        body .app .education-edit__main-project .projects,
         body .app .stored-projects__main-project .projects,
         body .app .project-create__main-project .projects,
         body .app .project-edit__main-project .projects,
@@ -292,6 +328,9 @@ body {
           text-transform: uppercase;
           color: transparent;
           -webkit-text-stroke: 1px white; }
+        body .app .stored-educations__main-project .card,
+        body .app .education-create__main-project .card,
+        body .app .education-edit__main-project .card,
         body .app .stored-projects__main-project .card,
         body .app .project-create__main-project .card,
         body .app .project-edit__main-project .card,
@@ -311,6 +350,9 @@ body {
           cursor: pointer;
           overflow: hidden;
           margin-bottom: 32px; }
+          body .app .stored-educations__main-project .card:hover .card-img-overlay,
+          body .app .education-create__main-project .card:hover .card-img-overlay,
+          body .app .education-edit__main-project .card:hover .card-img-overlay,
           body .app .stored-projects__main-project .card:hover .card-img-overlay,
           body .app .project-create__main-project .card:hover .card-img-overlay,
           body .app .project-edit__main-project .card:hover .card-img-overlay,
@@ -323,6 +365,9 @@ body {
           body .app .portfolio__main-project .card:hover .card-img-overlay,
           body .app .about__main-project .card:hover .card-img-overlay {
             background: unset; }
+          body .app .stored-educations__main-project .card:hover .card-img,
+          body .app .education-create__main-project .card:hover .card-img,
+          body .app .education-edit__main-project .card:hover .card-img,
           body .app .stored-projects__main-project .card:hover .card-img,
           body .app .project-create__main-project .card:hover .card-img,
           body .app .project-edit__main-project .card:hover .card-img,
@@ -335,6 +380,9 @@ body {
           body .app .portfolio__main-project .card:hover .card-img,
           body .app .about__main-project .card:hover .card-img {
             transform: scale(1); }
+          body .app .stored-educations__main-project .card:hover .card-title,
+          body .app .education-create__main-project .card:hover .card-title,
+          body .app .education-edit__main-project .card:hover .card-title,
           body .app .stored-projects__main-project .card:hover .card-title,
           body .app .project-create__main-project .card:hover .card-title,
           body .app .project-edit__main-project .card:hover .card-title,
@@ -353,6 +401,9 @@ body {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: textclip 1.5s linear infinite; }
+          body .app .stored-educations__main-project .card-img,
+          body .app .education-create__main-project .card-img,
+          body .app .education-edit__main-project .card-img,
           body .app .stored-projects__main-project .card-img,
           body .app .project-create__main-project .card-img,
           body .app .project-edit__main-project .card-img,
@@ -369,6 +420,9 @@ body {
             transition: all 0.5s ease;
             object-fit: cover;
             border-radius: 0; }
+          body .app .stored-educations__main-project .card-img-overlay,
+          body .app .education-create__main-project .card-img-overlay,
+          body .app .education-edit__main-project .card-img-overlay,
           body .app .stored-projects__main-project .card-img-overlay,
           body .app .project-create__main-project .card-img-overlay,
           body .app .project-edit__main-project .card-img-overlay,
@@ -386,6 +440,9 @@ body {
             background: #1a1a1a;
             transition: all 0.5s ease;
             border-radius: 0; }
+            body .app .stored-educations__main-project .card-img-overlay .card-title,
+            body .app .education-create__main-project .card-img-overlay .card-title,
+            body .app .education-edit__main-project .card-img-overlay .card-title,
             body .app .stored-projects__main-project .card-img-overlay .card-title,
             body .app .project-create__main-project .card-img-overlay .card-title,
             body .app .project-edit__main-project .card-img-overlay .card-title,
@@ -400,6 +457,9 @@ body {
               text-align: center;
               text-transform: uppercase;
               letter-spacing: 6px; }
+      body .app .stored-educations__main-brand,
+      body .app .education-create__main-brand,
+      body .app .education-edit__main-brand,
       body .app .stored-projects__main-brand,
       body .app .project-create__main-brand,
       body .app .project-edit__main-brand,
@@ -412,6 +472,9 @@ body {
       body .app .portfolio__main-brand,
       body .app .about__main-brand {
         position: relative; }
+        body .app .stored-educations__main-brand .currently,
+        body .app .education-create__main-brand .currently,
+        body .app .education-edit__main-brand .currently,
         body .app .stored-projects__main-brand .currently,
         body .app .project-create__main-brand .currently,
         body .app .project-edit__main-brand .currently,
@@ -432,6 +495,9 @@ body {
           text-transform: uppercase;
           color: transparent;
           -webkit-text-stroke: 1px white; }
+        body .app .stored-educations__main-brand .card,
+        body .app .education-create__main-brand .card,
+        body .app .education-edit__main-brand .card,
         body .app .stored-projects__main-brand .card,
         body .app .project-create__main-brand .card,
         body .app .project-edit__main-brand .card,
@@ -445,6 +511,9 @@ body {
         body .app .about__main-brand .card {
           border-radius: calc(0.25rem - 1px);
           border: none; }
+          body .app .stored-educations__main-brand .card-img,
+          body .app .education-create__main-brand .card-img,
+          body .app .education-edit__main-brand .card-img,
           body .app .stored-projects__main-brand .card-img,
           body .app .project-create__main-brand .card-img,
           body .app .project-edit__main-brand .card-img,
@@ -458,6 +527,9 @@ body {
           body .app .about__main-brand .card-img {
             height: 462px;
             object-fit: cover; }
+          body .app .stored-educations__main-brand .card-img-overlay,
+          body .app .education-create__main-brand .card-img-overlay,
+          body .app .education-edit__main-brand .card-img-overlay,
           body .app .stored-projects__main-brand .card-img-overlay,
           body .app .project-create__main-brand .card-img-overlay,
           body .app .project-edit__main-brand .card-img-overlay,
@@ -471,6 +543,9 @@ body {
           body .app .about__main-brand .card-img-overlay {
             display: flex;
             align-items: center; }
+            body .app .stored-educations__main-brand .card-img-overlay .card-title,
+            body .app .education-create__main-brand .card-img-overlay .card-title,
+            body .app .education-edit__main-brand .card-img-overlay .card-title,
             body .app .stored-projects__main-brand .card-img-overlay .card-title,
             body .app .project-create__main-brand .card-img-overlay .card-title,
             body .app .project-edit__main-brand .card-img-overlay .card-title,
@@ -488,6 +563,9 @@ body {
               text-transform: uppercase;
               letter-spacing: -6px;
               line-height: 0.8; }
+              body .app .stored-educations__main-brand .card-img-overlay .card-title span,
+              body .app .education-create__main-brand .card-img-overlay .card-title span,
+              body .app .education-edit__main-brand .card-img-overlay .card-title span,
               body .app .stored-projects__main-brand .card-img-overlay .card-title span,
               body .app .project-create__main-brand .card-img-overlay .card-title span,
               body .app .project-edit__main-brand .card-img-overlay .card-title span,
@@ -500,6 +578,9 @@ body {
               body .app .portfolio__main-brand .card-img-overlay .card-title span,
               body .app .about__main-brand .card-img-overlay .card-title span {
                 display: block; }
+            body .app .stored-educations__main-brand .card-img-overlay .card-text,
+            body .app .education-create__main-brand .card-img-overlay .card-text,
+            body .app .education-edit__main-brand .card-img-overlay .card-text,
             body .app .stored-projects__main-brand .card-img-overlay .card-text,
             body .app .project-create__main-brand .card-img-overlay .card-text,
             body .app .project-edit__main-brand .card-img-overlay .card-text,
@@ -514,6 +595,9 @@ body {
               position: absolute;
               bottom: 32px;
               right: 48px; }
+              body .app .stored-educations__main-brand .card-img-overlay .card-text:hover a::after,
+              body .app .education-create__main-brand .card-img-overlay .card-text:hover a::after,
+              body .app .education-edit__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .stored-projects__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .project-create__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .project-edit__main-brand .card-img-overlay .card-text:hover a::after,
@@ -527,6 +611,9 @@ body {
               body .app .about__main-brand .card-img-overlay .card-text:hover a::after {
                 transform: scaleX(1);
                 transform-origin: center left; }
+              body .app .stored-educations__main-brand .card-img-overlay .card-text a,
+              body .app .education-create__main-brand .card-img-overlay .card-text a,
+              body .app .education-edit__main-brand .card-img-overlay .card-text a,
               body .app .stored-projects__main-brand .card-img-overlay .card-text a,
               body .app .project-create__main-brand .card-img-overlay .card-text a,
               body .app .project-edit__main-brand .card-img-overlay .card-text a,
@@ -539,6 +626,9 @@ body {
               body .app .portfolio__main-brand .card-img-overlay .card-text a,
               body .app .about__main-brand .card-img-overlay .card-text a {
                 color: white; }
+                body .app .stored-educations__main-brand .card-img-overlay .card-text a::after,
+                body .app .education-create__main-brand .card-img-overlay .card-text a::after,
+                body .app .education-edit__main-brand .card-img-overlay .card-text a::after,
                 body .app .stored-projects__main-brand .card-img-overlay .card-text a::after,
                 body .app .project-create__main-brand .card-img-overlay .card-text a::after,
                 body .app .project-edit__main-brand .card-img-overlay .card-text a::after,
@@ -561,6 +651,9 @@ body {
                   transform: scaleX(0);
                   transform-origin: center right;
                   transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
+      body .app .stored-educations__main .about__main-content,
+      body .app .education-create__main .about__main-content,
+      body .app .education-edit__main .about__main-content,
       body .app .stored-projects__main .about__main-content,
       body .app .project-create__main .about__main-content,
       body .app .project-edit__main .about__main-content,
@@ -576,6 +669,9 @@ body {
         font-size: 1.3125rem;
         line-height: 1.8;
         font-weight: 500; }
+        body .app .stored-educations__main .about__main-content p,
+        body .app .education-create__main .about__main-content p,
+        body .app .education-edit__main .about__main-content p,
         body .app .stored-projects__main .about__main-content p,
         body .app .project-create__main .about__main-content p,
         body .app .project-edit__main .about__main-content p,
@@ -588,6 +684,9 @@ body {
         body .app .portfolio__main .about__main-content p,
         body .app .about__main .about__main-content p {
           margin-bottom: 40px; }
+        body .app .stored-educations__main .about__main-content .download-cv,
+        body .app .education-create__main .about__main-content .download-cv,
+        body .app .education-edit__main .about__main-content .download-cv,
         body .app .stored-projects__main .about__main-content .download-cv,
         body .app .project-create__main .about__main-content .download-cv,
         body .app .project-edit__main .about__main-content .download-cv,
@@ -601,6 +700,9 @@ body {
         body .app .about__main .about__main-content .download-cv {
           color: white;
           position: relative; }
+          body .app .stored-educations__main .about__main-content .download-cv::after,
+          body .app .education-create__main .about__main-content .download-cv::after,
+          body .app .education-edit__main .about__main-content .download-cv::after,
           body .app .stored-projects__main .about__main-content .download-cv::after,
           body .app .project-create__main .about__main-content .download-cv::after,
           body .app .project-edit__main .about__main-content .download-cv::after,
@@ -621,6 +723,15 @@ body {
             left: 0px;
             background: currentcolor;
             opacity: 0.4; }
+        body .app .stored-educations__main .about__main-content .education,
+        body .app .stored-educations__main .about__main-content .experience,
+        body .app .stored-educations__main .about__main-content .contact,
+        body .app .education-create__main .about__main-content .education,
+        body .app .education-create__main .about__main-content .experience,
+        body .app .education-create__main .about__main-content .contact,
+        body .app .education-edit__main .about__main-content .education,
+        body .app .education-edit__main .about__main-content .experience,
+        body .app .education-edit__main .about__main-content .contact,
         body .app .stored-projects__main .about__main-content .education,
         body .app .stored-projects__main .about__main-content .experience,
         body .app .stored-projects__main .about__main-content .contact,
@@ -655,6 +766,15 @@ body {
         body .app .about__main .about__main-content .experience,
         body .app .about__main .about__main-content .contact {
           margin-bottom: 40px; }
+          body .app .stored-educations__main .about__main-content .education__title,
+          body .app .stored-educations__main .about__main-content .experience__title,
+          body .app .stored-educations__main .about__main-content .contact__title,
+          body .app .education-create__main .about__main-content .education__title,
+          body .app .education-create__main .about__main-content .experience__title,
+          body .app .education-create__main .about__main-content .contact__title,
+          body .app .education-edit__main .about__main-content .education__title,
+          body .app .education-edit__main .about__main-content .experience__title,
+          body .app .education-edit__main .about__main-content .contact__title,
           body .app .stored-projects__main .about__main-content .education__title,
           body .app .stored-projects__main .about__main-content .experience__title,
           body .app .stored-projects__main .about__main-content .contact__title,
@@ -690,6 +810,15 @@ body {
           body .app .about__main .about__main-content .contact__title {
             margin-bottom: 10px;
             opacity: 0.6; }
+          body .app .stored-educations__main .about__main-content .education__content,
+          body .app .stored-educations__main .about__main-content .experience__content,
+          body .app .stored-educations__main .about__main-content .contact__content,
+          body .app .education-create__main .about__main-content .education__content,
+          body .app .education-create__main .about__main-content .experience__content,
+          body .app .education-create__main .about__main-content .contact__content,
+          body .app .education-edit__main .about__main-content .education__content,
+          body .app .education-edit__main .about__main-content .experience__content,
+          body .app .education-edit__main .about__main-content .contact__content,
           body .app .stored-projects__main .about__main-content .education__content,
           body .app .stored-projects__main .about__main-content .experience__content,
           body .app .stored-projects__main .about__main-content .contact__content,
@@ -728,6 +857,15 @@ body {
             font-weight: 800;
             text-transform: uppercase;
             line-height: 1.5; }
+            body .app .stored-educations__main .about__main-content .education__content a,
+            body .app .stored-educations__main .about__main-content .experience__content a,
+            body .app .stored-educations__main .about__main-content .contact__content a,
+            body .app .education-create__main .about__main-content .education__content a,
+            body .app .education-create__main .about__main-content .experience__content a,
+            body .app .education-create__main .about__main-content .contact__content a,
+            body .app .education-edit__main .about__main-content .education__content a,
+            body .app .education-edit__main .about__main-content .experience__content a,
+            body .app .education-edit__main .about__main-content .contact__content a,
             body .app .stored-projects__main .about__main-content .education__content a,
             body .app .stored-projects__main .about__main-content .experience__content a,
             body .app .stored-projects__main .about__main-content .contact__content a,
@@ -763,6 +901,15 @@ body {
             body .app .about__main .about__main-content .contact__content a {
               color: white;
               margin-right: 12px; }
+            body .app .stored-educations__main .about__main-content .education__content .ig::after,
+            body .app .stored-educations__main .about__main-content .experience__content .ig::after,
+            body .app .stored-educations__main .about__main-content .contact__content .ig::after,
+            body .app .education-create__main .about__main-content .education__content .ig::after,
+            body .app .education-create__main .about__main-content .experience__content .ig::after,
+            body .app .education-create__main .about__main-content .contact__content .ig::after,
+            body .app .education-edit__main .about__main-content .education__content .ig::after,
+            body .app .education-edit__main .about__main-content .experience__content .ig::after,
+            body .app .education-edit__main .about__main-content .contact__content .ig::after,
             body .app .stored-projects__main .about__main-content .education__content .ig::after,
             body .app .stored-projects__main .about__main-content .experience__content .ig::after,
             body .app .stored-projects__main .about__main-content .contact__content .ig::after,
@@ -798,6 +945,15 @@ body {
             body .app .about__main .about__main-content .contact__content .ig::after {
               content: ".";
               color: #e112fc; }
+            body .app .stored-educations__main .about__main-content .education__content .ig:hover,
+            body .app .stored-educations__main .about__main-content .experience__content .ig:hover,
+            body .app .stored-educations__main .about__main-content .contact__content .ig:hover,
+            body .app .education-create__main .about__main-content .education__content .ig:hover,
+            body .app .education-create__main .about__main-content .experience__content .ig:hover,
+            body .app .education-create__main .about__main-content .contact__content .ig:hover,
+            body .app .education-edit__main .about__main-content .education__content .ig:hover,
+            body .app .education-edit__main .about__main-content .experience__content .ig:hover,
+            body .app .education-edit__main .about__main-content .contact__content .ig:hover,
             body .app .stored-projects__main .about__main-content .education__content .ig:hover,
             body .app .stored-projects__main .about__main-content .experience__content .ig:hover,
             body .app .stored-projects__main .about__main-content .contact__content .ig:hover,
@@ -832,6 +988,15 @@ body {
             body .app .about__main .about__main-content .experience__content .ig:hover,
             body .app .about__main .about__main-content .contact__content .ig:hover {
               color: #e112fc; }
+            body .app .stored-educations__main .about__main-content .education__content .ln::after,
+            body .app .stored-educations__main .about__main-content .experience__content .ln::after,
+            body .app .stored-educations__main .about__main-content .contact__content .ln::after,
+            body .app .education-create__main .about__main-content .education__content .ln::after,
+            body .app .education-create__main .about__main-content .experience__content .ln::after,
+            body .app .education-create__main .about__main-content .contact__content .ln::after,
+            body .app .education-edit__main .about__main-content .education__content .ln::after,
+            body .app .education-edit__main .about__main-content .experience__content .ln::after,
+            body .app .education-edit__main .about__main-content .contact__content .ln::after,
             body .app .stored-projects__main .about__main-content .education__content .ln::after,
             body .app .stored-projects__main .about__main-content .experience__content .ln::after,
             body .app .stored-projects__main .about__main-content .contact__content .ln::after,
@@ -867,6 +1032,15 @@ body {
             body .app .about__main .about__main-content .contact__content .ln::after {
               content: ".";
               color: #094290; }
+            body .app .stored-educations__main .about__main-content .education__content .ln:hover,
+            body .app .stored-educations__main .about__main-content .experience__content .ln:hover,
+            body .app .stored-educations__main .about__main-content .contact__content .ln:hover,
+            body .app .education-create__main .about__main-content .education__content .ln:hover,
+            body .app .education-create__main .about__main-content .experience__content .ln:hover,
+            body .app .education-create__main .about__main-content .contact__content .ln:hover,
+            body .app .education-edit__main .about__main-content .education__content .ln:hover,
+            body .app .education-edit__main .about__main-content .experience__content .ln:hover,
+            body .app .education-edit__main .about__main-content .contact__content .ln:hover,
             body .app .stored-projects__main .about__main-content .education__content .ln:hover,
             body .app .stored-projects__main .about__main-content .experience__content .ln:hover,
             body .app .stored-projects__main .about__main-content .contact__content .ln:hover,
@@ -901,6 +1075,15 @@ body {
             body .app .about__main .about__main-content .experience__content .ln:hover,
             body .app .about__main .about__main-content .contact__content .ln:hover {
               color: #094290; }
+            body .app .stored-educations__main .about__main-content .education__content .gh::after,
+            body .app .stored-educations__main .about__main-content .experience__content .gh::after,
+            body .app .stored-educations__main .about__main-content .contact__content .gh::after,
+            body .app .education-create__main .about__main-content .education__content .gh::after,
+            body .app .education-create__main .about__main-content .experience__content .gh::after,
+            body .app .education-create__main .about__main-content .contact__content .gh::after,
+            body .app .education-edit__main .about__main-content .education__content .gh::after,
+            body .app .education-edit__main .about__main-content .experience__content .gh::after,
+            body .app .education-edit__main .about__main-content .contact__content .gh::after,
             body .app .stored-projects__main .about__main-content .education__content .gh::after,
             body .app .stored-projects__main .about__main-content .experience__content .gh::after,
             body .app .stored-projects__main .about__main-content .contact__content .gh::after,
@@ -936,6 +1119,15 @@ body {
             body .app .about__main .about__main-content .contact__content .gh::after {
               content: ".";
               color: #444; }
+            body .app .stored-educations__main .about__main-content .education__content .gh:hover,
+            body .app .stored-educations__main .about__main-content .experience__content .gh:hover,
+            body .app .stored-educations__main .about__main-content .contact__content .gh:hover,
+            body .app .education-create__main .about__main-content .education__content .gh:hover,
+            body .app .education-create__main .about__main-content .experience__content .gh:hover,
+            body .app .education-create__main .about__main-content .contact__content .gh:hover,
+            body .app .education-edit__main .about__main-content .education__content .gh:hover,
+            body .app .education-edit__main .about__main-content .experience__content .gh:hover,
+            body .app .education-edit__main .about__main-content .contact__content .gh:hover,
             body .app .stored-projects__main .about__main-content .education__content .gh:hover,
             body .app .stored-projects__main .about__main-content .experience__content .gh:hover,
             body .app .stored-projects__main .about__main-content .contact__content .gh:hover,
@@ -970,6 +1162,15 @@ body {
             body .app .about__main .about__main-content .experience__content .gh:hover,
             body .app .about__main .about__main-content .contact__content .gh:hover {
               color: #444; }
+            body .app .stored-educations__main .about__main-content .education__content .fb::after,
+            body .app .stored-educations__main .about__main-content .experience__content .fb::after,
+            body .app .stored-educations__main .about__main-content .contact__content .fb::after,
+            body .app .education-create__main .about__main-content .education__content .fb::after,
+            body .app .education-create__main .about__main-content .experience__content .fb::after,
+            body .app .education-create__main .about__main-content .contact__content .fb::after,
+            body .app .education-edit__main .about__main-content .education__content .fb::after,
+            body .app .education-edit__main .about__main-content .experience__content .fb::after,
+            body .app .education-edit__main .about__main-content .contact__content .fb::after,
             body .app .stored-projects__main .about__main-content .education__content .fb::after,
             body .app .stored-projects__main .about__main-content .experience__content .fb::after,
             body .app .stored-projects__main .about__main-content .contact__content .fb::after,
@@ -1005,6 +1206,15 @@ body {
             body .app .about__main .about__main-content .contact__content .fb::after {
               content: ".";
               color: #097ceb; }
+            body .app .stored-educations__main .about__main-content .education__content .fb:hover,
+            body .app .stored-educations__main .about__main-content .experience__content .fb:hover,
+            body .app .stored-educations__main .about__main-content .contact__content .fb:hover,
+            body .app .education-create__main .about__main-content .education__content .fb:hover,
+            body .app .education-create__main .about__main-content .experience__content .fb:hover,
+            body .app .education-create__main .about__main-content .contact__content .fb:hover,
+            body .app .education-edit__main .about__main-content .education__content .fb:hover,
+            body .app .education-edit__main .about__main-content .experience__content .fb:hover,
+            body .app .education-edit__main .about__main-content .contact__content .fb:hover,
             body .app .stored-projects__main .about__main-content .education__content .fb:hover,
             body .app .stored-projects__main .about__main-content .experience__content .fb:hover,
             body .app .stored-projects__main .about__main-content .contact__content .fb:hover,
@@ -1039,6 +1249,15 @@ body {
             body .app .about__main .about__main-content .experience__content .fb:hover,
             body .app .about__main .about__main-content .contact__content .fb:hover {
               color: #097ceb; }
+            body .app .stored-educations__main .about__main-content .education__content .email,
+            body .app .stored-educations__main .about__main-content .experience__content .email,
+            body .app .stored-educations__main .about__main-content .contact__content .email,
+            body .app .education-create__main .about__main-content .education__content .email,
+            body .app .education-create__main .about__main-content .experience__content .email,
+            body .app .education-create__main .about__main-content .contact__content .email,
+            body .app .education-edit__main .about__main-content .education__content .email,
+            body .app .education-edit__main .about__main-content .experience__content .email,
+            body .app .education-edit__main .about__main-content .contact__content .email,
             body .app .stored-projects__main .about__main-content .education__content .email,
             body .app .stored-projects__main .about__main-content .experience__content .email,
             body .app .stored-projects__main .about__main-content .contact__content .email,
@@ -1073,6 +1292,15 @@ body {
             body .app .about__main .about__main-content .experience__content .email,
             body .app .about__main .about__main-content .contact__content .email {
               position: relative; }
+              body .app .stored-educations__main .about__main-content .education__content .email::after,
+              body .app .stored-educations__main .about__main-content .experience__content .email::after,
+              body .app .stored-educations__main .about__main-content .contact__content .email::after,
+              body .app .education-create__main .about__main-content .education__content .email::after,
+              body .app .education-create__main .about__main-content .experience__content .email::after,
+              body .app .education-create__main .about__main-content .contact__content .email::after,
+              body .app .education-edit__main .about__main-content .education__content .email::after,
+              body .app .education-edit__main .about__main-content .experience__content .email::after,
+              body .app .education-edit__main .about__main-content .contact__content .email::after,
               body .app .stored-projects__main .about__main-content .education__content .email::after,
               body .app .stored-projects__main .about__main-content .experience__content .email::after,
               body .app .stored-projects__main .about__main-content .contact__content .email::after,
@@ -1115,6 +1343,7 @@ body {
                 left: 0px;
                 background: currentcolor;
                 opacity: 0.4; }
+  body .app .stored-educations__table,
   body .app .stored-projects__table,
   body .app .stored-awards__table,
   body .app .stored-contacts__table {
@@ -1122,20 +1351,24 @@ body {
     font-family: "Source Serif Pro", serif;
     font-size: 1.3125rem;
     font-weight: 500; }
+    body .app .stored-educations__table tbody tr,
     body .app .stored-projects__table tbody tr,
     body .app .stored-awards__table tbody tr,
     body .app .stored-contacts__table tbody tr {
       vertical-align: middle; }
+      body .app .stored-educations__table tbody tr td,
       body .app .stored-projects__table tbody tr td,
       body .app .stored-awards__table tbody tr td,
       body .app .stored-contacts__table tbody tr td {
         padding: 1.5rem 0.5rem; }
+    body .app .stored-educations__table tbody .project-name,
     body .app .stored-projects__table tbody .project-name,
     body .app .stored-awards__table tbody .project-name,
     body .app .stored-contacts__table tbody .project-name {
       text-transform: uppercase;
       position: relative;
       cursor: pointer; }
+      body .app .stored-educations__table tbody .project-name .project-banner,
       body .app .stored-projects__table tbody .project-name .project-banner,
       body .app .stored-awards__table tbody .project-name .project-banner,
       body .app .stored-contacts__table tbody .project-name .project-banner {
@@ -1147,14 +1380,17 @@ body {
         left: 50%;
         display: none;
         z-index: 9999; }
+      body .app .stored-educations__table tbody .project-name:hover .project-banner,
       body .app .stored-projects__table tbody .project-name:hover .project-banner,
       body .app .stored-awards__table tbody .project-name:hover .project-banner,
       body .app .stored-contacts__table tbody .project-name:hover .project-banner {
         display: block; }
+  body .app .stored-educations__link,
   body .app .stored-projects__link,
   body .app .stored-awards__link,
   body .app .stored-contacts__link {
     position: relative; }
+    body .app .stored-educations__link .delete-select-all,
     body .app .stored-projects__link .delete-select-all,
     body .app .stored-awards__link .delete-select-all,
     body .app .stored-contacts__link .delete-select-all {
@@ -1174,11 +1410,13 @@ body {
       opacity: 0;
       visibility: hidden;
       transition: all 0.3s ease; }
+      body .app .stored-educations__link .delete-select-all span,
       body .app .stored-projects__link .delete-select-all span,
       body .app .stored-awards__link .delete-select-all span,
       body .app .stored-contacts__link .delete-select-all span {
         font-weight: 500;
         font-size: 1.2rem; }
+      body .app .stored-educations__link .delete-select-all button,
       body .app .stored-projects__link .delete-select-all button,
       body .app .stored-awards__link .delete-select-all button,
       body .app .stored-contacts__link .delete-select-all button {
@@ -1188,21 +1426,25 @@ body {
         width: 40px;
         height: 40px;
         border-radius: 50%; }
+        body .app .stored-educations__link .delete-select-all button:hover,
         body .app .stored-projects__link .delete-select-all button:hover,
         body .app .stored-awards__link .delete-select-all button:hover,
         body .app .stored-contacts__link .delete-select-all button:hover {
           background: #171f27; }
+        body .app .stored-educations__link .delete-select-all button i,
         body .app .stored-projects__link .delete-select-all button i,
         body .app .stored-awards__link .delete-select-all button i,
         body .app .stored-contacts__link .delete-select-all button i {
           font-size: 1.4rem;
           color: white;
           cursor: pointer; }
+  body .app .stored-educations__link.delete-all-show .delete-select-all,
   body .app .stored-projects__link.delete-all-show .delete-select-all,
   body .app .stored-awards__link.delete-all-show .delete-select-all,
   body .app .stored-contacts__link.delete-all-show .delete-select-all {
     opacity: 1;
     visibility: visible; }
+  body .app .stored-educations__link.delete-all-show a,
   body .app .stored-projects__link.delete-all-show a,
   body .app .stored-awards__link.delete-all-show a,
   body .app .stored-contacts__link.delete-all-show a {
@@ -1270,6 +1512,8 @@ body {
               font-family: "Sequel", sans-serif;
               font-weight: 800;
               text-transform: uppercase; }
+  body .app .education-create__main form,
+  body .app .education-edit__main form,
   body .app .award-create__main form,
   body .app .award-edit__main form,
   body .app .contact-create__main form,
@@ -1279,6 +1523,8 @@ body {
     font-family: "Source Serif Pro", serif;
     font-size: 1.3125rem;
     font-weight: 500; }
+    body .app .education-create__main form input,
+    body .app .education-edit__main form input,
     body .app .award-create__main form input,
     body .app .award-edit__main form input,
     body .app .contact-create__main form input,
@@ -1288,6 +1534,8 @@ body {
       border-radius: 2px;
       padding: 1.375rem 1.75rem;
       font-size: 1.2rem; }
+      body .app .education-create__main form input:focus,
+      body .app .education-edit__main form input:focus,
       body .app .award-create__main form input:focus,
       body .app .award-edit__main form input:focus,
       body .app .contact-create__main form input:focus,

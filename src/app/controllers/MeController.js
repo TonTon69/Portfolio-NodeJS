@@ -1,6 +1,7 @@
 const Project = require("../models/Project");
 const Contact = require("../models/Contact");
 const Award = require("../models/Award");
+const Education = require("../models/Education");
 
 class MeController {
     // [GET]/me/strored/projects
@@ -82,6 +83,32 @@ class MeController {
                 res.render("me/trash-awards", {
                     awards,
                     storedAwardsCount,
+                    success: req.flash("success"),
+                });
+            })
+            .catch(next);
+    }
+
+    // [GET]/me/strored/educations
+    storedEducations(req, res, next) {
+        Promise.all([Education.find({}), Education.countDocumentsDeleted()])
+            .then(([educations, deletedCount]) => {
+                res.render("me/stored-educations", {
+                    educations,
+                    deletedCount,
+                    success: req.flash("success"),
+                });
+            })
+            .catch(next);
+    }
+
+    // [GET]/me/trash/educations
+    trashEducations(req, res, next) {
+        Promise.all([Education.findDeleted({}), Education.countDocuments()])
+            .then(([educations, storedEducationsCount]) => {
+                res.render("me/trash-educations", {
+                    educations,
+                    storedEducationsCount,
                     success: req.flash("success"),
                 });
             })

@@ -11,6 +11,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 
 const SortMiddleware = require("./app/middlewares/SortMiddleware");
+const LocalMiddleware = require("./app/middlewares/LocalMiddleware");
 
 const route = require("./routes");
 const db = require("./config/db");
@@ -40,6 +41,7 @@ app.locals.moment = moment;
 
 // Custom middleware
 app.use(SortMiddleware);
+app.use(LocalMiddleware);
 
 //
 app.use(

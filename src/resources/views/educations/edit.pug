@@ -1,0 +1,35 @@
+extends ../layouts/admin
+block content 
+    seaction#education-edit.education-edit
+        header.education-edit__header 
+            nav.nav
+                a(href="/").nav-link portfolio
+            .education-edit__header-title
+                h1 edit education 
+        main.education-edit__main
+            form(action=`/educations/${education._id}?_method=PUT`, method="POST")
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='school') School
+                    .col-sm-10
+                        input#school.form-control(type='text', name='school', placeholder='Enter education school' value=education.school required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='degree') Degree
+                    .col-sm-10
+                        input#degree.form-control(type='text', name='degree', placeholder='Enter education degree' value=education.degree required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='startYear') Start Year
+                    .col-sm-10
+                        input#startYear.form-control(type='number', name='startYear', placeholder='Enter education start year' value=education.startYear required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='endYear') End Year
+                    .col-sm-10
+                        input#endYear.form-control(type='number', name='endYear', placeholder='Enter education end year' value=education.endYear required)
+                .is-devider-20
+                .mb-3.row
+                    label.col-sm-2.col-form-label
+                    .col-sm-10
+                        a.btn.btn-primary.me-4(href='/me/stored/educations') Close
+                        button.btn.btn-primary(type='submit') Save
