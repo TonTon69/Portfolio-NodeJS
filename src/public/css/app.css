@@ -38,17 +38,7 @@ html {
   .btn.btn-delete:hover {
     background: #bb2d3b; }
 
-.develop-note, body .app .stored-projects__header .nav-link,
-body .app .project-create__header .nav-link,
-body .app .project-edit__header .nav-link,
-body .app .stored-contacts__header .nav-link,
-body .app .contact-create__header .nav-link,
-body .app .contact-edit__header .nav-link,
-body .app .stored-awards__header .nav-link,
-body .app .award-create__header .nav-link,
-body .app .award-edit__header .nav-link,
-body .app .portfolio__header .nav-link,
-body .app .about__header .nav-link, body .app .stored-projects__main-brand .card-img-overlay .card-text,
+.develop-note, body .app .header .nav-link, body .app .stored-projects__main-brand .card-img-overlay .card-text,
 body .app .project-create__main-brand .card-img-overlay .card-text,
 body .app .project-edit__main-brand .card-img-overlay .card-text,
 body .app .stored-contacts__main-brand .card-img-overlay .card-text,
@@ -154,7 +144,8 @@ body {
     z-index: 12000;
     padding: 1.875rem 1.875rem;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: space-between; }
     body .app .header__logo {
       display: flex;
       align-items: center; }
@@ -174,6 +165,30 @@ body {
       transition: all 0.5s ease;
       opacity: 0;
       visibility: hidden; }
+    body .app .header .nav-item {
+      margin-left: 2rem; }
+      body .app .header .nav-item:hover .nav-link::after {
+        transform: scaleX(1);
+        transform-origin: center left; }
+    body .app .header .nav-link {
+      color: black;
+      display: inline-block;
+      position: relative;
+      padding: 0;
+      transition: all 0.5s ease; }
+      body .app .header .nav-link::after {
+        content: "";
+        display: block;
+        width: calc(100% - 0.5em);
+        height: 40%;
+        position: absolute;
+        z-index: -1;
+        top: 60%;
+        left: 0;
+        background-color: #444;
+        transform: scaleX(0);
+        transform-origin: center right;
+        transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
   body .app .stored-projects,
   body .app .project-create,
   body .app .project-edit,
@@ -201,73 +216,6 @@ body {
       align-items: center;
       min-height: 650px;
       position: relative; }
-      body .app .stored-projects__header .nav,
-      body .app .project-create__header .nav,
-      body .app .project-edit__header .nav,
-      body .app .stored-contacts__header .nav,
-      body .app .contact-create__header .nav,
-      body .app .contact-edit__header .nav,
-      body .app .stored-awards__header .nav,
-      body .app .award-create__header .nav,
-      body .app .award-edit__header .nav,
-      body .app .portfolio__header .nav,
-      body .app .about__header .nav {
-        position: fixed;
-        top: 46px;
-        right: 34px;
-        z-index: 120001; }
-        body .app .stored-projects__header .nav:hover .nav-link::after,
-        body .app .project-create__header .nav:hover .nav-link::after,
-        body .app .project-edit__header .nav:hover .nav-link::after,
-        body .app .stored-contacts__header .nav:hover .nav-link::after,
-        body .app .contact-create__header .nav:hover .nav-link::after,
-        body .app .contact-edit__header .nav:hover .nav-link::after,
-        body .app .stored-awards__header .nav:hover .nav-link::after,
-        body .app .award-create__header .nav:hover .nav-link::after,
-        body .app .award-edit__header .nav:hover .nav-link::after,
-        body .app .portfolio__header .nav:hover .nav-link::after,
-        body .app .about__header .nav:hover .nav-link::after {
-          transform: scaleX(1);
-          transform-origin: center left; }
-        body .app .stored-projects__header .nav-link,
-        body .app .project-create__header .nav-link,
-        body .app .project-edit__header .nav-link,
-        body .app .stored-contacts__header .nav-link,
-        body .app .contact-create__header .nav-link,
-        body .app .contact-edit__header .nav-link,
-        body .app .stored-awards__header .nav-link,
-        body .app .award-create__header .nav-link,
-        body .app .award-edit__header .nav-link,
-        body .app .portfolio__header .nav-link,
-        body .app .about__header .nav-link {
-          color: black;
-          display: inline-block;
-          position: relative;
-          padding: 0;
-          transition: all 0.5s ease; }
-          body .app .stored-projects__header .nav-link::after,
-          body .app .project-create__header .nav-link::after,
-          body .app .project-edit__header .nav-link::after,
-          body .app .stored-contacts__header .nav-link::after,
-          body .app .contact-create__header .nav-link::after,
-          body .app .contact-edit__header .nav-link::after,
-          body .app .stored-awards__header .nav-link::after,
-          body .app .award-create__header .nav-link::after,
-          body .app .award-edit__header .nav-link::after,
-          body .app .portfolio__header .nav-link::after,
-          body .app .about__header .nav-link::after {
-            content: "";
-            display: block;
-            width: calc(100% - 0.5em);
-            height: 40%;
-            position: absolute;
-            z-index: -1;
-            top: 60%;
-            left: 0;
-            background-color: #444;
-            transform: scaleX(0);
-            transform-origin: center right;
-            transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
       body .app .stored-projects__header-title,
       body .app .project-create__header-title,
       body .app .project-edit__header-title,
@@ -336,7 +284,7 @@ body {
         body .app .portfolio__main-project .projects,
         body .app .about__main-project .projects {
           position: absolute;
-          top: -26%;
+          bottom: 98%;
           left: -2.4%;
           font-weight: 800;
           font-size: 10rem;

@@ -129,6 +129,7 @@ body {
             z-index: 12000;
             padding: 1.875rem 1.875rem;
             @include flexCenter;
+            justify-content: space-between;
 
             &__logo {
                 @include flexCenter;
@@ -157,6 +158,43 @@ body {
                 opacity: 0;
                 visibility: hidden;
             }
+
+            .nav {
+                &-item {
+                    margin-left: 2rem;
+
+                    &:hover {
+                        .nav-link::after {
+                            transform: scaleX(1);
+                            transform-origin: center left;
+                        }
+                    }
+                }
+
+                &-link {
+                    @extend .develop-note;
+                    color: $black-color;
+                    display: inline-block;
+                    position: relative;
+                    padding: 0;
+                    transition: all 0.5s ease;
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: calc(100% - 0.5em);
+                        height: 40%;
+                        position: absolute;
+                        z-index: -1;
+                        top: 60%;
+                        left: 0;
+                        background-color: #444;
+                        transform: scaleX(0);
+                        transform-origin: center right;
+                        transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+                    }
+                }
+            }
         }
 
         .stored-projects,
@@ -176,45 +214,6 @@ body {
                 @include flexCenter;
                 min-height: 650px;
                 position: relative;
-
-                .nav {
-                    position: fixed;
-                    top: 46px;
-                    right: 34px;
-                    z-index: 120001;
-
-                    &:hover {
-                        .nav-link::after {
-                            transform: scaleX(1);
-                            transform-origin: center left;
-                        }
-                    }
-
-                    &-link {
-                        @extend .develop-note;
-                        color: $black-color;
-                        display: inline-block;
-                        position: relative;
-                        padding: 0;
-                        transition: all 0.5s ease;
-
-                        &::after {
-                            content: "";
-                            display: block;
-                            width: calc(100% - 0.5em);
-                            height: 40%;
-                            position: absolute;
-                            z-index: -1;
-                            top: 60%;
-                            left: 0;
-                            background-color: #444;
-                            transform: scaleX(0);
-                            transform-origin: center right;
-                            transition: transform 0.6s
-                                cubic-bezier(0.55, 0, 0.1, 1);
-                        }
-                    }
-                }
 
                 &-title {
                     max-width: 100rem;
@@ -241,7 +240,7 @@ body {
 
                     .projects {
                         position: absolute;
-                        top: -26%;
+                        bottom: 98%;
                         left: -2.4%;
                         font-weight: weight(bold);
                         font-size: 10rem;

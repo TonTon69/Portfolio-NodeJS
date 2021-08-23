@@ -2,8 +2,6 @@ extends ./layouts/common
 block content   
     section#portfolio.portfolio
         header.portfolio__header 
-            nav.nav
-                a(href="/about").nav-link about
             .portfolio__header-title
                 h1 
                     span welcome to my website
@@ -13,7 +11,7 @@ block content
         main.portfolio__main
             .portfolio__main-project
                 span.projects projects
-                .row 
+                .row
                     each project in projects  
                         .col-md-4.col-sm-6.col-xs-12
                             a.card.bg-dark.text-white(href=project.url, target="_blank")
