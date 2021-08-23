@@ -8,6 +8,7 @@ const Project = new Schema(
         name: { type: String },
         banner: { type: String },
         url: { type: String },
+        location: { type: Number },
     },
     {
         timestamps: true,

@@ -30,6 +30,7 @@ block content
                             th(scope='col') #
                             th(scope='col') Name
                             th(scope='col') Url
+                            th(scope='col') Location
                             th(scope='col') Created At
                             th(scope='col')
                     tbody
@@ -44,6 +45,7 @@ block content
                                     span.project-name=project.name
                                         img.project-banner(src=project.banner)
                                 td=project.url
+                                td=project.location
                                 td=moment(project.createdAt).format('DD-MM-YYYY')
                                 td
                                     a(href="/projects/" + project._id + "/edit").btn.btn-primary.me-2 Edit
@@ -66,7 +68,7 @@ block content
                                                 button#btn-delete-project.btn.btn-danger(type='button') Move to trash
                         else
                             tr
-                                td.text-center(colspan='6') You haven't posted any projects yet?
+                                td.text-center(colspan='7') You haven't posted any projects yet?
                                     a(href="/projects/create").ms-2.text-warning Create a new project                   
     if success.length > 0
         - var msg = success

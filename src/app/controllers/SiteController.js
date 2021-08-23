@@ -6,7 +6,10 @@ const Education = require("../models/Education");
 class SiteController {
     // [GET]/
     index(req, res, next) {
-        Promise.all([Project.find({}), Contact.find({})])
+        Promise.all([
+            Project.find({}).sort({ location: 1 }).limit(6),
+            Contact.find({}),
+        ])
             .then(([projects, contacts]) => {
                 res.render("index", {
                     projects,

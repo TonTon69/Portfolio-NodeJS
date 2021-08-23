@@ -29,6 +29,7 @@ block content
                             th(scope='col') #
                             th(scope='col') Name
                             th(scope='col') Url
+                            th(scope='col') Location
                             th(scope='col') Deleted At
                             th(scope='col')
                     tbody
@@ -43,6 +44,7 @@ block content
                                     span.project-name=project.name
                                         img.project-banner(src=project.banner)
                                 td=project.url
+                                td=project.location
                                 td=moment(project.deletedAt).format('DD-MM-YYYY')
                                 td
                                     a(href="#", data-bs-id=project._id).btn.btn-primary.btn-restore.me-2 Restore
@@ -66,7 +68,7 @@ block content
                                                 button#btn-delete-project.btn.btn-danger(type='button') Delete
                         else
                             tr
-                                td.text-center(colspan='6') Empty trash can?
+                                td.text-center(colspan='7') Empty trash can?
                                     a(href="/me/stored/projects").ms-2.text-warning Stored projects
     if success.length > 0
         - var msg = success
