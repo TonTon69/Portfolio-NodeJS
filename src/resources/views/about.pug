@@ -22,9 +22,15 @@ block content
                     .col-md-5
                         .education
                             .education__title education
-                            .education__content Ho Chi Minh City 
-                                br 
-                                | University of Technology, 2018
+                            .education__content
+                                each education in educations
+                                    span=education.school
+                                    span , 
+                                    span=education.startYear
+                                    span -
+                                    span=education.endYear
+                                    .is-devider-20
+                                        
                         .experience
                             .experience__title experience
                             .experience__content 
