@@ -11,5 +11,7 @@ router.get("/stored/awards", meController.storedAwards);
 router.get("/trash/awards", meController.trashAwards);
 router.get("/stored/educations", meController.storedEducations);
 router.get("/trash/educations", meController.trashEducations);
+router.get("/stored/experiences", meController.storedExperiences);
+router.get("/trash/experiences", meController.trashExperiences);
 
 module.exports = router;

@@ -1,0 +1,172 @@
+extends ../layouts/admin
+block content   
+    seaction#stored-experiences.stored-experiences
+        header.stored-experiences__header 
+            .stored-experiences__header-title
+                h1 
+                    span deleted experiences
+        main.stored-experiences__main
+            form(method="POST", action="/experiences/handle-form-actions")
+                .stored-experiences__link.text-end.mb-4
+                    a(href="/me/stored/experiences").btn.btn-primary.position-relative
+                        i.fab.fa-app-store
+                        span.ms-2 Stored Experiences
+                        span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger #{storedExperiencesCount}
+                    .delete-select-all
+                        span
+                        select.d-none(name='action')
+                            option(value='restore')
+                        div
+                            button#btn-restore-experience
+                                i.fas.fa-trash-restore
+                            button#btn-force-delete-experience.ms-4
+                                i.far.fa-trash-alt
+                table.table.stored-experiences__table
+                    thead
+                        tr.align-middle
+                            th(scope='col')
+                                input#checkbox-all(type='checkbox')
+                            th(scope='col') #
+                            th(scope='col') Company
+                            th(scope='col') Position
+                            th(scope='col') Start Year
+                            th(scope='col') End Year
+                            th(scope='col') Deleted At
+                            th(scope='col')
+                    tbody
+                        - var count = 0;
+                        each experience in experiences
+                            - count++;
+                            tr
+                                th(scope='row')
+                                    input(type='checkbox', name='experienceIds[]', value=experience._id)
+                                th(scope='row') #{count}
+                                td=experience.company
+                                td=experience.position
+                                td=experience.startYear
+                                td=experience.endYear
+                                td=moment(experience.deletedAt).format('DD-MM-YYYY')
+                                td
+                                    a(href="#", data-bs-id=experience._id).btn.btn-primary.btn-restore.me-2 Restore
+                                    a(href="#", data-bs-toggle="modal", data-bs-target="#delete-experience-modal", data-bs-id=experience._id).btn.btn-primary.btn-delete Delete
+                                
+                                form(name="delete-experience-form", method="POST")
+                                form(name="restore-experience-form", method="POST")
+
+                                // Confirm delete experience
+                                #delete-experience-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='delete-experience-label', aria-hidden='true')
+                                    .modal-dialog.modal-dialog-centered(style="max-width: 600px;")
+                                        .modal-content.bg-dark(style='box-shadow: 0 .5rem 1rem rgba(250,250,250,0.15); font-family: "Source Serif Pro", serif;')
+                                            .modal-header
+                                                h5#delete-experience-label.modal-title.text-uppercase Delete experience
+                                            .modal-body
+                                                .is-devider-20                                  
+                                                h4 This action cannot be restore. Are you sure you want to delete this experience?
+                                                .is-devider-20 
+                                            .modal-footer
+                                                button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+                                                button#btn-delete-experience.btn.btn-danger(type='button') Delete
+                        else
+                            tr
+                                td.text-center(colspan='8') Empty trash can?
+                                    a(href="/me/stored/experiences").ms-2.text-warning Stored experiences
+    if success.length > 0
+        - var msg = success
+
+    script.
+        document.addEventListener("DOMContentLoaded", function () {
+            var deleteExperienceModal = $("#delete-experience-modal");
+            var experienceId;
+            var deleteExperienceForm = document.forms["delete-experience-form"];
+            var restoreExperienceForm = document.forms["restore-experience-form"];
+            var btnDeleteExperience = $("#btn-delete-experience");
+            var restoreBtn = $$(".btn-restore");
+            var checkboxAll = $("#checkbox-all");
+            var experienceItemCheckbox = $$('input[name="experienceIds[]"]');
+            var btnRestoreExperience = $("#btn-restore-experience");
+            var btnForceDeleteExperience = $("#btn-force-delete-experience");
+            
+            // toast message
+            let msgToast = '#{msg}';
+            if(msgToast != ''){
+                Eggy({
+                    title:  'Success',
+                    message:  msgToast,
+                    type: 'success',
+                    duration: 3000,
+                });
+            }
+
+            deleteExperienceModal.addEventListener("show.bs.modal", function (event) {
+                // Button that triggered the modal
+                var button = event.relatedTarget;
+                experienceId = button.getAttribute("data-bs-id");
+            });
+
+            //When delete experience btn clicked
+            btnDeleteExperience.onclick = function () {
+                deleteExperienceForm.setAttribute(
+                    "action",
+                    "/experiences/" + experienceId + "/force?_method=DELETE"
+                );
+                deleteExperienceForm.submit();
+            };
+
+            // Restore btn clicked
+            for (let item of restoreBtn) {
+                item.onclick = function (e) {
+                    e.preventDefault();
+                    var experienceId = item.getAttribute("data-bs-id");
+                    restoreExperienceForm.setAttribute(
+                        "action",
+                        "/experiences/" + experienceId + "/restore?_method=PATCH"
+                    );
+                    restoreExperienceForm.submit();
+                };
+            }
+
+            //Checkbox all changed
+            checkboxAll.onchange = function() {
+                for (let experienceItem of experienceItemCheckbox) {
+                    experienceItem.checked = this.checked;
+                }
+                renderSelectedAction();
+            };
+
+            // Project item checkbox changed
+            for (let experienceItem of experienceItemCheckbox) {
+                experienceItem.onchange = function () {
+                    var isCheckedAll = experienceItemCheckbox.length === $$('input[name="experienceIds[]"]:checked').length;
+                    checkboxAll.checked = isCheckedAll;
+                    renderSelectedAction();
+                };
+            };
+
+            window.onload = function() {
+                renderSelectedAction()
+            }
+
+            //Re-render checked all submit button
+            function renderSelectedAction() {
+                var checkedCount = $$('input[name="experienceIds[]"]:checked').length;
+                var storedExperiencesLink = $(".stored-experiences__link");
+
+                if (checkedCount > 0) {
+                    storedExperiencesLink.classList.add("delete-all-show");
+                    $(".delete-select-all span").innerText = checkedCount + " selected";
+                } else {
+                    storedExperiencesLink.classList.remove("delete-all-show");
+                }
+            };
+
+            // Set value to handle submit form
+            btnRestoreExperience.onclick = function () {
+                $("select option").value = "restore";
+            }
+
+            btnForceDeleteExperience.onclick = function () {
+                $("select option").value = "force-delete";
+            } 
+        });
+
+       

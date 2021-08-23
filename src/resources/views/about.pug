@@ -33,12 +33,20 @@ block content
                                         
                         .experience
                             .experience__title experience
-                            .experience__content 
-                                span fullstack developer, 2020-2021
-                                .is-devider-20
-                                span backend developer, 2019-2020
-                                .is-devider-20
-                                span frontend developer, 2019
+                            .experience__content
+                                each experience in experiences
+                                    - var company = experience.company
+                                        if(company !== '')
+                                            span=company
+                                            span , 
+                                    span=experience.position
+                                    span , 
+                                    span=experience.startYear
+                                    - var endYear = experience.endYear
+                                    if(endYear !== null)
+                                        span -
+                                        span=endYear
+                                    .is-devider-20
                         .contact
                             .contact__title contact
                             .contact__content

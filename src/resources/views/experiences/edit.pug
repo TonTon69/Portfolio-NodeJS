@@ -1,0 +1,33 @@
+extends ../layouts/admin
+block content 
+    seaction#experience-edit.experience-edit
+        header.experience-edit__header 
+            .experience-edit__header-title
+                h1 edit experience 
+        main.experience-edit__main
+            form(action=`/experiences/${experience._id}?_method=PUT`, method="POST")
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='company') Company
+                    .col-sm-10
+                        input#company.form-control(type='text', name='company', placeholder='Enter experience company' value=experience.company)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='position') Position
+                    .col-sm-10
+                        input#position.form-control(type='text', name='position', placeholder='Enter experience position' value=experience.position required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='startYear') Start Year
+                    .col-sm-10
+                        input#startYear.form-control(type='number', name='startYear', placeholder='Enter experience start year' value=experience.startYear required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='endYear') End Year
+                    .col-sm-10
+                        input#endYear.form-control(type='number', name='endYear', placeholder='Enter experience end year' value=experience.endYear)
+                .is-devider-20 
+                .mb-3.row
+                    label.col-sm-2.col-form-label
+                    .col-sm-10
+                        a.btn.btn-primary.me-4(href='/me/stored/experiences') Close
+                        button.btn.btn-primary(type='submit') Save

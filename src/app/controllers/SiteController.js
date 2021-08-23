@@ -2,6 +2,7 @@ const Project = require("../models/Project");
 const Contact = require("../models/Contact");
 const Award = require("../models/Award");
 const Education = require("../models/Education");
+const Experience = require("../models/Experience");
 
 class SiteController {
     // [GET]/
@@ -25,12 +26,14 @@ class SiteController {
             Award.find({}).sort({ year: -1 }),
             Contact.find({}),
             Education.find({}).sort({ startYear: -1, endYear: -1 }),
+            Experience.find({}).sort({ startYear: -1, endYear: -1 }),
         ])
-            .then(([awards, contacts, educations]) => {
+            .then(([awards, contacts, educations, experiences]) => {
                 res.render("about", {
                     awards,
                     contacts,
                     educations,
+                    experiences,
                 });
             })
             .catch(next);
