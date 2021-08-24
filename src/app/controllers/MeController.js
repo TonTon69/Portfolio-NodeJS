@@ -3,6 +3,7 @@ const Contact = require("../models/Contact");
 const Award = require("../models/Award");
 const Education = require("../models/Education");
 const Experience = require("../models/Experience");
+const ExpertiseCategory = require("../models/ExpertiseCategory");
 
 class MeController {
     // [GET]/me/strored/projects
@@ -136,6 +137,38 @@ class MeController {
                 res.render("me/trash-experiences", {
                     experiences,
                     storedExperiencesCount,
+                    success: req.flash("success"),
+                });
+            })
+            .catch(next);
+    }
+
+    // [GET]/me/strored/expertises/categories
+    storedExpertisesCategories(req, res, next) {
+        Promise.all([
+            ExpertiseCategory.find({}),
+            ExpertiseCategory.countDocumentsDeleted(),
+        ])
+            .then(([expertiseCategories, deletedCount]) => {
+                res.render("me/stored-expertises-categories", {
+                    expertiseCategories,
+                    deletedCount,
+                    success: req.flash("success"),
+                });
+            })
+            .catch(next);
+    }
+
+    // [GET]/me/trash/expertises/categories
+    trashExpertisesCategories(req, res, next) {
+        Promise.all([
+            ExpertiseCategory.findDeleted({}),
+            ExpertiseCategory.countDocuments(),
+        ])
+            .then(([expertiseCategories, storedExpertisesCategoriesCount]) => {
+                res.render("me/trash-expertises-categories", {
+                    expertiseCategories,
+                    storedExpertisesCategoriesCount,
                     success: req.flash("success"),
                 });
             })

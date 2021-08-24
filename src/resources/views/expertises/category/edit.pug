@@ -1,0 +1,28 @@
+extends ../../layouts/admin
+block content 
+    seaction#expertises-category-edit.expertises-category-edit
+        header.expertises-category-edit__header 
+            .expertises-category-edit__header-title
+                h1 edit expertises category 
+        main.expertises-category-edit__main
+            form(action=`/expertises/category/${expertiseCategory._id}?_method=PUT`, method="POST")
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='name') Name
+                    .col-sm-10
+                        input#name.form-control(type='text', name='name', placeholder='Enter expertises category name' value=expertiseCategory.name required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='description') Description
+                    .col-sm-10
+                        input#description.form-control(type='text', name='description', placeholder='Enter description' value=expertiseCategory.description required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='location') Location
+                    .col-sm-10
+                        input#location.form-control(type='number', name='location', placeholder='Enter expertises category location' value=expertiseCategory.location required)
+                .is-devider-20
+                .mb-3.row
+                    label.col-sm-2.col-form-label
+                    .col-sm-10
+                        a.btn.btn-primary.me-4(href='/me/stored/expertises/categories') Close
+                        button.btn.btn-primary(type='submit') Save

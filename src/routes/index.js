@@ -4,6 +4,7 @@ const contactsRouter = require("./contacts");
 const awardsRouter = require("./awards");
 const educationsRouter = require("./educations");
 const experiencesRouter = require("./experiences");
+const expertisesCategoryRouter = require("./expertises-category");
 const meRouter = require("./me");
 
 function route(app) {
@@ -13,6 +14,7 @@ function route(app) {
     app.use("/awards", awardsRouter);
     app.use("/educations", educationsRouter);
     app.use("/experiences", experiencesRouter);
+    app.use("/expertises/category", expertisesCategoryRouter);
     app.use("/me", meRouter);
 }
 
