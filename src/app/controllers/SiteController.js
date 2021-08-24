@@ -3,6 +3,8 @@ const Contact = require("../models/Contact");
 const Award = require("../models/Award");
 const Education = require("../models/Education");
 const Experience = require("../models/Experience");
+const Expertise = require("../models/Expertise");
+const ExpertiseCategory = require("../models/ExpertiseCategory");
 
 class SiteController {
     // [GET]/
@@ -27,15 +29,28 @@ class SiteController {
             Contact.find({}),
             Education.find({}).sort({ startYear: -1, endYear: -1 }),
             Experience.find({}).sort({ startYear: -1, endYear: -1 }),
+            ExpertiseCategory.find({}).sort({ location: 1 }),
+            Expertise.find({}).sort({ location: 1 }),
         ])
-            .then(([awards, contacts, educations, experiences]) => {
-                res.render("about", {
+            .then(
+                ([
                     awards,
                     contacts,
                     educations,
                     experiences,
-                });
-            })
+                    expertiseCategories,
+                    expertises,
+                ]) => {
+                    res.render("about", {
+                        awards,
+                        contacts,
+                        educations,
+                        experiences,
+                        expertiseCategories,
+                        expertises,
+                    });
+                }
+            )
             .catch(next);
     }
 }

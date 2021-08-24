@@ -70,6 +70,44 @@ block content
                             tr
                                 td.text-center(colspan='7') You haven't posted any expertises yet?
                                     a(href="/expertises/create").ms-2.text-warning Create a new expertise
+
+            .row
+                // hiển thị phân trang nếu có trang
+                if pages > 0 
+                    nav.d-flex.justify-content-center.mt-4
+                        ul.pagination
+                            // nếu trang hiện tại là 1 thì First sẽ bị disabled
+                            if current == 1
+                                li.page-item.disabled
+                                    a.page-link(href='#') First
+                            else
+                                li.page-item
+                                    a.page-link(href='/me/stored/expertises/1') First
+                            
+                            - var i = (Number(current) > 3 ? Number(current) - 2 : 1)
+                            if i !== 1
+                                li.page-item.disabled
+                                    a.page-link(href='#') ...
+                            
+                            // lặp qua từng trang và tăng số trang
+                            - for(; i <= (Number(current) + 2) && i <= pages; i++)
+                                if i == current
+                                    li.page-item.active
+                                        a.page-link(href='/me/stored/expertises/' + i)=i
+                                else
+                                    li.page-item
+                                        a.page-link(href='/me/stored/expertises/' + i)=i
+                                if i == Number(current) + 2 && i < pages
+                                    li.page-item.disabled
+                                        a.page-link(href='#') ...
+                            
+                            // Nếu số current( chỉ số phân trang ) là 6 và tổng số page là 6 thì Last bị disabled
+                            if current == pages
+                                li.page-item.disabled
+                                    a.page-link(href='#') Last
+                            else
+                                li.page-item
+                                    a.page-link(href='/me/stored/expertises/' + pages) Last
     if success.length > 0
         - var msg = success
 

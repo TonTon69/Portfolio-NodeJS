@@ -146,19 +146,33 @@ class MeController {
 
     // [GET]/me/strored/expertises
     storedExpertises(req, res, next) {
+        let perPage = 6; // số lượng expertises xuất hiện trên 1 page
+        let page = req.params.page || 1;
         Promise.all([
-            Expertise.find({}),
+            Expertise.find({})
+                .skip(perPage * page - perPage) // Trong page đầu tiên sẽ bỏ qua giá trị là 0
+                .limit(perPage),
+            Expertise.countDocuments(), // đếm để tính có bao nhiêu trang
             Expertise.countDocumentsDeleted(),
             ExpertiseCategory.find({}),
         ])
-            .then(([expertises, deletedCount, expertisesCategories]) => {
-                res.render("me/stored-expertises", {
+            .then(
+                ([
                     expertises,
+                    storedExpertisesCount,
                     deletedCount,
                     expertisesCategories,
-                    success: req.flash("success"),
-                });
-            })
+                ]) => {
+                    res.render("me/stored-expertises", {
+                        expertises, // expertises trên một page
+                        current: page, // page hiện tại
+                        pages: Math.ceil(storedExpertisesCount / perPage), // tổng số các page
+                        deletedCount,
+                        expertisesCategories,
+                        success: req.flash("success"),
+                    });
+                }
+            )
             .catch(next);
     }
 
