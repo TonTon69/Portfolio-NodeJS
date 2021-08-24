@@ -1,0 +1,31 @@
+extends ../layouts/admin
+block content 
+    seaction#expertises-create.expertises-create
+        header.expertises-create__header 
+            .expertises-create__header-title
+                h1 create a new expertise
+        main.expertises-create__main
+            form(method="POST", action="/expertises/create")
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='name') Name
+                    .col-sm-10
+                        input#name.form-control(type='text', name='name', placeholder='Enter expertise name' required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='location') Location
+                    .col-sm-10
+                        input#location.form-control(type='number', name='location', placeholder='Enter expertise location' required)
+                .is-devider-20
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='expertiseCategoryId') Expertise Category
+                    .col-sm-10
+                        select#expertiseCategoryId.form-select(name='expertiseCategoryId' required)
+                            option(value='') --Choose expertise category--
+                            each category in expertisesCategories
+                                option(value=category._id)=category.name
+                .is-devider-20
+                .mb-3.row
+                    label.col-sm-2.col-form-label
+                    .col-sm-10
+                        a.btn.btn-primary.me-4(href='/me/stored/expertises') Close
+                        button.btn.btn-primary(type='submit') Create

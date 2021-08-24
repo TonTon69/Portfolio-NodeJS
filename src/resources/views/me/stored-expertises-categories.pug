@@ -42,7 +42,7 @@ block content
                                     input(type='checkbox', name='expertisesCategoryIds[]', value=category._id)
                                 th(scope='row') #{count}
                                 td=category.name
-                                td=category.description
+                                td(width=700)=category.description
                                 td=category.location
                                 td=moment(category.createdAt).format('DD-MM-YYYY')
                                 td
@@ -108,15 +108,15 @@ block content
 
             //Checkbox all changed
             checkboxAll.onchange = function() {
-                for (let awardItem of expertisesCategoryItemCheckbox) {
-                    awardItem.checked = this.checked;
+                for (let expertisesCategoryItem of expertisesCategoryItemCheckbox) {
+                    expertisesCategoryItem.checked = this.checked;
                 }
                 renderSelectedAction();
             };
 
-            // Project item checkbox changed
-            for (let awardItem of expertisesCategoryItemCheckbox) {
-                awardItem.onchange = function () {
+            // Expertises Category item checkbox changed
+            for (let expertisesCategoryItem of expertisesCategoryItemCheckbox) {
+                expertisesCategoryItem.onchange = function () {
                     var isCheckedAll = expertisesCategoryItemCheckbox.length === $$('input[name="expertisesCategoryIds[]"]:checked').length;
                     checkboxAll.checked = isCheckedAll;
                     renderSelectedAction();

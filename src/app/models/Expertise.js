@@ -5,11 +5,9 @@ const mongooseDelete = require("mongoose-delete");
 
 const Expertise = new Schema(
     {
-        company: { type: String },
-        position: { type: String },
-        startYear: { type: Number },
-        endYear: { type: Number },
-        expertiseCategoryId: { type: ObjectId },
+        name: { type: String },
+        location: { type: Number },
+        expertiseCategoryId: { type: Number },
     },
     {
         timestamps: true,

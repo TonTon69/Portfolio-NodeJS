@@ -1,0 +1,34 @@
+extends ../layouts/admin
+block content 
+    seaction#expertises-edit.expertises-edit
+        header.expertises-edit__header 
+            .expertises-edit__header-title
+                h1 edit expertise
+        main.expertises-edit__main
+            form(action=`/expertises/${expertise._id}?_method=PUT`, method="POST")
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='name') Name
+                    .col-sm-10
+                        input#name.form-control(type='text', name='name', placeholder='Enter expertises name' value=expertise.name required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='location') location
+                    .col-sm-10
+                        input#location.form-control(type='text', name='location', placeholder='Enter expertises location' value=expertise.location required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='expertiseCategoryId') Expertise Category
+                    .col-sm-10
+                        select#expertiseCategoryId.form-select(name='expertiseCategoryId' required)
+                            option(value='') --Choose expertise category--
+                            each category in expertisesCategories
+                                if category._id === expertise.expertiseCategoryId
+                                    option(value=category._id, selected)=category.name
+                                else
+                                    option(value=category._id)=category.name
+                .is-devider-20
+                .mb-3.row
+                    label.col-sm-2.col-form-label
+                    .col-sm-10
+                        a.btn.btn-primary.me-4(href='/me/stored/expertises') Close
+                        button.btn.btn-primary(type='submit') Save

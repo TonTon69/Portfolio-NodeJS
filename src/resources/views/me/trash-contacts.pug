@@ -130,7 +130,7 @@ block content
                 renderSelectedAction();
             };
 
-            // Project item checkbox changed
+            // Contact item checkbox changed
             for (let contactItem of contactItemCheckbox) {
                 contactItem.onchange = function () {
                     var isCheckedAll = contactItemCheckbox.length === $$('input[name="contactIds[]"]:checked').length;

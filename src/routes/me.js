@@ -13,6 +13,8 @@ router.get("/stored/educations", meController.storedEducations);
 router.get("/trash/educations", meController.trashEducations);
 router.get("/stored/experiences", meController.storedExperiences);
 router.get("/trash/experiences", meController.trashExperiences);
+router.get("/stored/expertises", meController.storedExpertises);
+router.get("/trash/expertises", meController.trashExpertises);
 router.get(
     "/stored/expertises/categories",
     meController.storedExpertisesCategories

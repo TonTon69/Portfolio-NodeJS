@@ -197,6 +197,9 @@ body {
             }
         }
 
+        .stored-expertises,
+        .expertises-create,
+        .expertises-edit,
         .stored-expertises-categories,
         .expertises-category-create,
         .expertises-category-edit,
@@ -509,6 +512,7 @@ body {
             }
         }
 
+        .stored-expertises,
         .stored-expertises-categories,
         .stored-experiences,
         .stored-educations,
@@ -706,6 +710,8 @@ body {
             }
         }
 
+        .expertises-create,
+        .expertises-edit,
         .expertises-category-create,
         .expertises-category-edit,
         .experience-create,
@@ -724,7 +730,8 @@ body {
                     font-size: 1.3125rem;
                     font-weight: weight(medium);
 
-                    input {
+                    input,
+                    select {
                         border-radius: 2px;
                         padding: 1.375rem 1.75rem;
                         font-size: 1.2rem;

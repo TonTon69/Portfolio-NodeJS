@@ -39,6 +39,7 @@
         "moment": "^2.29.1",
         "mongoose": "^5.13.7",
         "mongoose-delete": "^0.5.3",
+        "mongoose-sequence": "^5.3.1",
         "pug": "^3.0.2"
     },
     "devDependencies": {
