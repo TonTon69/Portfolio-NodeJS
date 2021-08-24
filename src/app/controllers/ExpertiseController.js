@@ -20,7 +20,7 @@ class ExpertiseController {
             .save()
             .then(() => {
                 req.flash("success", "Create a new expertise successfully!");
-                res.redirect("/me/stored/expertises");
+                res.redirect("/me/stored/expertises/1");
             })
             .catch(next);
     }
@@ -45,7 +45,7 @@ class ExpertiseController {
         Expertise.updateOne({ _id: req.params.id }, req.body)
             .then(() => {
                 req.flash("success", "Update this expertise successfully!");
-                res.redirect("/me/stored/expertises");
+                res.redirect("/me/stored/expertises/1");
             })
             .catch(next);
     }
@@ -68,7 +68,7 @@ class ExpertiseController {
         Expertise.restore({ _id: req.params.id })
             .then(() => {
                 req.flash("success", "Restore this expertise successfully!");
-                res.redirect("/me/stored/expertises");
+                res.redirect("/me/stored/expertises/1");
             })
             .catch(next);
     }

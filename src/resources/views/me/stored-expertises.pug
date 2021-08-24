@@ -68,8 +68,12 @@ block content
                                                 button#btn-delete-expertise.btn.btn-danger(type='button') Move to trash
                         else
                             tr
-                                td.text-center(colspan='7') You haven't posted any expertises yet?
-                                    a(href="/expertises/create").ms-2.text-warning Create a new expertise
+                                if current > pages
+                                    td.text-center(colspan='7') Page limit exceeded, please try again!
+                                        a(href="/expertises/create").ms-2.text-warning Create a new expertise
+                                else
+                                    td.text-center(colspan='7') You haven't posted any expertises yet?
+                                        a(href="/expertises/create").ms-2.text-warning Create a new expertise
 
             .row
                 // hiển thị phân trang nếu có trang

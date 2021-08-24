@@ -8,7 +8,7 @@ block content
         main.stored-expertises__main
             form(method="POST", action="/expertises/handle-form-actions")
                 .stored-expertises__link.text-end.mb-4
-                    a(href="/me/stored/expertises").btn.btn-primary.position-relative
+                    a(href="/me/stored/expertises/1").btn.btn-primary.position-relative
                         i.fab.fa-app-store
                         span.ms-2 Stored Expertises
                         span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger #{storedExpertisesCount}
@@ -69,7 +69,7 @@ block content
                         else
                             tr
                                 td.text-center(colspan='7') Empty trash can?
-                                    a(href="/me/stored/expertises").ms-2.text-warning Stored expertises
+                                    a(href="/me/stored/expertises/1").ms-2.text-warning Stored expertises
     if success.length > 0
         - var msg = success
 
