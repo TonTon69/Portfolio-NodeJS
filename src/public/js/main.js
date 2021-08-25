@@ -31,11 +31,12 @@ window.onscroll = function () {
 // When to top clicked
 const toTop = $(".to-top span");
 toTop.onclick = function scrollToTop() {
-    if (
-        document.body.scrollTop !== 0 ||
-        document.documentElement.scrollTop !== 0
-    ) {
-        window.scrollBy(0, -100);
-        requestAnimationFrame(scrollToTop);
-    }
+    window.scrollTo(0, { behavior: "smooth" });
+    // if (
+    //     document.body.scrollTop !== 0 ||
+    //     document.documentElement.scrollTop !== 0
+    // ) {
+    //     window.scrollBy(0, -100);
+    //     requestAnimationFrame(scrollToTop);
+    // }
 };

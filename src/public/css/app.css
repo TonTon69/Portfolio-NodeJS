@@ -1095,7 +1095,8 @@ body {
         body .app .portfolio__main .about__main-content .download-cv,
         body .app .about__main .about__main-content .download-cv {
           color: white;
-          position: relative; }
+          position: relative;
+          cursor: pointer; }
           body .app .stored-system-info__main .about__main-content .download-cv::after,
           body .app .system-info-create__main .about__main-content .download-cv::after,
           body .app .system-info-edit__main .about__main-content .download-cv::after,

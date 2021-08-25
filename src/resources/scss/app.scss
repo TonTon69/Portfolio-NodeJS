@@ -413,6 +413,7 @@ body {
                         @extend .develop-note;
                         color: $white-color;
                         position: relative;
+                        cursor: pointer;
 
                         &::after {
                             content: "";

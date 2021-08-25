@@ -13,12 +13,12 @@ block content
                     .col-md-7.pe-5
                         each i in info
                             if i.field == 'description-me'
-                                - var value = i.value
-                                div !{value}
+                                - var valueInfoMe = i.value
+                                div !{valueInfoMe}
+                        each i in info
                             if i.field == 'cv'
                                 - var valueCv = i.value
-                                - var body = !{valueCv}
-                                a(href=body).download-cv download resume
+                                a(href="", target='_blank').download-cv download resume
                     .col-md-5
                         .education
                             .education__title education
