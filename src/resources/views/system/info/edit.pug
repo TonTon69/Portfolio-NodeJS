@@ -12,12 +12,13 @@ block content
                         input#field.form-control(type='text', name='field', placeholder='Enter system info field' value=systemInfo.field required)
                 .is-devider-20 
                 .mb-3.row.align-items-center
-                    label.col-sm-2.col-form-label(for='value') Value
+                    label.col-sm-2.col-form-label(for='value-editor') Value
                     .col-sm-10
-                        textarea#value.form-control(type='text', name='value', placeholder='Enter system info value' rows='5' required)=systemInfo.value
+                        textarea#value-editor.form-control(type='text', name='value', placeholder='Enter system info value' rows='5' required)=systemInfo.value
                 .is-devider-20 
                 .mb-3.row
                     label.col-sm-2.col-form-label
                     .col-sm-10
                         a.btn.btn-primary.me-4(href='/me/stored/system/info') Close
                         button.btn.btn-primary(type='submit') Save
+        

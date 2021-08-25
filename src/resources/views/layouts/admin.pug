@@ -1,5 +1,8 @@
 html
     head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
         title Portfolio
         link(rel='preconnect', href='https://fonts.googleapis.com')
         link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
@@ -22,8 +25,18 @@ html
             .is-devider-200
             .to-top.text-end 
                 span back to top
-            .is-devider-200  
+            .is-devider-200 
         script(type="text/javascript", src="/js/main.js")
-        
-
+        script(type="text/javascript", src="/vendor/ckeditor/ckeditor.js")
+        script.
+            CKEDITOR.config.pasteFromWordPromptCleanup = true;
+            CKEDITOR.config.pasteFromWordRemoveFontStyles = false;
+            CKEDITOR.config.pasteFromWordRemoveStyles = false;
+            CKEDITOR.config.language = "vi";
+            CKEDITOR.config.htmlEncodeOutput = false;
+            CKEDITOR.config.ProcessHTMLEntities = false;
+            CKEDITOR.config.entities = false;
+            CKEDITOR.config.entities_latin = false;
+            CKEDITOR.config.ForceSimpleAmpersand = false;
+            CKEDITOR.replace('value-editor');
             

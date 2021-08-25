@@ -38,8 +38,13 @@ block content
                             tr
                                 th(scope='row')
                                     input(type='checkbox', name='systemInfoIds[]', value=info._id)
+                                th(scope='row') #{count}
                                 td=info.field
-                                td(width=750)=info.value
+                                td(width=750) !{info.value}
+                                style(type="text/css").
+                                    p {
+                                        margin: 0;
+                                    }
                                 td=moment(info.deletedAt).format('DD-MM-YYYY')
                                 td
                                     a(href="#", data-bs-id=info._id).btn.btn-primary.btn-restore.me-2 Restore
@@ -63,7 +68,7 @@ block content
                                                 button#btn-delete-system-info.btn.btn-danger(type='button') Delete
                         else
                             tr
-                                td.text-center(colspan='7') Empty trash can?
+                                td.text-center(colspan='6') Empty trash can?
                                     a(href="/me/stored/system/info").ms-2.text-warning Stored system info
     if success.length > 0
         - var msg = success

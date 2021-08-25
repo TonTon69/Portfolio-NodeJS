@@ -10,7 +10,6 @@ const moment = require("moment");
 const session = require("express-session");
 const flash = require("connect-flash");
 
-const SortMiddleware = require("./app/middlewares/SortMiddleware");
 const LocalMiddleware = require("./app/middlewares/LocalMiddleware");
 
 const route = require("./routes");
@@ -37,11 +36,10 @@ app.set("views", path.join(__dirname, "resources", "views"));
 
 app.use(methodOverride("_method"));
 
-app.locals.moment = moment;
-
 // Custom middleware
-app.use(SortMiddleware);
 app.use(LocalMiddleware);
+
+app.locals.moment = moment;
 
 //
 app.use(

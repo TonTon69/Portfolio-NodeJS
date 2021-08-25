@@ -3,10 +3,10 @@ block content
     section#portfolio.portfolio
         header.portfolio__header 
             .portfolio__header-title
-                h1 
-                    span welcome to my website
-                    br
-                    span hi, i'm minh hoang.
+                each i in info
+                    if i.field == 'description-home'
+                        - var value = i.value
+                        h1 !{value}
         .is-devider-100
         main.portfolio__main
             .portfolio__main-project
@@ -27,5 +27,5 @@ block content
                         h1.card-title 
                             span helping
                             span brands win.
-                        p.card-text 
+                        p.card-text
                             a(href="javascript:void(0)") visit ad minhhoang
