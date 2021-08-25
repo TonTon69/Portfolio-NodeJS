@@ -39,7 +39,7 @@ block content
                                 th(scope='row')
                                     input(type='checkbox', name='systemInfoIds[]', value=info._id)
                                 td=info.field
-                                td=info.value
+                                td(width=750)=info.value
                                 td=moment(info.deletedAt).format('DD-MM-YYYY')
                                 td
                                     a(href="#", data-bs-id=info._id).btn.btn-primary.btn-restore.me-2 Restore

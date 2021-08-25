@@ -41,7 +41,7 @@ block content
                                     input(type='checkbox', name='systemInfoIds[]', value=info._id)
                                 th(scope='row') #{count}
                                 td=info.field
-                                td=info.value
+                                td(width=750)=info.value
                                 td=moment(info.createdAt).format('DD-MM-YYYY')
                                 td
                                     a(href="/system/info/" + info._id + "/edit").btn.btn-primary.me-2 Edit

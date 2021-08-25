@@ -13,8 +13,6 @@ router.get("/stored/educations", meController.storedEducations);
 router.get("/trash/educations", meController.trashEducations);
 router.get("/stored/experiences", meController.storedExperiences);
 router.get("/trash/experiences", meController.trashExperiences);
-router.get("/stored/expertises/:page", meController.storedExpertises);
-router.get("/trash/expertises", meController.trashExpertises);
 router.get(
     "/stored/expertises/categories",
     meController.storedExpertisesCategories
@@ -23,6 +21,8 @@ router.get(
     "/trash/expertises/categories",
     meController.trashExpertisesCategories
 );
+router.get("/stored/expertises/:page", meController.storedExpertises);
+router.get("/trash/expertises", meController.trashExpertises);
 router.get("/stored/system/info", meController.storedSystemInfo);
 router.get("/trash/system/info", meController.trashSystemInfo);
 

@@ -14,7 +14,7 @@ block content
                 .mb-3.row.align-items-center
                     label.col-sm-2.col-form-label(for='description') Description
                     .col-sm-10
-                        input#description.form-control(type='text', name='description', placeholder='Enter description' value=expertiseCategory.description required)
+                        textarea#description.form-control(type='text', name='description', placeholder='Enter description' rows='5' required)=expertiseCategory.description
                 .is-devider-20 
                 .mb-3.row.align-items-center
                     label.col-sm-2.col-form-label(for='location') Location
