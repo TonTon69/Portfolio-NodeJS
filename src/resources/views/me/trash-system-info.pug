@@ -1,0 +1,167 @@
+extends ../layouts/admin
+block content   
+    seaction#stored-system-info.stored-system-info
+        header.stored-system-info__header 
+            .stored-system-info__header-title
+                h1 
+                    span deleted system info
+        main.stored-system-info__main
+            form(method="POST", action="/system/info/handle-form-actions")
+                .stored-system-info__link.text-end.mb-4
+                    a(href="/me/stored/system/info").btn.btn-primary.position-relative
+                        i.fab.fa-app-store
+                        span.ms-2 Stored System Info
+                        span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger #{storedSystemInfoCount}
+                    .delete-select-all
+                        span
+                        select.d-none(name='action')
+                            option(value='restore')
+                        div
+                            button#btn-restore-system-info
+                                i.fas.fa-trash-restore
+                            button#btn-force-delete-system-info.ms-4
+                                i.far.fa-trash-alt
+                table.table.stored-system-info__table
+                    thead
+                        tr.align-middle
+                            th(scope='col')
+                                input#checkbox-all(type='checkbox')
+                            th(scope='col') #
+                            th(scope='col') Field
+                            th(scope='col') Value
+                            th(scope='col') Deleted At
+                            th(scope='col')
+                    tbody
+                        - var count = 0;
+                        each info in systemInfo
+                            - count++;
+                            tr
+                                th(scope='row')
+                                    input(type='checkbox', name='systemInfoIds[]', value=info._id)
+                                td=info.field
+                                td=info.value
+                                td=moment(info.deletedAt).format('DD-MM-YYYY')
+                                td
+                                    a(href="#", data-bs-id=info._id).btn.btn-primary.btn-restore.me-2 Restore
+                                    a(href="#", data-bs-toggle="modal", data-bs-target="#delete-system-info-modal", data-bs-id=info._id).btn.btn-primary.btn-delete Delete
+                                
+                                form(name="delete-system-info-form", method="POST")
+                                form(name="restore-system-info-form", method="POST")
+
+                                // Confirm delete system-info
+                                #delete-system-info-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='delete-system-info-label', aria-hidden='true')
+                                    .modal-dialog.modal-dialog-centered(style="max-width: 600px;")
+                                        .modal-content.bg-dark(style='box-shadow: 0 .5rem 1rem rgba(250,250,250,0.15); font-family: "Source Serif Pro", serif;')
+                                            .modal-header
+                                                h5#delete-system-info-label.modal-title.text-uppercase Delete system info
+                                            .modal-body
+                                                .is-devider-20                                  
+                                                h4 This action cannot be restore. Are you sure you want to delete this system info?
+                                                .is-devider-20 
+                                            .modal-footer
+                                                button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+                                                button#btn-delete-system-info.btn.btn-danger(type='button') Delete
+                        else
+                            tr
+                                td.text-center(colspan='7') Empty trash can?
+                                    a(href="/me/stored/system/info").ms-2.text-warning Stored system info
+    if success.length > 0
+        - var msg = success
+
+    script.
+        document.addEventListener("DOMContentLoaded", function () {
+            var deleteSystemInfoModal = $("#delete-system-info-modal");
+            var systemInfoId;
+            var deleteSystemInfoForm = document.forms["delete-system-info-form"];
+            var restoreSystemInfoForm = document.forms["restore-system-info-form"];
+            var btnDeleteSystemInfo = $("#btn-delete-system-info");
+            var restoreBtn = $$(".btn-restore");
+            var checkboxAll = $("#checkbox-all");
+            var systemInfoItemCheckbox = $$('input[name="systemInfoIds[]"]');
+            var btnRestoreSystemInfo = $("#btn-restore-system-info");
+            var btnForceDeleteSystemInfo = $("#btn-force-delete-system-info");
+
+            // toast message
+            let msgToast = '#{msg}';
+            if(msgToast != ''){
+                Eggy({
+                    title:  'Success',
+                    message:  msgToast,
+                    type: 'success',
+                    duration: 3000,
+                });
+            }
+
+            deleteSystemInfoModal.addEventListener("show.bs.modal", function (event) {
+                // Button that triggered the modal
+                var button = event.relatedTarget;
+                systemInfoId = button.getAttribute("data-bs-id");
+            });
+
+            //When delete contact btn clicked
+            btnDeleteSystemInfo.onclick = function () {
+                deleteSystemInfoForm.setAttribute(
+                    "action",
+                    "/system/info/" + systemInfoId + "/force?_method=DELETE"
+                );
+                deleteSystemInfoForm.submit();
+            };
+
+            // Restore btn clicked
+            for (let item of restoreBtn) {
+                item.onclick = function (e) {
+                    e.preventDefault();
+                    var systemInfoId = item.getAttribute("data-bs-id");
+                    restoreSystemInfoForm.setAttribute(
+                        "action",
+                        "/system/info/" + systemInfoId + "/restore?_method=PATCH"
+                    );
+                    restoreSystemInfoForm.submit();
+                };
+            }
+
+            //Checkbox all changed
+            checkboxAll.onchange = function() {
+                for (let systemInfoItem of systemInfoItemCheckbox) {
+                    systemInfoItem.checked = this.checked;
+                }
+                renderSelectedAction();
+            };
+
+            // System info item checkbox changed
+            for (let systemInfoItem of systemInfoItemCheckbox) {
+                systemInfoItem.onchange = function () {
+                    var isCheckedAll = systemInfoItemCheckbox.length === $$('input[name="systemInfoIds[]"]:checked').length;
+                    checkboxAll.checked = isCheckedAll;
+                    renderSelectedAction();
+                };
+            };
+
+            window.onload = function() {
+                renderSelectedAction()
+            }
+
+            //Re-render checked all submit button
+            function renderSelectedAction() {
+                var checkedCount = $$('input[name="systemInfoIds[]"]:checked').length;
+                var storedSystemInfoLink = $(".stored-system-info__link");
+
+                if (checkedCount > 0) {
+                    storedSystemInfoLink.classList.add("delete-all-show");
+                    $(".delete-select-all span").innerText = checkedCount + " selected";
+                } else {
+                    storedSystemInfoLink.classList.remove("delete-all-show");
+                }
+            };
+
+            // Set value to handle submit form
+            btnRestoreSystemInfo.onclick = function () {
+                $("select option").value = "restore";
+            }
+
+            btnForceDeleteSystemInfo.onclick = function () {
+                $("select option").value = "force-delete";
+            } 
+        });
+
+       

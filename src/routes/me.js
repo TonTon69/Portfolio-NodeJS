@@ -23,4 +23,7 @@ router.get(
     "/trash/expertises/categories",
     meController.trashExpertisesCategories
 );
+router.get("/stored/system/info", meController.storedSystemInfo);
+router.get("/trash/system/info", meController.trashSystemInfo);
+
 module.exports = router;

@@ -6,6 +6,7 @@ const educationsRouter = require("./educations");
 const experiencesRouter = require("./experiences");
 const expertisesRouter = require("./expertises");
 const expertisesCategoryRouter = require("./expertises-category");
+const systemInfoRouter = require("./system-info");
 const meRouter = require("./me");
 
 function route(app) {
@@ -17,6 +18,7 @@ function route(app) {
     app.use("/experiences", experiencesRouter);
     app.use("/expertises", expertisesRouter);
     app.use("/expertises/category", expertisesCategoryRouter);
+    app.use("/system/info", systemInfoRouter);
     app.use("/me", meRouter);
 }
 

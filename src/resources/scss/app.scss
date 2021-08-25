@@ -197,6 +197,9 @@ body {
             }
         }
 
+        .stored-system-info,
+        .system-info-create,
+        .system-info-edit,
         .stored-expertises,
         .expertises-create,
         .expertises-edit,
@@ -548,6 +551,7 @@ body {
             }
         }
 
+        .stored-system-info,
         .stored-expertises,
         .stored-expertises-categories,
         .stored-experiences,
@@ -673,6 +677,18 @@ body {
                     -webkit-text-stroke: 1px #000;
                 }
 
+                &-categories:first-child {
+                    padding-right: 4rem !important;
+                }
+
+                &-categories:nth-child(2) {
+                    padding: 0 2rem !important;
+                }
+
+                &-categories:last-child {
+                    padding-left: 4rem !important;
+                }
+
                 &-title {
                     font-weight: weight(bold);
                     font-size: 3rem;
@@ -686,7 +702,7 @@ body {
                     font-size: 1.3125rem;
                     line-height: 1.8;
                     font-weight: weight(medium);
-                    padding-right: 4rem;
+                    // padding-right: 4rem;
                     text-align: justify;
                 }
 
@@ -746,6 +762,8 @@ body {
             }
         }
 
+        .system-info-create,
+        .system-info-edit,
         .expertises-create,
         .expertises-edit,
         .expertises-category-create,

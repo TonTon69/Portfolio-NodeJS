@@ -1,0 +1,3165 @@
+@font-face {
+  font-family: "Sequel";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Sequel"), url("/src/public/fonts/Sequel-Bold.otf") format("otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn.btn-primary,
+.btn.btn-delete {
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
+  border-radius: 2px;
+}
+
+.btn.btn-primary:focus,
+.btn.btn-delete:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn.btn-primary {
+  background: #212b36;
+  border-color: #212b36;
+}
+
+.btn.btn-primary:hover {
+  background: #171f27;
+}
+
+.btn.btn-delete {
+  background: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn.btn-delete:hover {
+  background: #bb2d3b;
+}
+
+.develop-note, body .app .header .nav-link, body .app .stored-system-info__main-brand .card-img-overlay .card-text,
+body .app .system-info-create__main-brand .card-img-overlay .card-text,
+body .app .system-info-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-expertises__main-brand .card-img-overlay .card-text,
+body .app .expertises-create__main-brand .card-img-overlay .card-text,
+body .app .expertises-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-expertises-categories__main-brand .card-img-overlay .card-text,
+body .app .expertises-category-create__main-brand .card-img-overlay .card-text,
+body .app .expertises-category-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-experiences__main-brand .card-img-overlay .card-text,
+body .app .experience-create__main-brand .card-img-overlay .card-text,
+body .app .experience-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-educations__main-brand .card-img-overlay .card-text,
+body .app .education-create__main-brand .card-img-overlay .card-text,
+body .app .education-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-projects__main-brand .card-img-overlay .card-text,
+body .app .project-create__main-brand .card-img-overlay .card-text,
+body .app .project-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-contacts__main-brand .card-img-overlay .card-text,
+body .app .contact-create__main-brand .card-img-overlay .card-text,
+body .app .contact-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-awards__main-brand .card-img-overlay .card-text,
+body .app .award-create__main-brand .card-img-overlay .card-text,
+body .app .award-edit__main-brand .card-img-overlay .card-text,
+body .app .portfolio__main-brand .card-img-overlay .card-text,
+body .app .about__main-brand .card-img-overlay .card-text, body .app .stored-system-info__main .about__main-content .download-cv,
+body .app .system-info-create__main .about__main-content .download-cv,
+body .app .system-info-edit__main .about__main-content .download-cv,
+body .app .stored-expertises__main .about__main-content .download-cv,
+body .app .expertises-create__main .about__main-content .download-cv,
+body .app .expertises-edit__main .about__main-content .download-cv,
+body .app .stored-expertises-categories__main .about__main-content .download-cv,
+body .app .expertises-category-create__main .about__main-content .download-cv,
+body .app .expertises-category-edit__main .about__main-content .download-cv,
+body .app .stored-experiences__main .about__main-content .download-cv,
+body .app .experience-create__main .about__main-content .download-cv,
+body .app .experience-edit__main .about__main-content .download-cv,
+body .app .stored-educations__main .about__main-content .download-cv,
+body .app .education-create__main .about__main-content .download-cv,
+body .app .education-edit__main .about__main-content .download-cv,
+body .app .stored-projects__main .about__main-content .download-cv,
+body .app .project-create__main .about__main-content .download-cv,
+body .app .project-edit__main .about__main-content .download-cv,
+body .app .stored-contacts__main .about__main-content .download-cv,
+body .app .contact-create__main .about__main-content .download-cv,
+body .app .contact-edit__main .about__main-content .download-cv,
+body .app .stored-awards__main .about__main-content .download-cv,
+body .app .award-create__main .about__main-content .download-cv,
+body .app .award-edit__main .about__main-content .download-cv,
+body .app .portfolio__main .about__main-content .download-cv,
+body .app .about__main .about__main-content .download-cv, body .app .stored-system-info__main .about__main-content .education__title,
+body .app .stored-system-info__main .about__main-content .experience__title,
+body .app .stored-system-info__main .about__main-content .contact__title,
+body .app .system-info-create__main .about__main-content .education__title,
+body .app .system-info-create__main .about__main-content .experience__title,
+body .app .system-info-create__main .about__main-content .contact__title,
+body .app .system-info-edit__main .about__main-content .education__title,
+body .app .system-info-edit__main .about__main-content .experience__title,
+body .app .system-info-edit__main .about__main-content .contact__title,
+body .app .stored-expertises__main .about__main-content .education__title,
+body .app .stored-expertises__main .about__main-content .experience__title,
+body .app .stored-expertises__main .about__main-content .contact__title,
+body .app .expertises-create__main .about__main-content .education__title,
+body .app .expertises-create__main .about__main-content .experience__title,
+body .app .expertises-create__main .about__main-content .contact__title,
+body .app .expertises-edit__main .about__main-content .education__title,
+body .app .expertises-edit__main .about__main-content .experience__title,
+body .app .expertises-edit__main .about__main-content .contact__title,
+body .app .stored-expertises-categories__main .about__main-content .education__title,
+body .app .stored-expertises-categories__main .about__main-content .experience__title,
+body .app .stored-expertises-categories__main .about__main-content .contact__title,
+body .app .expertises-category-create__main .about__main-content .education__title,
+body .app .expertises-category-create__main .about__main-content .experience__title,
+body .app .expertises-category-create__main .about__main-content .contact__title,
+body .app .expertises-category-edit__main .about__main-content .education__title,
+body .app .expertises-category-edit__main .about__main-content .experience__title,
+body .app .expertises-category-edit__main .about__main-content .contact__title,
+body .app .stored-experiences__main .about__main-content .education__title,
+body .app .stored-experiences__main .about__main-content .experience__title,
+body .app .stored-experiences__main .about__main-content .contact__title,
+body .app .experience-create__main .about__main-content .education__title,
+body .app .experience-create__main .about__main-content .experience__title,
+body .app .experience-create__main .about__main-content .contact__title,
+body .app .experience-edit__main .about__main-content .education__title,
+body .app .experience-edit__main .about__main-content .experience__title,
+body .app .experience-edit__main .about__main-content .contact__title,
+body .app .stored-educations__main .about__main-content .education__title,
+body .app .stored-educations__main .about__main-content .experience__title,
+body .app .stored-educations__main .about__main-content .contact__title,
+body .app .education-create__main .about__main-content .education__title,
+body .app .education-create__main .about__main-content .experience__title,
+body .app .education-create__main .about__main-content .contact__title,
+body .app .education-edit__main .about__main-content .education__title,
+body .app .education-edit__main .about__main-content .experience__title,
+body .app .education-edit__main .about__main-content .contact__title,
+body .app .stored-projects__main .about__main-content .education__title,
+body .app .stored-projects__main .about__main-content .experience__title,
+body .app .stored-projects__main .about__main-content .contact__title,
+body .app .project-create__main .about__main-content .education__title,
+body .app .project-create__main .about__main-content .experience__title,
+body .app .project-create__main .about__main-content .contact__title,
+body .app .project-edit__main .about__main-content .education__title,
+body .app .project-edit__main .about__main-content .experience__title,
+body .app .project-edit__main .about__main-content .contact__title,
+body .app .stored-contacts__main .about__main-content .education__title,
+body .app .stored-contacts__main .about__main-content .experience__title,
+body .app .stored-contacts__main .about__main-content .contact__title,
+body .app .contact-create__main .about__main-content .education__title,
+body .app .contact-create__main .about__main-content .experience__title,
+body .app .contact-create__main .about__main-content .contact__title,
+body .app .contact-edit__main .about__main-content .education__title,
+body .app .contact-edit__main .about__main-content .experience__title,
+body .app .contact-edit__main .about__main-content .contact__title,
+body .app .stored-awards__main .about__main-content .education__title,
+body .app .stored-awards__main .about__main-content .experience__title,
+body .app .stored-awards__main .about__main-content .contact__title,
+body .app .award-create__main .about__main-content .education__title,
+body .app .award-create__main .about__main-content .experience__title,
+body .app .award-create__main .about__main-content .contact__title,
+body .app .award-edit__main .about__main-content .education__title,
+body .app .award-edit__main .about__main-content .experience__title,
+body .app .award-edit__main .about__main-content .contact__title,
+body .app .portfolio__main .about__main-content .education__title,
+body .app .portfolio__main .about__main-content .experience__title,
+body .app .portfolio__main .about__main-content .contact__title,
+body .app .about__main .about__main-content .education__title,
+body .app .about__main .about__main-content .experience__title,
+body .app .about__main .about__main-content .contact__title, body .app .footer__contact-title, body .app .to-top {
+  text-transform: uppercase;
+  font-size: 0.775rem;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.5em;
+  line-height: 1;
+}
+
+input[type="checkbox"] {
+  border-radius: 0.15rem;
+  border: 2px solid #637381;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+
+.is-devider-300 {
+  height: 300px;
+}
+
+.is-devider-200 {
+  height: 200px;
+}
+
+.is-devider-100 {
+  height: 100px;
+}
+
+.is-devider-40 {
+  height: 40px;
+}
+
+.is-devider-20 {
+  height: 20px;
+}
+
+::-moz-selection {
+  background: rgba(200, 200, 200, 0.99);
+  color: black;
+}
+
+::selection {
+  background: rgba(200, 200, 200, 0.99);
+  color: black;
+}
+
+body {
+  background: white;
+  color: black;
+  font-size: 16px;
+  font-family: "Sequel", sans-serif;
+  font-weight: 800;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #b4bcc3;
+  border-radius: 20px;
+  border: 3px solid #b4bcc3;
+}
+
+body .app .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 12000;
+  padding: 1.875rem 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .app .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .app .header__logo img {
+  margin-right: 20px;
+}
+
+body .app .header__logo:hover .header__brand {
+  opacity: 1 !important;
+  visibility: visible !important;
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+}
+
+body .app .header__brand {
+  color: black;
+  font-family: "Rouge Script", cursive;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+body .app .header .nav-item {
+  margin-left: 2rem;
+}
+
+body .app .header .nav-item:hover .nav-link::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+
+body .app .header .nav-link {
+  color: black;
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .app .header .nav-link::after {
+  content: "";
+  display: block;
+  width: calc(100% - 0.5em);
+  height: 40%;
+  position: absolute;
+  z-index: -1;
+  top: 60%;
+  left: 0;
+  background-color: #444;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+body .app .stored-system-info,
+body .app .system-info-create,
+body .app .system-info-edit,
+body .app .stored-expertises,
+body .app .expertises-create,
+body .app .expertises-edit,
+body .app .stored-expertises-categories,
+body .app .expertises-category-create,
+body .app .expertises-category-edit,
+body .app .stored-experiences,
+body .app .experience-create,
+body .app .experience-edit,
+body .app .stored-educations,
+body .app .education-create,
+body .app .education-edit,
+body .app .stored-projects,
+body .app .project-create,
+body .app .project-edit,
+body .app .stored-contacts,
+body .app .contact-create,
+body .app .contact-edit,
+body .app .stored-awards,
+body .app .award-create,
+body .app .award-edit,
+body .app .portfolio,
+body .app .about {
+  padding-top: 100px;
+}
+
+body .app .stored-system-info__header,
+body .app .system-info-create__header,
+body .app .system-info-edit__header,
+body .app .stored-expertises__header,
+body .app .expertises-create__header,
+body .app .expertises-edit__header,
+body .app .stored-expertises-categories__header,
+body .app .expertises-category-create__header,
+body .app .expertises-category-edit__header,
+body .app .stored-experiences__header,
+body .app .experience-create__header,
+body .app .experience-edit__header,
+body .app .stored-educations__header,
+body .app .education-create__header,
+body .app .education-edit__header,
+body .app .stored-projects__header,
+body .app .project-create__header,
+body .app .project-edit__header,
+body .app .stored-contacts__header,
+body .app .contact-create__header,
+body .app .contact-edit__header,
+body .app .stored-awards__header,
+body .app .award-create__header,
+body .app .award-edit__header,
+body .app .portfolio__header,
+body .app .about__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 650px;
+  position: relative;
+}
+
+body .app .stored-system-info__header-title,
+body .app .system-info-create__header-title,
+body .app .system-info-edit__header-title,
+body .app .stored-expertises__header-title,
+body .app .expertises-create__header-title,
+body .app .expertises-edit__header-title,
+body .app .stored-expertises-categories__header-title,
+body .app .expertises-category-create__header-title,
+body .app .expertises-category-edit__header-title,
+body .app .stored-experiences__header-title,
+body .app .experience-create__header-title,
+body .app .experience-edit__header-title,
+body .app .stored-educations__header-title,
+body .app .education-create__header-title,
+body .app .education-edit__header-title,
+body .app .stored-projects__header-title,
+body .app .project-create__header-title,
+body .app .project-edit__header-title,
+body .app .stored-contacts__header-title,
+body .app .contact-create__header-title,
+body .app .contact-edit__header-title,
+body .app .stored-awards__header-title,
+body .app .award-create__header-title,
+body .app .award-edit__header-title,
+body .app .portfolio__header-title,
+body .app .about__header-title {
+  max-width: 100rem;
+  padding-right: 3.75rem;
+  padding-left: 3.75rem;
+}
+
+body .app .stored-system-info__header-title h1,
+body .app .system-info-create__header-title h1,
+body .app .system-info-edit__header-title h1,
+body .app .stored-expertises__header-title h1,
+body .app .expertises-create__header-title h1,
+body .app .expertises-edit__header-title h1,
+body .app .stored-expertises-categories__header-title h1,
+body .app .expertises-category-create__header-title h1,
+body .app .expertises-category-edit__header-title h1,
+body .app .stored-experiences__header-title h1,
+body .app .experience-create__header-title h1,
+body .app .experience-edit__header-title h1,
+body .app .stored-educations__header-title h1,
+body .app .education-create__header-title h1,
+body .app .education-edit__header-title h1,
+body .app .stored-projects__header-title h1,
+body .app .project-create__header-title h1,
+body .app .project-edit__header-title h1,
+body .app .stored-contacts__header-title h1,
+body .app .contact-create__header-title h1,
+body .app .contact-edit__header-title h1,
+body .app .stored-awards__header-title h1,
+body .app .award-create__header-title h1,
+body .app .award-edit__header-title h1,
+body .app .portfolio__header-title h1,
+body .app .about__header-title h1 {
+  font-size: 5.575rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -6px;
+}
+
+body .app .stored-system-info__main,
+body .app .system-info-create__main,
+body .app .system-info-edit__main,
+body .app .stored-expertises__main,
+body .app .expertises-create__main,
+body .app .expertises-edit__main,
+body .app .stored-expertises-categories__main,
+body .app .expertises-category-create__main,
+body .app .expertises-category-edit__main,
+body .app .stored-experiences__main,
+body .app .experience-create__main,
+body .app .experience-edit__main,
+body .app .stored-educations__main,
+body .app .education-create__main,
+body .app .education-edit__main,
+body .app .stored-projects__main,
+body .app .project-create__main,
+body .app .project-edit__main,
+body .app .stored-contacts__main,
+body .app .contact-create__main,
+body .app .contact-edit__main,
+body .app .stored-awards__main,
+body .app .award-create__main,
+body .app .award-edit__main,
+body .app .portfolio__main,
+body .app .about__main {
+  max-width: 100rem;
+  padding-right: 3.75rem;
+  padding-left: 3.75rem;
+}
+
+body .app .stored-system-info__main-project,
+body .app .system-info-create__main-project,
+body .app .system-info-edit__main-project,
+body .app .stored-expertises__main-project,
+body .app .expertises-create__main-project,
+body .app .expertises-edit__main-project,
+body .app .stored-expertises-categories__main-project,
+body .app .expertises-category-create__main-project,
+body .app .expertises-category-edit__main-project,
+body .app .stored-experiences__main-project,
+body .app .experience-create__main-project,
+body .app .experience-edit__main-project,
+body .app .stored-educations__main-project,
+body .app .education-create__main-project,
+body .app .education-edit__main-project,
+body .app .stored-projects__main-project,
+body .app .project-create__main-project,
+body .app .project-edit__main-project,
+body .app .stored-contacts__main-project,
+body .app .contact-create__main-project,
+body .app .contact-edit__main-project,
+body .app .stored-awards__main-project,
+body .app .award-create__main-project,
+body .app .award-edit__main-project,
+body .app .portfolio__main-project,
+body .app .about__main-project {
+  position: relative;
+}
+
+body .app .stored-system-info__main-project .projects,
+body .app .system-info-create__main-project .projects,
+body .app .system-info-edit__main-project .projects,
+body .app .stored-expertises__main-project .projects,
+body .app .expertises-create__main-project .projects,
+body .app .expertises-edit__main-project .projects,
+body .app .stored-expertises-categories__main-project .projects,
+body .app .expertises-category-create__main-project .projects,
+body .app .expertises-category-edit__main-project .projects,
+body .app .stored-experiences__main-project .projects,
+body .app .experience-create__main-project .projects,
+body .app .experience-edit__main-project .projects,
+body .app .stored-educations__main-project .projects,
+body .app .education-create__main-project .projects,
+body .app .education-edit__main-project .projects,
+body .app .stored-projects__main-project .projects,
+body .app .project-create__main-project .projects,
+body .app .project-edit__main-project .projects,
+body .app .stored-contacts__main-project .projects,
+body .app .contact-create__main-project .projects,
+body .app .contact-edit__main-project .projects,
+body .app .stored-awards__main-project .projects,
+body .app .award-create__main-project .projects,
+body .app .award-edit__main-project .projects,
+body .app .portfolio__main-project .projects,
+body .app .about__main-project .projects {
+  position: absolute;
+  bottom: 98%;
+  left: -2.4%;
+  font-weight: 800;
+  font-size: 10rem;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+body .app .stored-system-info__main-project .card,
+body .app .system-info-create__main-project .card,
+body .app .system-info-edit__main-project .card,
+body .app .stored-expertises__main-project .card,
+body .app .expertises-create__main-project .card,
+body .app .expertises-edit__main-project .card,
+body .app .stored-expertises-categories__main-project .card,
+body .app .expertises-category-create__main-project .card,
+body .app .expertises-category-edit__main-project .card,
+body .app .stored-experiences__main-project .card,
+body .app .experience-create__main-project .card,
+body .app .experience-edit__main-project .card,
+body .app .stored-educations__main-project .card,
+body .app .education-create__main-project .card,
+body .app .education-edit__main-project .card,
+body .app .stored-projects__main-project .card,
+body .app .project-create__main-project .card,
+body .app .project-edit__main-project .card,
+body .app .stored-contacts__main-project .card,
+body .app .contact-create__main-project .card,
+body .app .contact-edit__main-project .card,
+body .app .stored-awards__main-project .card,
+body .app .award-create__main-project .card,
+body .app .award-edit__main-project .card,
+body .app .portfolio__main-project .card,
+body .app .about__main-project .card {
+  position: relative;
+  width: 445px;
+  height: 445px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+body .app .stored-system-info__main-project .card:hover .card-img-overlay,
+body .app .system-info-create__main-project .card:hover .card-img-overlay,
+body .app .system-info-edit__main-project .card:hover .card-img-overlay,
+body .app .stored-expertises__main-project .card:hover .card-img-overlay,
+body .app .expertises-create__main-project .card:hover .card-img-overlay,
+body .app .expertises-edit__main-project .card:hover .card-img-overlay,
+body .app .stored-expertises-categories__main-project .card:hover .card-img-overlay,
+body .app .expertises-category-create__main-project .card:hover .card-img-overlay,
+body .app .expertises-category-edit__main-project .card:hover .card-img-overlay,
+body .app .stored-experiences__main-project .card:hover .card-img-overlay,
+body .app .experience-create__main-project .card:hover .card-img-overlay,
+body .app .experience-edit__main-project .card:hover .card-img-overlay,
+body .app .stored-educations__main-project .card:hover .card-img-overlay,
+body .app .education-create__main-project .card:hover .card-img-overlay,
+body .app .education-edit__main-project .card:hover .card-img-overlay,
+body .app .stored-projects__main-project .card:hover .card-img-overlay,
+body .app .project-create__main-project .card:hover .card-img-overlay,
+body .app .project-edit__main-project .card:hover .card-img-overlay,
+body .app .stored-contacts__main-project .card:hover .card-img-overlay,
+body .app .contact-create__main-project .card:hover .card-img-overlay,
+body .app .contact-edit__main-project .card:hover .card-img-overlay,
+body .app .stored-awards__main-project .card:hover .card-img-overlay,
+body .app .award-create__main-project .card:hover .card-img-overlay,
+body .app .award-edit__main-project .card:hover .card-img-overlay,
+body .app .portfolio__main-project .card:hover .card-img-overlay,
+body .app .about__main-project .card:hover .card-img-overlay {
+  background: unset;
+}
+
+body .app .stored-system-info__main-project .card:hover .card-img,
+body .app .system-info-create__main-project .card:hover .card-img,
+body .app .system-info-edit__main-project .card:hover .card-img,
+body .app .stored-expertises__main-project .card:hover .card-img,
+body .app .expertises-create__main-project .card:hover .card-img,
+body .app .expertises-edit__main-project .card:hover .card-img,
+body .app .stored-expertises-categories__main-project .card:hover .card-img,
+body .app .expertises-category-create__main-project .card:hover .card-img,
+body .app .expertises-category-edit__main-project .card:hover .card-img,
+body .app .stored-experiences__main-project .card:hover .card-img,
+body .app .experience-create__main-project .card:hover .card-img,
+body .app .experience-edit__main-project .card:hover .card-img,
+body .app .stored-educations__main-project .card:hover .card-img,
+body .app .education-create__main-project .card:hover .card-img,
+body .app .education-edit__main-project .card:hover .card-img,
+body .app .stored-projects__main-project .card:hover .card-img,
+body .app .project-create__main-project .card:hover .card-img,
+body .app .project-edit__main-project .card:hover .card-img,
+body .app .stored-contacts__main-project .card:hover .card-img,
+body .app .contact-create__main-project .card:hover .card-img,
+body .app .contact-edit__main-project .card:hover .card-img,
+body .app .stored-awards__main-project .card:hover .card-img,
+body .app .award-create__main-project .card:hover .card-img,
+body .app .award-edit__main-project .card:hover .card-img,
+body .app .portfolio__main-project .card:hover .card-img,
+body .app .about__main-project .card:hover .card-img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+body .app .stored-system-info__main-project .card:hover .card-title,
+body .app .system-info-create__main-project .card:hover .card-title,
+body .app .system-info-edit__main-project .card:hover .card-title,
+body .app .stored-expertises__main-project .card:hover .card-title,
+body .app .expertises-create__main-project .card:hover .card-title,
+body .app .expertises-edit__main-project .card:hover .card-title,
+body .app .stored-expertises-categories__main-project .card:hover .card-title,
+body .app .expertises-category-create__main-project .card:hover .card-title,
+body .app .expertises-category-edit__main-project .card:hover .card-title,
+body .app .stored-experiences__main-project .card:hover .card-title,
+body .app .experience-create__main-project .card:hover .card-title,
+body .app .experience-edit__main-project .card:hover .card-title,
+body .app .stored-educations__main-project .card:hover .card-title,
+body .app .education-create__main-project .card:hover .card-title,
+body .app .education-edit__main-project .card:hover .card-title,
+body .app .stored-projects__main-project .card:hover .card-title,
+body .app .project-create__main-project .card:hover .card-title,
+body .app .project-edit__main-project .card:hover .card-title,
+body .app .stored-contacts__main-project .card:hover .card-title,
+body .app .contact-create__main-project .card:hover .card-title,
+body .app .contact-edit__main-project .card:hover .card-title,
+body .app .stored-awards__main-project .card:hover .card-title,
+body .app .award-create__main-project .card:hover .card-title,
+body .app .award-edit__main-project .card:hover .card-title,
+body .app .portfolio__main-project .card:hover .card-title,
+body .app .about__main-project .card:hover .card-title {
+  background-image: -webkit-gradient(linear, left top, right top, from(#09f1b8), color-stop(#00a2ff), color-stop(#ff00d2), to(#fed90f));
+  background-image: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: textclip 1.5s linear infinite;
+          animation: textclip 1.5s linear infinite;
+}
+
+body .app .stored-system-info__main-project .card-img,
+body .app .system-info-create__main-project .card-img,
+body .app .system-info-edit__main-project .card-img,
+body .app .stored-expertises__main-project .card-img,
+body .app .expertises-create__main-project .card-img,
+body .app .expertises-edit__main-project .card-img,
+body .app .stored-expertises-categories__main-project .card-img,
+body .app .expertises-category-create__main-project .card-img,
+body .app .expertises-category-edit__main-project .card-img,
+body .app .stored-experiences__main-project .card-img,
+body .app .experience-create__main-project .card-img,
+body .app .experience-edit__main-project .card-img,
+body .app .stored-educations__main-project .card-img,
+body .app .education-create__main-project .card-img,
+body .app .education-edit__main-project .card-img,
+body .app .stored-projects__main-project .card-img,
+body .app .project-create__main-project .card-img,
+body .app .project-edit__main-project .card-img,
+body .app .stored-contacts__main-project .card-img,
+body .app .contact-create__main-project .card-img,
+body .app .contact-edit__main-project .card-img,
+body .app .stored-awards__main-project .card-img,
+body .app .award-create__main-project .card-img,
+body .app .award-edit__main-project .card-img,
+body .app .portfolio__main-project .card-img,
+body .app .about__main-project .card-img {
+  height: 100%;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0;
+}
+
+body .app .stored-system-info__main-project .card-img-overlay,
+body .app .system-info-create__main-project .card-img-overlay,
+body .app .system-info-edit__main-project .card-img-overlay,
+body .app .stored-expertises__main-project .card-img-overlay,
+body .app .expertises-create__main-project .card-img-overlay,
+body .app .expertises-edit__main-project .card-img-overlay,
+body .app .stored-expertises-categories__main-project .card-img-overlay,
+body .app .expertises-category-create__main-project .card-img-overlay,
+body .app .expertises-category-edit__main-project .card-img-overlay,
+body .app .stored-experiences__main-project .card-img-overlay,
+body .app .experience-create__main-project .card-img-overlay,
+body .app .experience-edit__main-project .card-img-overlay,
+body .app .stored-educations__main-project .card-img-overlay,
+body .app .education-create__main-project .card-img-overlay,
+body .app .education-edit__main-project .card-img-overlay,
+body .app .stored-projects__main-project .card-img-overlay,
+body .app .project-create__main-project .card-img-overlay,
+body .app .project-edit__main-project .card-img-overlay,
+body .app .stored-contacts__main-project .card-img-overlay,
+body .app .contact-create__main-project .card-img-overlay,
+body .app .contact-edit__main-project .card-img-overlay,
+body .app .stored-awards__main-project .card-img-overlay,
+body .app .award-create__main-project .card-img-overlay,
+body .app .award-edit__main-project .card-img-overlay,
+body .app .portfolio__main-project .card-img-overlay,
+body .app .about__main-project .card-img-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #1a1a1a;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-radius: 0;
+}
+
+body .app .stored-system-info__main-project .card-img-overlay .card-title,
+body .app .system-info-create__main-project .card-img-overlay .card-title,
+body .app .system-info-edit__main-project .card-img-overlay .card-title,
+body .app .stored-expertises__main-project .card-img-overlay .card-title,
+body .app .expertises-create__main-project .card-img-overlay .card-title,
+body .app .expertises-edit__main-project .card-img-overlay .card-title,
+body .app .stored-expertises-categories__main-project .card-img-overlay .card-title,
+body .app .expertises-category-create__main-project .card-img-overlay .card-title,
+body .app .expertises-category-edit__main-project .card-img-overlay .card-title,
+body .app .stored-experiences__main-project .card-img-overlay .card-title,
+body .app .experience-create__main-project .card-img-overlay .card-title,
+body .app .experience-edit__main-project .card-img-overlay .card-title,
+body .app .stored-educations__main-project .card-img-overlay .card-title,
+body .app .education-create__main-project .card-img-overlay .card-title,
+body .app .education-edit__main-project .card-img-overlay .card-title,
+body .app .stored-projects__main-project .card-img-overlay .card-title,
+body .app .project-create__main-project .card-img-overlay .card-title,
+body .app .project-edit__main-project .card-img-overlay .card-title,
+body .app .stored-contacts__main-project .card-img-overlay .card-title,
+body .app .contact-create__main-project .card-img-overlay .card-title,
+body .app .contact-edit__main-project .card-img-overlay .card-title,
+body .app .stored-awards__main-project .card-img-overlay .card-title,
+body .app .award-create__main-project .card-img-overlay .card-title,
+body .app .award-edit__main-project .card-img-overlay .card-title,
+body .app .portfolio__main-project .card-img-overlay .card-title,
+body .app .about__main-project .card-img-overlay .card-title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+body .app .stored-system-info__main-brand,
+body .app .system-info-create__main-brand,
+body .app .system-info-edit__main-brand,
+body .app .stored-expertises__main-brand,
+body .app .expertises-create__main-brand,
+body .app .expertises-edit__main-brand,
+body .app .stored-expertises-categories__main-brand,
+body .app .expertises-category-create__main-brand,
+body .app .expertises-category-edit__main-brand,
+body .app .stored-experiences__main-brand,
+body .app .experience-create__main-brand,
+body .app .experience-edit__main-brand,
+body .app .stored-educations__main-brand,
+body .app .education-create__main-brand,
+body .app .education-edit__main-brand,
+body .app .stored-projects__main-brand,
+body .app .project-create__main-brand,
+body .app .project-edit__main-brand,
+body .app .stored-contacts__main-brand,
+body .app .contact-create__main-brand,
+body .app .contact-edit__main-brand,
+body .app .stored-awards__main-brand,
+body .app .award-create__main-brand,
+body .app .award-edit__main-brand,
+body .app .portfolio__main-brand,
+body .app .about__main-brand {
+  position: relative;
+}
+
+body .app .stored-system-info__main-brand .currently,
+body .app .system-info-create__main-brand .currently,
+body .app .system-info-edit__main-brand .currently,
+body .app .stored-expertises__main-brand .currently,
+body .app .expertises-create__main-brand .currently,
+body .app .expertises-edit__main-brand .currently,
+body .app .stored-expertises-categories__main-brand .currently,
+body .app .expertises-category-create__main-brand .currently,
+body .app .expertises-category-edit__main-brand .currently,
+body .app .stored-experiences__main-brand .currently,
+body .app .experience-create__main-brand .currently,
+body .app .experience-edit__main-brand .currently,
+body .app .stored-educations__main-brand .currently,
+body .app .education-create__main-brand .currently,
+body .app .education-edit__main-brand .currently,
+body .app .stored-projects__main-brand .currently,
+body .app .project-create__main-brand .currently,
+body .app .project-edit__main-brand .currently,
+body .app .stored-contacts__main-brand .currently,
+body .app .contact-create__main-brand .currently,
+body .app .contact-edit__main-brand .currently,
+body .app .stored-awards__main-brand .currently,
+body .app .award-create__main-brand .currently,
+body .app .award-edit__main-brand .currently,
+body .app .portfolio__main-brand .currently,
+body .app .about__main-brand .currently {
+  position: absolute;
+  top: -26%;
+  left: -2.4%;
+  font-weight: 800;
+  font-size: 10rem;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+body .app .stored-system-info__main-brand .card,
+body .app .system-info-create__main-brand .card,
+body .app .system-info-edit__main-brand .card,
+body .app .stored-expertises__main-brand .card,
+body .app .expertises-create__main-brand .card,
+body .app .expertises-edit__main-brand .card,
+body .app .stored-expertises-categories__main-brand .card,
+body .app .expertises-category-create__main-brand .card,
+body .app .expertises-category-edit__main-brand .card,
+body .app .stored-experiences__main-brand .card,
+body .app .experience-create__main-brand .card,
+body .app .experience-edit__main-brand .card,
+body .app .stored-educations__main-brand .card,
+body .app .education-create__main-brand .card,
+body .app .education-edit__main-brand .card,
+body .app .stored-projects__main-brand .card,
+body .app .project-create__main-brand .card,
+body .app .project-edit__main-brand .card,
+body .app .stored-contacts__main-brand .card,
+body .app .contact-create__main-brand .card,
+body .app .contact-edit__main-brand .card,
+body .app .stored-awards__main-brand .card,
+body .app .award-create__main-brand .card,
+body .app .award-edit__main-brand .card,
+body .app .portfolio__main-brand .card,
+body .app .about__main-brand .card {
+  border-radius: calc(0.25rem - 1px);
+  border: none;
+}
+
+body .app .stored-system-info__main-brand .card-img,
+body .app .system-info-create__main-brand .card-img,
+body .app .system-info-edit__main-brand .card-img,
+body .app .stored-expertises__main-brand .card-img,
+body .app .expertises-create__main-brand .card-img,
+body .app .expertises-edit__main-brand .card-img,
+body .app .stored-expertises-categories__main-brand .card-img,
+body .app .expertises-category-create__main-brand .card-img,
+body .app .expertises-category-edit__main-brand .card-img,
+body .app .stored-experiences__main-brand .card-img,
+body .app .experience-create__main-brand .card-img,
+body .app .experience-edit__main-brand .card-img,
+body .app .stored-educations__main-brand .card-img,
+body .app .education-create__main-brand .card-img,
+body .app .education-edit__main-brand .card-img,
+body .app .stored-projects__main-brand .card-img,
+body .app .project-create__main-brand .card-img,
+body .app .project-edit__main-brand .card-img,
+body .app .stored-contacts__main-brand .card-img,
+body .app .contact-create__main-brand .card-img,
+body .app .contact-edit__main-brand .card-img,
+body .app .stored-awards__main-brand .card-img,
+body .app .award-create__main-brand .card-img,
+body .app .award-edit__main-brand .card-img,
+body .app .portfolio__main-brand .card-img,
+body .app .about__main-brand .card-img {
+  height: 462px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .app .stored-system-info__main-brand .card-img-overlay,
+body .app .system-info-create__main-brand .card-img-overlay,
+body .app .system-info-edit__main-brand .card-img-overlay,
+body .app .stored-expertises__main-brand .card-img-overlay,
+body .app .expertises-create__main-brand .card-img-overlay,
+body .app .expertises-edit__main-brand .card-img-overlay,
+body .app .stored-expertises-categories__main-brand .card-img-overlay,
+body .app .expertises-category-create__main-brand .card-img-overlay,
+body .app .expertises-category-edit__main-brand .card-img-overlay,
+body .app .stored-experiences__main-brand .card-img-overlay,
+body .app .experience-create__main-brand .card-img-overlay,
+body .app .experience-edit__main-brand .card-img-overlay,
+body .app .stored-educations__main-brand .card-img-overlay,
+body .app .education-create__main-brand .card-img-overlay,
+body .app .education-edit__main-brand .card-img-overlay,
+body .app .stored-projects__main-brand .card-img-overlay,
+body .app .project-create__main-brand .card-img-overlay,
+body .app .project-edit__main-brand .card-img-overlay,
+body .app .stored-contacts__main-brand .card-img-overlay,
+body .app .contact-create__main-brand .card-img-overlay,
+body .app .contact-edit__main-brand .card-img-overlay,
+body .app .stored-awards__main-brand .card-img-overlay,
+body .app .award-create__main-brand .card-img-overlay,
+body .app .award-edit__main-brand .card-img-overlay,
+body .app .portfolio__main-brand .card-img-overlay,
+body .app .about__main-brand .card-img-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .app .stored-system-info__main-brand .card-img-overlay .card-title,
+body .app .system-info-create__main-brand .card-img-overlay .card-title,
+body .app .system-info-edit__main-brand .card-img-overlay .card-title,
+body .app .stored-expertises__main-brand .card-img-overlay .card-title,
+body .app .expertises-create__main-brand .card-img-overlay .card-title,
+body .app .expertises-edit__main-brand .card-img-overlay .card-title,
+body .app .stored-expertises-categories__main-brand .card-img-overlay .card-title,
+body .app .expertises-category-create__main-brand .card-img-overlay .card-title,
+body .app .expertises-category-edit__main-brand .card-img-overlay .card-title,
+body .app .stored-experiences__main-brand .card-img-overlay .card-title,
+body .app .experience-create__main-brand .card-img-overlay .card-title,
+body .app .experience-edit__main-brand .card-img-overlay .card-title,
+body .app .stored-educations__main-brand .card-img-overlay .card-title,
+body .app .education-create__main-brand .card-img-overlay .card-title,
+body .app .education-edit__main-brand .card-img-overlay .card-title,
+body .app .stored-projects__main-brand .card-img-overlay .card-title,
+body .app .project-create__main-brand .card-img-overlay .card-title,
+body .app .project-edit__main-brand .card-img-overlay .card-title,
+body .app .stored-contacts__main-brand .card-img-overlay .card-title,
+body .app .contact-create__main-brand .card-img-overlay .card-title,
+body .app .contact-edit__main-brand .card-img-overlay .card-title,
+body .app .stored-awards__main-brand .card-img-overlay .card-title,
+body .app .award-create__main-brand .card-img-overlay .card-title,
+body .app .award-edit__main-brand .card-img-overlay .card-title,
+body .app .portfolio__main-brand .card-img-overlay .card-title,
+body .app .about__main-brand .card-img-overlay .card-title {
+  font-size: 5.575rem;
+  font-weight: 800;
+  margin: 0 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: -6px;
+  line-height: 0.8;
+}
+
+body .app .stored-system-info__main-brand .card-img-overlay .card-title span,
+body .app .system-info-create__main-brand .card-img-overlay .card-title span,
+body .app .system-info-edit__main-brand .card-img-overlay .card-title span,
+body .app .stored-expertises__main-brand .card-img-overlay .card-title span,
+body .app .expertises-create__main-brand .card-img-overlay .card-title span,
+body .app .expertises-edit__main-brand .card-img-overlay .card-title span,
+body .app .stored-expertises-categories__main-brand .card-img-overlay .card-title span,
+body .app .expertises-category-create__main-brand .card-img-overlay .card-title span,
+body .app .expertises-category-edit__main-brand .card-img-overlay .card-title span,
+body .app .stored-experiences__main-brand .card-img-overlay .card-title span,
+body .app .experience-create__main-brand .card-img-overlay .card-title span,
+body .app .experience-edit__main-brand .card-img-overlay .card-title span,
+body .app .stored-educations__main-brand .card-img-overlay .card-title span,
+body .app .education-create__main-brand .card-img-overlay .card-title span,
+body .app .education-edit__main-brand .card-img-overlay .card-title span,
+body .app .stored-projects__main-brand .card-img-overlay .card-title span,
+body .app .project-create__main-brand .card-img-overlay .card-title span,
+body .app .project-edit__main-brand .card-img-overlay .card-title span,
+body .app .stored-contacts__main-brand .card-img-overlay .card-title span,
+body .app .contact-create__main-brand .card-img-overlay .card-title span,
+body .app .contact-edit__main-brand .card-img-overlay .card-title span,
+body .app .stored-awards__main-brand .card-img-overlay .card-title span,
+body .app .award-create__main-brand .card-img-overlay .card-title span,
+body .app .award-edit__main-brand .card-img-overlay .card-title span,
+body .app .portfolio__main-brand .card-img-overlay .card-title span,
+body .app .about__main-brand .card-img-overlay .card-title span {
+  display: block;
+}
+
+body .app .stored-system-info__main-brand .card-img-overlay .card-text,
+body .app .system-info-create__main-brand .card-img-overlay .card-text,
+body .app .system-info-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-expertises__main-brand .card-img-overlay .card-text,
+body .app .expertises-create__main-brand .card-img-overlay .card-text,
+body .app .expertises-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-expertises-categories__main-brand .card-img-overlay .card-text,
+body .app .expertises-category-create__main-brand .card-img-overlay .card-text,
+body .app .expertises-category-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-experiences__main-brand .card-img-overlay .card-text,
+body .app .experience-create__main-brand .card-img-overlay .card-text,
+body .app .experience-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-educations__main-brand .card-img-overlay .card-text,
+body .app .education-create__main-brand .card-img-overlay .card-text,
+body .app .education-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-projects__main-brand .card-img-overlay .card-text,
+body .app .project-create__main-brand .card-img-overlay .card-text,
+body .app .project-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-contacts__main-brand .card-img-overlay .card-text,
+body .app .contact-create__main-brand .card-img-overlay .card-text,
+body .app .contact-edit__main-brand .card-img-overlay .card-text,
+body .app .stored-awards__main-brand .card-img-overlay .card-text,
+body .app .award-create__main-brand .card-img-overlay .card-text,
+body .app .award-edit__main-brand .card-img-overlay .card-text,
+body .app .portfolio__main-brand .card-img-overlay .card-text,
+body .app .about__main-brand .card-img-overlay .card-text {
+  position: absolute;
+  bottom: 32px;
+  right: 48px;
+}
+
+body .app .stored-system-info__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .system-info-create__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .system-info-edit__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .stored-expertises__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .expertises-create__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .expertises-edit__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .stored-expertises-categories__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .expertises-category-create__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .expertises-category-edit__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .stored-experiences__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .experience-create__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .experience-edit__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .stored-educations__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .education-create__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .education-edit__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .stored-projects__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .project-create__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .project-edit__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .stored-contacts__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .contact-create__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .contact-edit__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .stored-awards__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .award-create__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .award-edit__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .portfolio__main-brand .card-img-overlay .card-text:hover a::after,
+body .app .about__main-brand .card-img-overlay .card-text:hover a::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+
+body .app .stored-system-info__main-brand .card-img-overlay .card-text a,
+body .app .system-info-create__main-brand .card-img-overlay .card-text a,
+body .app .system-info-edit__main-brand .card-img-overlay .card-text a,
+body .app .stored-expertises__main-brand .card-img-overlay .card-text a,
+body .app .expertises-create__main-brand .card-img-overlay .card-text a,
+body .app .expertises-edit__main-brand .card-img-overlay .card-text a,
+body .app .stored-expertises-categories__main-brand .card-img-overlay .card-text a,
+body .app .expertises-category-create__main-brand .card-img-overlay .card-text a,
+body .app .expertises-category-edit__main-brand .card-img-overlay .card-text a,
+body .app .stored-experiences__main-brand .card-img-overlay .card-text a,
+body .app .experience-create__main-brand .card-img-overlay .card-text a,
+body .app .experience-edit__main-brand .card-img-overlay .card-text a,
+body .app .stored-educations__main-brand .card-img-overlay .card-text a,
+body .app .education-create__main-brand .card-img-overlay .card-text a,
+body .app .education-edit__main-brand .card-img-overlay .card-text a,
+body .app .stored-projects__main-brand .card-img-overlay .card-text a,
+body .app .project-create__main-brand .card-img-overlay .card-text a,
+body .app .project-edit__main-brand .card-img-overlay .card-text a,
+body .app .stored-contacts__main-brand .card-img-overlay .card-text a,
+body .app .contact-create__main-brand .card-img-overlay .card-text a,
+body .app .contact-edit__main-brand .card-img-overlay .card-text a,
+body .app .stored-awards__main-brand .card-img-overlay .card-text a,
+body .app .award-create__main-brand .card-img-overlay .card-text a,
+body .app .award-edit__main-brand .card-img-overlay .card-text a,
+body .app .portfolio__main-brand .card-img-overlay .card-text a,
+body .app .about__main-brand .card-img-overlay .card-text a {
+  color: white;
+}
+
+body .app .stored-system-info__main-brand .card-img-overlay .card-text a::after,
+body .app .system-info-create__main-brand .card-img-overlay .card-text a::after,
+body .app .system-info-edit__main-brand .card-img-overlay .card-text a::after,
+body .app .stored-expertises__main-brand .card-img-overlay .card-text a::after,
+body .app .expertises-create__main-brand .card-img-overlay .card-text a::after,
+body .app .expertises-edit__main-brand .card-img-overlay .card-text a::after,
+body .app .stored-expertises-categories__main-brand .card-img-overlay .card-text a::after,
+body .app .expertises-category-create__main-brand .card-img-overlay .card-text a::after,
+body .app .expertises-category-edit__main-brand .card-img-overlay .card-text a::after,
+body .app .stored-experiences__main-brand .card-img-overlay .card-text a::after,
+body .app .experience-create__main-brand .card-img-overlay .card-text a::after,
+body .app .experience-edit__main-brand .card-img-overlay .card-text a::after,
+body .app .stored-educations__main-brand .card-img-overlay .card-text a::after,
+body .app .education-create__main-brand .card-img-overlay .card-text a::after,
+body .app .education-edit__main-brand .card-img-overlay .card-text a::after,
+body .app .stored-projects__main-brand .card-img-overlay .card-text a::after,
+body .app .project-create__main-brand .card-img-overlay .card-text a::after,
+body .app .project-edit__main-brand .card-img-overlay .card-text a::after,
+body .app .stored-contacts__main-brand .card-img-overlay .card-text a::after,
+body .app .contact-create__main-brand .card-img-overlay .card-text a::after,
+body .app .contact-edit__main-brand .card-img-overlay .card-text a::after,
+body .app .stored-awards__main-brand .card-img-overlay .card-text a::after,
+body .app .award-create__main-brand .card-img-overlay .card-text a::after,
+body .app .award-edit__main-brand .card-img-overlay .card-text a::after,
+body .app .portfolio__main-brand .card-img-overlay .card-text a::after,
+body .app .about__main-brand .card-img-overlay .card-text a::after {
+  content: "";
+  display: block;
+  width: calc(100% - 0.5em);
+  height: 40%;
+  position: absolute;
+  top: 60%;
+  left: 0;
+  background-color: #444444;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+body .app .stored-system-info__main .about__main-content,
+body .app .system-info-create__main .about__main-content,
+body .app .system-info-edit__main .about__main-content,
+body .app .stored-expertises__main .about__main-content,
+body .app .expertises-create__main .about__main-content,
+body .app .expertises-edit__main .about__main-content,
+body .app .stored-expertises-categories__main .about__main-content,
+body .app .expertises-category-create__main .about__main-content,
+body .app .expertises-category-edit__main .about__main-content,
+body .app .stored-experiences__main .about__main-content,
+body .app .experience-create__main .about__main-content,
+body .app .experience-edit__main .about__main-content,
+body .app .stored-educations__main .about__main-content,
+body .app .education-create__main .about__main-content,
+body .app .education-edit__main .about__main-content,
+body .app .stored-projects__main .about__main-content,
+body .app .project-create__main .about__main-content,
+body .app .project-edit__main .about__main-content,
+body .app .stored-contacts__main .about__main-content,
+body .app .contact-create__main .about__main-content,
+body .app .contact-edit__main .about__main-content,
+body .app .stored-awards__main .about__main-content,
+body .app .award-create__main .about__main-content,
+body .app .award-edit__main .about__main-content,
+body .app .portfolio__main .about__main-content,
+body .app .about__main .about__main-content {
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.3125rem;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+body .app .stored-system-info__main .about__main-content p,
+body .app .system-info-create__main .about__main-content p,
+body .app .system-info-edit__main .about__main-content p,
+body .app .stored-expertises__main .about__main-content p,
+body .app .expertises-create__main .about__main-content p,
+body .app .expertises-edit__main .about__main-content p,
+body .app .stored-expertises-categories__main .about__main-content p,
+body .app .expertises-category-create__main .about__main-content p,
+body .app .expertises-category-edit__main .about__main-content p,
+body .app .stored-experiences__main .about__main-content p,
+body .app .experience-create__main .about__main-content p,
+body .app .experience-edit__main .about__main-content p,
+body .app .stored-educations__main .about__main-content p,
+body .app .education-create__main .about__main-content p,
+body .app .education-edit__main .about__main-content p,
+body .app .stored-projects__main .about__main-content p,
+body .app .project-create__main .about__main-content p,
+body .app .project-edit__main .about__main-content p,
+body .app .stored-contacts__main .about__main-content p,
+body .app .contact-create__main .about__main-content p,
+body .app .contact-edit__main .about__main-content p,
+body .app .stored-awards__main .about__main-content p,
+body .app .award-create__main .about__main-content p,
+body .app .award-edit__main .about__main-content p,
+body .app .portfolio__main .about__main-content p,
+body .app .about__main .about__main-content p {
+  margin-bottom: 40px;
+}
+
+body .app .stored-system-info__main .about__main-content .download-cv,
+body .app .system-info-create__main .about__main-content .download-cv,
+body .app .system-info-edit__main .about__main-content .download-cv,
+body .app .stored-expertises__main .about__main-content .download-cv,
+body .app .expertises-create__main .about__main-content .download-cv,
+body .app .expertises-edit__main .about__main-content .download-cv,
+body .app .stored-expertises-categories__main .about__main-content .download-cv,
+body .app .expertises-category-create__main .about__main-content .download-cv,
+body .app .expertises-category-edit__main .about__main-content .download-cv,
+body .app .stored-experiences__main .about__main-content .download-cv,
+body .app .experience-create__main .about__main-content .download-cv,
+body .app .experience-edit__main .about__main-content .download-cv,
+body .app .stored-educations__main .about__main-content .download-cv,
+body .app .education-create__main .about__main-content .download-cv,
+body .app .education-edit__main .about__main-content .download-cv,
+body .app .stored-projects__main .about__main-content .download-cv,
+body .app .project-create__main .about__main-content .download-cv,
+body .app .project-edit__main .about__main-content .download-cv,
+body .app .stored-contacts__main .about__main-content .download-cv,
+body .app .contact-create__main .about__main-content .download-cv,
+body .app .contact-edit__main .about__main-content .download-cv,
+body .app .stored-awards__main .about__main-content .download-cv,
+body .app .award-create__main .about__main-content .download-cv,
+body .app .award-edit__main .about__main-content .download-cv,
+body .app .portfolio__main .about__main-content .download-cv,
+body .app .about__main .about__main-content .download-cv {
+  color: white;
+  position: relative;
+}
+
+body .app .stored-system-info__main .about__main-content .download-cv::after,
+body .app .system-info-create__main .about__main-content .download-cv::after,
+body .app .system-info-edit__main .about__main-content .download-cv::after,
+body .app .stored-expertises__main .about__main-content .download-cv::after,
+body .app .expertises-create__main .about__main-content .download-cv::after,
+body .app .expertises-edit__main .about__main-content .download-cv::after,
+body .app .stored-expertises-categories__main .about__main-content .download-cv::after,
+body .app .expertises-category-create__main .about__main-content .download-cv::after,
+body .app .expertises-category-edit__main .about__main-content .download-cv::after,
+body .app .stored-experiences__main .about__main-content .download-cv::after,
+body .app .experience-create__main .about__main-content .download-cv::after,
+body .app .experience-edit__main .about__main-content .download-cv::after,
+body .app .stored-educations__main .about__main-content .download-cv::after,
+body .app .education-create__main .about__main-content .download-cv::after,
+body .app .education-edit__main .about__main-content .download-cv::after,
+body .app .stored-projects__main .about__main-content .download-cv::after,
+body .app .project-create__main .about__main-content .download-cv::after,
+body .app .project-edit__main .about__main-content .download-cv::after,
+body .app .stored-contacts__main .about__main-content .download-cv::after,
+body .app .contact-create__main .about__main-content .download-cv::after,
+body .app .contact-edit__main .about__main-content .download-cv::after,
+body .app .stored-awards__main .about__main-content .download-cv::after,
+body .app .award-create__main .about__main-content .download-cv::after,
+body .app .award-edit__main .about__main-content .download-cv::after,
+body .app .portfolio__main .about__main-content .download-cv::after,
+body .app .about__main .about__main-content .download-cv::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.35em;
+  position: absolute;
+  top: 70%;
+  left: 0px;
+  background: currentcolor;
+  opacity: 0.4;
+}
+
+body .app .stored-system-info__main .about__main-content .education,
+body .app .stored-system-info__main .about__main-content .experience,
+body .app .stored-system-info__main .about__main-content .contact,
+body .app .system-info-create__main .about__main-content .education,
+body .app .system-info-create__main .about__main-content .experience,
+body .app .system-info-create__main .about__main-content .contact,
+body .app .system-info-edit__main .about__main-content .education,
+body .app .system-info-edit__main .about__main-content .experience,
+body .app .system-info-edit__main .about__main-content .contact,
+body .app .stored-expertises__main .about__main-content .education,
+body .app .stored-expertises__main .about__main-content .experience,
+body .app .stored-expertises__main .about__main-content .contact,
+body .app .expertises-create__main .about__main-content .education,
+body .app .expertises-create__main .about__main-content .experience,
+body .app .expertises-create__main .about__main-content .contact,
+body .app .expertises-edit__main .about__main-content .education,
+body .app .expertises-edit__main .about__main-content .experience,
+body .app .expertises-edit__main .about__main-content .contact,
+body .app .stored-expertises-categories__main .about__main-content .education,
+body .app .stored-expertises-categories__main .about__main-content .experience,
+body .app .stored-expertises-categories__main .about__main-content .contact,
+body .app .expertises-category-create__main .about__main-content .education,
+body .app .expertises-category-create__main .about__main-content .experience,
+body .app .expertises-category-create__main .about__main-content .contact,
+body .app .expertises-category-edit__main .about__main-content .education,
+body .app .expertises-category-edit__main .about__main-content .experience,
+body .app .expertises-category-edit__main .about__main-content .contact,
+body .app .stored-experiences__main .about__main-content .education,
+body .app .stored-experiences__main .about__main-content .experience,
+body .app .stored-experiences__main .about__main-content .contact,
+body .app .experience-create__main .about__main-content .education,
+body .app .experience-create__main .about__main-content .experience,
+body .app .experience-create__main .about__main-content .contact,
+body .app .experience-edit__main .about__main-content .education,
+body .app .experience-edit__main .about__main-content .experience,
+body .app .experience-edit__main .about__main-content .contact,
+body .app .stored-educations__main .about__main-content .education,
+body .app .stored-educations__main .about__main-content .experience,
+body .app .stored-educations__main .about__main-content .contact,
+body .app .education-create__main .about__main-content .education,
+body .app .education-create__main .about__main-content .experience,
+body .app .education-create__main .about__main-content .contact,
+body .app .education-edit__main .about__main-content .education,
+body .app .education-edit__main .about__main-content .experience,
+body .app .education-edit__main .about__main-content .contact,
+body .app .stored-projects__main .about__main-content .education,
+body .app .stored-projects__main .about__main-content .experience,
+body .app .stored-projects__main .about__main-content .contact,
+body .app .project-create__main .about__main-content .education,
+body .app .project-create__main .about__main-content .experience,
+body .app .project-create__main .about__main-content .contact,
+body .app .project-edit__main .about__main-content .education,
+body .app .project-edit__main .about__main-content .experience,
+body .app .project-edit__main .about__main-content .contact,
+body .app .stored-contacts__main .about__main-content .education,
+body .app .stored-contacts__main .about__main-content .experience,
+body .app .stored-contacts__main .about__main-content .contact,
+body .app .contact-create__main .about__main-content .education,
+body .app .contact-create__main .about__main-content .experience,
+body .app .contact-create__main .about__main-content .contact,
+body .app .contact-edit__main .about__main-content .education,
+body .app .contact-edit__main .about__main-content .experience,
+body .app .contact-edit__main .about__main-content .contact,
+body .app .stored-awards__main .about__main-content .education,
+body .app .stored-awards__main .about__main-content .experience,
+body .app .stored-awards__main .about__main-content .contact,
+body .app .award-create__main .about__main-content .education,
+body .app .award-create__main .about__main-content .experience,
+body .app .award-create__main .about__main-content .contact,
+body .app .award-edit__main .about__main-content .education,
+body .app .award-edit__main .about__main-content .experience,
+body .app .award-edit__main .about__main-content .contact,
+body .app .portfolio__main .about__main-content .education,
+body .app .portfolio__main .about__main-content .experience,
+body .app .portfolio__main .about__main-content .contact,
+body .app .about__main .about__main-content .education,
+body .app .about__main .about__main-content .experience,
+body .app .about__main .about__main-content .contact {
+  margin-bottom: 40px;
+}
+
+body .app .stored-system-info__main .about__main-content .education__title,
+body .app .stored-system-info__main .about__main-content .experience__title,
+body .app .stored-system-info__main .about__main-content .contact__title,
+body .app .system-info-create__main .about__main-content .education__title,
+body .app .system-info-create__main .about__main-content .experience__title,
+body .app .system-info-create__main .about__main-content .contact__title,
+body .app .system-info-edit__main .about__main-content .education__title,
+body .app .system-info-edit__main .about__main-content .experience__title,
+body .app .system-info-edit__main .about__main-content .contact__title,
+body .app .stored-expertises__main .about__main-content .education__title,
+body .app .stored-expertises__main .about__main-content .experience__title,
+body .app .stored-expertises__main .about__main-content .contact__title,
+body .app .expertises-create__main .about__main-content .education__title,
+body .app .expertises-create__main .about__main-content .experience__title,
+body .app .expertises-create__main .about__main-content .contact__title,
+body .app .expertises-edit__main .about__main-content .education__title,
+body .app .expertises-edit__main .about__main-content .experience__title,
+body .app .expertises-edit__main .about__main-content .contact__title,
+body .app .stored-expertises-categories__main .about__main-content .education__title,
+body .app .stored-expertises-categories__main .about__main-content .experience__title,
+body .app .stored-expertises-categories__main .about__main-content .contact__title,
+body .app .expertises-category-create__main .about__main-content .education__title,
+body .app .expertises-category-create__main .about__main-content .experience__title,
+body .app .expertises-category-create__main .about__main-content .contact__title,
+body .app .expertises-category-edit__main .about__main-content .education__title,
+body .app .expertises-category-edit__main .about__main-content .experience__title,
+body .app .expertises-category-edit__main .about__main-content .contact__title,
+body .app .stored-experiences__main .about__main-content .education__title,
+body .app .stored-experiences__main .about__main-content .experience__title,
+body .app .stored-experiences__main .about__main-content .contact__title,
+body .app .experience-create__main .about__main-content .education__title,
+body .app .experience-create__main .about__main-content .experience__title,
+body .app .experience-create__main .about__main-content .contact__title,
+body .app .experience-edit__main .about__main-content .education__title,
+body .app .experience-edit__main .about__main-content .experience__title,
+body .app .experience-edit__main .about__main-content .contact__title,
+body .app .stored-educations__main .about__main-content .education__title,
+body .app .stored-educations__main .about__main-content .experience__title,
+body .app .stored-educations__main .about__main-content .contact__title,
+body .app .education-create__main .about__main-content .education__title,
+body .app .education-create__main .about__main-content .experience__title,
+body .app .education-create__main .about__main-content .contact__title,
+body .app .education-edit__main .about__main-content .education__title,
+body .app .education-edit__main .about__main-content .experience__title,
+body .app .education-edit__main .about__main-content .contact__title,
+body .app .stored-projects__main .about__main-content .education__title,
+body .app .stored-projects__main .about__main-content .experience__title,
+body .app .stored-projects__main .about__main-content .contact__title,
+body .app .project-create__main .about__main-content .education__title,
+body .app .project-create__main .about__main-content .experience__title,
+body .app .project-create__main .about__main-content .contact__title,
+body .app .project-edit__main .about__main-content .education__title,
+body .app .project-edit__main .about__main-content .experience__title,
+body .app .project-edit__main .about__main-content .contact__title,
+body .app .stored-contacts__main .about__main-content .education__title,
+body .app .stored-contacts__main .about__main-content .experience__title,
+body .app .stored-contacts__main .about__main-content .contact__title,
+body .app .contact-create__main .about__main-content .education__title,
+body .app .contact-create__main .about__main-content .experience__title,
+body .app .contact-create__main .about__main-content .contact__title,
+body .app .contact-edit__main .about__main-content .education__title,
+body .app .contact-edit__main .about__main-content .experience__title,
+body .app .contact-edit__main .about__main-content .contact__title,
+body .app .stored-awards__main .about__main-content .education__title,
+body .app .stored-awards__main .about__main-content .experience__title,
+body .app .stored-awards__main .about__main-content .contact__title,
+body .app .award-create__main .about__main-content .education__title,
+body .app .award-create__main .about__main-content .experience__title,
+body .app .award-create__main .about__main-content .contact__title,
+body .app .award-edit__main .about__main-content .education__title,
+body .app .award-edit__main .about__main-content .experience__title,
+body .app .award-edit__main .about__main-content .contact__title,
+body .app .portfolio__main .about__main-content .education__title,
+body .app .portfolio__main .about__main-content .experience__title,
+body .app .portfolio__main .about__main-content .contact__title,
+body .app .about__main .about__main-content .education__title,
+body .app .about__main .about__main-content .experience__title,
+body .app .about__main .about__main-content .contact__title {
+  margin-bottom: 10px;
+  opacity: 0.6;
+}
+
+body .app .stored-system-info__main .about__main-content .education__content,
+body .app .stored-system-info__main .about__main-content .experience__content,
+body .app .stored-system-info__main .about__main-content .contact__content,
+body .app .system-info-create__main .about__main-content .education__content,
+body .app .system-info-create__main .about__main-content .experience__content,
+body .app .system-info-create__main .about__main-content .contact__content,
+body .app .system-info-edit__main .about__main-content .education__content,
+body .app .system-info-edit__main .about__main-content .experience__content,
+body .app .system-info-edit__main .about__main-content .contact__content,
+body .app .stored-expertises__main .about__main-content .education__content,
+body .app .stored-expertises__main .about__main-content .experience__content,
+body .app .stored-expertises__main .about__main-content .contact__content,
+body .app .expertises-create__main .about__main-content .education__content,
+body .app .expertises-create__main .about__main-content .experience__content,
+body .app .expertises-create__main .about__main-content .contact__content,
+body .app .expertises-edit__main .about__main-content .education__content,
+body .app .expertises-edit__main .about__main-content .experience__content,
+body .app .expertises-edit__main .about__main-content .contact__content,
+body .app .stored-expertises-categories__main .about__main-content .education__content,
+body .app .stored-expertises-categories__main .about__main-content .experience__content,
+body .app .stored-expertises-categories__main .about__main-content .contact__content,
+body .app .expertises-category-create__main .about__main-content .education__content,
+body .app .expertises-category-create__main .about__main-content .experience__content,
+body .app .expertises-category-create__main .about__main-content .contact__content,
+body .app .expertises-category-edit__main .about__main-content .education__content,
+body .app .expertises-category-edit__main .about__main-content .experience__content,
+body .app .expertises-category-edit__main .about__main-content .contact__content,
+body .app .stored-experiences__main .about__main-content .education__content,
+body .app .stored-experiences__main .about__main-content .experience__content,
+body .app .stored-experiences__main .about__main-content .contact__content,
+body .app .experience-create__main .about__main-content .education__content,
+body .app .experience-create__main .about__main-content .experience__content,
+body .app .experience-create__main .about__main-content .contact__content,
+body .app .experience-edit__main .about__main-content .education__content,
+body .app .experience-edit__main .about__main-content .experience__content,
+body .app .experience-edit__main .about__main-content .contact__content,
+body .app .stored-educations__main .about__main-content .education__content,
+body .app .stored-educations__main .about__main-content .experience__content,
+body .app .stored-educations__main .about__main-content .contact__content,
+body .app .education-create__main .about__main-content .education__content,
+body .app .education-create__main .about__main-content .experience__content,
+body .app .education-create__main .about__main-content .contact__content,
+body .app .education-edit__main .about__main-content .education__content,
+body .app .education-edit__main .about__main-content .experience__content,
+body .app .education-edit__main .about__main-content .contact__content,
+body .app .stored-projects__main .about__main-content .education__content,
+body .app .stored-projects__main .about__main-content .experience__content,
+body .app .stored-projects__main .about__main-content .contact__content,
+body .app .project-create__main .about__main-content .education__content,
+body .app .project-create__main .about__main-content .experience__content,
+body .app .project-create__main .about__main-content .contact__content,
+body .app .project-edit__main .about__main-content .education__content,
+body .app .project-edit__main .about__main-content .experience__content,
+body .app .project-edit__main .about__main-content .contact__content,
+body .app .stored-contacts__main .about__main-content .education__content,
+body .app .stored-contacts__main .about__main-content .experience__content,
+body .app .stored-contacts__main .about__main-content .contact__content,
+body .app .contact-create__main .about__main-content .education__content,
+body .app .contact-create__main .about__main-content .experience__content,
+body .app .contact-create__main .about__main-content .contact__content,
+body .app .contact-edit__main .about__main-content .education__content,
+body .app .contact-edit__main .about__main-content .experience__content,
+body .app .contact-edit__main .about__main-content .contact__content,
+body .app .stored-awards__main .about__main-content .education__content,
+body .app .stored-awards__main .about__main-content .experience__content,
+body .app .stored-awards__main .about__main-content .contact__content,
+body .app .award-create__main .about__main-content .education__content,
+body .app .award-create__main .about__main-content .experience__content,
+body .app .award-create__main .about__main-content .contact__content,
+body .app .award-edit__main .about__main-content .education__content,
+body .app .award-edit__main .about__main-content .experience__content,
+body .app .award-edit__main .about__main-content .contact__content,
+body .app .portfolio__main .about__main-content .education__content,
+body .app .portfolio__main .about__main-content .experience__content,
+body .app .portfolio__main .about__main-content .contact__content,
+body .app .about__main .about__main-content .education__content,
+body .app .about__main .about__main-content .experience__content,
+body .app .about__main .about__main-content .contact__content {
+  font-size: 1.2rem;
+  font-family: "Sequel", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+body .app .stored-system-info__main .about__main-content .education__content a,
+body .app .stored-system-info__main .about__main-content .experience__content a,
+body .app .stored-system-info__main .about__main-content .contact__content a,
+body .app .system-info-create__main .about__main-content .education__content a,
+body .app .system-info-create__main .about__main-content .experience__content a,
+body .app .system-info-create__main .about__main-content .contact__content a,
+body .app .system-info-edit__main .about__main-content .education__content a,
+body .app .system-info-edit__main .about__main-content .experience__content a,
+body .app .system-info-edit__main .about__main-content .contact__content a,
+body .app .stored-expertises__main .about__main-content .education__content a,
+body .app .stored-expertises__main .about__main-content .experience__content a,
+body .app .stored-expertises__main .about__main-content .contact__content a,
+body .app .expertises-create__main .about__main-content .education__content a,
+body .app .expertises-create__main .about__main-content .experience__content a,
+body .app .expertises-create__main .about__main-content .contact__content a,
+body .app .expertises-edit__main .about__main-content .education__content a,
+body .app .expertises-edit__main .about__main-content .experience__content a,
+body .app .expertises-edit__main .about__main-content .contact__content a,
+body .app .stored-expertises-categories__main .about__main-content .education__content a,
+body .app .stored-expertises-categories__main .about__main-content .experience__content a,
+body .app .stored-expertises-categories__main .about__main-content .contact__content a,
+body .app .expertises-category-create__main .about__main-content .education__content a,
+body .app .expertises-category-create__main .about__main-content .experience__content a,
+body .app .expertises-category-create__main .about__main-content .contact__content a,
+body .app .expertises-category-edit__main .about__main-content .education__content a,
+body .app .expertises-category-edit__main .about__main-content .experience__content a,
+body .app .expertises-category-edit__main .about__main-content .contact__content a,
+body .app .stored-experiences__main .about__main-content .education__content a,
+body .app .stored-experiences__main .about__main-content .experience__content a,
+body .app .stored-experiences__main .about__main-content .contact__content a,
+body .app .experience-create__main .about__main-content .education__content a,
+body .app .experience-create__main .about__main-content .experience__content a,
+body .app .experience-create__main .about__main-content .contact__content a,
+body .app .experience-edit__main .about__main-content .education__content a,
+body .app .experience-edit__main .about__main-content .experience__content a,
+body .app .experience-edit__main .about__main-content .contact__content a,
+body .app .stored-educations__main .about__main-content .education__content a,
+body .app .stored-educations__main .about__main-content .experience__content a,
+body .app .stored-educations__main .about__main-content .contact__content a,
+body .app .education-create__main .about__main-content .education__content a,
+body .app .education-create__main .about__main-content .experience__content a,
+body .app .education-create__main .about__main-content .contact__content a,
+body .app .education-edit__main .about__main-content .education__content a,
+body .app .education-edit__main .about__main-content .experience__content a,
+body .app .education-edit__main .about__main-content .contact__content a,
+body .app .stored-projects__main .about__main-content .education__content a,
+body .app .stored-projects__main .about__main-content .experience__content a,
+body .app .stored-projects__main .about__main-content .contact__content a,
+body .app .project-create__main .about__main-content .education__content a,
+body .app .project-create__main .about__main-content .experience__content a,
+body .app .project-create__main .about__main-content .contact__content a,
+body .app .project-edit__main .about__main-content .education__content a,
+body .app .project-edit__main .about__main-content .experience__content a,
+body .app .project-edit__main .about__main-content .contact__content a,
+body .app .stored-contacts__main .about__main-content .education__content a,
+body .app .stored-contacts__main .about__main-content .experience__content a,
+body .app .stored-contacts__main .about__main-content .contact__content a,
+body .app .contact-create__main .about__main-content .education__content a,
+body .app .contact-create__main .about__main-content .experience__content a,
+body .app .contact-create__main .about__main-content .contact__content a,
+body .app .contact-edit__main .about__main-content .education__content a,
+body .app .contact-edit__main .about__main-content .experience__content a,
+body .app .contact-edit__main .about__main-content .contact__content a,
+body .app .stored-awards__main .about__main-content .education__content a,
+body .app .stored-awards__main .about__main-content .experience__content a,
+body .app .stored-awards__main .about__main-content .contact__content a,
+body .app .award-create__main .about__main-content .education__content a,
+body .app .award-create__main .about__main-content .experience__content a,
+body .app .award-create__main .about__main-content .contact__content a,
+body .app .award-edit__main .about__main-content .education__content a,
+body .app .award-edit__main .about__main-content .experience__content a,
+body .app .award-edit__main .about__main-content .contact__content a,
+body .app .portfolio__main .about__main-content .education__content a,
+body .app .portfolio__main .about__main-content .experience__content a,
+body .app .portfolio__main .about__main-content .contact__content a,
+body .app .about__main .about__main-content .education__content a,
+body .app .about__main .about__main-content .experience__content a,
+body .app .about__main .about__main-content .contact__content a {
+  color: white;
+  margin-right: 12px;
+}
+
+body .app .stored-system-info__main .about__main-content .education__content .ig::after,
+body .app .stored-system-info__main .about__main-content .experience__content .ig::after,
+body .app .stored-system-info__main .about__main-content .contact__content .ig::after,
+body .app .system-info-create__main .about__main-content .education__content .ig::after,
+body .app .system-info-create__main .about__main-content .experience__content .ig::after,
+body .app .system-info-create__main .about__main-content .contact__content .ig::after,
+body .app .system-info-edit__main .about__main-content .education__content .ig::after,
+body .app .system-info-edit__main .about__main-content .experience__content .ig::after,
+body .app .system-info-edit__main .about__main-content .contact__content .ig::after,
+body .app .stored-expertises__main .about__main-content .education__content .ig::after,
+body .app .stored-expertises__main .about__main-content .experience__content .ig::after,
+body .app .stored-expertises__main .about__main-content .contact__content .ig::after,
+body .app .expertises-create__main .about__main-content .education__content .ig::after,
+body .app .expertises-create__main .about__main-content .experience__content .ig::after,
+body .app .expertises-create__main .about__main-content .contact__content .ig::after,
+body .app .expertises-edit__main .about__main-content .education__content .ig::after,
+body .app .expertises-edit__main .about__main-content .experience__content .ig::after,
+body .app .expertises-edit__main .about__main-content .contact__content .ig::after,
+body .app .stored-expertises-categories__main .about__main-content .education__content .ig::after,
+body .app .stored-expertises-categories__main .about__main-content .experience__content .ig::after,
+body .app .stored-expertises-categories__main .about__main-content .contact__content .ig::after,
+body .app .expertises-category-create__main .about__main-content .education__content .ig::after,
+body .app .expertises-category-create__main .about__main-content .experience__content .ig::after,
+body .app .expertises-category-create__main .about__main-content .contact__content .ig::after,
+body .app .expertises-category-edit__main .about__main-content .education__content .ig::after,
+body .app .expertises-category-edit__main .about__main-content .experience__content .ig::after,
+body .app .expertises-category-edit__main .about__main-content .contact__content .ig::after,
+body .app .stored-experiences__main .about__main-content .education__content .ig::after,
+body .app .stored-experiences__main .about__main-content .experience__content .ig::after,
+body .app .stored-experiences__main .about__main-content .contact__content .ig::after,
+body .app .experience-create__main .about__main-content .education__content .ig::after,
+body .app .experience-create__main .about__main-content .experience__content .ig::after,
+body .app .experience-create__main .about__main-content .contact__content .ig::after,
+body .app .experience-edit__main .about__main-content .education__content .ig::after,
+body .app .experience-edit__main .about__main-content .experience__content .ig::after,
+body .app .experience-edit__main .about__main-content .contact__content .ig::after,
+body .app .stored-educations__main .about__main-content .education__content .ig::after,
+body .app .stored-educations__main .about__main-content .experience__content .ig::after,
+body .app .stored-educations__main .about__main-content .contact__content .ig::after,
+body .app .education-create__main .about__main-content .education__content .ig::after,
+body .app .education-create__main .about__main-content .experience__content .ig::after,
+body .app .education-create__main .about__main-content .contact__content .ig::after,
+body .app .education-edit__main .about__main-content .education__content .ig::after,
+body .app .education-edit__main .about__main-content .experience__content .ig::after,
+body .app .education-edit__main .about__main-content .contact__content .ig::after,
+body .app .stored-projects__main .about__main-content .education__content .ig::after,
+body .app .stored-projects__main .about__main-content .experience__content .ig::after,
+body .app .stored-projects__main .about__main-content .contact__content .ig::after,
+body .app .project-create__main .about__main-content .education__content .ig::after,
+body .app .project-create__main .about__main-content .experience__content .ig::after,
+body .app .project-create__main .about__main-content .contact__content .ig::after,
+body .app .project-edit__main .about__main-content .education__content .ig::after,
+body .app .project-edit__main .about__main-content .experience__content .ig::after,
+body .app .project-edit__main .about__main-content .contact__content .ig::after,
+body .app .stored-contacts__main .about__main-content .education__content .ig::after,
+body .app .stored-contacts__main .about__main-content .experience__content .ig::after,
+body .app .stored-contacts__main .about__main-content .contact__content .ig::after,
+body .app .contact-create__main .about__main-content .education__content .ig::after,
+body .app .contact-create__main .about__main-content .experience__content .ig::after,
+body .app .contact-create__main .about__main-content .contact__content .ig::after,
+body .app .contact-edit__main .about__main-content .education__content .ig::after,
+body .app .contact-edit__main .about__main-content .experience__content .ig::after,
+body .app .contact-edit__main .about__main-content .contact__content .ig::after,
+body .app .stored-awards__main .about__main-content .education__content .ig::after,
+body .app .stored-awards__main .about__main-content .experience__content .ig::after,
+body .app .stored-awards__main .about__main-content .contact__content .ig::after,
+body .app .award-create__main .about__main-content .education__content .ig::after,
+body .app .award-create__main .about__main-content .experience__content .ig::after,
+body .app .award-create__main .about__main-content .contact__content .ig::after,
+body .app .award-edit__main .about__main-content .education__content .ig::after,
+body .app .award-edit__main .about__main-content .experience__content .ig::after,
+body .app .award-edit__main .about__main-content .contact__content .ig::after,
+body .app .portfolio__main .about__main-content .education__content .ig::after,
+body .app .portfolio__main .about__main-content .experience__content .ig::after,
+body .app .portfolio__main .about__main-content .contact__content .ig::after,
+body .app .about__main .about__main-content .education__content .ig::after,
+body .app .about__main .about__main-content .experience__content .ig::after,
+body .app .about__main .about__main-content .contact__content .ig::after {
+  content: ".";
+  color: #e112fc;
+}
+
+body .app .stored-system-info__main .about__main-content .education__content .ig:hover,
+body .app .stored-system-info__main .about__main-content .experience__content .ig:hover,
+body .app .stored-system-info__main .about__main-content .contact__content .ig:hover,
+body .app .system-info-create__main .about__main-content .education__content .ig:hover,
+body .app .system-info-create__main .about__main-content .experience__content .ig:hover,
+body .app .system-info-create__main .about__main-content .contact__content .ig:hover,
+body .app .system-info-edit__main .about__main-content .education__content .ig:hover,
+body .app .system-info-edit__main .about__main-content .experience__content .ig:hover,
+body .app .system-info-edit__main .about__main-content .contact__content .ig:hover,
+body .app .stored-expertises__main .about__main-content .education__content .ig:hover,
+body .app .stored-expertises__main .about__main-content .experience__content .ig:hover,
+body .app .stored-expertises__main .about__main-content .contact__content .ig:hover,
+body .app .expertises-create__main .about__main-content .education__content .ig:hover,
+body .app .expertises-create__main .about__main-content .experience__content .ig:hover,
+body .app .expertises-create__main .about__main-content .contact__content .ig:hover,
+body .app .expertises-edit__main .about__main-content .education__content .ig:hover,
+body .app .expertises-edit__main .about__main-content .experience__content .ig:hover,
+body .app .expertises-edit__main .about__main-content .contact__content .ig:hover,
+body .app .stored-expertises-categories__main .about__main-content .education__content .ig:hover,
+body .app .stored-expertises-categories__main .about__main-content .experience__content .ig:hover,
+body .app .stored-expertises-categories__main .about__main-content .contact__content .ig:hover,
+body .app .expertises-category-create__main .about__main-content .education__content .ig:hover,
+body .app .expertises-category-create__main .about__main-content .experience__content .ig:hover,
+body .app .expertises-category-create__main .about__main-content .contact__content .ig:hover,
+body .app .expertises-category-edit__main .about__main-content .education__content .ig:hover,
+body .app .expertises-category-edit__main .about__main-content .experience__content .ig:hover,
+body .app .expertises-category-edit__main .about__main-content .contact__content .ig:hover,
+body .app .stored-experiences__main .about__main-content .education__content .ig:hover,
+body .app .stored-experiences__main .about__main-content .experience__content .ig:hover,
+body .app .stored-experiences__main .about__main-content .contact__content .ig:hover,
+body .app .experience-create__main .about__main-content .education__content .ig:hover,
+body .app .experience-create__main .about__main-content .experience__content .ig:hover,
+body .app .experience-create__main .about__main-content .contact__content .ig:hover,
+body .app .experience-edit__main .about__main-content .education__content .ig:hover,
+body .app .experience-edit__main .about__main-content .experience__content .ig:hover,
+body .app .experience-edit__main .about__main-content .contact__content .ig:hover,
+body .app .stored-educations__main .about__main-content .education__content .ig:hover,
+body .app .stored-educations__main .about__main-content .experience__content .ig:hover,
+body .app .stored-educations__main .about__main-content .contact__content .ig:hover,
+body .app .education-create__main .about__main-content .education__content .ig:hover,
+body .app .education-create__main .about__main-content .experience__content .ig:hover,
+body .app .education-create__main .about__main-content .contact__content .ig:hover,
+body .app .education-edit__main .about__main-content .education__content .ig:hover,
+body .app .education-edit__main .about__main-content .experience__content .ig:hover,
+body .app .education-edit__main .about__main-content .contact__content .ig:hover,
+body .app .stored-projects__main .about__main-content .education__content .ig:hover,
+body .app .stored-projects__main .about__main-content .experience__content .ig:hover,
+body .app .stored-projects__main .about__main-content .contact__content .ig:hover,
+body .app .project-create__main .about__main-content .education__content .ig:hover,
+body .app .project-create__main .about__main-content .experience__content .ig:hover,
+body .app .project-create__main .about__main-content .contact__content .ig:hover,
+body .app .project-edit__main .about__main-content .education__content .ig:hover,
+body .app .project-edit__main .about__main-content .experience__content .ig:hover,
+body .app .project-edit__main .about__main-content .contact__content .ig:hover,
+body .app .stored-contacts__main .about__main-content .education__content .ig:hover,
+body .app .stored-contacts__main .about__main-content .experience__content .ig:hover,
+body .app .stored-contacts__main .about__main-content .contact__content .ig:hover,
+body .app .contact-create__main .about__main-content .education__content .ig:hover,
+body .app .contact-create__main .about__main-content .experience__content .ig:hover,
+body .app .contact-create__main .about__main-content .contact__content .ig:hover,
+body .app .contact-edit__main .about__main-content .education__content .ig:hover,
+body .app .contact-edit__main .about__main-content .experience__content .ig:hover,
+body .app .contact-edit__main .about__main-content .contact__content .ig:hover,
+body .app .stored-awards__main .about__main-content .education__content .ig:hover,
+body .app .stored-awards__main .about__main-content .experience__content .ig:hover,
+body .app .stored-awards__main .about__main-content .contact__content .ig:hover,
+body .app .award-create__main .about__main-content .education__content .ig:hover,
+body .app .award-create__main .about__main-content .experience__content .ig:hover,
+body .app .award-create__main .about__main-content .contact__content .ig:hover,
+body .app .award-edit__main .about__main-content .education__content .ig:hover,
+body .app .award-edit__main .about__main-content .experience__content .ig:hover,
+body .app .award-edit__main .about__main-content .contact__content .ig:hover,
+body .app .portfolio__main .about__main-content .education__content .ig:hover,
+body .app .portfolio__main .about__main-content .experience__content .ig:hover,
+body .app .portfolio__main .about__main-content .contact__content .ig:hover,
+body .app .about__main .about__main-content .education__content .ig:hover,
+body .app .about__main .about__main-content .experience__content .ig:hover,
+body .app .about__main .about__main-content .contact__content .ig:hover {
+  color: #e112fc;
+}
+
+body .app .stored-system-info__main .about__main-content .education__content .ln::after,
+body .app .stored-system-info__main .about__main-content .experience__content .ln::after,
+body .app .stored-system-info__main .about__main-content .contact__content .ln::after,
+body .app .system-info-create__main .about__main-content .education__content .ln::after,
+body .app .system-info-create__main .about__main-content .experience__content .ln::after,
+body .app .system-info-create__main .about__main-content .contact__content .ln::after,
+body .app .system-info-edit__main .about__main-content .education__content .ln::after,
+body .app .system-info-edit__main .about__main-content .experience__content .ln::after,
+body .app .system-info-edit__main .about__main-content .contact__content .ln::after,
+body .app .stored-expertises__main .about__main-content .education__content .ln::after,
+body .app .stored-expertises__main .about__main-content .experience__content .ln::after,
+body .app .stored-expertises__main .about__main-content .contact__content .ln::after,
+body .app .expertises-create__main .about__main-content .education__content .ln::after,
+body .app .expertises-create__main .about__main-content .experience__content .ln::after,
+body .app .expertises-create__main .about__main-content .contact__content .ln::after,
+body .app .expertises-edit__main .about__main-content .education__content .ln::after,
+body .app .expertises-edit__main .about__main-content .experience__content .ln::after,
+body .app .expertises-edit__main .about__main-content .contact__content .ln::after,
+body .app .stored-expertises-categories__main .about__main-content .education__content .ln::after,
+body .app .stored-expertises-categories__main .about__main-content .experience__content .ln::after,
+body .app .stored-expertises-categories__main .about__main-content .contact__content .ln::after,
+body .app .expertises-category-create__main .about__main-content .education__content .ln::after,
+body .app .expertises-category-create__main .about__main-content .experience__content .ln::after,
+body .app .expertises-category-create__main .about__main-content .contact__content .ln::after,
+body .app .expertises-category-edit__main .about__main-content .education__content .ln::after,
+body .app .expertises-category-edit__main .about__main-content .experience__content .ln::after,
+body .app .expertises-category-edit__main .about__main-content .contact__content .ln::after,
+body .app .stored-experiences__main .about__main-content .education__content .ln::after,
+body .app .stored-experiences__main .about__main-content .experience__content .ln::after,
+body .app .stored-experiences__main .about__main-content .contact__content .ln::after,
+body .app .experience-create__main .about__main-content .education__content .ln::after,
+body .app .experience-create__main .about__main-content .experience__content .ln::after,
+body .app .experience-create__main .about__main-content .contact__content .ln::after,
+body .app .experience-edit__main .about__main-content .education__content .ln::after,
+body .app .experience-edit__main .about__main-content .experience__content .ln::after,
+body .app .experience-edit__main .about__main-content .contact__content .ln::after,
+body .app .stored-educations__main .about__main-content .education__content .ln::after,
+body .app .stored-educations__main .about__main-content .experience__content .ln::after,
+body .app .stored-educations__main .about__main-content .contact__content .ln::after,
+body .app .education-create__main .about__main-content .education__content .ln::after,
+body .app .education-create__main .about__main-content .experience__content .ln::after,
+body .app .education-create__main .about__main-content .contact__content .ln::after,
+body .app .education-edit__main .about__main-content .education__content .ln::after,
+body .app .education-edit__main .about__main-content .experience__content .ln::after,
+body .app .education-edit__main .about__main-content .contact__content .ln::after,
+body .app .stored-projects__main .about__main-content .education__content .ln::after,
+body .app .stored-projects__main .about__main-content .experience__content .ln::after,
+body .app .stored-projects__main .about__main-content .contact__content .ln::after,
+body .app .project-create__main .about__main-content .education__content .ln::after,
+body .app .project-create__main .about__main-content .experience__content .ln::after,
+body .app .project-create__main .about__main-content .contact__content .ln::after,
+body .app .project-edit__main .about__main-content .education__content .ln::after,
+body .app .project-edit__main .about__main-content .experience__content .ln::after,
+body .app .project-edit__main .about__main-content .contact__content .ln::after,
+body .app .stored-contacts__main .about__main-content .education__content .ln::after,
+body .app .stored-contacts__main .about__main-content .experience__content .ln::after,
+body .app .stored-contacts__main .about__main-content .contact__content .ln::after,
+body .app .contact-create__main .about__main-content .education__content .ln::after,
+body .app .contact-create__main .about__main-content .experience__content .ln::after,
+body .app .contact-create__main .about__main-content .contact__content .ln::after,
+body .app .contact-edit__main .about__main-content .education__content .ln::after,
+body .app .contact-edit__main .about__main-content .experience__content .ln::after,
+body .app .contact-edit__main .about__main-content .contact__content .ln::after,
+body .app .stored-awards__main .about__main-content .education__content .ln::after,
+body .app .stored-awards__main .about__main-content .experience__content .ln::after,
+body .app .stored-awards__main .about__main-content .contact__content .ln::after,
+body .app .award-create__main .about__main-content .education__content .ln::after,
+body .app .award-create__main .about__main-content .experience__content .ln::after,
+body .app .award-create__main .about__main-content .contact__content .ln::after,
+body .app .award-edit__main .about__main-content .education__content .ln::after,
+body .app .award-edit__main .about__main-content .experience__content .ln::after,
+body .app .award-edit__main .about__main-content .contact__content .ln::after,
+body .app .portfolio__main .about__main-content .education__content .ln::after,
+body .app .portfolio__main .about__main-content .experience__content .ln::after,
+body .app .portfolio__main .about__main-content .contact__content .ln::after,
+body .app .about__main .about__main-content .education__content .ln::after,
+body .app .about__main .about__main-content .experience__content .ln::after,
+body .app .about__main .about__main-content .contact__content .ln::after {
+  content: ".";
+  color: #094290;
+}
+
+body .app .stored-system-info__main .about__main-content .education__content .ln:hover,
+body .app .stored-system-info__main .about__main-content .experience__content .ln:hover,
+body .app .stored-system-info__main .about__main-content .contact__content .ln:hover,
+body .app .system-info-create__main .about__main-content .education__content .ln:hover,
+body .app .system-info-create__main .about__main-content .experience__content .ln:hover,
+body .app .system-info-create__main .about__main-content .contact__content .ln:hover,
+body .app .system-info-edit__main .about__main-content .education__content .ln:hover,
+body .app .system-info-edit__main .about__main-content .experience__content .ln:hover,
+body .app .system-info-edit__main .about__main-content .contact__content .ln:hover,
+body .app .stored-expertises__main .about__main-content .education__content .ln:hover,
+body .app .stored-expertises__main .about__main-content .experience__content .ln:hover,
+body .app .stored-expertises__main .about__main-content .contact__content .ln:hover,
+body .app .expertises-create__main .about__main-content .education__content .ln:hover,
+body .app .expertises-create__main .about__main-content .experience__content .ln:hover,
+body .app .expertises-create__main .about__main-content .contact__content .ln:hover,
+body .app .expertises-edit__main .about__main-content .education__content .ln:hover,
+body .app .expertises-edit__main .about__main-content .experience__content .ln:hover,
+body .app .expertises-edit__main .about__main-content .contact__content .ln:hover,
+body .app .stored-expertises-categories__main .about__main-content .education__content .ln:hover,
+body .app .stored-expertises-categories__main .about__main-content .experience__content .ln:hover,
+body .app .stored-expertises-categories__main .about__main-content .contact__content .ln:hover,
+body .app .expertises-category-create__main .about__main-content .education__content .ln:hover,
+body .app .expertises-category-create__main .about__main-content .experience__content .ln:hover,
+body .app .expertises-category-create__main .about__main-content .contact__content .ln:hover,
+body .app .expertises-category-edit__main .about__main-content .education__content .ln:hover,
+body .app .expertises-category-edit__main .about__main-content .experience__content .ln:hover,
+body .app .expertises-category-edit__main .about__main-content .contact__content .ln:hover,
+body .app .stored-experiences__main .about__main-content .education__content .ln:hover,
+body .app .stored-experiences__main .about__main-content .experience__content .ln:hover,
+body .app .stored-experiences__main .about__main-content .contact__content .ln:hover,
+body .app .experience-create__main .about__main-content .education__content .ln:hover,
+body .app .experience-create__main .about__main-content .experience__content .ln:hover,
+body .app .experience-create__main .about__main-content .contact__content .ln:hover,
+body .app .experience-edit__main .about__main-content .education__content .ln:hover,
+body .app .experience-edit__main .about__main-content .experience__content .ln:hover,
+body .app .experience-edit__main .about__main-content .contact__content .ln:hover,
+body .app .stored-educations__main .about__main-content .education__content .ln:hover,
+body .app .stored-educations__main .about__main-content .experience__content .ln:hover,
+body .app .stored-educations__main .about__main-content .contact__content .ln:hover,
+body .app .education-create__main .about__main-content .education__content .ln:hover,
+body .app .education-create__main .about__main-content .experience__content .ln:hover,
+body .app .education-create__main .about__main-content .contact__content .ln:hover,
+body .app .education-edit__main .about__main-content .education__content .ln:hover,
+body .app .education-edit__main .about__main-content .experience__content .ln:hover,
+body .app .education-edit__main .about__main-content .contact__content .ln:hover,
+body .app .stored-projects__main .about__main-content .education__content .ln:hover,
+body .app .stored-projects__main .about__main-content .experience__content .ln:hover,
+body .app .stored-projects__main .about__main-content .contact__content .ln:hover,
+body .app .project-create__main .about__main-content .education__content .ln:hover,
+body .app .project-create__main .about__main-content .experience__content .ln:hover,
+body .app .project-create__main .about__main-content .contact__content .ln:hover,
+body .app .project-edit__main .about__main-content .education__content .ln:hover,
+body .app .project-edit__main .about__main-content .experience__content .ln:hover,
+body .app .project-edit__main .about__main-content .contact__content .ln:hover,
+body .app .stored-contacts__main .about__main-content .education__content .ln:hover,
+body .app .stored-contacts__main .about__main-content .experience__content .ln:hover,
+body .app .stored-contacts__main .about__main-content .contact__content .ln:hover,
+body .app .contact-create__main .about__main-content .education__content .ln:hover,
+body .app .contact-create__main .about__main-content .experience__content .ln:hover,
+body .app .contact-create__main .about__main-content .contact__content .ln:hover,
+body .app .contact-edit__main .about__main-content .education__content .ln:hover,
+body .app .contact-edit__main .about__main-content .experience__content .ln:hover,
+body .app .contact-edit__main .about__main-content .contact__content .ln:hover,
+body .app .stored-awards__main .about__main-content .education__content .ln:hover,
+body .app .stored-awards__main .about__main-content .experience__content .ln:hover,
+body .app .stored-awards__main .about__main-content .contact__content .ln:hover,
+body .app .award-create__main .about__main-content .education__content .ln:hover,
+body .app .award-create__main .about__main-content .experience__content .ln:hover,
+body .app .award-create__main .about__main-content .contact__content .ln:hover,
+body .app .award-edit__main .about__main-content .education__content .ln:hover,
+body .app .award-edit__main .about__main-content .experience__content .ln:hover,
+body .app .award-edit__main .about__main-content .contact__content .ln:hover,
+body .app .portfolio__main .about__main-content .education__content .ln:hover,
+body .app .portfolio__main .about__main-content .experience__content .ln:hover,
+body .app .portfolio__main .about__main-content .contact__content .ln:hover,
+body .app .about__main .about__main-content .education__content .ln:hover,
+body .app .about__main .about__main-content .experience__content .ln:hover,
+body .app .about__main .about__main-content .contact__content .ln:hover {
+  color: #094290;
+}
+
+body .app .stored-system-info__main .about__main-content .education__content .gh::after,
+body .app .stored-system-info__main .about__main-content .experience__content .gh::after,
+body .app .stored-system-info__main .about__main-content .contact__content .gh::after,
+body .app .system-info-create__main .about__main-content .education__content .gh::after,
+body .app .system-info-create__main .about__main-content .experience__content .gh::after,
+body .app .system-info-create__main .about__main-content .contact__content .gh::after,
+body .app .system-info-edit__main .about__main-content .education__content .gh::after,
+body .app .system-info-edit__main .about__main-content .experience__content .gh::after,
+body .app .system-info-edit__main .about__main-content .contact__content .gh::after,
+body .app .stored-expertises__main .about__main-content .education__content .gh::after,
+body .app .stored-expertises__main .about__main-content .experience__content .gh::after,
+body .app .stored-expertises__main .about__main-content .contact__content .gh::after,
+body .app .expertises-create__main .about__main-content .education__content .gh::after,
+body .app .expertises-create__main .about__main-content .experience__content .gh::after,
+body .app .expertises-create__main .about__main-content .contact__content .gh::after,
+body .app .expertises-edit__main .about__main-content .education__content .gh::after,
+body .app .expertises-edit__main .about__main-content .experience__content .gh::after,
+body .app .expertises-edit__main .about__main-content .contact__content .gh::after,
+body .app .stored-expertises-categories__main .about__main-content .education__content .gh::after,
+body .app .stored-expertises-categories__main .about__main-content .experience__content .gh::after,
+body .app .stored-expertises-categories__main .about__main-content .contact__content .gh::after,
+body .app .expertises-category-create__main .about__main-content .education__content .gh::after,
+body .app .expertises-category-create__main .about__main-content .experience__content .gh::after,
+body .app .expertises-category-create__main .about__main-content .contact__content .gh::after,
+body .app .expertises-category-edit__main .about__main-content .education__content .gh::after,
+body .app .expertises-category-edit__main .about__main-content .experience__content .gh::after,
+body .app .expertises-category-edit__main .about__main-content .contact__content .gh::after,
+body .app .stored-experiences__main .about__main-content .education__content .gh::after,
+body .app .stored-experiences__main .about__main-content .experience__content .gh::after,
+body .app .stored-experiences__main .about__main-content .contact__content .gh::after,
+body .app .experience-create__main .about__main-content .education__content .gh::after,
+body .app .experience-create__main .about__main-content .experience__content .gh::after,
+body .app .experience-create__main .about__main-content .contact__content .gh::after,
+body .app .experience-edit__main .about__main-content .education__content .gh::after,
+body .app .experience-edit__main .about__main-content .experience__content .gh::after,
+body .app .experience-edit__main .about__main-content .contact__content .gh::after,
+body .app .stored-educations__main .about__main-content .education__content .gh::after,
+body .app .stored-educations__main .about__main-content .experience__content .gh::after,
+body .app .stored-educations__main .about__main-content .contact__content .gh::after,
+body .app .education-create__main .about__main-content .education__content .gh::after,
+body .app .education-create__main .about__main-content .experience__content .gh::after,
+body .app .education-create__main .about__main-content .contact__content .gh::after,
+body .app .education-edit__main .about__main-content .education__content .gh::after,
+body .app .education-edit__main .about__main-content .experience__content .gh::after,
+body .app .education-edit__main .about__main-content .contact__content .gh::after,
+body .app .stored-projects__main .about__main-content .education__content .gh::after,
+body .app .stored-projects__main .about__main-content .experience__content .gh::after,
+body .app .stored-projects__main .about__main-content .contact__content .gh::after,
+body .app .project-create__main .about__main-content .education__content .gh::after,
+body .app .project-create__main .about__main-content .experience__content .gh::after,
+body .app .project-create__main .about__main-content .contact__content .gh::after,
+body .app .project-edit__main .about__main-content .education__content .gh::after,
+body .app .project-edit__main .about__main-content .experience__content .gh::after,
+body .app .project-edit__main .about__main-content .contact__content .gh::after,
+body .app .stored-contacts__main .about__main-content .education__content .gh::after,
+body .app .stored-contacts__main .about__main-content .experience__content .gh::after,
+body .app .stored-contacts__main .about__main-content .contact__content .gh::after,
+body .app .contact-create__main .about__main-content .education__content .gh::after,
+body .app .contact-create__main .about__main-content .experience__content .gh::after,
+body .app .contact-create__main .about__main-content .contact__content .gh::after,
+body .app .contact-edit__main .about__main-content .education__content .gh::after,
+body .app .contact-edit__main .about__main-content .experience__content .gh::after,
+body .app .contact-edit__main .about__main-content .contact__content .gh::after,
+body .app .stored-awards__main .about__main-content .education__content .gh::after,
+body .app .stored-awards__main .about__main-content .experience__content .gh::after,
+body .app .stored-awards__main .about__main-content .contact__content .gh::after,
+body .app .award-create__main .about__main-content .education__content .gh::after,
+body .app .award-create__main .about__main-content .experience__content .gh::after,
+body .app .award-create__main .about__main-content .contact__content .gh::after,
+body .app .award-edit__main .about__main-content .education__content .gh::after,
+body .app .award-edit__main .about__main-content .experience__content .gh::after,
+body .app .award-edit__main .about__main-content .contact__content .gh::after,
+body .app .portfolio__main .about__main-content .education__content .gh::after,
+body .app .portfolio__main .about__main-content .experience__content .gh::after,
+body .app .portfolio__main .about__main-content .contact__content .gh::after,
+body .app .about__main .about__main-content .education__content .gh::after,
+body .app .about__main .about__main-content .experience__content .gh::after,
+body .app .about__main .about__main-content .contact__content .gh::after {
+  content: ".";
+  color: #444;
+}
+
+body .app .stored-system-info__main .about__main-content .education__content .gh:hover,
+body .app .stored-system-info__main .about__main-content .experience__content .gh:hover,
+body .app .stored-system-info__main .about__main-content .contact__content .gh:hover,
+body .app .system-info-create__main .about__main-content .education__content .gh:hover,
+body .app .system-info-create__main .about__main-content .experience__content .gh:hover,
+body .app .system-info-create__main .about__main-content .contact__content .gh:hover,
+body .app .system-info-edit__main .about__main-content .education__content .gh:hover,
+body .app .system-info-edit__main .about__main-content .experience__content .gh:hover,
+body .app .system-info-edit__main .about__main-content .contact__content .gh:hover,
+body .app .stored-expertises__main .about__main-content .education__content .gh:hover,
+body .app .stored-expertises__main .about__main-content .experience__content .gh:hover,
+body .app .stored-expertises__main .about__main-content .contact__content .gh:hover,
+body .app .expertises-create__main .about__main-content .education__content .gh:hover,
+body .app .expertises-create__main .about__main-content .experience__content .gh:hover,
+body .app .expertises-create__main .about__main-content .contact__content .gh:hover,
+body .app .expertises-edit__main .about__main-content .education__content .gh:hover,
+body .app .expertises-edit__main .about__main-content .experience__content .gh:hover,
+body .app .expertises-edit__main .about__main-content .contact__content .gh:hover,
+body .app .stored-expertises-categories__main .about__main-content .education__content .gh:hover,
+body .app .stored-expertises-categories__main .about__main-content .experience__content .gh:hover,
+body .app .stored-expertises-categories__main .about__main-content .contact__content .gh:hover,
+body .app .expertises-category-create__main .about__main-content .education__content .gh:hover,
+body .app .expertises-category-create__main .about__main-content .experience__content .gh:hover,
+body .app .expertises-category-create__main .about__main-content .contact__content .gh:hover,
+body .app .expertises-category-edit__main .about__main-content .education__content .gh:hover,
+body .app .expertises-category-edit__main .about__main-content .experience__content .gh:hover,
+body .app .expertises-category-edit__main .about__main-content .contact__content .gh:hover,
+body .app .stored-experiences__main .about__main-content .education__content .gh:hover,
+body .app .stored-experiences__main .about__main-content .experience__content .gh:hover,
+body .app .stored-experiences__main .about__main-content .contact__content .gh:hover,
+body .app .experience-create__main .about__main-content .education__content .gh:hover,
+body .app .experience-create__main .about__main-content .experience__content .gh:hover,
+body .app .experience-create__main .about__main-content .contact__content .gh:hover,
+body .app .experience-edit__main .about__main-content .education__content .gh:hover,
+body .app .experience-edit__main .about__main-content .experience__content .gh:hover,
+body .app .experience-edit__main .about__main-content .contact__content .gh:hover,
+body .app .stored-educations__main .about__main-content .education__content .gh:hover,
+body .app .stored-educations__main .about__main-content .experience__content .gh:hover,
+body .app .stored-educations__main .about__main-content .contact__content .gh:hover,
+body .app .education-create__main .about__main-content .education__content .gh:hover,
+body .app .education-create__main .about__main-content .experience__content .gh:hover,
+body .app .education-create__main .about__main-content .contact__content .gh:hover,
+body .app .education-edit__main .about__main-content .education__content .gh:hover,
+body .app .education-edit__main .about__main-content .experience__content .gh:hover,
+body .app .education-edit__main .about__main-content .contact__content .gh:hover,
+body .app .stored-projects__main .about__main-content .education__content .gh:hover,
+body .app .stored-projects__main .about__main-content .experience__content .gh:hover,
+body .app .stored-projects__main .about__main-content .contact__content .gh:hover,
+body .app .project-create__main .about__main-content .education__content .gh:hover,
+body .app .project-create__main .about__main-content .experience__content .gh:hover,
+body .app .project-create__main .about__main-content .contact__content .gh:hover,
+body .app .project-edit__main .about__main-content .education__content .gh:hover,
+body .app .project-edit__main .about__main-content .experience__content .gh:hover,
+body .app .project-edit__main .about__main-content .contact__content .gh:hover,
+body .app .stored-contacts__main .about__main-content .education__content .gh:hover,
+body .app .stored-contacts__main .about__main-content .experience__content .gh:hover,
+body .app .stored-contacts__main .about__main-content .contact__content .gh:hover,
+body .app .contact-create__main .about__main-content .education__content .gh:hover,
+body .app .contact-create__main .about__main-content .experience__content .gh:hover,
+body .app .contact-create__main .about__main-content .contact__content .gh:hover,
+body .app .contact-edit__main .about__main-content .education__content .gh:hover,
+body .app .contact-edit__main .about__main-content .experience__content .gh:hover,
+body .app .contact-edit__main .about__main-content .contact__content .gh:hover,
+body .app .stored-awards__main .about__main-content .education__content .gh:hover,
+body .app .stored-awards__main .about__main-content .experience__content .gh:hover,
+body .app .stored-awards__main .about__main-content .contact__content .gh:hover,
+body .app .award-create__main .about__main-content .education__content .gh:hover,
+body .app .award-create__main .about__main-content .experience__content .gh:hover,
+body .app .award-create__main .about__main-content .contact__content .gh:hover,
+body .app .award-edit__main .about__main-content .education__content .gh:hover,
+body .app .award-edit__main .about__main-content .experience__content .gh:hover,
+body .app .award-edit__main .about__main-content .contact__content .gh:hover,
+body .app .portfolio__main .about__main-content .education__content .gh:hover,
+body .app .portfolio__main .about__main-content .experience__content .gh:hover,
+body .app .portfolio__main .about__main-content .contact__content .gh:hover,
+body .app .about__main .about__main-content .education__content .gh:hover,
+body .app .about__main .about__main-content .experience__content .gh:hover,
+body .app .about__main .about__main-content .contact__content .gh:hover {
+  color: #444;
+}
+
+body .app .stored-system-info__main .about__main-content .education__content .fb::after,
+body .app .stored-system-info__main .about__main-content .experience__content .fb::after,
+body .app .stored-system-info__main .about__main-content .contact__content .fb::after,
+body .app .system-info-create__main .about__main-content .education__content .fb::after,
+body .app .system-info-create__main .about__main-content .experience__content .fb::after,
+body .app .system-info-create__main .about__main-content .contact__content .fb::after,
+body .app .system-info-edit__main .about__main-content .education__content .fb::after,
+body .app .system-info-edit__main .about__main-content .experience__content .fb::after,
+body .app .system-info-edit__main .about__main-content .contact__content .fb::after,
+body .app .stored-expertises__main .about__main-content .education__content .fb::after,
+body .app .stored-expertises__main .about__main-content .experience__content .fb::after,
+body .app .stored-expertises__main .about__main-content .contact__content .fb::after,
+body .app .expertises-create__main .about__main-content .education__content .fb::after,
+body .app .expertises-create__main .about__main-content .experience__content .fb::after,
+body .app .expertises-create__main .about__main-content .contact__content .fb::after,
+body .app .expertises-edit__main .about__main-content .education__content .fb::after,
+body .app .expertises-edit__main .about__main-content .experience__content .fb::after,
+body .app .expertises-edit__main .about__main-content .contact__content .fb::after,
+body .app .stored-expertises-categories__main .about__main-content .education__content .fb::after,
+body .app .stored-expertises-categories__main .about__main-content .experience__content .fb::after,
+body .app .stored-expertises-categories__main .about__main-content .contact__content .fb::after,
+body .app .expertises-category-create__main .about__main-content .education__content .fb::after,
+body .app .expertises-category-create__main .about__main-content .experience__content .fb::after,
+body .app .expertises-category-create__main .about__main-content .contact__content .fb::after,
+body .app .expertises-category-edit__main .about__main-content .education__content .fb::after,
+body .app .expertises-category-edit__main .about__main-content .experience__content .fb::after,
+body .app .expertises-category-edit__main .about__main-content .contact__content .fb::after,
+body .app .stored-experiences__main .about__main-content .education__content .fb::after,
+body .app .stored-experiences__main .about__main-content .experience__content .fb::after,
+body .app .stored-experiences__main .about__main-content .contact__content .fb::after,
+body .app .experience-create__main .about__main-content .education__content .fb::after,
+body .app .experience-create__main .about__main-content .experience__content .fb::after,
+body .app .experience-create__main .about__main-content .contact__content .fb::after,
+body .app .experience-edit__main .about__main-content .education__content .fb::after,
+body .app .experience-edit__main .about__main-content .experience__content .fb::after,
+body .app .experience-edit__main .about__main-content .contact__content .fb::after,
+body .app .stored-educations__main .about__main-content .education__content .fb::after,
+body .app .stored-educations__main .about__main-content .experience__content .fb::after,
+body .app .stored-educations__main .about__main-content .contact__content .fb::after,
+body .app .education-create__main .about__main-content .education__content .fb::after,
+body .app .education-create__main .about__main-content .experience__content .fb::after,
+body .app .education-create__main .about__main-content .contact__content .fb::after,
+body .app .education-edit__main .about__main-content .education__content .fb::after,
+body .app .education-edit__main .about__main-content .experience__content .fb::after,
+body .app .education-edit__main .about__main-content .contact__content .fb::after,
+body .app .stored-projects__main .about__main-content .education__content .fb::after,
+body .app .stored-projects__main .about__main-content .experience__content .fb::after,
+body .app .stored-projects__main .about__main-content .contact__content .fb::after,
+body .app .project-create__main .about__main-content .education__content .fb::after,
+body .app .project-create__main .about__main-content .experience__content .fb::after,
+body .app .project-create__main .about__main-content .contact__content .fb::after,
+body .app .project-edit__main .about__main-content .education__content .fb::after,
+body .app .project-edit__main .about__main-content .experience__content .fb::after,
+body .app .project-edit__main .about__main-content .contact__content .fb::after,
+body .app .stored-contacts__main .about__main-content .education__content .fb::after,
+body .app .stored-contacts__main .about__main-content .experience__content .fb::after,
+body .app .stored-contacts__main .about__main-content .contact__content .fb::after,
+body .app .contact-create__main .about__main-content .education__content .fb::after,
+body .app .contact-create__main .about__main-content .experience__content .fb::after,
+body .app .contact-create__main .about__main-content .contact__content .fb::after,
+body .app .contact-edit__main .about__main-content .education__content .fb::after,
+body .app .contact-edit__main .about__main-content .experience__content .fb::after,
+body .app .contact-edit__main .about__main-content .contact__content .fb::after,
+body .app .stored-awards__main .about__main-content .education__content .fb::after,
+body .app .stored-awards__main .about__main-content .experience__content .fb::after,
+body .app .stored-awards__main .about__main-content .contact__content .fb::after,
+body .app .award-create__main .about__main-content .education__content .fb::after,
+body .app .award-create__main .about__main-content .experience__content .fb::after,
+body .app .award-create__main .about__main-content .contact__content .fb::after,
+body .app .award-edit__main .about__main-content .education__content .fb::after,
+body .app .award-edit__main .about__main-content .experience__content .fb::after,
+body .app .award-edit__main .about__main-content .contact__content .fb::after,
+body .app .portfolio__main .about__main-content .education__content .fb::after,
+body .app .portfolio__main .about__main-content .experience__content .fb::after,
+body .app .portfolio__main .about__main-content .contact__content .fb::after,
+body .app .about__main .about__main-content .education__content .fb::after,
+body .app .about__main .about__main-content .experience__content .fb::after,
+body .app .about__main .about__main-content .contact__content .fb::after {
+  content: ".";
+  color: #097ceb;
+}
+
+body .app .stored-system-info__main .about__main-content .education__content .fb:hover,
+body .app .stored-system-info__main .about__main-content .experience__content .fb:hover,
+body .app .stored-system-info__main .about__main-content .contact__content .fb:hover,
+body .app .system-info-create__main .about__main-content .education__content .fb:hover,
+body .app .system-info-create__main .about__main-content .experience__content .fb:hover,
+body .app .system-info-create__main .about__main-content .contact__content .fb:hover,
+body .app .system-info-edit__main .about__main-content .education__content .fb:hover,
+body .app .system-info-edit__main .about__main-content .experience__content .fb:hover,
+body .app .system-info-edit__main .about__main-content .contact__content .fb:hover,
+body .app .stored-expertises__main .about__main-content .education__content .fb:hover,
+body .app .stored-expertises__main .about__main-content .experience__content .fb:hover,
+body .app .stored-expertises__main .about__main-content .contact__content .fb:hover,
+body .app .expertises-create__main .about__main-content .education__content .fb:hover,
+body .app .expertises-create__main .about__main-content .experience__content .fb:hover,
+body .app .expertises-create__main .about__main-content .contact__content .fb:hover,
+body .app .expertises-edit__main .about__main-content .education__content .fb:hover,
+body .app .expertises-edit__main .about__main-content .experience__content .fb:hover,
+body .app .expertises-edit__main .about__main-content .contact__content .fb:hover,
+body .app .stored-expertises-categories__main .about__main-content .education__content .fb:hover,
+body .app .stored-expertises-categories__main .about__main-content .experience__content .fb:hover,
+body .app .stored-expertises-categories__main .about__main-content .contact__content .fb:hover,
+body .app .expertises-category-create__main .about__main-content .education__content .fb:hover,
+body .app .expertises-category-create__main .about__main-content .experience__content .fb:hover,
+body .app .expertises-category-create__main .about__main-content .contact__content .fb:hover,
+body .app .expertises-category-edit__main .about__main-content .education__content .fb:hover,
+body .app .expertises-category-edit__main .about__main-content .experience__content .fb:hover,
+body .app .expertises-category-edit__main .about__main-content .contact__content .fb:hover,
+body .app .stored-experiences__main .about__main-content .education__content .fb:hover,
+body .app .stored-experiences__main .about__main-content .experience__content .fb:hover,
+body .app .stored-experiences__main .about__main-content .contact__content .fb:hover,
+body .app .experience-create__main .about__main-content .education__content .fb:hover,
+body .app .experience-create__main .about__main-content .experience__content .fb:hover,
+body .app .experience-create__main .about__main-content .contact__content .fb:hover,
+body .app .experience-edit__main .about__main-content .education__content .fb:hover,
+body .app .experience-edit__main .about__main-content .experience__content .fb:hover,
+body .app .experience-edit__main .about__main-content .contact__content .fb:hover,
+body .app .stored-educations__main .about__main-content .education__content .fb:hover,
+body .app .stored-educations__main .about__main-content .experience__content .fb:hover,
+body .app .stored-educations__main .about__main-content .contact__content .fb:hover,
+body .app .education-create__main .about__main-content .education__content .fb:hover,
+body .app .education-create__main .about__main-content .experience__content .fb:hover,
+body .app .education-create__main .about__main-content .contact__content .fb:hover,
+body .app .education-edit__main .about__main-content .education__content .fb:hover,
+body .app .education-edit__main .about__main-content .experience__content .fb:hover,
+body .app .education-edit__main .about__main-content .contact__content .fb:hover,
+body .app .stored-projects__main .about__main-content .education__content .fb:hover,
+body .app .stored-projects__main .about__main-content .experience__content .fb:hover,
+body .app .stored-projects__main .about__main-content .contact__content .fb:hover,
+body .app .project-create__main .about__main-content .education__content .fb:hover,
+body .app .project-create__main .about__main-content .experience__content .fb:hover,
+body .app .project-create__main .about__main-content .contact__content .fb:hover,
+body .app .project-edit__main .about__main-content .education__content .fb:hover,
+body .app .project-edit__main .about__main-content .experience__content .fb:hover,
+body .app .project-edit__main .about__main-content .contact__content .fb:hover,
+body .app .stored-contacts__main .about__main-content .education__content .fb:hover,
+body .app .stored-contacts__main .about__main-content .experience__content .fb:hover,
+body .app .stored-contacts__main .about__main-content .contact__content .fb:hover,
+body .app .contact-create__main .about__main-content .education__content .fb:hover,
+body .app .contact-create__main .about__main-content .experience__content .fb:hover,
+body .app .contact-create__main .about__main-content .contact__content .fb:hover,
+body .app .contact-edit__main .about__main-content .education__content .fb:hover,
+body .app .contact-edit__main .about__main-content .experience__content .fb:hover,
+body .app .contact-edit__main .about__main-content .contact__content .fb:hover,
+body .app .stored-awards__main .about__main-content .education__content .fb:hover,
+body .app .stored-awards__main .about__main-content .experience__content .fb:hover,
+body .app .stored-awards__main .about__main-content .contact__content .fb:hover,
+body .app .award-create__main .about__main-content .education__content .fb:hover,
+body .app .award-create__main .about__main-content .experience__content .fb:hover,
+body .app .award-create__main .about__main-content .contact__content .fb:hover,
+body .app .award-edit__main .about__main-content .education__content .fb:hover,
+body .app .award-edit__main .about__main-content .experience__content .fb:hover,
+body .app .award-edit__main .about__main-content .contact__content .fb:hover,
+body .app .portfolio__main .about__main-content .education__content .fb:hover,
+body .app .portfolio__main .about__main-content .experience__content .fb:hover,
+body .app .portfolio__main .about__main-content .contact__content .fb:hover,
+body .app .about__main .about__main-content .education__content .fb:hover,
+body .app .about__main .about__main-content .experience__content .fb:hover,
+body .app .about__main .about__main-content .contact__content .fb:hover {
+  color: #097ceb;
+}
+
+body .app .stored-system-info__main .about__main-content .education__content .email,
+body .app .stored-system-info__main .about__main-content .experience__content .email,
+body .app .stored-system-info__main .about__main-content .contact__content .email,
+body .app .system-info-create__main .about__main-content .education__content .email,
+body .app .system-info-create__main .about__main-content .experience__content .email,
+body .app .system-info-create__main .about__main-content .contact__content .email,
+body .app .system-info-edit__main .about__main-content .education__content .email,
+body .app .system-info-edit__main .about__main-content .experience__content .email,
+body .app .system-info-edit__main .about__main-content .contact__content .email,
+body .app .stored-expertises__main .about__main-content .education__content .email,
+body .app .stored-expertises__main .about__main-content .experience__content .email,
+body .app .stored-expertises__main .about__main-content .contact__content .email,
+body .app .expertises-create__main .about__main-content .education__content .email,
+body .app .expertises-create__main .about__main-content .experience__content .email,
+body .app .expertises-create__main .about__main-content .contact__content .email,
+body .app .expertises-edit__main .about__main-content .education__content .email,
+body .app .expertises-edit__main .about__main-content .experience__content .email,
+body .app .expertises-edit__main .about__main-content .contact__content .email,
+body .app .stored-expertises-categories__main .about__main-content .education__content .email,
+body .app .stored-expertises-categories__main .about__main-content .experience__content .email,
+body .app .stored-expertises-categories__main .about__main-content .contact__content .email,
+body .app .expertises-category-create__main .about__main-content .education__content .email,
+body .app .expertises-category-create__main .about__main-content .experience__content .email,
+body .app .expertises-category-create__main .about__main-content .contact__content .email,
+body .app .expertises-category-edit__main .about__main-content .education__content .email,
+body .app .expertises-category-edit__main .about__main-content .experience__content .email,
+body .app .expertises-category-edit__main .about__main-content .contact__content .email,
+body .app .stored-experiences__main .about__main-content .education__content .email,
+body .app .stored-experiences__main .about__main-content .experience__content .email,
+body .app .stored-experiences__main .about__main-content .contact__content .email,
+body .app .experience-create__main .about__main-content .education__content .email,
+body .app .experience-create__main .about__main-content .experience__content .email,
+body .app .experience-create__main .about__main-content .contact__content .email,
+body .app .experience-edit__main .about__main-content .education__content .email,
+body .app .experience-edit__main .about__main-content .experience__content .email,
+body .app .experience-edit__main .about__main-content .contact__content .email,
+body .app .stored-educations__main .about__main-content .education__content .email,
+body .app .stored-educations__main .about__main-content .experience__content .email,
+body .app .stored-educations__main .about__main-content .contact__content .email,
+body .app .education-create__main .about__main-content .education__content .email,
+body .app .education-create__main .about__main-content .experience__content .email,
+body .app .education-create__main .about__main-content .contact__content .email,
+body .app .education-edit__main .about__main-content .education__content .email,
+body .app .education-edit__main .about__main-content .experience__content .email,
+body .app .education-edit__main .about__main-content .contact__content .email,
+body .app .stored-projects__main .about__main-content .education__content .email,
+body .app .stored-projects__main .about__main-content .experience__content .email,
+body .app .stored-projects__main .about__main-content .contact__content .email,
+body .app .project-create__main .about__main-content .education__content .email,
+body .app .project-create__main .about__main-content .experience__content .email,
+body .app .project-create__main .about__main-content .contact__content .email,
+body .app .project-edit__main .about__main-content .education__content .email,
+body .app .project-edit__main .about__main-content .experience__content .email,
+body .app .project-edit__main .about__main-content .contact__content .email,
+body .app .stored-contacts__main .about__main-content .education__content .email,
+body .app .stored-contacts__main .about__main-content .experience__content .email,
+body .app .stored-contacts__main .about__main-content .contact__content .email,
+body .app .contact-create__main .about__main-content .education__content .email,
+body .app .contact-create__main .about__main-content .experience__content .email,
+body .app .contact-create__main .about__main-content .contact__content .email,
+body .app .contact-edit__main .about__main-content .education__content .email,
+body .app .contact-edit__main .about__main-content .experience__content .email,
+body .app .contact-edit__main .about__main-content .contact__content .email,
+body .app .stored-awards__main .about__main-content .education__content .email,
+body .app .stored-awards__main .about__main-content .experience__content .email,
+body .app .stored-awards__main .about__main-content .contact__content .email,
+body .app .award-create__main .about__main-content .education__content .email,
+body .app .award-create__main .about__main-content .experience__content .email,
+body .app .award-create__main .about__main-content .contact__content .email,
+body .app .award-edit__main .about__main-content .education__content .email,
+body .app .award-edit__main .about__main-content .experience__content .email,
+body .app .award-edit__main .about__main-content .contact__content .email,
+body .app .portfolio__main .about__main-content .education__content .email,
+body .app .portfolio__main .about__main-content .experience__content .email,
+body .app .portfolio__main .about__main-content .contact__content .email,
+body .app .about__main .about__main-content .education__content .email,
+body .app .about__main .about__main-content .experience__content .email,
+body .app .about__main .about__main-content .contact__content .email {
+  position: relative;
+}
+
+body .app .stored-system-info__main .about__main-content .education__content .email::after,
+body .app .stored-system-info__main .about__main-content .experience__content .email::after,
+body .app .stored-system-info__main .about__main-content .contact__content .email::after,
+body .app .system-info-create__main .about__main-content .education__content .email::after,
+body .app .system-info-create__main .about__main-content .experience__content .email::after,
+body .app .system-info-create__main .about__main-content .contact__content .email::after,
+body .app .system-info-edit__main .about__main-content .education__content .email::after,
+body .app .system-info-edit__main .about__main-content .experience__content .email::after,
+body .app .system-info-edit__main .about__main-content .contact__content .email::after,
+body .app .stored-expertises__main .about__main-content .education__content .email::after,
+body .app .stored-expertises__main .about__main-content .experience__content .email::after,
+body .app .stored-expertises__main .about__main-content .contact__content .email::after,
+body .app .expertises-create__main .about__main-content .education__content .email::after,
+body .app .expertises-create__main .about__main-content .experience__content .email::after,
+body .app .expertises-create__main .about__main-content .contact__content .email::after,
+body .app .expertises-edit__main .about__main-content .education__content .email::after,
+body .app .expertises-edit__main .about__main-content .experience__content .email::after,
+body .app .expertises-edit__main .about__main-content .contact__content .email::after,
+body .app .stored-expertises-categories__main .about__main-content .education__content .email::after,
+body .app .stored-expertises-categories__main .about__main-content .experience__content .email::after,
+body .app .stored-expertises-categories__main .about__main-content .contact__content .email::after,
+body .app .expertises-category-create__main .about__main-content .education__content .email::after,
+body .app .expertises-category-create__main .about__main-content .experience__content .email::after,
+body .app .expertises-category-create__main .about__main-content .contact__content .email::after,
+body .app .expertises-category-edit__main .about__main-content .education__content .email::after,
+body .app .expertises-category-edit__main .about__main-content .experience__content .email::after,
+body .app .expertises-category-edit__main .about__main-content .contact__content .email::after,
+body .app .stored-experiences__main .about__main-content .education__content .email::after,
+body .app .stored-experiences__main .about__main-content .experience__content .email::after,
+body .app .stored-experiences__main .about__main-content .contact__content .email::after,
+body .app .experience-create__main .about__main-content .education__content .email::after,
+body .app .experience-create__main .about__main-content .experience__content .email::after,
+body .app .experience-create__main .about__main-content .contact__content .email::after,
+body .app .experience-edit__main .about__main-content .education__content .email::after,
+body .app .experience-edit__main .about__main-content .experience__content .email::after,
+body .app .experience-edit__main .about__main-content .contact__content .email::after,
+body .app .stored-educations__main .about__main-content .education__content .email::after,
+body .app .stored-educations__main .about__main-content .experience__content .email::after,
+body .app .stored-educations__main .about__main-content .contact__content .email::after,
+body .app .education-create__main .about__main-content .education__content .email::after,
+body .app .education-create__main .about__main-content .experience__content .email::after,
+body .app .education-create__main .about__main-content .contact__content .email::after,
+body .app .education-edit__main .about__main-content .education__content .email::after,
+body .app .education-edit__main .about__main-content .experience__content .email::after,
+body .app .education-edit__main .about__main-content .contact__content .email::after,
+body .app .stored-projects__main .about__main-content .education__content .email::after,
+body .app .stored-projects__main .about__main-content .experience__content .email::after,
+body .app .stored-projects__main .about__main-content .contact__content .email::after,
+body .app .project-create__main .about__main-content .education__content .email::after,
+body .app .project-create__main .about__main-content .experience__content .email::after,
+body .app .project-create__main .about__main-content .contact__content .email::after,
+body .app .project-edit__main .about__main-content .education__content .email::after,
+body .app .project-edit__main .about__main-content .experience__content .email::after,
+body .app .project-edit__main .about__main-content .contact__content .email::after,
+body .app .stored-contacts__main .about__main-content .education__content .email::after,
+body .app .stored-contacts__main .about__main-content .experience__content .email::after,
+body .app .stored-contacts__main .about__main-content .contact__content .email::after,
+body .app .contact-create__main .about__main-content .education__content .email::after,
+body .app .contact-create__main .about__main-content .experience__content .email::after,
+body .app .contact-create__main .about__main-content .contact__content .email::after,
+body .app .contact-edit__main .about__main-content .education__content .email::after,
+body .app .contact-edit__main .about__main-content .experience__content .email::after,
+body .app .contact-edit__main .about__main-content .contact__content .email::after,
+body .app .stored-awards__main .about__main-content .education__content .email::after,
+body .app .stored-awards__main .about__main-content .experience__content .email::after,
+body .app .stored-awards__main .about__main-content .contact__content .email::after,
+body .app .award-create__main .about__main-content .education__content .email::after,
+body .app .award-create__main .about__main-content .experience__content .email::after,
+body .app .award-create__main .about__main-content .contact__content .email::after,
+body .app .award-edit__main .about__main-content .education__content .email::after,
+body .app .award-edit__main .about__main-content .experience__content .email::after,
+body .app .award-edit__main .about__main-content .contact__content .email::after,
+body .app .portfolio__main .about__main-content .education__content .email::after,
+body .app .portfolio__main .about__main-content .experience__content .email::after,
+body .app .portfolio__main .about__main-content .contact__content .email::after,
+body .app .about__main .about__main-content .education__content .email::after,
+body .app .about__main .about__main-content .experience__content .email::after,
+body .app .about__main .about__main-content .contact__content .email::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.35em;
+  position: absolute;
+  top: 70%;
+  left: 0px;
+  background: currentcolor;
+  opacity: 0.4;
+}
+
+body .app .stored-system-info__main .pagination,
+body .app .system-info-create__main .pagination,
+body .app .system-info-edit__main .pagination,
+body .app .stored-expertises__main .pagination,
+body .app .expertises-create__main .pagination,
+body .app .expertises-edit__main .pagination,
+body .app .stored-expertises-categories__main .pagination,
+body .app .expertises-category-create__main .pagination,
+body .app .expertises-category-edit__main .pagination,
+body .app .stored-experiences__main .pagination,
+body .app .experience-create__main .pagination,
+body .app .experience-edit__main .pagination,
+body .app .stored-educations__main .pagination,
+body .app .education-create__main .pagination,
+body .app .education-edit__main .pagination,
+body .app .stored-projects__main .pagination,
+body .app .project-create__main .pagination,
+body .app .project-edit__main .pagination,
+body .app .stored-contacts__main .pagination,
+body .app .contact-create__main .pagination,
+body .app .contact-edit__main .pagination,
+body .app .stored-awards__main .pagination,
+body .app .award-create__main .pagination,
+body .app .award-edit__main .pagination,
+body .app .portfolio__main .pagination,
+body .app .about__main .pagination {
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.2rem;
+}
+
+body .app .stored-system-info__main .pagination .page-link,
+body .app .system-info-create__main .pagination .page-link,
+body .app .system-info-edit__main .pagination .page-link,
+body .app .stored-expertises__main .pagination .page-link,
+body .app .expertises-create__main .pagination .page-link,
+body .app .expertises-edit__main .pagination .page-link,
+body .app .stored-expertises-categories__main .pagination .page-link,
+body .app .expertises-category-create__main .pagination .page-link,
+body .app .expertises-category-edit__main .pagination .page-link,
+body .app .stored-experiences__main .pagination .page-link,
+body .app .experience-create__main .pagination .page-link,
+body .app .experience-edit__main .pagination .page-link,
+body .app .stored-educations__main .pagination .page-link,
+body .app .education-create__main .pagination .page-link,
+body .app .education-edit__main .pagination .page-link,
+body .app .stored-projects__main .pagination .page-link,
+body .app .project-create__main .pagination .page-link,
+body .app .project-edit__main .pagination .page-link,
+body .app .stored-contacts__main .pagination .page-link,
+body .app .contact-create__main .pagination .page-link,
+body .app .contact-edit__main .pagination .page-link,
+body .app .stored-awards__main .pagination .page-link,
+body .app .award-create__main .pagination .page-link,
+body .app .award-edit__main .pagination .page-link,
+body .app .portfolio__main .pagination .page-link,
+body .app .about__main .pagination .page-link {
+  background: black;
+  color: white;
+  padding: 0.8rem 1.45rem;
+}
+
+body .app .stored-system-info__main .pagination .page-link:focus,
+body .app .system-info-create__main .pagination .page-link:focus,
+body .app .system-info-edit__main .pagination .page-link:focus,
+body .app .stored-expertises__main .pagination .page-link:focus,
+body .app .expertises-create__main .pagination .page-link:focus,
+body .app .expertises-edit__main .pagination .page-link:focus,
+body .app .stored-expertises-categories__main .pagination .page-link:focus,
+body .app .expertises-category-create__main .pagination .page-link:focus,
+body .app .expertises-category-edit__main .pagination .page-link:focus,
+body .app .stored-experiences__main .pagination .page-link:focus,
+body .app .experience-create__main .pagination .page-link:focus,
+body .app .experience-edit__main .pagination .page-link:focus,
+body .app .stored-educations__main .pagination .page-link:focus,
+body .app .education-create__main .pagination .page-link:focus,
+body .app .education-edit__main .pagination .page-link:focus,
+body .app .stored-projects__main .pagination .page-link:focus,
+body .app .project-create__main .pagination .page-link:focus,
+body .app .project-edit__main .pagination .page-link:focus,
+body .app .stored-contacts__main .pagination .page-link:focus,
+body .app .contact-create__main .pagination .page-link:focus,
+body .app .contact-edit__main .pagination .page-link:focus,
+body .app .stored-awards__main .pagination .page-link:focus,
+body .app .award-create__main .pagination .page-link:focus,
+body .app .award-edit__main .pagination .page-link:focus,
+body .app .portfolio__main .pagination .page-link:focus,
+body .app .about__main .pagination .page-link:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem #ffffff;
+          box-shadow: 0 0 0 0.25rem #ffffff;
+}
+
+body .app .stored-system-info__main .pagination .page-link:hover,
+body .app .system-info-create__main .pagination .page-link:hover,
+body .app .system-info-edit__main .pagination .page-link:hover,
+body .app .stored-expertises__main .pagination .page-link:hover,
+body .app .expertises-create__main .pagination .page-link:hover,
+body .app .expertises-edit__main .pagination .page-link:hover,
+body .app .stored-expertises-categories__main .pagination .page-link:hover,
+body .app .expertises-category-create__main .pagination .page-link:hover,
+body .app .expertises-category-edit__main .pagination .page-link:hover,
+body .app .stored-experiences__main .pagination .page-link:hover,
+body .app .experience-create__main .pagination .page-link:hover,
+body .app .experience-edit__main .pagination .page-link:hover,
+body .app .stored-educations__main .pagination .page-link:hover,
+body .app .education-create__main .pagination .page-link:hover,
+body .app .education-edit__main .pagination .page-link:hover,
+body .app .stored-projects__main .pagination .page-link:hover,
+body .app .project-create__main .pagination .page-link:hover,
+body .app .project-edit__main .pagination .page-link:hover,
+body .app .stored-contacts__main .pagination .page-link:hover,
+body .app .contact-create__main .pagination .page-link:hover,
+body .app .contact-edit__main .pagination .page-link:hover,
+body .app .stored-awards__main .pagination .page-link:hover,
+body .app .award-create__main .pagination .page-link:hover,
+body .app .award-edit__main .pagination .page-link:hover,
+body .app .portfolio__main .pagination .page-link:hover,
+body .app .about__main .pagination .page-link:hover {
+  background: #212b36;
+}
+
+body .app .stored-system-info__main .pagination .page-item,
+body .app .system-info-create__main .pagination .page-item,
+body .app .system-info-edit__main .pagination .page-item,
+body .app .stored-expertises__main .pagination .page-item,
+body .app .expertises-create__main .pagination .page-item,
+body .app .expertises-edit__main .pagination .page-item,
+body .app .stored-expertises-categories__main .pagination .page-item,
+body .app .expertises-category-create__main .pagination .page-item,
+body .app .expertises-category-edit__main .pagination .page-item,
+body .app .stored-experiences__main .pagination .page-item,
+body .app .experience-create__main .pagination .page-item,
+body .app .experience-edit__main .pagination .page-item,
+body .app .stored-educations__main .pagination .page-item,
+body .app .education-create__main .pagination .page-item,
+body .app .education-edit__main .pagination .page-item,
+body .app .stored-projects__main .pagination .page-item,
+body .app .project-create__main .pagination .page-item,
+body .app .project-edit__main .pagination .page-item,
+body .app .stored-contacts__main .pagination .page-item,
+body .app .contact-create__main .pagination .page-item,
+body .app .contact-edit__main .pagination .page-item,
+body .app .stored-awards__main .pagination .page-item,
+body .app .award-create__main .pagination .page-item,
+body .app .award-edit__main .pagination .page-item,
+body .app .portfolio__main .pagination .page-item,
+body .app .about__main .pagination .page-item {
+  margin: 0 10px;
+}
+
+body .app .stored-system-info__main .pagination .page-item.disabled .page-link,
+body .app .system-info-create__main .pagination .page-item.disabled .page-link,
+body .app .system-info-edit__main .pagination .page-item.disabled .page-link,
+body .app .stored-expertises__main .pagination .page-item.disabled .page-link,
+body .app .expertises-create__main .pagination .page-item.disabled .page-link,
+body .app .expertises-edit__main .pagination .page-item.disabled .page-link,
+body .app .stored-expertises-categories__main .pagination .page-item.disabled .page-link,
+body .app .expertises-category-create__main .pagination .page-item.disabled .page-link,
+body .app .expertises-category-edit__main .pagination .page-item.disabled .page-link,
+body .app .stored-experiences__main .pagination .page-item.disabled .page-link,
+body .app .experience-create__main .pagination .page-item.disabled .page-link,
+body .app .experience-edit__main .pagination .page-item.disabled .page-link,
+body .app .stored-educations__main .pagination .page-item.disabled .page-link,
+body .app .education-create__main .pagination .page-item.disabled .page-link,
+body .app .education-edit__main .pagination .page-item.disabled .page-link,
+body .app .stored-projects__main .pagination .page-item.disabled .page-link,
+body .app .project-create__main .pagination .page-item.disabled .page-link,
+body .app .project-edit__main .pagination .page-item.disabled .page-link,
+body .app .stored-contacts__main .pagination .page-item.disabled .page-link,
+body .app .contact-create__main .pagination .page-item.disabled .page-link,
+body .app .contact-edit__main .pagination .page-item.disabled .page-link,
+body .app .stored-awards__main .pagination .page-item.disabled .page-link,
+body .app .award-create__main .pagination .page-item.disabled .page-link,
+body .app .award-edit__main .pagination .page-item.disabled .page-link,
+body .app .portfolio__main .pagination .page-item.disabled .page-link,
+body .app .about__main .pagination .page-item.disabled .page-link {
+  background: #212b36;
+}
+
+body .app .stored-system-info__main .pagination .page-item.active .page-link,
+body .app .system-info-create__main .pagination .page-item.active .page-link,
+body .app .system-info-edit__main .pagination .page-item.active .page-link,
+body .app .stored-expertises__main .pagination .page-item.active .page-link,
+body .app .expertises-create__main .pagination .page-item.active .page-link,
+body .app .expertises-edit__main .pagination .page-item.active .page-link,
+body .app .stored-expertises-categories__main .pagination .page-item.active .page-link,
+body .app .expertises-category-create__main .pagination .page-item.active .page-link,
+body .app .expertises-category-edit__main .pagination .page-item.active .page-link,
+body .app .stored-experiences__main .pagination .page-item.active .page-link,
+body .app .experience-create__main .pagination .page-item.active .page-link,
+body .app .experience-edit__main .pagination .page-item.active .page-link,
+body .app .stored-educations__main .pagination .page-item.active .page-link,
+body .app .education-create__main .pagination .page-item.active .page-link,
+body .app .education-edit__main .pagination .page-item.active .page-link,
+body .app .stored-projects__main .pagination .page-item.active .page-link,
+body .app .project-create__main .pagination .page-item.active .page-link,
+body .app .project-edit__main .pagination .page-item.active .page-link,
+body .app .stored-contacts__main .pagination .page-item.active .page-link,
+body .app .contact-create__main .pagination .page-item.active .page-link,
+body .app .contact-edit__main .pagination .page-item.active .page-link,
+body .app .stored-awards__main .pagination .page-item.active .page-link,
+body .app .award-create__main .pagination .page-item.active .page-link,
+body .app .award-edit__main .pagination .page-item.active .page-link,
+body .app .portfolio__main .pagination .page-item.active .page-link,
+body .app .about__main .pagination .page-item.active .page-link {
+  background: #dc3545;
+  border-color: #dc3545;
+}
+
+body .app .stored-system-info__table,
+body .app .stored-expertises__table,
+body .app .stored-expertises-categories__table,
+body .app .stored-experiences__table,
+body .app .stored-educations__table,
+body .app .stored-projects__table,
+body .app .stored-awards__table,
+body .app .stored-contacts__table {
+  color: white;
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.3125rem;
+  font-weight: 500;
+}
+
+body .app .stored-system-info__table tbody tr,
+body .app .stored-expertises__table tbody tr,
+body .app .stored-expertises-categories__table tbody tr,
+body .app .stored-experiences__table tbody tr,
+body .app .stored-educations__table tbody tr,
+body .app .stored-projects__table tbody tr,
+body .app .stored-awards__table tbody tr,
+body .app .stored-contacts__table tbody tr {
+  vertical-align: middle;
+}
+
+body .app .stored-system-info__table tbody tr td,
+body .app .stored-expertises__table tbody tr td,
+body .app .stored-expertises-categories__table tbody tr td,
+body .app .stored-experiences__table tbody tr td,
+body .app .stored-educations__table tbody tr td,
+body .app .stored-projects__table tbody tr td,
+body .app .stored-awards__table tbody tr td,
+body .app .stored-contacts__table tbody tr td {
+  padding: 1.5rem 0.5rem;
+}
+
+body .app .stored-system-info__table tbody .project-name,
+body .app .stored-expertises__table tbody .project-name,
+body .app .stored-expertises-categories__table tbody .project-name,
+body .app .stored-experiences__table tbody .project-name,
+body .app .stored-educations__table tbody .project-name,
+body .app .stored-projects__table tbody .project-name,
+body .app .stored-awards__table tbody .project-name,
+body .app .stored-contacts__table tbody .project-name {
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+}
+
+body .app .stored-system-info__table tbody .project-name .project-banner,
+body .app .stored-expertises__table tbody .project-name .project-banner,
+body .app .stored-expertises-categories__table tbody .project-name .project-banner,
+body .app .stored-experiences__table tbody .project-name .project-banner,
+body .app .stored-educations__table tbody .project-name .project-banner,
+body .app .stored-projects__table tbody .project-name .project-banner,
+body .app .stored-awards__table tbody .project-name .project-banner,
+body .app .stored-contacts__table tbody .project-name .project-banner {
+  width: 200px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  z-index: 9999;
+}
+
+body .app .stored-system-info__table tbody .project-name:hover .project-banner,
+body .app .stored-expertises__table tbody .project-name:hover .project-banner,
+body .app .stored-expertises-categories__table tbody .project-name:hover .project-banner,
+body .app .stored-experiences__table tbody .project-name:hover .project-banner,
+body .app .stored-educations__table tbody .project-name:hover .project-banner,
+body .app .stored-projects__table tbody .project-name:hover .project-banner,
+body .app .stored-awards__table tbody .project-name:hover .project-banner,
+body .app .stored-contacts__table tbody .project-name:hover .project-banner {
+  display: block;
+}
+
+body .app .stored-system-info__link,
+body .app .stored-expertises__link,
+body .app .stored-expertises-categories__link,
+body .app .stored-experiences__link,
+body .app .stored-educations__link,
+body .app .stored-projects__link,
+body .app .stored-awards__link,
+body .app .stored-contacts__link {
+  position: relative;
+}
+
+body .app .stored-system-info__link .delete-select-all,
+body .app .stored-expertises__link .delete-select-all,
+body .app .stored-expertises-categories__link .delete-select-all,
+body .app .stored-experiences__link .delete-select-all,
+body .app .stored-educations__link .delete-select-all,
+body .app .stored-projects__link .delete-select-all,
+body .app .stored-awards__link .delete-select-all,
+body .app .stored-contacts__link .delete-select-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 3rem;
+  background: #212b36;
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+body .app .stored-system-info__link .delete-select-all span,
+body .app .stored-expertises__link .delete-select-all span,
+body .app .stored-expertises-categories__link .delete-select-all span,
+body .app .stored-experiences__link .delete-select-all span,
+body .app .stored-educations__link .delete-select-all span,
+body .app .stored-projects__link .delete-select-all span,
+body .app .stored-awards__link .delete-select-all span,
+body .app .stored-contacts__link .delete-select-all span {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+body .app .stored-system-info__link .delete-select-all button,
+body .app .stored-expertises__link .delete-select-all button,
+body .app .stored-expertises-categories__link .delete-select-all button,
+body .app .stored-experiences__link .delete-select-all button,
+body .app .stored-educations__link .delete-select-all button,
+body .app .stored-projects__link .delete-select-all button,
+body .app .stored-awards__link .delete-select-all button,
+body .app .stored-contacts__link .delete-select-all button {
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+body .app .stored-system-info__link .delete-select-all button:hover,
+body .app .stored-expertises__link .delete-select-all button:hover,
+body .app .stored-expertises-categories__link .delete-select-all button:hover,
+body .app .stored-experiences__link .delete-select-all button:hover,
+body .app .stored-educations__link .delete-select-all button:hover,
+body .app .stored-projects__link .delete-select-all button:hover,
+body .app .stored-awards__link .delete-select-all button:hover,
+body .app .stored-contacts__link .delete-select-all button:hover {
+  background: #171f27;
+}
+
+body .app .stored-system-info__link .delete-select-all button i,
+body .app .stored-expertises__link .delete-select-all button i,
+body .app .stored-expertises-categories__link .delete-select-all button i,
+body .app .stored-experiences__link .delete-select-all button i,
+body .app .stored-educations__link .delete-select-all button i,
+body .app .stored-projects__link .delete-select-all button i,
+body .app .stored-awards__link .delete-select-all button i,
+body .app .stored-contacts__link .delete-select-all button i {
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+}
+
+body .app .stored-system-info__link.delete-all-show .delete-select-all,
+body .app .stored-expertises__link.delete-all-show .delete-select-all,
+body .app .stored-expertises-categories__link.delete-all-show .delete-select-all,
+body .app .stored-experiences__link.delete-all-show .delete-select-all,
+body .app .stored-educations__link.delete-all-show .delete-select-all,
+body .app .stored-projects__link.delete-all-show .delete-select-all,
+body .app .stored-awards__link.delete-all-show .delete-select-all,
+body .app .stored-contacts__link.delete-all-show .delete-select-all {
+  opacity: 1;
+  visibility: visible;
+}
+
+body .app .stored-system-info__link.delete-all-show a,
+body .app .stored-expertises__link.delete-all-show a,
+body .app .stored-expertises-categories__link.delete-all-show a,
+body .app .stored-experiences__link.delete-all-show a,
+body .app .stored-educations__link.delete-all-show a,
+body .app .stored-projects__link.delete-all-show a,
+body .app .stored-awards__link.delete-all-show a,
+body .app .stored-contacts__link.delete-all-show a {
+  opacity: 0;
+}
+
+body .app .bg-light .about__expertise {
+  position: relative;
+  max-width: 100rem;
+  padding-right: 3.75rem;
+  padding-left: 3.75rem;
+  color: black;
+}
+
+body .app .bg-light .about__expertise #expertise {
+  position: absolute;
+  top: -19%;
+  left: 1.6%;
+  font-weight: 800;
+  font-size: 10rem;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+}
+
+body .app .bg-light .about__expertise-categories:first-child {
+  padding-right: 4rem !important;
+}
+
+body .app .bg-light .about__expertise-categories:nth-child(2) {
+  padding: 0 2rem !important;
+}
+
+body .app .bg-light .about__expertise-categories:last-child {
+  padding-left: 4rem !important;
+}
+
+body .app .bg-light .about__expertise-title {
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+}
+
+body .app .bg-light .about__expertise-description {
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.3125rem;
+  line-height: 1.8;
+  font-weight: 500;
+  text-align: justify;
+}
+
+body .app .bg-light .about__expertise-skill {
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 2.5;
+}
+
+body .app .bg-light .about__expertise-skill--item {
+  display: block;
+}
+
+body .app .bg-dark {
+  background: black !important;
+}
+
+body .app .bg-dark .about__awards {
+  max-width: 100rem;
+  padding-right: 3.75rem;
+  padding-left: 3.75rem;
+}
+
+body .app .bg-dark .about__awards-title {
+  margin-left: -30px;
+  font-weight: 800;
+  font-size: 10rem;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+body .app .bg-dark .about__awards-table {
+  color: white;
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.3125rem;
+  font-weight: 500;
+}
+
+body .app .bg-dark .about__awards-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body .app .bg-dark .about__awards-table tbody tr td {
+  padding: 20px 0;
+}
+
+body .app .bg-dark .about__awards-table tbody tr td span {
+  font-family: "Sequel", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+body .app .system-info-create__main form,
+body .app .system-info-edit__main form,
+body .app .expertises-create__main form,
+body .app .expertises-edit__main form,
+body .app .expertises-category-create__main form,
+body .app .expertises-category-edit__main form,
+body .app .experience-create__main form,
+body .app .experience-edit__main form,
+body .app .education-create__main form,
+body .app .education-edit__main form,
+body .app .award-create__main form,
+body .app .award-edit__main form,
+body .app .contact-create__main form,
+body .app .contact-edit__main form,
+body .app .project-create__main form,
+body .app .project-edit__main form {
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.3125rem;
+  font-weight: 500;
+}
+
+body .app .system-info-create__main form input,
+body .app .system-info-create__main form select,
+body .app .system-info-edit__main form input,
+body .app .system-info-edit__main form select,
+body .app .expertises-create__main form input,
+body .app .expertises-create__main form select,
+body .app .expertises-edit__main form input,
+body .app .expertises-edit__main form select,
+body .app .expertises-category-create__main form input,
+body .app .expertises-category-create__main form select,
+body .app .expertises-category-edit__main form input,
+body .app .expertises-category-edit__main form select,
+body .app .experience-create__main form input,
+body .app .experience-create__main form select,
+body .app .experience-edit__main form input,
+body .app .experience-edit__main form select,
+body .app .education-create__main form input,
+body .app .education-create__main form select,
+body .app .education-edit__main form input,
+body .app .education-edit__main form select,
+body .app .award-create__main form input,
+body .app .award-create__main form select,
+body .app .award-edit__main form input,
+body .app .award-edit__main form select,
+body .app .contact-create__main form input,
+body .app .contact-create__main form select,
+body .app .contact-edit__main form input,
+body .app .contact-edit__main form select,
+body .app .project-create__main form input,
+body .app .project-create__main form select,
+body .app .project-edit__main form input,
+body .app .project-edit__main form select {
+  border-radius: 2px;
+  padding: 1.375rem 1.75rem;
+  font-size: 1.2rem;
+}
+
+body .app .system-info-create__main form input:focus,
+body .app .system-info-create__main form select:focus,
+body .app .system-info-edit__main form input:focus,
+body .app .system-info-edit__main form select:focus,
+body .app .expertises-create__main form input:focus,
+body .app .expertises-create__main form select:focus,
+body .app .expertises-edit__main form input:focus,
+body .app .expertises-edit__main form select:focus,
+body .app .expertises-category-create__main form input:focus,
+body .app .expertises-category-create__main form select:focus,
+body .app .expertises-category-edit__main form input:focus,
+body .app .expertises-category-edit__main form select:focus,
+body .app .experience-create__main form input:focus,
+body .app .experience-create__main form select:focus,
+body .app .experience-edit__main form input:focus,
+body .app .experience-edit__main form select:focus,
+body .app .education-create__main form input:focus,
+body .app .education-create__main form select:focus,
+body .app .education-edit__main form input:focus,
+body .app .education-edit__main form select:focus,
+body .app .award-create__main form input:focus,
+body .app .award-create__main form select:focus,
+body .app .award-edit__main form input:focus,
+body .app .award-edit__main form select:focus,
+body .app .contact-create__main form input:focus,
+body .app .contact-create__main form select:focus,
+body .app .contact-edit__main form input:focus,
+body .app .contact-edit__main form select:focus,
+body .app .project-create__main form input:focus,
+body .app .project-create__main form select:focus,
+body .app .project-edit__main form input:focus,
+body .app .project-edit__main form select:focus {
+  border-color: #000;
+  -webkit-box-shadow: 0 0 10px white;
+          box-shadow: 0 0 10px white;
+}
+
+body .app .footer {
+  max-width: 100rem;
+  padding-right: 3.75rem;
+  padding-left: 3.75rem;
+}
+
+body .app .footer__contact-socials {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -4px;
+}
+
+body .app .footer__contact-socials a {
+  color: white;
+  margin-right: 12px;
+  margin-left: -4px;
+}
+
+body .app .footer__contact-socials .ig::after {
+  content: ".";
+  color: #e112fc;
+}
+
+body .app .footer__contact-socials .ig:hover {
+  color: #e112fc;
+}
+
+body .app .footer__contact-socials .ln::after {
+  content: ".";
+  color: #094290;
+}
+
+body .app .footer__contact-socials .ln:hover {
+  color: #094290;
+}
+
+body .app .footer__contact-socials .gh::after {
+  content: ".";
+  color: #444;
+}
+
+body .app .footer__contact-socials .gh:hover {
+  color: #444;
+}
+
+body .app .footer__contact-socials .fb::after {
+  content: ".";
+  color: #097ceb;
+}
+
+body .app .footer__contact-socials .fb:hover {
+  color: #097ceb;
+}
+
+body .app .footer__contact-more {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -4px;
+  line-height: 0.9;
+}
+
+body .app .footer__contact-more a {
+  color: white;
+  position: relative;
+}
+
+body .app .footer__contact-more a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.35em;
+  position: absolute;
+  top: 70%;
+  left: 0px;
+  background: currentcolor;
+  opacity: 0.4;
+}
+
+body .app .to-top {
+  margin-right: 15px;
+  opacity: 0.4;
+}
+
+body .app .to-top span {
+  padding: 2.5rem;
+  cursor: url("../img/to-top.svg"), auto;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+@-webkit-keyframes textclip {
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: -200% center;
+  }
+}
+
+body.show {
+  background: black;
+  color: white;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+}
+
+body.show .header__brand {
+  color: white;
+}
+
+body.show .nav-link {
+  color: white !important;
+}
+/*# sourceMappingURL=app.css.map */

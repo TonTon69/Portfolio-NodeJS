@@ -1,0 +1,23 @@
+extends ../../layouts/admin
+block content 
+    seaction#system-info-edit.system-info-edit
+        header.system-info-edit__header 
+            .system-info-edit__header-title
+                h1 edit system info
+        main.system-info-edit__main
+            form(action=`/system/info/${systemInfo._id}?_method=PUT`, method="POST")
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='field') Field
+                    .col-sm-10
+                        input#field.form-control(type='text', name='field', placeholder='Enter system info field' value=systemInfo.field required)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='value') Value
+                    .col-sm-10
+                        input#value.form-control(type='text', name='value', placeholder='Enter system info value' value=systemInfo.value required)
+                .is-devider-20 
+                .mb-3.row
+                    label.col-sm-2.col-form-label
+                    .col-sm-10
+                        a.btn.btn-primary.me-4(href='/me/stored/system/info') Close
+                        button.btn.btn-primary(type='submit') Save

@@ -39,6 +39,7 @@ block content
                             tr
                                 th(scope='row')
                                     input(type='checkbox', name='contactIds[]', value=contact._id)
+                                th(scope='row') #{count}
                                 td=contact.field
                                 td=contact.sign
                                 td=contact.value

@@ -65,16 +65,15 @@ block content
                 span#expertise expertise
                 .row.m-0
                     each category in expertiseCategories
-                        .col-md-4.p-0
+                        .col-md-4.about__expertise-categories.p-0
                             h1.about__expertise-title=category.name
                             .is-devider-20
                             p.about__expertise-description=category.description
                             .is-devider-20
                             each expertise in expertises
                                 if expertise.expertiseCategoryId === category._id
-                                    .col-md-4.p-0     
-                                        .about__expertise-skill
-                                            span.about__expertise-skill--item=expertise.name
+                                    .about__expertise-skill
+                                        span.about__expertise-skill--item=expertise.name
             .is-devider-200
         .bg-dark
             .is-devider-200

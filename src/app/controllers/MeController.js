@@ -5,6 +5,7 @@ const Education = require("../models/Education");
 const Experience = require("../models/Experience");
 const Expertise = require("../models/Expertise");
 const ExpertiseCategory = require("../models/ExpertiseCategory");
+const SystemInfo = require("../models/SystemInfo");
 
 class MeController {
     // [GET]/me/strored/projects
@@ -222,6 +223,32 @@ class MeController {
                 res.render("me/trash-expertises-categories", {
                     expertiseCategories,
                     storedExpertisesCategoriesCount,
+                    success: req.flash("success"),
+                });
+            })
+            .catch(next);
+    }
+
+    // [GET]/me/strored/system/info
+    storedSystemInfo(req, res, next) {
+        Promise.all([SystemInfo.find({}), SystemInfo.countDocumentsDeleted()])
+            .then(([systemInfo, deletedCount]) => {
+                res.render("me/stored-system-info", {
+                    systemInfo,
+                    deletedCount,
+                    success: req.flash("success"),
+                });
+            })
+            .catch(next);
+    }
+
+    // [GET]/me/trash/system/info
+    trashSystemInfo(req, res, next) {
+        Promise.all([SystemInfo.findDeleted({}), SystemInfo.countDocuments()])
+            .then(([systemInfo, storedSystemInfoCount]) => {
+                res.render("me/trash-system-info", {
+                    systemInfo,
+                    storedSystemInfoCount,
                     success: req.flash("success"),
                 });
             })
