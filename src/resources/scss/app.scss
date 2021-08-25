@@ -929,3 +929,130 @@ body.show {
         }
     }
 }
+
+//login
+.login {
+    font-family: "Source Serif Pro", serif;
+    font-size: 1.3125rem;
+    font-weight: weight(medium);
+    background-image: url(../img/bg.png);
+    width: 100%;
+    height: 100%;
+
+    @include flexCenter;
+    justify-content: center;
+
+    .card {
+        width: 50rem;
+        border: none;
+
+        &-img {
+            width: 42px;
+            height: 42px;
+        }
+
+        &-body {
+            padding: 2rem 3rem;
+
+            form {
+                .fullname {
+                    .material-textfield {
+                        width: 48.666667%;
+                    }
+                }
+
+                .material-textfield {
+                    position: relative;
+                    margin-top: 30px;
+
+                    label {
+                        position: absolute;
+                        font-size: 1.2rem;
+                        font-weight: weight(regular);
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        color: rgb(99, 115, 129);
+                        background: $white-background-color;
+                        padding: 0 0.3rem;
+                        margin: 0 0.5rem;
+                        transition: 0.1s ease-out;
+                        transform-origin: left top;
+                        pointer-events: none;
+                    }
+
+                    input {
+                        width: 100%;
+                        font-size: 1.2rem;
+                        outline: none;
+                        border: 1px solid rgba(145, 158, 171, 0.24);
+                        border-radius: 8px;
+                        padding: 1rem 0.7rem;
+                        color: rgb(33, 43, 54);
+                        transition: 0.1s ease-out;
+
+                        &:hover {
+                            border-color: rgb(33, 43, 54);
+                        }
+
+                        &:focus {
+                            border-color: rgb(0, 171, 85);
+                        }
+
+                        &:focus + label {
+                            color: rgb(0, 171, 85);
+                            top: 0;
+                            transform: translateY(-50%) scale(0.9);
+                        }
+
+                        &:not(:placeholder-shown) + label {
+                            top: 0;
+                            transform: translateY(-50%) scale(0.9);
+                        }
+                    }
+
+                    .message {
+                        position: absolute;
+                        top: 100%;
+                        left: 12px;
+                        color: rgb(255, 72, 66);
+                        font-size: 0.9rem;
+                        line-height: 1.5;
+                    }
+
+                    &.invalid input,
+                    &.invalid label {
+                        border-color: rgb(255, 72, 66);
+                        color: rgb(255, 72, 66) !important;
+                    }
+
+                    .show-password {
+                        position: absolute;
+                        top: 34%;
+                        right: 14px;
+                        cursor: pointer;
+
+                        i {
+                            color: rgb(33, 43, 54);
+                        }
+                    }
+                }
+
+                .form-check {
+                    @include flexCenter;
+                    justify-content: space-between;
+                }
+
+                .btn-success {
+                    width: 100%;
+                    height: 48px;
+                }
+
+                a {
+                    color: rgb(0, 171, 85);
+                    font-weight: weight(medium);
+                }
+            }
+        }
+    }
+}

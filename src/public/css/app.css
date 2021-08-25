@@ -2871,3 +2871,89 @@ body.show {
     color: white; }
   body.show .nav-link {
     color: white !important; }
+
+.login {
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.3125rem;
+  font-weight: 500;
+  background-image: url(../img/bg.png);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .login .card {
+    width: 50rem;
+    border: none; }
+    .login .card-img {
+      width: 42px;
+      height: 42px; }
+    .login .card-body {
+      padding: 2rem 3rem; }
+      .login .card-body form .fullname .material-textfield {
+        width: 48.666667%; }
+      .login .card-body form .material-textfield {
+        position: relative;
+        margin-top: 30px; }
+        .login .card-body form .material-textfield label {
+          position: absolute;
+          font-size: 1.2rem;
+          font-weight: 400;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #637381;
+          background: white;
+          padding: 0 0.3rem;
+          margin: 0 0.5rem;
+          transition: 0.1s ease-out;
+          transform-origin: left top;
+          pointer-events: none; }
+        .login .card-body form .material-textfield input {
+          width: 100%;
+          font-size: 1.2rem;
+          outline: none;
+          border: 1px solid rgba(145, 158, 171, 0.24);
+          border-radius: 8px;
+          padding: 1rem 0.7rem;
+          color: #212b36;
+          transition: 0.1s ease-out; }
+          .login .card-body form .material-textfield input:hover {
+            border-color: #212b36; }
+          .login .card-body form .material-textfield input:focus {
+            border-color: #00ab55; }
+          .login .card-body form .material-textfield input:focus + label {
+            color: #00ab55;
+            top: 0;
+            transform: translateY(-50%) scale(0.9); }
+          .login .card-body form .material-textfield input:not(:placeholder-shown) + label {
+            top: 0;
+            transform: translateY(-50%) scale(0.9); }
+        .login .card-body form .material-textfield .message {
+          position: absolute;
+          top: 100%;
+          left: 12px;
+          color: #ff4842;
+          font-size: 0.9rem;
+          line-height: 1.5; }
+        .login .card-body form .material-textfield.invalid input,
+        .login .card-body form .material-textfield.invalid label {
+          border-color: #ff4842;
+          color: #ff4842 !important; }
+        .login .card-body form .material-textfield .show-password {
+          position: absolute;
+          top: 34%;
+          right: 14px;
+          cursor: pointer; }
+          .login .card-body form .material-textfield .show-password i {
+            color: #212b36; }
+      .login .card-body form .form-check {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+      .login .card-body form .btn-success {
+        width: 100%;
+        height: 48px; }
+      .login .card-body form a {
+        color: #00ab55;
+        font-weight: 500; }

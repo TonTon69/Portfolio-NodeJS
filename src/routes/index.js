@@ -8,6 +8,7 @@ const expertisesRouter = require("./expertises");
 const expertisesCategoryRouter = require("./expertises-category");
 const systemInfoRouter = require("./system-info");
 const meRouter = require("./me");
+const authRouter = require("./auth");
 
 function route(app) {
     app.use("/", siteRouter);
@@ -20,6 +21,7 @@ function route(app) {
     app.use("/expertises/category", expertisesCategoryRouter);
     app.use("/system/info", systemInfoRouter);
     app.use("/me", meRouter);
+    app.use("/auth", authRouter);
 }
 
 module.exports = route;
