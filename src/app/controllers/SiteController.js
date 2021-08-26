@@ -5,6 +5,7 @@ const Education = require("../models/Education");
 const Experience = require("../models/Experience");
 const Expertise = require("../models/Expertise");
 const ExpertiseCategory = require("../models/ExpertiseCategory");
+const User = require("../models/User");
 
 class SiteController {
     // [GET]/
@@ -12,14 +13,21 @@ class SiteController {
         Promise.all([
             Project.find({}).sort({ location: 1 }).limit(6),
             Contact.find({}),
+            User.findOne({ _id: req.signedCookies.userId }),
         ])
-            .then(([projects, contacts]) => {
-                res.render("index", {
-                    projects,
-                    contacts,
-                    success: req.flash("success"),
-                    errors: req.flash("error"),
-                });
+            .then(([projects, contacts, user]) => {
+                if (user) {
+                    res.locals.user = user;
+                    res.render("index", {
+                        projects,
+                        contacts,
+                    });
+                } else {
+                    res.render("index", {
+                        projects,
+                        contacts,
+                    });
+                }
             })
             .catch(next);
     }
@@ -33,6 +41,7 @@ class SiteController {
             Experience.find({}).sort({ startYear: -1, endYear: -1 }),
             ExpertiseCategory.find({}).sort({ location: 1 }),
             Expertise.find({}).sort({ location: 1 }),
+            User.findOne({ _id: req.signedCookies.userId }),
         ])
             .then(
                 ([
@@ -42,15 +51,28 @@ class SiteController {
                     experiences,
                     expertiseCategories,
                     expertises,
+                    user,
                 ]) => {
-                    res.render("about", {
-                        awards,
-                        contacts,
-                        educations,
-                        experiences,
-                        expertiseCategories,
-                        expertises,
-                    });
+                    if (user) {
+                        res.locals.user = user;
+                        res.render("about", {
+                            awards,
+                            contacts,
+                            educations,
+                            experiences,
+                            expertiseCategories,
+                            expertises,
+                        });
+                    } else {
+                        res.render("about", {
+                            awards,
+                            contacts,
+                            educations,
+                            experiences,
+                            expertiseCategories,
+                            expertises,
+                        });
+                    }
                 }
             )
             .catch(next);

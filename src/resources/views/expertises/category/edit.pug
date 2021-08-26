@@ -3,7 +3,7 @@ block content
     seaction#expertises-category-edit.expertises-category-edit
         header.expertises-category-edit__header 
             .expertises-category-edit__header-title
-                h1 edit expertises category 
+                h1(style='line-height: 0.9') edit expertises category 
         main.expertises-category-edit__main
             form(action=`/expertises/category/${expertiseCategory._id}?_method=PUT`, method="POST")
                 .mb-3.row.align-items-center

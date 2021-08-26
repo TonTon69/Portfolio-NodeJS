@@ -44,6 +44,13 @@ class AuthController {
         });
         res.redirect("/");
     }
+
+    // [GET]/auth/logout
+    logout(req, res) {
+        res.clearCookie("userId");
+        res.clearCookie("sessionId");
+        res.redirect("/");
+    }
 }
 
 module.exports = new AuthController();

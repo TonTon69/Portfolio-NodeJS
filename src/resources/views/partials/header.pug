@@ -14,11 +14,29 @@ header.header
                         button#dropdownMenuUser.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
                             | #{user.name}
                         ul.dropdown-menu.mt-2.shadow(aria-labelledby='dropdownMenuUser')
-                            li
-                                a.dropdown-item(href='#') Action
-                            li
-                                a.dropdown-item(href='#') Another action
-                            li
-                                a.dropdown-item(href='#') Logout
+                            if user.role
+                                li
+                                    a.dropdown-item(href='/me/stored/awards') Stored Awards
+                                li
+                                    a.dropdown-item(href='/me/stored/contacts') Stored Contacts
+                                li
+                                    a.dropdown-item(href='/me/stored/educations') Stored Educations
+                                li
+                                    a.dropdown-item(href='/me/stored/experiences') Stored Experiences
+                                li
+                                    a.dropdown-item(href='/me/stored/expertises/categories') Stored Experiences Categories
+                                li
+                                    a.dropdown-item(href='/me/stored/expertises/1') Stored Expertises
+                                li
+                                    a.dropdown-item(href='/me/stored/projects') Stored Projects
+                                li
+                                    a.dropdown-item(href='/me/stored/system/info') Stored System Info
+                                li
+                                    hr.dropdown-divider
+                                li
+                                    a.dropdown-item(href='/auth/logout') Logout
+                            else
+                                li
+                                    a.dropdown-item(href='/auth/logout') Logout
                 else
                     a(href="/auth/login").nav-link login

@@ -42,7 +42,7 @@ block content
                                 th(scope='row')
                                     input(type='checkbox', name='awardIds[]', value=award._id)
                                 th(scope='row') #{count}
-                                td=award.name
+                                td(width=600)=award.name
                                 td=award.subject
                                 td=award.prize
                                 td=award.year

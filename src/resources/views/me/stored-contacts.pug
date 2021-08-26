@@ -43,7 +43,7 @@ block content
                                 th(scope='row') #{count}
                                 td=contact.field
                                 td=contact.sign
-                                td=contact.value
+                                td(width=750)=contact.value
                                 td=moment(contact.createdAt).format('DD-MM-YYYY')
                                 td
                                     a(href="/contacts/" + contact._id + "/edit").btn.btn-primary.me-2 Edit
