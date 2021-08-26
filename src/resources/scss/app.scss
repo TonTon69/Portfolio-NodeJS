@@ -358,7 +358,7 @@ body {
                         -webkit-text-stroke: 1px $white-color;
 
                         @include mobile {
-                            font-size: 3.4rem;
+                            font-size: 3rem;
                             bottom: 99%;
                         }
                     }
@@ -405,10 +405,14 @@ body {
 
                         &-img {
                             height: 100%;
-                            transform: scale(1.2);
+                            transform: scale(1.1);
                             transition: all 0.5s ease;
                             object-fit: cover;
                             border-radius: 0;
+
+                            @include mobile {
+                                transform: scale(0.9);
+                            }
                         }
 
                         &-img-overlay {
@@ -447,7 +451,7 @@ body {
 
                         @include mobile {
                             font-size: 3rem;
-                            top: -8%;
+                            top: -13%;
                         }
                     }
 
@@ -458,6 +462,10 @@ body {
                         &-img {
                             height: 462px;
                             object-fit: cover;
+
+                            @include mobile {
+                                height: 300px;
+                            }
                         }
 
                         &-img-overlay {
@@ -469,10 +477,13 @@ body {
                                 margin: 0 0.875rem;
                                 text-transform: uppercase;
                                 letter-spacing: -6px;
-                                line-height: 0.8;
+                                line-height: 0.9;
 
                                 @include mobile {
-                                    font-size: 3rem;
+                                    position: absolute;
+                                    top: 30px;
+                                    font-size: 2.8rem;
+                                    letter-spacing: -4px;
                                 }
 
                                 span {

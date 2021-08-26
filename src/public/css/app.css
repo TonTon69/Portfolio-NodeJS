@@ -674,7 +674,7 @@ body {
             body .app .award-edit__main-project .projects,
             body .app .portfolio__main-project .projects,
             body .app .about__main-project .projects {
-              font-size: 3.4rem;
+              font-size: 3rem;
               bottom: 99%; } }
         body .app .stored-system-info__main-project .card,
         body .app .system-info-create__main-project .card,
@@ -854,10 +854,38 @@ body {
           body .app .portfolio__main-project .card-img,
           body .app .about__main-project .card-img {
             height: 100%;
-            transform: scale(1.2);
+            transform: scale(1.1);
             transition: all 0.5s ease;
             object-fit: cover;
             border-radius: 0; }
+            @media (max-width: 768px) {
+              body .app .stored-system-info__main-project .card-img,
+              body .app .system-info-create__main-project .card-img,
+              body .app .system-info-edit__main-project .card-img,
+              body .app .stored-expertises__main-project .card-img,
+              body .app .expertises-create__main-project .card-img,
+              body .app .expertises-edit__main-project .card-img,
+              body .app .stored-expertises-categories__main-project .card-img,
+              body .app .expertises-category-create__main-project .card-img,
+              body .app .expertises-category-edit__main-project .card-img,
+              body .app .stored-experiences__main-project .card-img,
+              body .app .experience-create__main-project .card-img,
+              body .app .experience-edit__main-project .card-img,
+              body .app .stored-educations__main-project .card-img,
+              body .app .education-create__main-project .card-img,
+              body .app .education-edit__main-project .card-img,
+              body .app .stored-projects__main-project .card-img,
+              body .app .project-create__main-project .card-img,
+              body .app .project-edit__main-project .card-img,
+              body .app .stored-contacts__main-project .card-img,
+              body .app .contact-create__main-project .card-img,
+              body .app .contact-edit__main-project .card-img,
+              body .app .stored-awards__main-project .card-img,
+              body .app .award-create__main-project .card-img,
+              body .app .award-edit__main-project .card-img,
+              body .app .portfolio__main-project .card-img,
+              body .app .about__main-project .card-img {
+                transform: scale(0.9); } }
           body .app .stored-system-info__main-project .card-img-overlay,
           body .app .system-info-create__main-project .card-img-overlay,
           body .app .system-info-edit__main-project .card-img-overlay,
@@ -1037,7 +1065,7 @@ body {
             body .app .portfolio__main-brand .currently,
             body .app .about__main-brand .currently {
               font-size: 3rem;
-              top: -8%; } }
+              top: -13%; } }
         body .app .stored-system-info__main-brand .card,
         body .app .system-info-create__main-brand .card,
         body .app .system-info-edit__main-brand .card,
@@ -1094,6 +1122,34 @@ body {
           body .app .about__main-brand .card-img {
             height: 462px;
             object-fit: cover; }
+            @media (max-width: 768px) {
+              body .app .stored-system-info__main-brand .card-img,
+              body .app .system-info-create__main-brand .card-img,
+              body .app .system-info-edit__main-brand .card-img,
+              body .app .stored-expertises__main-brand .card-img,
+              body .app .expertises-create__main-brand .card-img,
+              body .app .expertises-edit__main-brand .card-img,
+              body .app .stored-expertises-categories__main-brand .card-img,
+              body .app .expertises-category-create__main-brand .card-img,
+              body .app .expertises-category-edit__main-brand .card-img,
+              body .app .stored-experiences__main-brand .card-img,
+              body .app .experience-create__main-brand .card-img,
+              body .app .experience-edit__main-brand .card-img,
+              body .app .stored-educations__main-brand .card-img,
+              body .app .education-create__main-brand .card-img,
+              body .app .education-edit__main-brand .card-img,
+              body .app .stored-projects__main-brand .card-img,
+              body .app .project-create__main-brand .card-img,
+              body .app .project-edit__main-brand .card-img,
+              body .app .stored-contacts__main-brand .card-img,
+              body .app .contact-create__main-brand .card-img,
+              body .app .contact-edit__main-brand .card-img,
+              body .app .stored-awards__main-brand .card-img,
+              body .app .award-create__main-brand .card-img,
+              body .app .award-edit__main-brand .card-img,
+              body .app .portfolio__main-brand .card-img,
+              body .app .about__main-brand .card-img {
+                height: 300px; } }
           body .app .stored-system-info__main-brand .card-img-overlay,
           body .app .system-info-create__main-brand .card-img-overlay,
           body .app .system-info-edit__main-brand .card-img-overlay,
@@ -1153,7 +1209,7 @@ body {
               margin: 0 0.875rem;
               text-transform: uppercase;
               letter-spacing: -6px;
-              line-height: 0.8; }
+              line-height: 0.9; }
               @media (max-width: 768px) {
                 body .app .stored-system-info__main-brand .card-img-overlay .card-title,
                 body .app .system-info-create__main-brand .card-img-overlay .card-title,
@@ -1181,7 +1237,10 @@ body {
                 body .app .award-edit__main-brand .card-img-overlay .card-title,
                 body .app .portfolio__main-brand .card-img-overlay .card-title,
                 body .app .about__main-brand .card-img-overlay .card-title {
-                  font-size: 3rem; } }
+                  position: absolute;
+                  top: 30px;
+                  font-size: 2.8rem;
+                  letter-spacing: -4px; } }
               body .app .stored-system-info__main-brand .card-img-overlay .card-title span,
               body .app .system-info-create__main-brand .card-img-overlay .card-title span,
               body .app .system-info-edit__main-brand .card-img-overlay .card-title span,
