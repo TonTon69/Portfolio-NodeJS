@@ -9,7 +9,8 @@ class AuthController {
 
     // [POST]/auth/login
     async postLogin(req, res, next) {
-        const user = await User.findOne({ email: req.body.email });
+        const { email, password } = req.body;
+        const user = await User.findOne({ email: email });
         if (!user) {
             req.flash("error", "Your email does not exist!");
             res.render("auth/login", {
@@ -19,10 +20,7 @@ class AuthController {
             return;
         }
 
-        const matchPassword = await bcrypt.compare(
-            req.body.password,
-            user.password
-        );
+        const matchPassword = await bcrypt.compare(password, user.password);
         if (!matchPassword) {
             req.flash("error", "Your password does not match!");
             res.render("auth/login", {

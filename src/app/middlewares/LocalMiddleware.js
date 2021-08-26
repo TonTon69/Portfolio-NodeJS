@@ -1,10 +1,7 @@
 const SystemInfo = require("../models/SystemInfo");
 
-module.exports = function LocalMiddleware(req, res, next) {
-    SystemInfo.find({}).then((info) => {
-        res.locals = {
-            info,
-        };
-    });
+module.exports = async function LocalMiddleware(req, res, next) {
+    const info = await SystemInfo.find({});
+    res.locals.info = info;
     next();
 };

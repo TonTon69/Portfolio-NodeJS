@@ -18,6 +18,7 @@ class SiteController {
                     projects,
                     contacts,
                     success: req.flash("success"),
+                    errors: req.flash("error"),
                 });
             })
             .catch(next);
@@ -53,6 +54,11 @@ class SiteController {
                 }
             )
             .catch(next);
+    }
+
+    //[GET]/error
+    error(req, res, next) {
+        res.render("error");
     }
 }
 

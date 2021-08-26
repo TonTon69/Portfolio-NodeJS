@@ -2958,3 +2958,25 @@ body.show {
       .login .card-body form a {
         color: #00ab55;
         font-weight: 500; }
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: scale(0); }
+  to {
+    opacity: 1;
+    transform: scale(1.1); } }
+
+#page-not-found {
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.3125rem;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  #page-not-found h2 {
+    animation: fadein 0.3s ease; }
+  #page-not-found img {
+    animation: fadein 0.3s ease; }
+  #page-not-found a {
+    font-size: 1.2rem; }
