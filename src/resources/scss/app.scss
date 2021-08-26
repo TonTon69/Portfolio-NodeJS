@@ -100,7 +100,7 @@ input[type="checkbox"] {
     height: 300px;
 
     @include mobile {
-        height: 200px;
+        height: 150px;
     }
 }
 
@@ -193,7 +193,47 @@ body {
                 }
             }
 
+            .nav-mobile-icon {
+                opacity: 0;
+                visibility: hidden;
+
+                @include mobile {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                i {
+                    font-size: 1.2rem;
+                }
+            }
+
             .nav {
+                &-list {
+                    @include mobile {
+                        display: block !important;
+                        margin: 4rem auto !important;
+                        padding-left: 0;
+                    }
+                }
+
+                .nav-mobile-icon-close {
+                    position: absolute;
+                    top: 32px;
+                    left: 32px;
+                    opacity: 0;
+                    visibility: hidden;
+
+                    @include mobile {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    i {
+                        font-size: 1.2rem;
+                        color: $black-color !important;
+                    }
+                }
+
                 &-item {
                     margin-left: 2rem;
 
@@ -202,6 +242,11 @@ body {
                             transform: scaleX(1);
                             transform-origin: center left;
                         }
+                    }
+
+                    @include mobile {
+                        margin-left: 0;
+                        margin-bottom: 20px;
                     }
                 }
 
@@ -227,6 +272,10 @@ body {
                         transform-origin: center right;
                         transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
                     }
+
+                    @include mobile {
+                        color: $black-color !important;
+                    }
                 }
 
                 .dropdown {
@@ -239,6 +288,10 @@ body {
                         border: none;
                         background: transparent;
                         transition: all 0.5s ease;
+
+                        @include mobile {
+                            color: $black-color !important;
+                        }
                     }
 
                     &-toggle {
@@ -250,6 +303,10 @@ body {
                     &-menu {
                         border: none;
                         font-size: 1.2rem;
+
+                        @include mobile {
+                            font-size: 1rem;
+                        }
                     }
 
                     &-item {
@@ -260,6 +317,51 @@ body {
                             background: #e9ecef;
                         }
                     }
+                }
+
+                &-overlay {
+                    @include mobile {
+                        position: fixed;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        background: linear-gradient(
+                            75deg,
+                            rgba(22, 28, 36, 0.48) 0%,
+                            #161c24 100%
+                        );
+                        width: 200vh;
+                        height: 100%;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 0.3s ease;
+                    }
+
+                    &.nav-overlay-mobile {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                &.nav-mobile {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateX(0);
+                }
+
+                @include mobile {
+                    position: fixed;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    background: $white-background-color;
+                    width: 280px;
+                    height: 100%;
+                    transform: translateX(100%);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s ease;
                 }
             }
 
@@ -818,12 +920,6 @@ body {
         }
 
         .bg-light {
-            .is-devider-300 {
-                @include mobile {
-                    height: 150px;
-                }
-            }
-
             .about__expertise {
                 position: relative;
                 max-width: 100rem;

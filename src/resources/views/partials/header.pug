@@ -2,8 +2,13 @@ header.header
     a(href="/").header__logo
         img(src="https://minhhoang6920.web.app/assets/image/logo.png", alt="", width="45")
         span.header__brand Minhhoang
+    .nav-mobile-icon
+        i.fas.fa-bars
+    .nav-overlay
     nav.nav
-        ul.d-flex.align-items-center.m-0
+        .nav-mobile-icon-close
+            i.fas.fa-times
+        ul.nav-list.d-flex.align-items-center.m-0
             li.nav-item
                 a(href="/").nav-link portfolio
             li.nav-item

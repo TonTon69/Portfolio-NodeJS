@@ -40,3 +40,23 @@ toTop.onclick = function scrollToTop() {
     //     requestAnimationFrame(scrollToTop);
     // }
 };
+
+const navMobileIconMenu = $(".nav-mobile-icon");
+const nav = $(".nav");
+const navOverlay = $(".nav-overlay");
+const navMobileIconClose = $(".nav-mobile-icon-close");
+
+navMobileIconMenu.onclick = function () {
+    nav.classList.add("nav-mobile");
+    navOverlay.classList.add("nav-overlay-mobile");
+};
+
+navOverlay.onclick = function () {
+    nav.classList.remove("nav-mobile");
+    this.classList.remove("nav-overlay-mobile");
+};
+
+navMobileIconClose.onclick = function () {
+    nav.classList.remove("nav-mobile");
+    navOverlay.classList.remove("nav-overlay-mobile");
+};

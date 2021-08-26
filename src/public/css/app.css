@@ -184,7 +184,7 @@ input[type="checkbox"] {
   height: 300px; }
   @media (max-width: 768px) {
     .is-devider-300 {
-      height: 200px; } }
+      height: 150px; } }
 
 .is-devider-200 {
   height: 200px; }
@@ -252,11 +252,42 @@ body {
       @media (max-width: 768px) {
         body .app .header__brand {
           font-size: 1.2rem; } }
+    body .app .header .nav-mobile-icon {
+      opacity: 0;
+      visibility: hidden; }
+      @media (max-width: 768px) {
+        body .app .header .nav-mobile-icon {
+          opacity: 1;
+          visibility: visible; } }
+      body .app .header .nav-mobile-icon i {
+        font-size: 1.2rem; }
+    @media (max-width: 768px) {
+      body .app .header .nav-list {
+        display: block !important;
+        margin: 4rem auto !important;
+        padding-left: 0; } }
+    body .app .header .nav .nav-mobile-icon-close {
+      position: absolute;
+      top: 32px;
+      left: 32px;
+      opacity: 0;
+      visibility: hidden; }
+      @media (max-width: 768px) {
+        body .app .header .nav .nav-mobile-icon-close {
+          opacity: 1;
+          visibility: visible; } }
+      body .app .header .nav .nav-mobile-icon-close i {
+        font-size: 1.2rem;
+        color: black !important; }
     body .app .header .nav-item {
       margin-left: 2rem; }
       body .app .header .nav-item:hover .nav-link::after {
         transform: scaleX(1);
         transform-origin: center left; }
+      @media (max-width: 768px) {
+        body .app .header .nav-item {
+          margin-left: 0;
+          margin-bottom: 20px; } }
     body .app .header .nav-link {
       color: black;
       display: inline-block;
@@ -276,6 +307,9 @@ body {
         transform: scaleX(0);
         transform-origin: center right;
         transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
+      @media (max-width: 768px) {
+        body .app .header .nav-link {
+          color: black !important; } }
     body .app .header .nav .dropdown {
       font-family: "Source Serif Pro", serif;
       font-size: 1.2rem;
@@ -285,16 +319,55 @@ body {
         border: none;
         background: transparent;
         transition: all 0.5s ease; }
+        @media (max-width: 768px) {
+          body .app .header .nav .dropdown #dropdownMenuUser {
+            color: black !important; } }
       body .app .header .nav .dropdown-toggle::after {
         margin-bottom: -0.1em; }
       body .app .header .nav .dropdown-menu {
         border: none;
         font-size: 1.2rem; }
+        @media (max-width: 768px) {
+          body .app .header .nav .dropdown-menu {
+            font-size: 1rem; } }
       body .app .header .nav .dropdown-item {
         padding: 0.25rem 1.75rem; }
         body .app .header .nav .dropdown-item:active {
           color: #1e2125;
           background: #e9ecef; }
+    @media (max-width: 768px) {
+      body .app .header .nav-overlay {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(75deg, rgba(22, 28, 36, 0.48) 0%, #161c24 100%);
+        width: 200vh;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease; } }
+    body .app .header .nav-overlay.nav-overlay-mobile {
+      opacity: 1;
+      visibility: visible; }
+    body .app .header .nav.nav-mobile {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0); }
+    @media (max-width: 768px) {
+      body .app .header .nav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: white;
+        width: 280px;
+        height: 100%;
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease; } }
     @media (max-width: 768px) {
       body .app .header {
         padding: 1.25rem; } }
@@ -3187,9 +3260,6 @@ body {
   body .app .stored-awards__link.delete-all-show a,
   body .app .stored-contacts__link.delete-all-show a {
     opacity: 0; }
-  @media (max-width: 768px) {
-    body .app .bg-light .is-devider-300 {
-      height: 150px; } }
   body .app .bg-light .about__expertise {
     position: relative;
     max-width: 100rem;
