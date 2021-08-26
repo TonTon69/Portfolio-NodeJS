@@ -28,7 +28,10 @@ module.exports.checkAdmin = function (req, res, next) {
 module.exports.authValidate = function (req, res, next) {
     const { email, password } = req.body;
     if (!email && !password) {
-        req.flash("error", "Please enter your details below!");
+        req.flash(
+            "error",
+            "Please enter the information below to login your account!"
+        );
         res.render("auth/login", {
             errors: req.flash("error"),
         });
