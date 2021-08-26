@@ -34,9 +34,11 @@ header.header
                                 li
                                     hr.dropdown-divider
                                 li
-                                    a.dropdown-item(href='/auth/logout') Logout
+                                    form(action='/auth/logout', method='get')
+                                        button.dropdown-item Logout
                             else
                                 li
-                                    a.dropdown-item(href='/auth/logout') Logout
+                                    form(action='/auth/logout', method='get')
+                                        button.dropdown-item Logout
                 else
                     a(href="/auth/login").nav-link login

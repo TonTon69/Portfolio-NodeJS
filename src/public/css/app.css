@@ -182,12 +182,21 @@ input[type="checkbox"] {
 
 .is-devider-300 {
   height: 300px; }
+  @media (max-width: 768px) {
+    .is-devider-300 {
+      height: 200px; } }
 
 .is-devider-200 {
   height: 200px; }
+  @media (max-width: 768px) {
+    .is-devider-200 {
+      height: 100px; } }
 
 .is-devider-100 {
   height: 100px; }
+  @media (max-width: 768px) {
+    .is-devider-100 {
+      height: 50px; } }
 
 .is-devider-40 {
   height: 40px; }
@@ -283,6 +292,9 @@ body {
         body .app .header .nav .dropdown-item:active {
           color: #1e2125;
           background: #e9ecef; }
+    @media (max-width: 768px) {
+      body .app .header {
+        padding: 1.25rem; } }
   body .app .stored-system-info,
   body .app .system-info-create,
   body .app .system-info-edit,
@@ -340,6 +352,34 @@ body {
       align-items: center;
       min-height: 650px;
       position: relative; }
+      @media (max-width: 768px) {
+        body .app .stored-system-info__header,
+        body .app .system-info-create__header,
+        body .app .system-info-edit__header,
+        body .app .stored-expertises__header,
+        body .app .expertises-create__header,
+        body .app .expertises-edit__header,
+        body .app .stored-expertises-categories__header,
+        body .app .expertises-category-create__header,
+        body .app .expertises-category-edit__header,
+        body .app .stored-experiences__header,
+        body .app .experience-create__header,
+        body .app .experience-edit__header,
+        body .app .stored-educations__header,
+        body .app .education-create__header,
+        body .app .education-edit__header,
+        body .app .stored-projects__header,
+        body .app .project-create__header,
+        body .app .project-edit__header,
+        body .app .stored-contacts__header,
+        body .app .contact-create__header,
+        body .app .contact-edit__header,
+        body .app .stored-awards__header,
+        body .app .award-create__header,
+        body .app .award-edit__header,
+        body .app .portfolio__header,
+        body .app .about__header {
+          min-height: 450px; } }
       body .app .stored-system-info__header-title,
       body .app .system-info-create__header-title,
       body .app .system-info-edit__header-title,
@@ -369,6 +409,35 @@ body {
         max-width: 100rem;
         padding-right: 3.75rem;
         padding-left: 3.75rem; }
+        @media (max-width: 768px) {
+          body .app .stored-system-info__header-title,
+          body .app .system-info-create__header-title,
+          body .app .system-info-edit__header-title,
+          body .app .stored-expertises__header-title,
+          body .app .expertises-create__header-title,
+          body .app .expertises-edit__header-title,
+          body .app .stored-expertises-categories__header-title,
+          body .app .expertises-category-create__header-title,
+          body .app .expertises-category-edit__header-title,
+          body .app .stored-experiences__header-title,
+          body .app .experience-create__header-title,
+          body .app .experience-edit__header-title,
+          body .app .stored-educations__header-title,
+          body .app .education-create__header-title,
+          body .app .education-edit__header-title,
+          body .app .stored-projects__header-title,
+          body .app .project-create__header-title,
+          body .app .project-edit__header-title,
+          body .app .stored-contacts__header-title,
+          body .app .contact-create__header-title,
+          body .app .contact-edit__header-title,
+          body .app .stored-awards__header-title,
+          body .app .award-create__header-title,
+          body .app .award-edit__header-title,
+          body .app .portfolio__header-title,
+          body .app .about__header-title {
+            padding-right: 1.25rem;
+            padding-left: 1.25rem; } }
         body .app .stored-system-info__header-title h1,
         body .app .system-info-create__header-title h1,
         body .app .system-info-edit__header-title h1,
@@ -400,6 +469,64 @@ body {
           text-transform: uppercase;
           line-height: 0.7;
           letter-spacing: -6px; }
+          @media (max-width: 768px) {
+            body .app .stored-system-info__header-title h1 p,
+            body .app .system-info-create__header-title h1 p,
+            body .app .system-info-edit__header-title h1 p,
+            body .app .stored-expertises__header-title h1 p,
+            body .app .expertises-create__header-title h1 p,
+            body .app .expertises-edit__header-title h1 p,
+            body .app .stored-expertises-categories__header-title h1 p,
+            body .app .expertises-category-create__header-title h1 p,
+            body .app .expertises-category-edit__header-title h1 p,
+            body .app .stored-experiences__header-title h1 p,
+            body .app .experience-create__header-title h1 p,
+            body .app .experience-edit__header-title h1 p,
+            body .app .stored-educations__header-title h1 p,
+            body .app .education-create__header-title h1 p,
+            body .app .education-edit__header-title h1 p,
+            body .app .stored-projects__header-title h1 p,
+            body .app .project-create__header-title h1 p,
+            body .app .project-edit__header-title h1 p,
+            body .app .stored-contacts__header-title h1 p,
+            body .app .contact-create__header-title h1 p,
+            body .app .contact-edit__header-title h1 p,
+            body .app .stored-awards__header-title h1 p,
+            body .app .award-create__header-title h1 p,
+            body .app .award-edit__header-title h1 p,
+            body .app .portfolio__header-title h1 p,
+            body .app .about__header-title h1 p {
+              line-height: 0.9;
+              margin-bottom: 0; } }
+          @media (max-width: 768px) {
+            body .app .stored-system-info__header-title h1,
+            body .app .system-info-create__header-title h1,
+            body .app .system-info-edit__header-title h1,
+            body .app .stored-expertises__header-title h1,
+            body .app .expertises-create__header-title h1,
+            body .app .expertises-edit__header-title h1,
+            body .app .stored-expertises-categories__header-title h1,
+            body .app .expertises-category-create__header-title h1,
+            body .app .expertises-category-edit__header-title h1,
+            body .app .stored-experiences__header-title h1,
+            body .app .experience-create__header-title h1,
+            body .app .experience-edit__header-title h1,
+            body .app .stored-educations__header-title h1,
+            body .app .education-create__header-title h1,
+            body .app .education-edit__header-title h1,
+            body .app .stored-projects__header-title h1,
+            body .app .project-create__header-title h1,
+            body .app .project-edit__header-title h1,
+            body .app .stored-contacts__header-title h1,
+            body .app .contact-create__header-title h1,
+            body .app .contact-edit__header-title h1,
+            body .app .stored-awards__header-title h1,
+            body .app .award-create__header-title h1,
+            body .app .award-edit__header-title h1,
+            body .app .portfolio__header-title h1,
+            body .app .about__header-title h1 {
+              font-size: 3rem;
+              letter-spacing: -4px; } }
     body .app .stored-system-info__main,
     body .app .system-info-create__main,
     body .app .system-info-edit__main,
@@ -429,6 +556,35 @@ body {
       max-width: 100rem;
       padding-right: 3.75rem;
       padding-left: 3.75rem; }
+      @media (max-width: 768px) {
+        body .app .stored-system-info__main,
+        body .app .system-info-create__main,
+        body .app .system-info-edit__main,
+        body .app .stored-expertises__main,
+        body .app .expertises-create__main,
+        body .app .expertises-edit__main,
+        body .app .stored-expertises-categories__main,
+        body .app .expertises-category-create__main,
+        body .app .expertises-category-edit__main,
+        body .app .stored-experiences__main,
+        body .app .experience-create__main,
+        body .app .experience-edit__main,
+        body .app .stored-educations__main,
+        body .app .education-create__main,
+        body .app .education-edit__main,
+        body .app .stored-projects__main,
+        body .app .project-create__main,
+        body .app .project-edit__main,
+        body .app .stored-contacts__main,
+        body .app .contact-create__main,
+        body .app .contact-edit__main,
+        body .app .stored-awards__main,
+        body .app .award-create__main,
+        body .app .award-edit__main,
+        body .app .portfolio__main,
+        body .app .about__main {
+          padding-right: 1.25rem;
+          padding-left: 1.25rem; } }
       body .app .stored-system-info__main-project,
       body .app .system-info-create__main-project,
       body .app .system-info-edit__main-project,
@@ -491,6 +647,35 @@ body {
           text-transform: uppercase;
           color: transparent;
           -webkit-text-stroke: 1px white; }
+          @media (max-width: 768px) {
+            body .app .stored-system-info__main-project .projects,
+            body .app .system-info-create__main-project .projects,
+            body .app .system-info-edit__main-project .projects,
+            body .app .stored-expertises__main-project .projects,
+            body .app .expertises-create__main-project .projects,
+            body .app .expertises-edit__main-project .projects,
+            body .app .stored-expertises-categories__main-project .projects,
+            body .app .expertises-category-create__main-project .projects,
+            body .app .expertises-category-edit__main-project .projects,
+            body .app .stored-experiences__main-project .projects,
+            body .app .experience-create__main-project .projects,
+            body .app .experience-edit__main-project .projects,
+            body .app .stored-educations__main-project .projects,
+            body .app .education-create__main-project .projects,
+            body .app .education-edit__main-project .projects,
+            body .app .stored-projects__main-project .projects,
+            body .app .project-create__main-project .projects,
+            body .app .project-edit__main-project .projects,
+            body .app .stored-contacts__main-project .projects,
+            body .app .contact-create__main-project .projects,
+            body .app .contact-edit__main-project .projects,
+            body .app .stored-awards__main-project .projects,
+            body .app .award-create__main-project .projects,
+            body .app .award-edit__main-project .projects,
+            body .app .portfolio__main-project .projects,
+            body .app .about__main-project .projects {
+              font-size: 3.4rem;
+              bottom: 99%; } }
         body .app .stored-system-info__main-project .card,
         body .app .system-info-create__main-project .card,
         body .app .system-info-edit__main-project .card,
@@ -525,6 +710,36 @@ body {
           cursor: pointer;
           overflow: hidden;
           margin-bottom: 32px; }
+          @media (max-width: 768px) {
+            body .app .stored-system-info__main-project .card,
+            body .app .system-info-create__main-project .card,
+            body .app .system-info-edit__main-project .card,
+            body .app .stored-expertises__main-project .card,
+            body .app .expertises-create__main-project .card,
+            body .app .expertises-edit__main-project .card,
+            body .app .stored-expertises-categories__main-project .card,
+            body .app .expertises-category-create__main-project .card,
+            body .app .expertises-category-edit__main-project .card,
+            body .app .stored-experiences__main-project .card,
+            body .app .experience-create__main-project .card,
+            body .app .experience-edit__main-project .card,
+            body .app .stored-educations__main-project .card,
+            body .app .education-create__main-project .card,
+            body .app .education-edit__main-project .card,
+            body .app .stored-projects__main-project .card,
+            body .app .project-create__main-project .card,
+            body .app .project-edit__main-project .card,
+            body .app .stored-contacts__main-project .card,
+            body .app .contact-create__main-project .card,
+            body .app .contact-edit__main-project .card,
+            body .app .stored-awards__main-project .card,
+            body .app .award-create__main-project .card,
+            body .app .award-edit__main-project .card,
+            body .app .portfolio__main-project .card,
+            body .app .about__main-project .card {
+              width: 158px;
+              height: 158px;
+              margin-bottom: 24px; } }
           body .app .stored-system-info__main-project .card:hover .card-img-overlay,
           body .app .system-info-create__main-project .card:hover .card-img-overlay,
           body .app .system-info-edit__main-project .card:hover .card-img-overlay,
@@ -704,6 +919,34 @@ body {
               text-align: center;
               text-transform: uppercase;
               letter-spacing: 6px; }
+              @media (max-width: 768px) {
+                body .app .stored-system-info__main-project .card-img-overlay .card-title,
+                body .app .system-info-create__main-project .card-img-overlay .card-title,
+                body .app .system-info-edit__main-project .card-img-overlay .card-title,
+                body .app .stored-expertises__main-project .card-img-overlay .card-title,
+                body .app .expertises-create__main-project .card-img-overlay .card-title,
+                body .app .expertises-edit__main-project .card-img-overlay .card-title,
+                body .app .stored-expertises-categories__main-project .card-img-overlay .card-title,
+                body .app .expertises-category-create__main-project .card-img-overlay .card-title,
+                body .app .expertises-category-edit__main-project .card-img-overlay .card-title,
+                body .app .stored-experiences__main-project .card-img-overlay .card-title,
+                body .app .experience-create__main-project .card-img-overlay .card-title,
+                body .app .experience-edit__main-project .card-img-overlay .card-title,
+                body .app .stored-educations__main-project .card-img-overlay .card-title,
+                body .app .education-create__main-project .card-img-overlay .card-title,
+                body .app .education-edit__main-project .card-img-overlay .card-title,
+                body .app .stored-projects__main-project .card-img-overlay .card-title,
+                body .app .project-create__main-project .card-img-overlay .card-title,
+                body .app .project-edit__main-project .card-img-overlay .card-title,
+                body .app .stored-contacts__main-project .card-img-overlay .card-title,
+                body .app .contact-create__main-project .card-img-overlay .card-title,
+                body .app .contact-edit__main-project .card-img-overlay .card-title,
+                body .app .stored-awards__main-project .card-img-overlay .card-title,
+                body .app .award-create__main-project .card-img-overlay .card-title,
+                body .app .award-edit__main-project .card-img-overlay .card-title,
+                body .app .portfolio__main-project .card-img-overlay .card-title,
+                body .app .about__main-project .card-img-overlay .card-title {
+                  font-size: 0.9rem; } }
       body .app .stored-system-info__main-brand,
       body .app .system-info-create__main-brand,
       body .app .system-info-edit__main-brand,
@@ -766,6 +1009,35 @@ body {
           text-transform: uppercase;
           color: transparent;
           -webkit-text-stroke: 1px white; }
+          @media (max-width: 768px) {
+            body .app .stored-system-info__main-brand .currently,
+            body .app .system-info-create__main-brand .currently,
+            body .app .system-info-edit__main-brand .currently,
+            body .app .stored-expertises__main-brand .currently,
+            body .app .expertises-create__main-brand .currently,
+            body .app .expertises-edit__main-brand .currently,
+            body .app .stored-expertises-categories__main-brand .currently,
+            body .app .expertises-category-create__main-brand .currently,
+            body .app .expertises-category-edit__main-brand .currently,
+            body .app .stored-experiences__main-brand .currently,
+            body .app .experience-create__main-brand .currently,
+            body .app .experience-edit__main-brand .currently,
+            body .app .stored-educations__main-brand .currently,
+            body .app .education-create__main-brand .currently,
+            body .app .education-edit__main-brand .currently,
+            body .app .stored-projects__main-brand .currently,
+            body .app .project-create__main-brand .currently,
+            body .app .project-edit__main-brand .currently,
+            body .app .stored-contacts__main-brand .currently,
+            body .app .contact-create__main-brand .currently,
+            body .app .contact-edit__main-brand .currently,
+            body .app .stored-awards__main-brand .currently,
+            body .app .award-create__main-brand .currently,
+            body .app .award-edit__main-brand .currently,
+            body .app .portfolio__main-brand .currently,
+            body .app .about__main-brand .currently {
+              font-size: 3rem;
+              top: -8%; } }
         body .app .stored-system-info__main-brand .card,
         body .app .system-info-create__main-brand .card,
         body .app .system-info-edit__main-brand .card,
@@ -882,6 +1154,34 @@ body {
               text-transform: uppercase;
               letter-spacing: -6px;
               line-height: 0.8; }
+              @media (max-width: 768px) {
+                body .app .stored-system-info__main-brand .card-img-overlay .card-title,
+                body .app .system-info-create__main-brand .card-img-overlay .card-title,
+                body .app .system-info-edit__main-brand .card-img-overlay .card-title,
+                body .app .stored-expertises__main-brand .card-img-overlay .card-title,
+                body .app .expertises-create__main-brand .card-img-overlay .card-title,
+                body .app .expertises-edit__main-brand .card-img-overlay .card-title,
+                body .app .stored-expertises-categories__main-brand .card-img-overlay .card-title,
+                body .app .expertises-category-create__main-brand .card-img-overlay .card-title,
+                body .app .expertises-category-edit__main-brand .card-img-overlay .card-title,
+                body .app .stored-experiences__main-brand .card-img-overlay .card-title,
+                body .app .experience-create__main-brand .card-img-overlay .card-title,
+                body .app .experience-edit__main-brand .card-img-overlay .card-title,
+                body .app .stored-educations__main-brand .card-img-overlay .card-title,
+                body .app .education-create__main-brand .card-img-overlay .card-title,
+                body .app .education-edit__main-brand .card-img-overlay .card-title,
+                body .app .stored-projects__main-brand .card-img-overlay .card-title,
+                body .app .project-create__main-brand .card-img-overlay .card-title,
+                body .app .project-edit__main-brand .card-img-overlay .card-title,
+                body .app .stored-contacts__main-brand .card-img-overlay .card-title,
+                body .app .contact-create__main-brand .card-img-overlay .card-title,
+                body .app .contact-edit__main-brand .card-img-overlay .card-title,
+                body .app .stored-awards__main-brand .card-img-overlay .card-title,
+                body .app .award-create__main-brand .card-img-overlay .card-title,
+                body .app .award-edit__main-brand .card-img-overlay .card-title,
+                body .app .portfolio__main-brand .card-img-overlay .card-title,
+                body .app .about__main-brand .card-img-overlay .card-title {
+                  font-size: 3rem; } }
               body .app .stored-system-info__main-brand .card-img-overlay .card-title span,
               body .app .system-info-create__main-brand .card-img-overlay .card-title span,
               body .app .system-info-edit__main-brand .card-img-overlay .card-title span,
@@ -938,6 +1238,35 @@ body {
               position: absolute;
               bottom: 32px;
               right: 48px; }
+              @media (max-width: 768px) {
+                body .app .stored-system-info__main-brand .card-img-overlay .card-text,
+                body .app .system-info-create__main-brand .card-img-overlay .card-text,
+                body .app .system-info-edit__main-brand .card-img-overlay .card-text,
+                body .app .stored-expertises__main-brand .card-img-overlay .card-text,
+                body .app .expertises-create__main-brand .card-img-overlay .card-text,
+                body .app .expertises-edit__main-brand .card-img-overlay .card-text,
+                body .app .stored-expertises-categories__main-brand .card-img-overlay .card-text,
+                body .app .expertises-category-create__main-brand .card-img-overlay .card-text,
+                body .app .expertises-category-edit__main-brand .card-img-overlay .card-text,
+                body .app .stored-experiences__main-brand .card-img-overlay .card-text,
+                body .app .experience-create__main-brand .card-img-overlay .card-text,
+                body .app .experience-edit__main-brand .card-img-overlay .card-text,
+                body .app .stored-educations__main-brand .card-img-overlay .card-text,
+                body .app .education-create__main-brand .card-img-overlay .card-text,
+                body .app .education-edit__main-brand .card-img-overlay .card-text,
+                body .app .stored-projects__main-brand .card-img-overlay .card-text,
+                body .app .project-create__main-brand .card-img-overlay .card-text,
+                body .app .project-edit__main-brand .card-img-overlay .card-text,
+                body .app .stored-contacts__main-brand .card-img-overlay .card-text,
+                body .app .contact-create__main-brand .card-img-overlay .card-text,
+                body .app .contact-edit__main-brand .card-img-overlay .card-text,
+                body .app .stored-awards__main-brand .card-img-overlay .card-text,
+                body .app .award-create__main-brand .card-img-overlay .card-text,
+                body .app .award-edit__main-brand .card-img-overlay .card-text,
+                body .app .portfolio__main-brand .card-img-overlay .card-text,
+                body .app .about__main-brand .card-img-overlay .card-text {
+                  left: 30px;
+                  right: unset; } }
               body .app .stored-system-info__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .system-info-create__main-brand .card-img-overlay .card-text:hover a::after,
               body .app .system-info-edit__main-brand .card-img-overlay .card-text:hover a::after,
@@ -2823,15 +3152,26 @@ body {
     max-width: 100rem;
     padding-right: 3.75rem;
     padding-left: 3.75rem; }
+    @media (max-width: 768px) {
+      body .app .footer {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem; } }
     body .app .footer__contact-socials {
       text-transform: uppercase;
       font-size: 3rem;
       font-weight: 800;
       letter-spacing: -4px; }
+      @media (max-width: 768px) {
+        body .app .footer__contact-socials {
+          font-size: 1.8rem; } }
       body .app .footer__contact-socials a {
         color: white;
         margin-right: 12px;
         margin-left: -4px; }
+        @media (max-width: 768px) {
+          body .app .footer__contact-socials a {
+            margin-right: 24px;
+            margin-left: -2px; } }
       body .app .footer__contact-socials .ig::after {
         content: ".";
         color: #e112fc; }
@@ -2858,6 +3198,9 @@ body {
       font-weight: 800;
       letter-spacing: -4px;
       line-height: 0.9; }
+      @media (max-width: 768px) {
+        body .app .footer__contact-more {
+          font-size: 1.8rem; } }
       body .app .footer__contact-more a {
         color: white;
         position: relative; }
@@ -2874,10 +3217,17 @@ body {
   body .app .to-top {
     margin-right: 15px;
     opacity: 0.4; }
+    @media (max-width: 768px) {
+      body .app .to-top {
+        text-align: left !important;
+        margin-top: 50px; } }
     body .app .to-top span {
       padding: 2.5rem;
       cursor: url("../img/to-top.svg"), auto;
       transition: all 0.3s ease 0s; }
+      @media (max-width: 768px) {
+        body .app .to-top span {
+          padding-left: 1.25rem; } }
 
 @keyframes textclip {
   to {

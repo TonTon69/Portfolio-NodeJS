@@ -16,6 +16,24 @@
     src: local("Sequel"), url("/src/public/fonts/Sequel-Bold.otf") format("otf");
 }
 
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $tablet) and (min-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (max-width: $laptop) {
+        @content;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -80,14 +98,26 @@ input[type="checkbox"] {
 
 .is-devider-300 {
     height: 300px;
+
+    @include mobile {
+        height: 200px;
+    }
 }
 
 .is-devider-200 {
     height: 200px;
+
+    @include mobile {
+        height: 100px;
+    }
 }
 
 .is-devider-100 {
     height: 100px;
+
+    @include mobile {
+        height: 50px;
+    }
 }
 
 .is-devider-40 {
@@ -228,6 +258,10 @@ body {
                     }
                 }
             }
+
+            @include mobile {
+                padding: 1.25rem;
+            }
         }
 
         .stored-system-info,
@@ -263,10 +297,19 @@ body {
                 min-height: 650px;
                 position: relative;
 
+                @include mobile {
+                    min-height: 450px;
+                }
+
                 &-title {
                     max-width: 100rem;
                     padding-right: 3.75rem;
                     padding-left: 3.75rem;
+
+                    @include mobile {
+                        padding-right: 1.25rem;
+                        padding-left: 1.25rem;
+                    }
 
                     h1 {
                         font-size: 5.575rem;
@@ -274,6 +317,18 @@ body {
                         text-transform: uppercase;
                         line-height: 0.7;
                         letter-spacing: -6px;
+
+                        p {
+                            @include mobile {
+                                line-height: 0.9;
+                                margin-bottom: 0;
+                            }
+                        }
+
+                        @include mobile {
+                            font-size: 3rem;
+                            letter-spacing: -4px;
+                        }
                     }
                 }
             }
@@ -282,6 +337,11 @@ body {
                 max-width: 100rem;
                 padding-right: 3.75rem;
                 padding-left: 3.75rem;
+
+                @include mobile {
+                    padding-right: 1.25rem;
+                    padding-left: 1.25rem;
+                }
 
                 &-project {
                     position: relative;
@@ -296,6 +356,11 @@ body {
                         text-transform: uppercase;
                         color: transparent;
                         -webkit-text-stroke: 1px $white-color;
+
+                        @include mobile {
+                            font-size: 3.4rem;
+                            bottom: 99%;
+                        }
                     }
 
                     .card {
@@ -307,6 +372,12 @@ body {
                         cursor: pointer;
                         overflow: hidden;
                         margin-bottom: 32px;
+
+                        @include mobile {
+                            width: 158px;
+                            height: 158px;
+                            margin-bottom: 24px;
+                        }
 
                         &:hover {
                             .card-img-overlay {
@@ -351,6 +422,10 @@ body {
                                 text-align: center;
                                 text-transform: uppercase;
                                 letter-spacing: 6px;
+
+                                @include mobile {
+                                    font-size: 0.9rem;
+                                }
                             }
                         }
                     }
@@ -369,6 +444,11 @@ body {
                         text-transform: uppercase;
                         color: transparent;
                         -webkit-text-stroke: 1px $white-color;
+
+                        @include mobile {
+                            font-size: 3rem;
+                            top: -8%;
+                        }
                     }
 
                     .card {
@@ -391,6 +471,10 @@ body {
                                 letter-spacing: -6px;
                                 line-height: 0.8;
 
+                                @include mobile {
+                                    font-size: 3rem;
+                                }
+
                                 span {
                                     display: block;
                                 }
@@ -401,6 +485,11 @@ body {
                                 bottom: 32px;
                                 right: 48px;
                                 @extend .develop-note;
+
+                                @include mobile {
+                                    left: 30px;
+                                    right: unset;
+                                }
 
                                 &:hover {
                                     a::after {
@@ -840,6 +929,11 @@ body {
             padding-right: 3.75rem;
             padding-left: 3.75rem;
 
+            @include mobile {
+                padding-right: 1.25rem;
+                padding-left: 1.25rem;
+            }
+
             &__contact {
                 &-title {
                     @extend .develop-note;
@@ -851,10 +945,19 @@ body {
                     font-weight: weight(bold);
                     letter-spacing: -4px;
 
+                    @include mobile {
+                        font-size: 1.8rem;
+                    }
+
                     a {
                         color: $white-color;
                         margin-right: 12px;
                         margin-left: -4px;
+
+                        @include mobile {
+                            margin-right: 24px;
+                            margin-left: -2px;
+                        }
                     }
 
                     .ig {
@@ -909,6 +1012,10 @@ body {
                     letter-spacing: -4px;
                     line-height: 0.9;
 
+                    @include mobile {
+                        font-size: 1.8rem;
+                    }
+
                     a {
                         color: $white-color;
                         position: relative;
@@ -934,10 +1041,19 @@ body {
             margin-right: 15px;
             opacity: 0.4;
 
+            @include mobile {
+                text-align: left !important;
+                margin-top: 50px;
+            }
+
             span {
                 padding: 2.5rem;
                 cursor: url("../img/to-top.svg"), auto;
                 transition: all 0.3s ease 0s;
+
+                @include mobile {
+                    padding-left: 1.25rem;
+                }
             }
         }
     }
