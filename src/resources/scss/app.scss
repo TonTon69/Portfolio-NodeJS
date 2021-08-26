@@ -166,6 +166,11 @@ body {
 
                 img {
                     margin-right: 20px;
+
+                    @include mobile {
+                        margin-right: 0;
+                        margin-left: -12px;
+                    }
                 }
 
                 &:hover {
@@ -1268,9 +1273,17 @@ body.show {
     color: $white-color;
     transition: all 0.9s ease;
 
+    .header__logo {
+        img {
+            transition: all 0.9s ease;
+            filter: brightness(0) invert(1);
+        }
+    }
+
     .header__brand {
         color: $white-color;
     }
+
     .nav {
         &-link,
         #dropdownMenuUser {
@@ -1302,8 +1315,7 @@ body.show {
         }
 
         &-img {
-            width: 42px;
-            height: 42px;
+            width: 70px;
         }
 
         &-body {

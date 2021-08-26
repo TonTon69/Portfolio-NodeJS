@@ -235,6 +235,10 @@ body {
       align-items: center; }
       body .app .header__logo img {
         margin-right: 20px; }
+        @media (max-width: 768px) {
+          body .app .header__logo img {
+            margin-right: 0;
+            margin-left: -12px; } }
       body .app .header__logo:hover .header__brand {
         opacity: 1 !important;
         visibility: visible !important;
@@ -3583,6 +3587,9 @@ body.show {
   background: black;
   color: white;
   transition: all 0.9s ease; }
+  body.show .header__logo img {
+    transition: all 0.9s ease;
+    filter: brightness(0) invert(1); }
   body.show .header__brand {
     color: white; }
   body.show .nav-link,
@@ -3608,8 +3615,7 @@ body.show {
         width: 100%;
         height: 100%; } }
     .login .card-img {
-      width: 42px;
-      height: 42px; }
+      width: 70px; }
     .login .card-body {
       padding: 2rem 3rem; }
       @media (max-width: 768px) {
