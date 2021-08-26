@@ -17,6 +17,7 @@ class SiteController {
                 res.render("index", {
                     projects,
                     contacts,
+                    success: req.flash("success"),
                 });
             })
             .catch(next);

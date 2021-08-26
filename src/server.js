@@ -3,8 +3,8 @@ require("dotenv").config();
 const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
-const pug = require("pug");
 
+const cookieParser = require("cookie-parser");
 const methodOverride = require("method-override");
 const moment = require("moment");
 const session = require("express-session");
@@ -34,6 +34,7 @@ app.use(morgan("combined"));
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "resources", "views"));
 
+app.use(cookieParser(process.env.SESSION_SECRET));
 app.use(methodOverride("_method"));
 
 // Custom middleware
@@ -50,6 +51,7 @@ app.use(
         secret: "secret",
     })
 );
+
 app.use(flash());
 
 // Route init

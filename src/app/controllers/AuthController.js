@@ -1,9 +1,50 @@
 const User = require("../models/User");
+const bcrypt = require("bcrypt");
 
 class AuthController {
-    // [GET]/
+    // [GET]/auth/login
     login(req, res, next) {
-        res.render("auth/login");
+        res.render("auth/login", { errors: req.flash("error") });
+    }
+
+    // [POST]/auth/login
+    async postLogin(req, res, next) {
+        const user = await User.findOne({ email: req.body.email });
+        if (!user) {
+            req.flash("error", "Your email does not exist!");
+            res.render("auth/login", {
+                values: req.body,
+                errors: req.flash("error"),
+            });
+            return;
+        }
+
+        const matchPassword = await bcrypt.compare(
+            req.body.password,
+            user.password
+        );
+        if (!matchPassword) {
+            req.flash("error", "Your password does not match!");
+            res.render("auth/login", {
+                values: req.body,
+                errors: req.flash("error"),
+            });
+            retrun;
+        }
+
+        const isVerified = user.verified;
+        if (!isVerified) {
+            req.flash("error", "Your account is not verified!");
+            res.render("auth/login", {
+                errors: req.flash("error"),
+            });
+            retrun;
+        }
+
+        res.cookie("userId", user.id, {
+            signed: true,
+        });
+        res.redirect("/");
     }
 }
 
