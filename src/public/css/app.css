@@ -264,6 +264,25 @@ body {
         transform: scaleX(0);
         transform-origin: center right;
         transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
+    body .app .header .nav .dropdown {
+      font-family: "Source Serif Pro", serif;
+      font-size: 1.2rem;
+      font-weight: 500; }
+      body .app .header .nav .dropdown #dropdownMenuUser {
+        outline: none;
+        border: none;
+        background: transparent;
+        transition: all 0.5s ease; }
+      body .app .header .nav .dropdown-toggle::after {
+        margin-bottom: -0.1em; }
+      body .app .header .nav .dropdown-menu {
+        border: none;
+        font-size: 1.2rem; }
+      body .app .header .nav .dropdown-item {
+        padding: 0.25rem 1.75rem; }
+        body .app .header .nav .dropdown-item:active {
+          color: #1e2125;
+          background: #e9ecef; }
   body .app .stored-system-info,
   body .app .system-info-create,
   body .app .system-info-edit,
@@ -2646,12 +2665,13 @@ body {
       font-weight: 500;
       text-align: justify; }
     body .app .bg-light .about__expertise-skill {
-      font-size: 1.2rem;
+      font-family: "Source Serif Pro", serif;
+      font-size: 1.3rem;
       font-weight: 800;
       text-transform: uppercase;
       line-height: 2.5; }
       body .app .bg-light .about__expertise-skill--item {
-        display: block; }
+        letter-spacing: 1px; }
   body .app .bg-dark {
     background: black !important; }
     body .app .bg-dark .about__awards {
@@ -2869,7 +2889,8 @@ body.show {
   transition: all 0.9s ease; }
   body.show .header__brand {
     color: white; }
-  body.show .nav-link {
+  body.show .nav-link,
+  body.show .nav #dropdownMenuUser {
     color: white !important; }
 
 .login {
@@ -2884,7 +2905,8 @@ body.show {
   justify-content: center; }
   .login .card {
     width: 50rem;
-    border: none; }
+    border: none;
+    border-radius: 8px; }
     .login .card-img {
       width: 42px;
       height: 42px; }
@@ -2954,7 +2976,8 @@ body.show {
         font-size: 1.2rem; }
       .login .card-body form .btn-success {
         width: 100%;
-        height: 48px; }
+        height: 48px;
+        border-radius: 8px; }
       .login .card-body form a {
         color: #00ab55;
         font-weight: 500; }

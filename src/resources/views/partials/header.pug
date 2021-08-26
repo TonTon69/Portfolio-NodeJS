@@ -3,13 +3,22 @@ header.header
         img(src="https://minhhoang6920.web.app/assets/image/logo.png", alt="", width="45")
         span.header__brand Minhhoang
     nav.nav
-        ul.d-flex
+        ul.d-flex.align-items-center.m-0
             li.nav-item
                 a(href="/").nav-link portfolio
             li.nav-item
                 a(href="/about").nav-link about
             li.nav-item
                 if user
-                    a(href="/auth/login").nav-link= user.name
+                    .dropdown
+                        button#dropdownMenuUser.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                            | #{user.name}
+                        ul.dropdown-menu.mt-2.shadow(aria-labelledby='dropdownMenuUser')
+                            li
+                                a.dropdown-item(href='#') Action
+                            li
+                                a.dropdown-item(href='#') Another action
+                            li
+                                a.dropdown-item(href='#') Logout
                 else
                     a(href="/auth/login").nav-link login

@@ -4,11 +4,11 @@ const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
 
-const cookieParser = require("cookie-parser");
 const methodOverride = require("method-override");
 const moment = require("moment");
 const session = require("express-session");
 const flash = require("connect-flash");
+const cookieParser = require("cookie-parser");
 
 const LocalMiddleware = require("./app/middlewares/LocalMiddleware");
 
@@ -19,10 +19,11 @@ const db = require("./config/db");
 db.connect();
 
 const app = express();
-const port = 3000;
+// const port = 3000;
 
-// Static file
-app.use(express.static(path.join(__dirname, "public")));
+// Template engine
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "resources", "views"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -30,11 +31,11 @@ app.use(express.json());
 // HTTP request logger middleware for node.js
 app.use(morgan("combined"));
 
-// Template engine
-app.set("view engine", "pug");
-app.set("views", path.join(__dirname, "resources", "views"));
-
 app.use(cookieParser(process.env.SESSION_SECRET));
+
+// Static file
+app.use(express.static(path.join(__dirname, "public")));
+
 app.use(methodOverride("_method"));
 
 // Custom middleware
@@ -57,6 +58,7 @@ app.use(flash());
 // Route init
 route(app);
 
-app.listen(port, () => {
-    console.log(`App listening at http://localhost:${port}`);
+let port = process.env.PORT || 3000;
+var listener = app.listen(port, function () {
+    console.log("Listening on port " + listener.address().port);
 });

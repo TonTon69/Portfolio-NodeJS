@@ -24,3 +24,31 @@ module.exports.checkAdmin = function (req, res, next) {
         res.redirect("/error");
     }
 };
+
+module.exports.authValidate = function (req, res, next) {
+    const { email, password } = req.body;
+    if (!email && !password) {
+        req.flash("error", "Please enter your details below!");
+        res.render("auth/login", {
+            errors: req.flash("error"),
+        });
+        return;
+    }
+    if (!email) {
+        req.flash("error", "Please enter your email!");
+        res.render("auth/login", {
+            errors: req.flash("error"),
+            values: req.body,
+        });
+        return;
+    }
+    if (!password) {
+        req.flash("error", "Please enter your password!");
+        res.render("auth/login", {
+            errors: req.flash("error"),
+            values: req.body,
+        });
+        return;
+    }
+    next();
+};
