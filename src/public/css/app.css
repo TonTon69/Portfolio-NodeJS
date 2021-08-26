@@ -249,6 +249,9 @@ body {
       transition: all 0.5s ease;
       opacity: 0;
       visibility: hidden; }
+      @media (max-width: 768px) {
+        body .app .header__brand {
+          font-size: 1.2rem; } }
     body .app .header .nav-item {
       margin-left: 2rem; }
       body .app .header .nav-item:hover .nav-link::after {
@@ -974,7 +977,8 @@ body {
                 body .app .award-edit__main-project .card-img-overlay .card-title,
                 body .app .portfolio__main-project .card-img-overlay .card-title,
                 body .app .about__main-project .card-img-overlay .card-title {
-                  font-size: 0.9rem; } }
+                  font-size: 0.9rem;
+                  font-weight: 600; } }
       body .app .stored-system-info__main-brand,
       body .app .system-info-create__main-brand,
       body .app .system-info-edit__main-brand,
@@ -1448,6 +1452,34 @@ body {
         font-size: 1.3125rem;
         line-height: 1.8;
         font-weight: 500; }
+        @media (max-width: 768px) {
+          body .app .stored-system-info__main .about__main-content .pe-5,
+          body .app .system-info-create__main .about__main-content .pe-5,
+          body .app .system-info-edit__main .about__main-content .pe-5,
+          body .app .stored-expertises__main .about__main-content .pe-5,
+          body .app .expertises-create__main .about__main-content .pe-5,
+          body .app .expertises-edit__main .about__main-content .pe-5,
+          body .app .stored-expertises-categories__main .about__main-content .pe-5,
+          body .app .expertises-category-create__main .about__main-content .pe-5,
+          body .app .expertises-category-edit__main .about__main-content .pe-5,
+          body .app .stored-experiences__main .about__main-content .pe-5,
+          body .app .experience-create__main .about__main-content .pe-5,
+          body .app .experience-edit__main .about__main-content .pe-5,
+          body .app .stored-educations__main .about__main-content .pe-5,
+          body .app .education-create__main .about__main-content .pe-5,
+          body .app .education-edit__main .about__main-content .pe-5,
+          body .app .stored-projects__main .about__main-content .pe-5,
+          body .app .project-create__main .about__main-content .pe-5,
+          body .app .project-edit__main .about__main-content .pe-5,
+          body .app .stored-contacts__main .about__main-content .pe-5,
+          body .app .contact-create__main .about__main-content .pe-5,
+          body .app .contact-edit__main .about__main-content .pe-5,
+          body .app .stored-awards__main .about__main-content .pe-5,
+          body .app .award-create__main .about__main-content .pe-5,
+          body .app .award-edit__main .about__main-content .pe-5,
+          body .app .portfolio__main .about__main-content .pe-5,
+          body .app .about__main .about__main-content .pe-5 {
+            padding-right: 12px !important; } }
         body .app .stored-system-info__main .about__main-content p,
         body .app .system-info-create__main .about__main-content p,
         body .app .system-info-edit__main .about__main-content p,
@@ -1475,6 +1507,35 @@ body {
         body .app .portfolio__main .about__main-content p,
         body .app .about__main .about__main-content p {
           margin-bottom: 40px; }
+          @media (max-width: 768px) {
+            body .app .stored-system-info__main .about__main-content p,
+            body .app .system-info-create__main .about__main-content p,
+            body .app .system-info-edit__main .about__main-content p,
+            body .app .stored-expertises__main .about__main-content p,
+            body .app .expertises-create__main .about__main-content p,
+            body .app .expertises-edit__main .about__main-content p,
+            body .app .stored-expertises-categories__main .about__main-content p,
+            body .app .expertises-category-create__main .about__main-content p,
+            body .app .expertises-category-edit__main .about__main-content p,
+            body .app .stored-experiences__main .about__main-content p,
+            body .app .experience-create__main .about__main-content p,
+            body .app .experience-edit__main .about__main-content p,
+            body .app .stored-educations__main .about__main-content p,
+            body .app .education-create__main .about__main-content p,
+            body .app .education-edit__main .about__main-content p,
+            body .app .stored-projects__main .about__main-content p,
+            body .app .project-create__main .about__main-content p,
+            body .app .project-edit__main .about__main-content p,
+            body .app .stored-contacts__main .about__main-content p,
+            body .app .contact-create__main .about__main-content p,
+            body .app .contact-edit__main .about__main-content p,
+            body .app .stored-awards__main .about__main-content p,
+            body .app .award-create__main .about__main-content p,
+            body .app .award-edit__main .about__main-content p,
+            body .app .portfolio__main .about__main-content p,
+            body .app .about__main .about__main-content p {
+              font-size: 1rem;
+              margin-bottom: 20px; } }
         body .app .stored-system-info__main .about__main-content .download-cv,
         body .app .system-info-create__main .about__main-content .download-cv,
         body .app .system-info-edit__main .about__main-content .download-cv,
@@ -1539,6 +1600,34 @@ body {
             left: 0px;
             background: currentcolor;
             opacity: 0.4; }
+        @media (max-width: 768px) {
+          body .app .stored-system-info__main .about__main-content .education,
+          body .app .system-info-create__main .about__main-content .education,
+          body .app .system-info-edit__main .about__main-content .education,
+          body .app .stored-expertises__main .about__main-content .education,
+          body .app .expertises-create__main .about__main-content .education,
+          body .app .expertises-edit__main .about__main-content .education,
+          body .app .stored-expertises-categories__main .about__main-content .education,
+          body .app .expertises-category-create__main .about__main-content .education,
+          body .app .expertises-category-edit__main .about__main-content .education,
+          body .app .stored-experiences__main .about__main-content .education,
+          body .app .experience-create__main .about__main-content .education,
+          body .app .experience-edit__main .about__main-content .education,
+          body .app .stored-educations__main .about__main-content .education,
+          body .app .education-create__main .about__main-content .education,
+          body .app .education-edit__main .about__main-content .education,
+          body .app .stored-projects__main .about__main-content .education,
+          body .app .project-create__main .about__main-content .education,
+          body .app .project-edit__main .about__main-content .education,
+          body .app .stored-contacts__main .about__main-content .education,
+          body .app .contact-create__main .about__main-content .education,
+          body .app .contact-edit__main .about__main-content .education,
+          body .app .stored-awards__main .about__main-content .education,
+          body .app .award-create__main .about__main-content .education,
+          body .app .award-edit__main .about__main-content .education,
+          body .app .portfolio__main .about__main-content .education,
+          body .app .about__main .about__main-content .education {
+            margin-top: 60px; } }
         body .app .stored-system-info__main .about__main-content .education,
         body .app .stored-system-info__main .about__main-content .experience,
         body .app .stored-system-info__main .about__main-content .contact,
@@ -1781,6 +1870,86 @@ body {
             font-weight: 800;
             text-transform: uppercase;
             line-height: 1.5; }
+            @media (max-width: 768px) {
+              body .app .stored-system-info__main .about__main-content .education__content,
+              body .app .stored-system-info__main .about__main-content .experience__content,
+              body .app .stored-system-info__main .about__main-content .contact__content,
+              body .app .system-info-create__main .about__main-content .education__content,
+              body .app .system-info-create__main .about__main-content .experience__content,
+              body .app .system-info-create__main .about__main-content .contact__content,
+              body .app .system-info-edit__main .about__main-content .education__content,
+              body .app .system-info-edit__main .about__main-content .experience__content,
+              body .app .system-info-edit__main .about__main-content .contact__content,
+              body .app .stored-expertises__main .about__main-content .education__content,
+              body .app .stored-expertises__main .about__main-content .experience__content,
+              body .app .stored-expertises__main .about__main-content .contact__content,
+              body .app .expertises-create__main .about__main-content .education__content,
+              body .app .expertises-create__main .about__main-content .experience__content,
+              body .app .expertises-create__main .about__main-content .contact__content,
+              body .app .expertises-edit__main .about__main-content .education__content,
+              body .app .expertises-edit__main .about__main-content .experience__content,
+              body .app .expertises-edit__main .about__main-content .contact__content,
+              body .app .stored-expertises-categories__main .about__main-content .education__content,
+              body .app .stored-expertises-categories__main .about__main-content .experience__content,
+              body .app .stored-expertises-categories__main .about__main-content .contact__content,
+              body .app .expertises-category-create__main .about__main-content .education__content,
+              body .app .expertises-category-create__main .about__main-content .experience__content,
+              body .app .expertises-category-create__main .about__main-content .contact__content,
+              body .app .expertises-category-edit__main .about__main-content .education__content,
+              body .app .expertises-category-edit__main .about__main-content .experience__content,
+              body .app .expertises-category-edit__main .about__main-content .contact__content,
+              body .app .stored-experiences__main .about__main-content .education__content,
+              body .app .stored-experiences__main .about__main-content .experience__content,
+              body .app .stored-experiences__main .about__main-content .contact__content,
+              body .app .experience-create__main .about__main-content .education__content,
+              body .app .experience-create__main .about__main-content .experience__content,
+              body .app .experience-create__main .about__main-content .contact__content,
+              body .app .experience-edit__main .about__main-content .education__content,
+              body .app .experience-edit__main .about__main-content .experience__content,
+              body .app .experience-edit__main .about__main-content .contact__content,
+              body .app .stored-educations__main .about__main-content .education__content,
+              body .app .stored-educations__main .about__main-content .experience__content,
+              body .app .stored-educations__main .about__main-content .contact__content,
+              body .app .education-create__main .about__main-content .education__content,
+              body .app .education-create__main .about__main-content .experience__content,
+              body .app .education-create__main .about__main-content .contact__content,
+              body .app .education-edit__main .about__main-content .education__content,
+              body .app .education-edit__main .about__main-content .experience__content,
+              body .app .education-edit__main .about__main-content .contact__content,
+              body .app .stored-projects__main .about__main-content .education__content,
+              body .app .stored-projects__main .about__main-content .experience__content,
+              body .app .stored-projects__main .about__main-content .contact__content,
+              body .app .project-create__main .about__main-content .education__content,
+              body .app .project-create__main .about__main-content .experience__content,
+              body .app .project-create__main .about__main-content .contact__content,
+              body .app .project-edit__main .about__main-content .education__content,
+              body .app .project-edit__main .about__main-content .experience__content,
+              body .app .project-edit__main .about__main-content .contact__content,
+              body .app .stored-contacts__main .about__main-content .education__content,
+              body .app .stored-contacts__main .about__main-content .experience__content,
+              body .app .stored-contacts__main .about__main-content .contact__content,
+              body .app .contact-create__main .about__main-content .education__content,
+              body .app .contact-create__main .about__main-content .experience__content,
+              body .app .contact-create__main .about__main-content .contact__content,
+              body .app .contact-edit__main .about__main-content .education__content,
+              body .app .contact-edit__main .about__main-content .experience__content,
+              body .app .contact-edit__main .about__main-content .contact__content,
+              body .app .stored-awards__main .about__main-content .education__content,
+              body .app .stored-awards__main .about__main-content .experience__content,
+              body .app .stored-awards__main .about__main-content .contact__content,
+              body .app .award-create__main .about__main-content .education__content,
+              body .app .award-create__main .about__main-content .experience__content,
+              body .app .award-create__main .about__main-content .contact__content,
+              body .app .award-edit__main .about__main-content .education__content,
+              body .app .award-edit__main .about__main-content .experience__content,
+              body .app .award-edit__main .about__main-content .contact__content,
+              body .app .portfolio__main .about__main-content .education__content,
+              body .app .portfolio__main .about__main-content .experience__content,
+              body .app .portfolio__main .about__main-content .contact__content,
+              body .app .about__main .about__main-content .education__content,
+              body .app .about__main .about__main-content .experience__content,
+              body .app .about__main .about__main-content .contact__content {
+                font-size: 0.9rem; } }
             body .app .stored-system-info__main .about__main-content .education__content a,
             body .app .stored-system-info__main .about__main-content .experience__content a,
             body .app .stored-system-info__main .about__main-content .contact__content a,
@@ -3018,12 +3187,19 @@ body {
   body .app .stored-awards__link.delete-all-show a,
   body .app .stored-contacts__link.delete-all-show a {
     opacity: 0; }
+  @media (max-width: 768px) {
+    body .app .bg-light .is-devider-300 {
+      height: 150px; } }
   body .app .bg-light .about__expertise {
     position: relative;
     max-width: 100rem;
     padding-right: 3.75rem;
     padding-left: 3.75rem;
     color: black; }
+    @media (max-width: 768px) {
+      body .app .bg-light .about__expertise {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem; } }
     body .app .bg-light .about__expertise #expertise {
       position: absolute;
       top: -19%;
@@ -3034,30 +3210,56 @@ body {
       text-transform: uppercase;
       color: transparent;
       -webkit-text-stroke: 1px #000; }
+      @media (max-width: 768px) {
+        body .app .bg-light .about__expertise #expertise {
+          top: -2%;
+          font-size: 3rem; } }
+    @media (max-width: 768px) {
+      body .app .bg-light .about__expertise-categories {
+        margin-bottom: 40px; } }
     body .app .bg-light .about__expertise-categories:first-child {
       padding-right: 4rem !important; }
+      @media (max-width: 768px) {
+        body .app .bg-light .about__expertise-categories:first-child {
+          padding-right: unset !important; } }
     body .app .bg-light .about__expertise-categories:nth-child(2) {
       padding: 0 2rem !important; }
+      @media (max-width: 768px) {
+        body .app .bg-light .about__expertise-categories:nth-child(2) {
+          padding: unset !important; } }
     body .app .bg-light .about__expertise-categories:last-child {
       padding-left: 4rem !important; }
+      @media (max-width: 768px) {
+        body .app .bg-light .about__expertise-categories:last-child {
+          padding-left: unset !important; } }
     body .app .bg-light .about__expertise-title {
       font-weight: 800;
       font-size: 3rem;
       line-height: 1;
       text-transform: uppercase;
       letter-spacing: -4px; }
+      @media (max-width: 768px) {
+        body .app .bg-light .about__expertise-title {
+          font-size: 1.8rem;
+          letter-spacing: -2px; } }
     body .app .bg-light .about__expertise-description {
       font-family: "Source Serif Pro", serif;
       font-size: 1.3125rem;
       line-height: 1.8;
       font-weight: 500;
       text-align: justify; }
+      @media (max-width: 768px) {
+        body .app .bg-light .about__expertise-description {
+          font-size: 1rem; } }
     body .app .bg-light .about__expertise-skill {
       font-family: "Source Serif Pro", serif;
       font-size: 1.3rem;
       font-weight: 800;
       text-transform: uppercase;
       line-height: 2.5; }
+      @media (max-width: 768px) {
+        body .app .bg-light .about__expertise-skill {
+          font-size: 1rem; } }
       body .app .bg-light .about__expertise-skill--item {
         letter-spacing: 1px; }
   body .app .bg-dark {
@@ -3066,6 +3268,10 @@ body {
       max-width: 100rem;
       padding-right: 3.75rem;
       padding-left: 3.75rem; }
+      @media (max-width: 768px) {
+        body .app .bg-dark .about__awards {
+          padding-right: 1.25rem;
+          padding-left: 1.25rem; } }
       body .app .bg-dark .about__awards-title {
         margin-left: -30px;
         font-weight: 800;
@@ -3074,11 +3280,20 @@ body {
         text-transform: uppercase;
         color: transparent;
         -webkit-text-stroke: 1px #fff; }
+        @media (max-width: 768px) {
+          body .app .bg-dark .about__awards-title {
+            font-size: 3rem;
+            margin-left: -12px; } }
       body .app .bg-dark .about__awards-table {
         color: white;
         font-family: "Source Serif Pro", serif;
         font-size: 1.3125rem;
         font-weight: 500; }
+        @media (max-width: 768px) {
+          body .app .bg-dark .about__awards-table {
+            width: 100%;
+            min-width: 50rem;
+            font-size: 1rem; } }
         body .app .bg-dark .about__awards-table tbody tr {
           border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
           body .app .bg-dark .about__awards-table tbody tr td {
@@ -3222,7 +3437,8 @@ body {
       letter-spacing: -4px; }
       @media (max-width: 768px) {
         body .app .footer__contact-socials {
-          font-size: 1.8rem; } }
+          font-size: 1.8rem;
+          letter-spacing: -2px; } }
       body .app .footer__contact-socials a {
         color: white;
         margin-right: 12px;
@@ -3259,7 +3475,8 @@ body {
       line-height: 0.9; }
       @media (max-width: 768px) {
         body .app .footer__contact-more {
-          font-size: 1.8rem; } }
+          font-size: 1.8rem;
+          letter-spacing: -2px; } }
       body .app .footer__contact-more a {
         color: white;
         position: relative; }

@@ -10,7 +10,7 @@ block content
         main.about__main
             .about__main-content
                 .row 
-                    .col-md-7.pe-5
+                    .col-md-7.col-12.pe-5
                         each i in info
                             if i.field == 'description-me'
                                 - var valueInfoMe = i.value
@@ -19,7 +19,7 @@ block content
                             if i.field == 'cv'
                                 - var valueCv = i.value
                                 a(href="", target='_blank').download-cv download resume
-                    .col-md-5
+                    .col-md-5.col-12
                         .education
                             .education__title education
                             .education__content
@@ -59,13 +59,12 @@ block content
                                         a(href=`mailto:${contact.value}`, class=contact.field)=contact.field
                 .is-devider-200
         .bg-light
-            .is-devider-100
-            .is-devider-200
+            .is-devider-300
             .about__expertise
                 span#expertise expertise
                 .row.m-0
                     each category in expertiseCategories
-                        .col-md-4.about__expertise-categories.p-0
+                        .col-md-4.col-12.about__expertise-categories.p-0
                             h1.about__expertise-title=category.name
                             .is-devider-20
                             p.about__expertise-description=category.description
@@ -80,14 +79,15 @@ block content
             .about__awards
                 .about__awards-title awards
                 .is-devider-40
-                table.table.about__awards-table
-                    tbody
-                        each award in awards
-                            tr
-                                td 
-                                    span=award.name
-                                td=award.subject
-                                td=award.prize
-                                td=award.year
-                        else
-                            p.text-center.develop-note Updating, please try again. Thanks...
+                .table-responsive
+                    table.table.about__awards-table
+                        tbody
+                            each award in awards
+                                tr
+                                    td 
+                                        span=award.name
+                                    td=award.subject
+                                    td=award.prize
+                                    td=award.year
+                            else
+                                p.text-center.develop-note Updating, please try again. Thanks...
