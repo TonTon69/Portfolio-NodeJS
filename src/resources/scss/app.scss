@@ -1296,6 +1296,11 @@ body.show {
         border: none;
         border-radius: 8px;
 
+        @include mobile {
+            width: 100%;
+            height: 100%;
+        }
+
         &-img {
             width: 42px;
             height: 42px;
@@ -1303,6 +1308,10 @@ body.show {
 
         &-body {
             padding: 2rem 3rem;
+
+            @include mobile {
+                padding: 3rem 2rem 2rem;
+            }
 
             form {
                 .fullname {
@@ -1329,6 +1338,10 @@ body.show {
                         transition: 0.1s ease-out;
                         transform-origin: left top;
                         pointer-events: none;
+
+                        @include mobile {
+                            font-size: 1.1rem;
+                        }
                     }
 
                     input {
@@ -1359,6 +1372,10 @@ body.show {
                             top: 0;
                             transform: translateY(-50%) scale(0.9);
                         }
+
+                        @include mobile {
+                            font-size: 1.1rem;
+                        }
                     }
 
                     .message {
@@ -1382,8 +1399,16 @@ body.show {
                         right: 14px;
                         cursor: pointer;
 
+                        @include mobile {
+                            top: 38%;
+                        }
+
                         i {
                             color: #6a6262;
+
+                            @include mobile {
+                                font-size: 1rem;
+                            }
                         }
                     }
                 }
@@ -1392,6 +1417,10 @@ body.show {
                     @include flexCenter;
                     justify-content: space-between;
                     font-size: 1.2rem;
+
+                    @include mobile {
+                        font-size: 1.1rem;
+                    }
                 }
 
                 .btn-success {
@@ -1403,6 +1432,12 @@ body.show {
                 a {
                     color: rgb(0, 171, 85);
                     font-weight: weight(medium);
+                }
+
+                .fs-5 {
+                    @include mobile {
+                        font-size: 1.1rem !important;
+                    }
                 }
             }
         }

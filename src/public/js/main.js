@@ -41,6 +41,7 @@ toTop.onclick = function scrollToTop() {
     // }
 };
 
+// When header mobile clicked
 const navMobileIconMenu = $(".nav-mobile-icon");
 const nav = $(".nav");
 const navOverlay = $(".nav-overlay");
