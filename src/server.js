@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const path = require("path");
 const express = require("express");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 
 const methodOverride = require("method-override");
 const moment = require("moment");
@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // HTTP request logger middleware for node.js
-app.use(morgan("combined"));
+// app.use(morgan("combined"));
 
 app.use(cookieParser(process.env.SESSION_SECRET));
 
