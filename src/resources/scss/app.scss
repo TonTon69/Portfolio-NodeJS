@@ -408,6 +408,10 @@ body {
                 min-height: 650px;
                 position: relative;
 
+                @include laptop {
+                    min-height: 550px;
+                }
+
                 @include mobile {
                     min-height: 450px;
                 }
@@ -430,10 +434,21 @@ body {
                         letter-spacing: -6px;
 
                         p {
+                            @include laptop {
+                                line-height: 0.9;
+                                margin-bottom: 0;
+                            }
+
                             @include mobile {
                                 line-height: 0.9;
                                 margin-bottom: 0;
                             }
+                        }
+
+                        @include laptop {
+                            font-size: 4rem;
+                            letter-spacing: -4px;
+                            line-height: 0.9;
                         }
 
                         @include mobile {
@@ -469,6 +484,10 @@ body {
                         color: transparent;
                         -webkit-text-stroke: 1px $white-color;
 
+                        @include laptop {
+                            font-size: 8rem;
+                        }
+
                         @include mobile {
                             font-size: 3rem;
                             bottom: 99%;
@@ -485,15 +504,21 @@ body {
                         overflow: hidden;
                         margin-bottom: 32px;
 
-                        @include mobile {
-                            width: 158px;
-                            height: 158px;
+                        @include laptop {
+                            width: 100%;
+                            height: 272px;
                             margin-bottom: 24px;
                         }
 
                         @include tablet {
                             width: 100%;
                             height: 216px;
+                            margin-bottom: 24px;
+                        }
+
+                        @include mobile {
+                            width: 100%;
+                            height: 158px;
                             margin-bottom: 24px;
                         }
 
@@ -545,6 +570,10 @@ body {
                                 text-transform: uppercase;
                                 letter-spacing: 6px;
 
+                                @include laptop {
+                                    font-size: 1.6rem;
+                                }
+
                                 @include mobile {
                                     font-size: 0.9rem;
                                     font-weight: 600;
@@ -567,6 +596,11 @@ body {
                         text-transform: uppercase;
                         color: transparent;
                         -webkit-text-stroke: 1px $white-color;
+
+                        @include laptop {
+                            font-size: 8rem;
+                            top: -22%;
+                        }
 
                         @include mobile {
                             font-size: 3rem;
@@ -597,6 +631,10 @@ body {
                                 text-transform: uppercase;
                                 letter-spacing: -6px;
                                 line-height: 0.9;
+
+                                @include laptop {
+                                    font-size: 4.5rem;
+                                }
 
                                 @include mobile {
                                     position: absolute;
@@ -692,12 +730,12 @@ body {
                     }
 
                     .education {
-                        @include mobile {
-                            margin-top: 60px;
-                        }
-
                         @include tablet {
                             margin-top: 0;
+                        }
+
+                        @include mobile {
+                            margin-top: 60px;
                         }
                     }
 
@@ -986,59 +1024,64 @@ body {
                     color: transparent;
                     -webkit-text-stroke: 1px #000;
 
-                    @include mobile {
-                        top: -2%;
-                        font-size: 3rem;
+                    @include laptop {
+                        top: -13%;
+                        font-size: 8rem;
                     }
 
                     @include tablet {
                         top: -5%;
                     }
+
+                    @include mobile {
+                        top: -2%;
+                        font-size: 3rem;
+                    }
                 }
 
                 &-categories {
-                    @include mobile {
-                        margin-bottom: 40px;
-                    }
-
                     @include tablet {
                         margin-bottom: 0;
+                    }
+
+                    @include mobile {
+                        margin-bottom: 40px;
                     }
                 }
 
                 &-categories:first-child {
                     padding-right: 4rem !important;
 
-                    @include mobile {
-                        padding-right: unset !important;
-                    }
-
                     @include tablet {
                         padding-right: 2rem !important;
+                    }
+
+                    @include mobile {
+                        padding-right: unset !important;
                     }
                 }
 
                 &-categories:nth-child(2) {
                     padding: 0 2rem !important;
 
-                    @include mobile {
-                        padding: unset !important;
-                    }
-
                     @include tablet {
                         padding: 0 1rem !important;
+                    }
+
+                    @include mobile {
+                        padding: unset !important;
                     }
                 }
 
                 &-categories:last-child {
                     padding-left: 4rem !important;
 
-                    @include mobile {
-                        padding-left: unset !important;
-                    }
-
                     @include tablet {
                         padding-left: 2rem !important;
+                    }
+
+                    @include mobile {
+                        padding-left: unset !important;
                     }
                 }
 
@@ -1048,6 +1091,11 @@ body {
                     line-height: 1;
                     text-transform: uppercase;
                     letter-spacing: -4px;
+
+                    @include laptop {
+                        font-size: 2.2rem;
+                        letter-spacing: -2px;
+                    }
 
                     @include mobile {
                         font-size: 1.8rem;
@@ -1063,6 +1111,10 @@ body {
                     // padding-right: 4rem;
                     text-align: justify;
 
+                    @include laptop {
+                        font-size: 1.2rem;
+                    }
+
                     @include mobile {
                         font-size: 1rem;
                     }
@@ -1074,6 +1126,10 @@ body {
                     font-weight: weight(bold);
                     text-transform: uppercase;
                     line-height: 2.5;
+
+                    @include laptop {
+                        font-size: 1.2rem;
+                    }
 
                     @include mobile {
                         font-size: 1rem;
@@ -1107,6 +1163,10 @@ body {
                     text-transform: uppercase;
                     color: transparent;
                     -webkit-text-stroke: 1px #fff;
+
+                    @include laptop {
+                        font-size: 8rem;
+                    }
 
                     @include mobile {
                         font-size: 3rem;
@@ -1209,6 +1269,11 @@ body {
                     font-weight: weight(bold);
                     letter-spacing: -4px;
 
+                    @include laptop {
+                        font-size: 2.4rem;
+                        letter-spacing: -2px;
+                    }
+
                     @include mobile {
                         font-size: 1.8rem;
                         letter-spacing: -2px;
@@ -1276,6 +1341,11 @@ body {
                     font-weight: weight(bold);
                     letter-spacing: -4px;
                     line-height: 0.9;
+
+                    @include laptop {
+                        font-size: 2.4rem;
+                        letter-spacing: -2px;
+                    }
 
                     @include mobile {
                         font-size: 1.8rem;
