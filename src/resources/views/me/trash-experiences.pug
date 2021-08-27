@@ -42,10 +42,18 @@ block content
                                     th(scope='row')
                                         input(type='checkbox', name='experienceIds[]', value=experience._id)
                                     th(scope='row') #{count}
-                                    td=experience.company
+                                    - var company=experience.company
+                                    if(company !== '')
+                                        td=experience.company
+                                    else
+                                        td Empty
                                     td=experience.position
                                     td=experience.startYear
-                                    td=experience.endYear
+                                    - var endYear=experience.endYear
+                                    if(endYear !== null)
+                                        td=endYear
+                                    else
+                                        td Empty
                                     td=moment(experience.deletedAt).format('DD-MM-YYYY')
                                     td
                                         a(href="#", data-bs-id=experience._id).btn.btn-primary.btn-restore.me-2 Restore
