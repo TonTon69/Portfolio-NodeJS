@@ -17,6 +17,7 @@ html
         link(rel="stylesheet", href="/vendor/eggy-js/css/progressbar.css")
         link(rel="stylesheet", href="/vendor/eggy-js/css/theme.css")
         script(src="/vendor/eggy-js/js/eggy.js")
+        script(type="text/javascript", src="/vendor/ckeditor/ckeditor.js")
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM', crossorigin='anonymous')
     body
         .app
@@ -27,7 +28,6 @@ html
                 span back to top
             .is-devider-200 
         script(type="text/javascript", src="/js/main.js")
-        script(type="text/javascript", src="/vendor/ckeditor/ckeditor.js")
         script.
             CKEDITOR.config.pasteFromWordPromptCleanup = true;
             CKEDITOR.config.pasteFromWordRemoveFontStyles = false;
@@ -38,5 +38,5 @@ html
             CKEDITOR.config.entities = false;
             CKEDITOR.config.entities_latin = false;
             CKEDITOR.config.ForceSimpleAmpersand = false;
-            CKEDITOR.replace('value-editor');
+            
             

@@ -77,11 +77,6 @@ class SiteController {
             )
             .catch(next);
     }
-
-    //[GET]/error
-    error(req, res, next) {
-        res.render("error");
-    }
 }
 
 module.exports = new SiteController();
