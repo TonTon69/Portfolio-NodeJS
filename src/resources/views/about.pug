@@ -17,8 +17,8 @@ block content
                                 div !{valueInfoMe}
                         each i in info
                             if i.field == 'cv'
-                                - var valueCv = i.value
-                                a(href="", target='_blank').download-cv download resume
+                                - var valueCv = i.value.replace(/<[^>]*>?/gm, '')
+                                a(href=valueCv, target='_blank').download-cv download resume
                     .col-md-5.col-12
                         .education
                             .education__title education

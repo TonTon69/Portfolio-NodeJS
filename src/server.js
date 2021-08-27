@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride("_method"));
 
 // Custom middleware
-app.use(LocalMiddleware);
+app.use(LocalMiddleware.systemInfoLocal);
 
 app.locals.moment = moment;
 
