@@ -606,7 +606,8 @@ body {
             body .app .portfolio__header-title h1,
             body .app .about__header-title h1 {
               font-size: 3rem;
-              letter-spacing: -4px; } }
+              letter-spacing: -4px;
+              line-height: 0.9; } }
     body .app .stored-system-info__main,
     body .app .system-info-create__main,
     body .app .system-info-edit__main,
@@ -2937,6 +2938,34 @@ body {
       body .app .about__main .pagination {
         font-family: "Source Serif Pro", serif;
         font-size: 1.2rem; }
+        @media (max-width: 768px) {
+          body .app .stored-system-info__main .pagination,
+          body .app .system-info-create__main .pagination,
+          body .app .system-info-edit__main .pagination,
+          body .app .stored-expertises__main .pagination,
+          body .app .expertises-create__main .pagination,
+          body .app .expertises-edit__main .pagination,
+          body .app .stored-expertises-categories__main .pagination,
+          body .app .expertises-category-create__main .pagination,
+          body .app .expertises-category-edit__main .pagination,
+          body .app .stored-experiences__main .pagination,
+          body .app .experience-create__main .pagination,
+          body .app .experience-edit__main .pagination,
+          body .app .stored-educations__main .pagination,
+          body .app .education-create__main .pagination,
+          body .app .education-edit__main .pagination,
+          body .app .stored-projects__main .pagination,
+          body .app .project-create__main .pagination,
+          body .app .project-edit__main .pagination,
+          body .app .stored-contacts__main .pagination,
+          body .app .contact-create__main .pagination,
+          body .app .contact-edit__main .pagination,
+          body .app .stored-awards__main .pagination,
+          body .app .award-create__main .pagination,
+          body .app .award-edit__main .pagination,
+          body .app .portfolio__main .pagination,
+          body .app .about__main .pagination {
+            font-size: 1.1rem; } }
         body .app .stored-system-info__main .pagination .page-link,
         body .app .system-info-create__main .pagination .page-link,
         body .app .system-info-edit__main .pagination .page-link,
@@ -2966,6 +2995,34 @@ body {
           background: black;
           color: white;
           padding: 0.8rem 1.45rem; }
+          @media (max-width: 768px) {
+            body .app .stored-system-info__main .pagination .page-link,
+            body .app .system-info-create__main .pagination .page-link,
+            body .app .system-info-edit__main .pagination .page-link,
+            body .app .stored-expertises__main .pagination .page-link,
+            body .app .expertises-create__main .pagination .page-link,
+            body .app .expertises-edit__main .pagination .page-link,
+            body .app .stored-expertises-categories__main .pagination .page-link,
+            body .app .expertises-category-create__main .pagination .page-link,
+            body .app .expertises-category-edit__main .pagination .page-link,
+            body .app .stored-experiences__main .pagination .page-link,
+            body .app .experience-create__main .pagination .page-link,
+            body .app .experience-edit__main .pagination .page-link,
+            body .app .stored-educations__main .pagination .page-link,
+            body .app .education-create__main .pagination .page-link,
+            body .app .education-edit__main .pagination .page-link,
+            body .app .stored-projects__main .pagination .page-link,
+            body .app .project-create__main .pagination .page-link,
+            body .app .project-edit__main .pagination .page-link,
+            body .app .stored-contacts__main .pagination .page-link,
+            body .app .contact-create__main .pagination .page-link,
+            body .app .contact-edit__main .pagination .page-link,
+            body .app .stored-awards__main .pagination .page-link,
+            body .app .award-create__main .pagination .page-link,
+            body .app .award-edit__main .pagination .page-link,
+            body .app .portfolio__main .pagination .page-link,
+            body .app .about__main .pagination .page-link {
+              padding: 0.5rem 1.2rem; } }
           body .app .stored-system-info__main .pagination .page-link:focus,
           body .app .system-info-create__main .pagination .page-link:focus,
           body .app .system-info-edit__main .pagination .page-link:focus,
@@ -3114,6 +3171,18 @@ body {
     font-family: "Source Serif Pro", serif;
     font-size: 1.3125rem;
     font-weight: 500; }
+    @media (max-width: 768px) {
+      body .app .stored-system-info__table,
+      body .app .stored-expertises__table,
+      body .app .stored-expertises-categories__table,
+      body .app .stored-experiences__table,
+      body .app .stored-educations__table,
+      body .app .stored-projects__table,
+      body .app .stored-awards__table,
+      body .app .stored-contacts__table {
+        width: 100%;
+        min-width: 50rem;
+        font-size: 1.1rem; } }
     body .app .stored-system-info__table tbody tr,
     body .app .stored-expertises__table tbody tr,
     body .app .stored-expertises-categories__table tbody tr,
@@ -3177,6 +3246,18 @@ body {
   body .app .stored-awards__link,
   body .app .stored-contacts__link {
     position: relative; }
+    @media (max-width: 768px) {
+      body .app .stored-system-info__link .btn-back,
+      body .app .stored-expertises__link .btn-back,
+      body .app .stored-expertises-categories__link .btn-back,
+      body .app .stored-experiences__link .btn-back,
+      body .app .stored-educations__link .btn-back,
+      body .app .stored-projects__link .btn-back,
+      body .app .stored-awards__link .btn-back,
+      body .app .stored-contacts__link .btn-back {
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
+        margin-bottom: 15px; } }
     body .app .stored-system-info__link .delete-select-all,
     body .app .stored-expertises__link .delete-select-all,
     body .app .stored-expertises-categories__link .delete-select-all,
@@ -3201,6 +3282,17 @@ body {
       opacity: 0;
       visibility: hidden;
       transition: all 0.3s ease; }
+      @media (max-width: 768px) {
+        body .app .stored-system-info__link .delete-select-all,
+        body .app .stored-expertises__link .delete-select-all,
+        body .app .stored-expertises-categories__link .delete-select-all,
+        body .app .stored-experiences__link .delete-select-all,
+        body .app .stored-educations__link .delete-select-all,
+        body .app .stored-projects__link .delete-select-all,
+        body .app .stored-awards__link .delete-select-all,
+        body .app .stored-contacts__link .delete-select-all {
+          padding: 1rem;
+          top: unset; } }
       body .app .stored-system-info__link .delete-select-all span,
       body .app .stored-expertises__link .delete-select-all span,
       body .app .stored-expertises-categories__link .delete-select-all span,
@@ -3446,6 +3538,57 @@ body {
       border-radius: 2px;
       padding: 1.375rem 1.75rem;
       font-size: 1.2rem; }
+      @media (max-width: 768px) {
+        body .app .system-info-create__main form textarea,
+        body .app .system-info-create__main form input,
+        body .app .system-info-create__main form select,
+        body .app .system-info-edit__main form textarea,
+        body .app .system-info-edit__main form input,
+        body .app .system-info-edit__main form select,
+        body .app .expertises-create__main form textarea,
+        body .app .expertises-create__main form input,
+        body .app .expertises-create__main form select,
+        body .app .expertises-edit__main form textarea,
+        body .app .expertises-edit__main form input,
+        body .app .expertises-edit__main form select,
+        body .app .expertises-category-create__main form textarea,
+        body .app .expertises-category-create__main form input,
+        body .app .expertises-category-create__main form select,
+        body .app .expertises-category-edit__main form textarea,
+        body .app .expertises-category-edit__main form input,
+        body .app .expertises-category-edit__main form select,
+        body .app .experience-create__main form textarea,
+        body .app .experience-create__main form input,
+        body .app .experience-create__main form select,
+        body .app .experience-edit__main form textarea,
+        body .app .experience-edit__main form input,
+        body .app .experience-edit__main form select,
+        body .app .education-create__main form textarea,
+        body .app .education-create__main form input,
+        body .app .education-create__main form select,
+        body .app .education-edit__main form textarea,
+        body .app .education-edit__main form input,
+        body .app .education-edit__main form select,
+        body .app .award-create__main form textarea,
+        body .app .award-create__main form input,
+        body .app .award-create__main form select,
+        body .app .award-edit__main form textarea,
+        body .app .award-edit__main form input,
+        body .app .award-edit__main form select,
+        body .app .contact-create__main form textarea,
+        body .app .contact-create__main form input,
+        body .app .contact-create__main form select,
+        body .app .contact-edit__main form textarea,
+        body .app .contact-edit__main form input,
+        body .app .contact-edit__main form select,
+        body .app .project-create__main form textarea,
+        body .app .project-create__main form input,
+        body .app .project-create__main form select,
+        body .app .project-edit__main form textarea,
+        body .app .project-edit__main form input,
+        body .app .project-edit__main form select {
+          padding: 1rem;
+          font-size: 1.1rem; } }
       body .app .system-info-create__main form textarea:focus,
       body .app .system-info-create__main form input:focus,
       body .app .system-info-create__main form select:focus,

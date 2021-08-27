@@ -9,10 +9,10 @@ block content
             form(method="POST", action="/experiences/handle-form-actions")
                 .stored-experiences__link.text-end.mb-4
                     div
-                        a(href="/experiences/create").btn.btn-primary
+                        a(href="/experiences/create").btn.btn-primary.btn-back
                             i.fas.fa-plus
                             span.ms-2 Create A New Experience
-                        a(href="/me/trash/experiences").btn.btn-primary.ms-2.position-relative
+                        a(href="/me/trash/experiences").btn.btn-primary.btn-back.ms-2.position-relative
                             i.far.fa-trash-alt
                             span.ms-2 Recycle Bin
                             span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger #{deletedCount}
@@ -22,62 +22,65 @@ block content
                             option(value='delete')
                         button
                             i.far.fa-trash-alt
-                table.table.stored-experiences__table
-                    thead
-                        tr.align-middle
-                            th(scope='col')
-                                input#checkbox-all(type='checkbox')
-                            th(scope='col') #
-                            th(scope='col') Company
-                            th(scope='col') Position
-                            th(scope='col') Start Year
-                            th(scope='col') End Year
-                            th(scope='col') Created At
-                            th(scope='col')
-                    tbody
-                        - var count = 0;
-                        each experience in experiences
-                            - count++;
-                            tr
-                                th(scope='row')
-                                    input(type='checkbox', name='experienceIds[]', value=experience._id)
-                                th(scope='row') #{count}
-                                - var company=experience.company
-                                if(company !== '')
-                                    td=experience.company
-                                else
-                                    td Empty
-                                td=experience.position
-                                td=experience.startYear
-                                - var endYear=experience.endYear
-                                if(endYear !== null)
-                                    td=endYear
-                                else
-                                    td Empty
-                                td=moment(experience.createdAt).format('DD-MM-YYYY')
-                                td
-                                    a(href="/experiences/" + experience._id + "/edit").btn.btn-primary.me-2 Edit
-                                    a(href="#", data-bs-toggle="modal", data-bs-target="#delete-experience-modal", data-bs-id=experience._id).btn.btn-primary.btn-delete Trash
-                                
-                                form(name="delete-experience-form", method="POST")
+                .table-responsive
+                    table.table.stored-experiences__table
+                        thead
+                            tr.align-middle
+                                th(scope='col')
+                                    input#checkbox-all(type='checkbox')
+                                th(scope='col') #
+                                th(scope='col') Company
+                                th(scope='col') Position
+                                th(scope='col') Start Year
+                                th(scope='col') End Year
+                                th(scope='col') Created At
+                                th(scope='col')
+                        tbody
+                            - var count = 0;
+                            each experience in experiences
+                                - count++;
+                                tr
+                                    th(scope='row')
+                                        input(type='checkbox', name='experienceIds[]', value=experience._id)
+                                    th(scope='row') #{count}
+                                    - var company=experience.company
+                                    if(company !== '')
+                                        td=experience.company
+                                    else
+                                        td Empty
+                                    td=experience.position
+                                    td=experience.startYear
+                                    - var endYear=experience.endYear
+                                    if(endYear !== null)
+                                        td=endYear
+                                    else
+                                        td Empty
+                                    td=moment(experience.createdAt).format('DD-MM-YYYY')
+                                    td
+                                        a(href="/experiences/" + experience._id + "/edit").btn.btn-primary.me-2 Edit
+                                        a(href="#", data-bs-toggle="modal", data-bs-target="#delete-experience-modal", data-bs-id=experience._id).btn.btn-primary.btn-delete Trash
+                                    
+                            else
+                                tr
+                                    td.text-center(colspan='8') You haven't posted any experiences yet?
+                                        a(href="/experiences/create").ms-2.text-warning Create a new experience
+            
+            form(name="delete-experience-form", method="POST")
 
-                                // Confirm delete experience
-                                #delete-experience-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='delete-experience-label', aria-hidden='true')
-                                    .modal-dialog.modal-dialog-centered(style="max-width: 600px;")
-                                        .modal-content.bg-dark(style='box-shadow: 0 .5rem 1rem rgba(250,250,250,0.15); font-family: "Source Serif Pro", serif;')
-                                            .modal-header
-                                                h5#delete-experience-label.modal-title.text-uppercase move the experience to the trash
-                                            .modal-body
-                                                .is-devider-20                                  
-                                                h4 Are you sure you want to move this experience to the trash???
-                                                .is-devider-20 
-                                            .modal-footer
-                                                button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
-                                                button#btn-delete-experience.btn.btn-danger(type='button') Move to trash
-                        else
-                            tr
-                                td.text-center(colspan='8') You haven't posted any experiences yet?
-                                    a(href="/experiences/create").ms-2.text-warning Create a new experience
+            // Confirm delete experience
+            #delete-experience-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='delete-experience-label', aria-hidden='true')
+                .modal-dialog.modal-dialog-centered(style="max-width: 600px;")
+                    .modal-content.bg-dark(style='box-shadow: 0 .5rem 1rem rgba(250,250,250,0.15); font-family: "Source Serif Pro", serif;')
+                        .modal-header
+                            h5#delete-experience-label.modal-title.text-uppercase move the experience to the trash
+                        .modal-body
+                            .is-devider-20                                  
+                            h4 Are you sure you want to move this experience to the trash???
+                            .is-devider-20 
+                        .modal-footer
+                            button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+                            button#btn-delete-experience.btn.btn-danger(type='button') Move to trash
+
     if success.length > 0
         - var msg = success
 

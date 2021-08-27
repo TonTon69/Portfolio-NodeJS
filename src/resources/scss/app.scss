@@ -439,6 +439,7 @@ body {
                         @include mobile {
                             font-size: 3rem;
                             letter-spacing: -4px;
+                            line-height: 0.9;
                         }
                     }
                 }
@@ -784,10 +785,18 @@ body {
                     font-family: "Source Serif Pro", serif;
                     font-size: 1.2rem;
 
+                    @include mobile {
+                        font-size: 1.1rem;
+                    }
+
                     .page-link {
                         background: $black-background-color;
                         color: $white-color;
                         padding: 0.8rem 1.45rem;
+
+                        @include mobile {
+                            padding: 0.5rem 1.2rem;
+                        }
 
                         &:focus {
                             box-shadow: 0 0 0 0.25rem #ffffff;
@@ -832,6 +841,12 @@ body {
                 font-size: 1.3125rem;
                 font-weight: weight(medium);
 
+                @include mobile {
+                    width: 100%;
+                    min-width: 50rem;
+                    font-size: 1.1rem;
+                }
+
                 tbody {
                     tr {
                         vertical-align: middle;
@@ -869,6 +884,14 @@ body {
             &__link {
                 position: relative;
 
+                .btn-back {
+                    @include mobile {
+                        font-size: 1.1rem;
+                        padding: 0.5rem 1rem;
+                        margin-bottom: 15px;
+                    }
+                }
+
                 .delete-select-all {
                     @include flexCenter;
                     justify-content: space-between;
@@ -885,6 +908,11 @@ body {
                     opacity: 0;
                     visibility: hidden;
                     transition: all 0.3s ease;
+
+                    @include mobile {
+                        padding: 1rem;
+                        top: unset;
+                    }
 
                     span {
                         font-weight: weight(medium);
@@ -1115,6 +1143,11 @@ body {
                         border-radius: 2px;
                         padding: 1.375rem 1.75rem;
                         font-size: 1.2rem;
+
+                        @include mobile {
+                            padding: 1rem;
+                            font-size: 1.1rem;
+                        }
 
                         &:focus {
                             border-color: #000;

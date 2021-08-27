@@ -9,10 +9,10 @@ block content
             form(method="POST", action="/system/info/handle-form-actions")
                 .stored-system-info__link.text-end.mb-4
                     div
-                        a(href="/system/info/create").btn.btn-primary
+                        a(href="/system/info/create").btn.btn-primary.btn-back
                             i.fas.fa-plus
                             span.ms-2 Create A New System Info
-                        a(href="/me/trash/system/info").btn.btn-primary.ms-2.position-relative
+                        a(href="/me/trash/system/info").btn.btn-primary.btn-back.ms-2.position-relative
                             i.far.fa-trash-alt
                             span.ms-2 Recycle Bin
                             span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger #{deletedCount}
@@ -22,54 +22,57 @@ block content
                             option(value='delete')
                         button
                             i.far.fa-trash-alt
-                table.table.stored-system-info__table
-                    thead
-                        tr.align-middle
-                            th(scope='col')
-                                input#checkbox-all(type='checkbox')
-                            th(scope='col') #
-                            th(scope='col') Field
-                            th(scope='col') Value
-                            th(scope='col') Created At
-                            th(scope='col')
-                    tbody
-                        - var count = 0;
-                        each info in systemInfo
-                            - count++;
-                            tr
-                                th(scope='row')
-                                    input(type='checkbox', name='systemInfoIds[]', value=info._id)
-                                th(scope='row') #{count}
-                                td=info.field
-                                td(width=750) !{info.value}
-                                style(type="text/css").
-                                    p {
-                                        margin: 0;
-                                    }
-                                td=moment(info.createdAt).format('DD-MM-YYYY')
-                                td
-                                    a(href="/system/info/" + info._id + "/edit").btn.btn-primary.me-2 Edit
-                                    a(href="#", data-bs-toggle="modal", data-bs-target="#delete-system-info-modal", data-bs-id=info._id).btn.btn-primary.btn-delete Trash
-                                
-                                form(name="delete-system-info-form", method="POST")
+                .table-responsive
+                    table.table.stored-system-info__table
+                        thead
+                            tr.align-middle
+                                th(scope='col')
+                                    input#checkbox-all(type='checkbox')
+                                th(scope='col') #
+                                th(scope='col') Field
+                                th(scope='col') Value
+                                th(scope='col') Created At
+                                th(scope='col')
+                        tbody
+                            - var count = 0;
+                            each info in systemInfo
+                                - count++;
+                                tr
+                                    th(scope='row')
+                                        input(type='checkbox', name='systemInfoIds[]', value=info._id)
+                                    th(scope='row') #{count}
+                                    td=info.field
+                                    td(width=750) !{info.value}
+                                    style(type="text/css").
+                                        p {
+                                            margin: 0;
+                                        }
+                                    td=moment(info.createdAt).format('DD-MM-YYYY')
+                                    td
+                                        a(href="/system/info/" + info._id + "/edit").btn.btn-primary.me-2 Edit
+                                        a(href="#", data-bs-toggle="modal", data-bs-target="#delete-system-info-modal", data-bs-id=info._id).btn.btn-primary.btn-delete Trash
+                                    
+                            else
+                                tr
+                                    td.text-center(colspan='6') You haven't posted any system info yet?
+                                        a(href="/system/info/create").ms-2.text-warning Create a new system info
+    
+            form(name="delete-system-info-form", method="POST")
 
-                                // Confirm delete system-info
-                                #delete-system-info-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='delete-system-info-label', aria-hidden='true')
-                                    .modal-dialog.modal-dialog-centered(style="max-width: 600px;")
-                                        .modal-content.bg-dark(style='box-shadow: 0 .5rem 1rem rgba(250,250,250,0.15); font-family: "Source Serif Pro", serif;')
-                                            .modal-header
-                                                h5#delete-system-info-label.modal-title.text-uppercase move the system info to the trash
-                                            .modal-body
-                                                .is-devider-20                                  
-                                                h4 Are you sure you want to move this system info to the trash???
-                                                .is-devider-20 
-                                            .modal-footer
-                                                button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
-                                                button#btn-delete-system-info.btn.btn-danger(type='button') Move to trash
-                        else
-                            tr
-                                td.text-center(colspan='6') You haven't posted any system info yet?
-                                    a(href="/system/info/create").ms-2.text-warning Create a new system info
+            // Confirm delete system-info
+            #delete-system-info-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='delete-system-info-label', aria-hidden='true')
+                .modal-dialog.modal-dialog-centered(style="max-width: 600px;")
+                    .modal-content.bg-dark(style='box-shadow: 0 .5rem 1rem rgba(250,250,250,0.15); font-family: "Source Serif Pro", serif;')
+                        .modal-header
+                            h5#delete-system-info-label.modal-title.text-uppercase move the system info to the trash
+                        .modal-body
+                            .is-devider-20                                  
+                            h4 Are you sure you want to move this system info to the trash???
+                            .is-devider-20 
+                        .modal-footer
+                            button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+                            button#btn-delete-system-info.btn.btn-danger(type='button') Move to trash
+    
     if success.length > 0
         - var msg = success
 

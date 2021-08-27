@@ -8,7 +8,7 @@ block content
         main.stored-expertises-categories__main
             form(method="POST", action="/expertises/category/handle-form-actions")
                 .stored-expertises-categories__link.text-end.mb-4
-                    a(href="/me/stored/expertises/categories").btn.btn-primary.position-relative
+                    a(href="/me/stored/expertises/categories").btn.btn-primary.btn-back.position-relative
                         i.fab.fa-app-store
                         span.ms-2 Stored Expertises Categories
                         span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger #{storedExpertisesCategoriesCount}
@@ -21,53 +21,56 @@ block content
                                 i.fas.fa-trash-restore
                             button#btn-force-delete-expertises-category.ms-4
                                 i.far.fa-trash-alt
-                table.table.stored-expertises-categories__table
-                    thead
-                        tr.align-middle
-                            th(scope='col')
-                                input#checkbox-all(type='checkbox')
-                            th(scope='col') #
-                            th(scope='col') Name
-                            th(scope='col') Description
-                            th(scope='col') Location
-                            th(scope='col') Deleted At
-                            th(scope='col')
-                    tbody
-                        - var count = 0;
-                        each category in expertiseCategories
-                            - count++;
-                            tr
-                                th(scope='row')
-                                    input(type='checkbox', name='expertisesCategoryIds[]', value=category._id)
-                                th(scope='row') #{count}
-                                td=category.name
-                                td(width=700)=category.description
-                                td=category.location
-                                td=moment(category.deletedAt).format('DD-MM-YYYY')
-                                td
-                                    a(href="#", data-bs-id=category._id).btn.btn-primary.btn-restore.me-2 Restore
-                                    a(href="#", data-bs-toggle="modal", data-bs-target="#delete-expertises-category-modal", data-bs-id=category._id).btn.btn-primary.btn-delete Delete
-                                
-                                form(name="delete-expertises-category-form", method="POST")
-                                form(name="restore-expertises-category-form", method="POST")
+                .table-responsive
+                    table.table.stored-expertises-categories__table
+                        thead
+                            tr.align-middle
+                                th(scope='col')
+                                    input#checkbox-all(type='checkbox')
+                                th(scope='col') #
+                                th(scope='col') Name
+                                th(scope='col') Description
+                                th(scope='col') Location
+                                th(scope='col') Deleted At
+                                th(scope='col')
+                        tbody
+                            - var count = 0;
+                            each category in expertiseCategories
+                                - count++;
+                                tr
+                                    th(scope='row')
+                                        input(type='checkbox', name='expertisesCategoryIds[]', value=category._id)
+                                    th(scope='row') #{count}
+                                    td=category.name
+                                    td(width=700)=category.description
+                                    td=category.location
+                                    td=moment(category.deletedAt).format('DD-MM-YYYY')
+                                    td
+                                        a(href="#", data-bs-id=category._id).btn.btn-primary.btn-restore.me-2 Restore
+                                        a(href="#", data-bs-toggle="modal", data-bs-target="#delete-expertises-category-modal", data-bs-id=category._id).btn.btn-primary.btn-delete Delete
+                                    
+                            else
+                                tr
+                                    td.text-center(colspan='7') Empty trash can?
+                                        a(href="/me/stored/expertises/categories").ms-2.text-warning Stored expertises categories
+    
+            form(name="delete-expertises-category-form", method="POST")
+            form(name="restore-expertises-category-form", method="POST")
 
-                                // Confirm delete project
-                                #delete-expertises-category-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='delete-expertises-category-label', aria-hidden='true')
-                                    .modal-dialog.modal-dialog-centered(style="max-width: 600px;")
-                                        .modal-content.bg-dark(style='box-shadow: 0 .5rem 1rem rgba(250,250,250,0.15); font-family: "Source Serif Pro", serif;')
-                                            .modal-header
-                                                h5#delete-expertises-category-label.modal-title.text-uppercase Delete expertises category
-                                            .modal-body
-                                                .is-devider-20                                  
-                                                h4 This action cannot be restore. Are you sure you want to delete this expertises category?
-                                                .is-devider-20 
-                                            .modal-footer
-                                                button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
-                                                button#btn-delete-expertises-category.btn.btn-danger(type='button') Delete
-                        else
-                            tr
-                                td.text-center(colspan='7') Empty trash can?
-                                    a(href="/me/stored/expertises/categories").ms-2.text-warning Stored expertises categories
+            // Confirm delete project
+            #delete-expertises-category-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='delete-expertises-category-label', aria-hidden='true')
+                .modal-dialog.modal-dialog-centered(style="max-width: 600px;")
+                    .modal-content.bg-dark(style='box-shadow: 0 .5rem 1rem rgba(250,250,250,0.15); font-family: "Source Serif Pro", serif;')
+                        .modal-header
+                            h5#delete-expertises-category-label.modal-title.text-uppercase Delete expertises category
+                        .modal-body
+                            .is-devider-20                                  
+                            h4 This action cannot be restore. Are you sure you want to delete this expertises category?
+                            .is-devider-20 
+                        .modal-footer
+                            button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+                            button#btn-delete-expertises-category.btn.btn-danger(type='button') Delete
+    
     if success.length > 0
         - var msg = success
 
