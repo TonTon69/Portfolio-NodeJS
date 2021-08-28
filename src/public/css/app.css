@@ -652,8 +652,8 @@ body {
             body .app .award-edit__header-title h1,
             body .app .portfolio__header-title h1,
             body .app .about__header-title h1 {
-              font-size: 4rem;
-              letter-spacing: -2px;
+              font-size: 3.8rem;
+              letter-spacing: 0;
               line-height: 0.9; } }
           @media (max-width: 768px) {
             body .app .stored-system-info__header-title h1,
@@ -682,8 +682,8 @@ body {
             body .app .award-edit__header-title h1,
             body .app .portfolio__header-title h1,
             body .app .about__header-title h1 {
-              font-size: 3rem;
-              letter-spacing: -2px;
+              font-size: 2.6rem;
+              letter-spacing: 0;
               line-height: 0.9; } }
     body .app .stored-system-info__main,
     body .app .system-info-create__main,
@@ -1600,8 +1600,8 @@ body {
                 body .app .about__main-brand .card-img-overlay .card-title {
                   position: absolute;
                   top: 30px;
-                  font-size: 2.8rem;
-                  letter-spacing: -2px; } }
+                  font-size: 2.6rem;
+                  letter-spacing: 0; } }
               body .app .stored-system-info__main-brand .card-img-overlay .card-title span,
               body .app .system-info-create__main-brand .card-img-overlay .card-title span,
               body .app .system-info-edit__main-brand .card-img-overlay .card-title span,
@@ -3732,10 +3732,12 @@ body {
       letter-spacing: -2px; }
       @media (max-width: 1224px) {
         body .app .bg-light .about__expertise-title {
-          font-size: 2.2rem; } }
+          font-size: 2.2rem;
+          letter-spacing: 0; } }
       @media (max-width: 768px) {
         body .app .bg-light .about__expertise-title {
-          font-size: 1.8rem; } }
+          font-size: 1.8rem;
+          letter-spacing: 0; } }
     body .app .bg-light .about__expertise-description {
       font-family: "Source Serif Pro", serif;
       font-size: 1.3125rem;
@@ -3989,8 +3991,7 @@ body {
     body .app .footer__contact-socials {
       text-transform: uppercase;
       font-size: 3rem;
-      font-weight: 800;
-      letter-spacing: -2px; }
+      font-weight: 800; }
       @media (max-width: 1224px) {
         body .app .footer__contact-socials {
           font-size: 2.4rem; } }
@@ -4029,7 +4030,6 @@ body {
       text-transform: uppercase;
       font-size: 3rem;
       font-weight: 800;
-      letter-spacing: -2px;
       line-height: 0.9; }
       @media (max-width: 1224px) {
         body .app .footer__contact-more {
