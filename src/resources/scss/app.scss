@@ -217,7 +217,7 @@ body {
                 &-list {
                     @include mobile {
                         display: block !important;
-                        margin: 4rem auto !important;
+                        margin: 5rem auto !important;
                         padding-left: 0;
                     }
                 }
@@ -281,6 +281,7 @@ body {
 
                     @include mobile {
                         color: $black-color !important;
+                        font-size: 1rem;
                     }
                 }
 
@@ -432,7 +433,7 @@ body {
                         font-weight: weight(bold);
                         text-transform: uppercase;
                         line-height: 0.7;
-                        letter-spacing: -6px;
+                        letter-spacing: -4px;
 
                         p {
                             @include laptop {
@@ -448,13 +449,13 @@ body {
 
                         @include laptop {
                             font-size: 4rem;
-                            letter-spacing: -4px;
+                            letter-spacing: -2px;
                             line-height: 0.9;
                         }
 
                         @include mobile {
                             font-size: 3rem;
-                            letter-spacing: -4px;
+                            letter-spacing: -2px;
                             line-height: 0.9;
                         }
                     }
@@ -491,7 +492,7 @@ body {
 
                         @include mobile {
                             font-size: 3rem;
-                            bottom: 99%;
+                            bottom: 98.5%;
                         }
                     }
 
@@ -582,6 +583,7 @@ body {
                                 @include mobile {
                                     font-size: 0.9rem;
                                     font-weight: 600;
+                                    letter-spacing: 2px;
                                 }
                             }
                         }
@@ -609,7 +611,7 @@ body {
 
                         @include mobile {
                             font-size: 3rem;
-                            top: -12%;
+                            top: -11.5%;
                         }
                     }
 
@@ -634,7 +636,7 @@ body {
                                 font-weight: weight(bold);
                                 margin: 0 0.875rem;
                                 text-transform: uppercase;
-                                letter-spacing: -6px;
+                                letter-spacing: -4px;
                                 line-height: 0.9;
 
                                 @include laptop {
@@ -645,7 +647,7 @@ body {
                                     position: absolute;
                                     top: 30px;
                                     font-size: 2.8rem;
-                                    letter-spacing: -4px;
+                                    letter-spacing: -2px;
                                 }
 
                                 span {
@@ -710,7 +712,7 @@ body {
                         margin-bottom: 40px;
 
                         @include mobile {
-                            font-size: 1rem;
+                            font-size: 1.1rem;
                             margin-bottom: 20px;
                         }
                     }
@@ -763,7 +765,7 @@ body {
                             line-height: 1.5;
 
                             @include mobile {
-                                font-size: 0.9rem;
+                                font-size: 1rem;
                             }
 
                             a {
@@ -1272,16 +1274,14 @@ body {
                     text-transform: uppercase;
                     font-size: 3rem;
                     font-weight: weight(bold);
-                    letter-spacing: -4px;
+                    letter-spacing: -2px;
 
                     @include laptop {
                         font-size: 2.4rem;
-                        letter-spacing: -2px;
                     }
 
                     @include mobile {
                         font-size: 1.8rem;
-                        letter-spacing: -2px;
                     }
 
                     a {
@@ -1344,17 +1344,15 @@ body {
                     text-transform: uppercase;
                     font-size: 3rem;
                     font-weight: weight(bold);
-                    letter-spacing: -4px;
+                    letter-spacing: -2px;
                     line-height: 0.9;
 
                     @include laptop {
                         font-size: 2.4rem;
-                        letter-spacing: -2px;
                     }
 
                     @include mobile {
                         font-size: 1.8rem;
-                        letter-spacing: -2px;
                     }
 
                     a {

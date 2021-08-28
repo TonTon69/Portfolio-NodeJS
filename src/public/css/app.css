@@ -257,7 +257,7 @@ body {
     @media (max-width: 768px) {
       body .app .header .nav-list {
         display: block !important;
-        margin: 4rem auto !important;
+        margin: 5rem auto !important;
         padding-left: 0; } }
     body .app .header .nav .nav-mobile-icon-close {
       position: absolute;
@@ -302,7 +302,8 @@ body {
         transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
       @media (max-width: 768px) {
         body .app .header .nav-link {
-          color: black !important; } }
+          color: black !important;
+          font-size: 1rem; } }
     body .app .header .nav .dropdown {
       font-family: "Source Serif Pro", serif;
       font-size: 1.2rem;
@@ -565,7 +566,7 @@ body {
           font-weight: 800;
           text-transform: uppercase;
           line-height: 0.7;
-          letter-spacing: -6px; }
+          letter-spacing: -4px; }
           @media (max-width: 1224px) {
             body .app .stored-system-info__header-title h1 p,
             body .app .system-info-create__header-title h1 p,
@@ -652,7 +653,7 @@ body {
             body .app .portfolio__header-title h1,
             body .app .about__header-title h1 {
               font-size: 4rem;
-              letter-spacing: -4px;
+              letter-spacing: -2px;
               line-height: 0.9; } }
           @media (max-width: 768px) {
             body .app .stored-system-info__header-title h1,
@@ -682,7 +683,7 @@ body {
             body .app .portfolio__header-title h1,
             body .app .about__header-title h1 {
               font-size: 3rem;
-              letter-spacing: -4px;
+              letter-spacing: -2px;
               line-height: 0.9; } }
     body .app .stored-system-info__main,
     body .app .system-info-create__main,
@@ -860,7 +861,7 @@ body {
             body .app .portfolio__main-project .projects,
             body .app .about__main-project .projects {
               font-size: 3rem;
-              bottom: 99%; } }
+              bottom: 98.5%; } }
         body .app .stored-system-info__main-project .card,
         body .app .system-info-create__main-project .card,
         body .app .system-info-edit__main-project .card,
@@ -1276,7 +1277,8 @@ body {
                 body .app .portfolio__main-project .card-img-overlay .card-title,
                 body .app .about__main-project .card-img-overlay .card-title {
                   font-size: 0.9rem;
-                  font-weight: 600; } }
+                  font-weight: 600;
+                  letter-spacing: 2px; } }
       body .app .stored-system-info__main-brand,
       body .app .system-info-create__main-brand,
       body .app .system-info-edit__main-brand,
@@ -1396,7 +1398,7 @@ body {
             body .app .portfolio__main-brand .currently,
             body .app .about__main-brand .currently {
               font-size: 3rem;
-              top: -12%; } }
+              top: -11.5%; } }
         body .app .stored-system-info__main-brand .card,
         body .app .system-info-create__main-brand .card,
         body .app .system-info-edit__main-brand .card,
@@ -1539,7 +1541,7 @@ body {
               font-weight: 800;
               margin: 0 0.875rem;
               text-transform: uppercase;
-              letter-spacing: -6px;
+              letter-spacing: -4px;
               line-height: 0.9; }
               @media (max-width: 1224px) {
                 body .app .stored-system-info__main-brand .card-img-overlay .card-title,
@@ -1599,7 +1601,7 @@ body {
                   position: absolute;
                   top: 30px;
                   font-size: 2.8rem;
-                  letter-spacing: -4px; } }
+                  letter-spacing: -2px; } }
               body .app .stored-system-info__main-brand .card-img-overlay .card-title span,
               body .app .system-info-create__main-brand .card-img-overlay .card-title span,
               body .app .system-info-edit__main-brand .card-img-overlay .card-title span,
@@ -1889,7 +1891,7 @@ body {
             body .app .award-edit__main .about__main-content p,
             body .app .portfolio__main .about__main-content p,
             body .app .about__main .about__main-content p {
-              font-size: 1rem;
+              font-size: 1.1rem;
               margin-bottom: 20px; } }
         body .app .stored-system-info__main .about__main-content .download-cv,
         body .app .system-info-create__main .about__main-content .download-cv,
@@ -2332,7 +2334,7 @@ body {
               body .app .about__main .about__main-content .education__content,
               body .app .about__main .about__main-content .experience__content,
               body .app .about__main .about__main-content .contact__content {
-                font-size: 0.9rem; } }
+                font-size: 1rem; } }
             body .app .stored-system-info__main .about__main-content .education__content a,
             body .app .stored-system-info__main .about__main-content .experience__content a,
             body .app .stored-system-info__main .about__main-content .contact__content a,
@@ -3988,15 +3990,13 @@ body {
       text-transform: uppercase;
       font-size: 3rem;
       font-weight: 800;
-      letter-spacing: -4px; }
+      letter-spacing: -2px; }
       @media (max-width: 1224px) {
         body .app .footer__contact-socials {
-          font-size: 2.4rem;
-          letter-spacing: -2px; } }
+          font-size: 2.4rem; } }
       @media (max-width: 768px) {
         body .app .footer__contact-socials {
-          font-size: 1.8rem;
-          letter-spacing: -2px; } }
+          font-size: 1.8rem; } }
       body .app .footer__contact-socials a {
         color: white;
         margin-right: 12px;
@@ -4029,16 +4029,14 @@ body {
       text-transform: uppercase;
       font-size: 3rem;
       font-weight: 800;
-      letter-spacing: -4px;
+      letter-spacing: -2px;
       line-height: 0.9; }
       @media (max-width: 1224px) {
         body .app .footer__contact-more {
-          font-size: 2.4rem;
-          letter-spacing: -2px; } }
+          font-size: 2.4rem; } }
       @media (max-width: 768px) {
         body .app .footer__contact-more {
-          font-size: 1.8rem;
-          letter-spacing: -2px; } }
+          font-size: 1.8rem; } }
       body .app .footer__contact-more a {
         color: white;
         position: relative; }
