@@ -1012,7 +1012,7 @@ body {
           body .app .award-edit__main-project .card:hover .card-img-overlay,
           body .app .portfolio__main-project .card:hover .card-img-overlay,
           body .app .about__main-project .card:hover .card-img-overlay {
-            background: unset; }
+            background: rgba(255, 255, 255, 0.1); }
           body .app .stored-system-info__main-project .card:hover .card-img,
           body .app .system-info-create__main-project .card:hover .card-img,
           body .app .system-info-edit__main-project .card:hover .card-img,

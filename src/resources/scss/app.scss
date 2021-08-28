@@ -526,11 +526,13 @@ body {
 
                         &:hover {
                             .card-img-overlay {
-                                background: unset;
+                                background: rgba(255, 255, 255, 0.1);
                             }
+
                             .card-img {
                                 transform: scale(1);
                             }
+
                             .card-title {
                                 background-image: linear-gradient(
                                     to right,
