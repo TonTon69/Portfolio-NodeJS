@@ -12,20 +12,17 @@ class SiteController {
     index(req, res, next) {
         Promise.all([
             Project.find({}).sort({ location: 1 }).limit(6),
-            Contact.find({}),
             User.findOne({ _id: req.signedCookies.userId }),
         ])
-            .then(([projects, contacts, user]) => {
+            .then(([projects, user]) => {
                 if (user) {
                     res.locals.user = user;
                     res.render("index", {
                         projects,
-                        contacts,
                     });
                 } else {
                     res.render("index", {
                         projects,
-                        contacts,
                     });
                 }
             })

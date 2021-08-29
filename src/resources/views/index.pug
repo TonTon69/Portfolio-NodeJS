@@ -14,7 +14,7 @@ block content
                 .row
                     each project in projects  
                         .col-md-4.col-6
-                            a.card.bg-dark.text-white(href=project.url, target="_blank")
+                            a.card.bg-dark.text-white(href=`/projects/${project.slug}`)
                                 img.card-img(src=project.banner, alt=project.name)
                                 .card-img-overlay
                                     h1.card-title=project.name

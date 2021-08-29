@@ -40,6 +40,7 @@ app.use(methodOverride("_method"));
 
 // Custom middleware
 app.use(LocalMiddleware.systemInfoLocal);
+app.use(LocalMiddleware.contactLocal);
 
 app.locals.moment = moment;
 

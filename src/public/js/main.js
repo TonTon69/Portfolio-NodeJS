@@ -31,7 +31,7 @@ window.onscroll = function () {
 // When to top clicked
 const toTop = $(".to-top span");
 toTop.onclick = function scrollToTop() {
-    window.scrollTo(0, { behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 // When header mobile clicked

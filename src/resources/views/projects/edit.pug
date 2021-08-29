@@ -17,9 +17,19 @@ block content
                         input#banner.form-control(type='text', name='banner', placeholder='Enter project banner' value=project.banner required)
                 .is-devider-20 
                 .mb-3.row.align-items-center
-                    label.col-sm-2.col-form-label(for='url') Url
+                    label.col-sm-2.col-form-label(for='description') Description
                     .col-sm-10
-                        input#url.form-control(type='text', name='url', placeholder='Enter project url' value=project.url required)
+                        input#description.form-control(type='text', name='description', placeholder='Enter project description' value=project.description)
+                .is-devider-20 
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='urlWeb') Url Website
+                    .col-sm-10
+                        input#urlWeb.form-control(type='text', name='urlWeb', placeholder='Enter project url website' value=project.urlWeb)
+                .is-devider-20
+                .mb-3.row.align-items-center
+                    label.col-sm-2.col-form-label(for='urlGit') Url Github
+                    .col-sm-10
+                        input#urlGit.form-control(type='text', name='urlGit', placeholder='Enter project url github' value=project.urlGit)
                 .is-devider-20
                 .mb-3.row.align-items-center
                     label.col-sm-2.col-form-label(for='location') Location

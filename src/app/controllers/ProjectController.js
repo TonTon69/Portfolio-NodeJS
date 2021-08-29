@@ -1,6 +1,13 @@
 const Project = require("../models/Project");
 
 class ProjectController {
+    // [GET]/projects/:slug
+    show(req, res, next) {
+        Project.findOne({ slug: req.params.slug })
+            .then((project) => res.render("projects/show", { project }))
+            .catch(next);
+    }
+
     // [GET]/projects/create
     create(req, res) {
         res.render("projects/create");

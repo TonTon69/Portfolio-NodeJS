@@ -1,0 +1,24 @@
+extends ../layouts/common
+block content
+    seaction#project-show.project-show
+        header.project-show__header.justify-content-center
+            .project-show__header-title.text-center
+                h5.mb-4.fw-bold.text-uppercase(style="letter-spacing: 8px") showcase
+                h1= project.name
+        main.project-show__main
+            .project-show__main-banner
+                img(src=project.banner)
+            .project-show__main-viewmore.mt-5
+                .project-show__main-visit
+                    a.visit-link(href=project.urlGit, target="_blank") 
+                        img.me-2(src="/img/left.svg", width=20)
+                        | Visit Github
+                .project-show__main-visit
+                    a.visit-link(href=project.urlWeb, target="_blank") Visit Website
+                        img.ms-2(src="/img/right.svg", width=20)
+            .project-show__main-nextproject
+                .col-md-6
+                    a.card.bg-dark.text-white(href=`/projects/${project.slug}`)
+                        img.card-img(src=project.banner, alt=project.name)
+                        .card-img-overlay
+                            h5.card-title.mb-4.fw-bold.text-uppercase(style="letter-spacing: 8px") next project

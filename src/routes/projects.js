@@ -11,5 +11,6 @@ router.put("/:id", projectController.update);
 router.patch("/:id/restore", projectController.restore);
 router.delete("/:id", projectController.delete);
 router.delete("/:id/force", projectController.forceDelete);
+router.get("/:slug", projectController.show);
 
 module.exports = router;

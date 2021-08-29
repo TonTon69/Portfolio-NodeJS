@@ -29,7 +29,7 @@ block content
                                     input#checkbox-all(type='checkbox')
                                 th(scope='col') #
                                 th(scope='col') Name
-                                th(scope='col') Url
+                                th(scope='col') Url Website
                                 th(scope='col') Location
                                 th(scope='col') Deleted At
                                 th(scope='col')
@@ -44,7 +44,7 @@ block content
                                     td
                                         span.project-name=project.name
                                             img.project-banner(src=project.banner)
-                                    td=project.url
+                                    td=project.urlWeb
                                     td=project.location
                                     td=moment(project.deletedAt).format('DD-MM-YYYY')
                                     td
