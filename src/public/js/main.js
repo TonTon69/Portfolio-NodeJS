@@ -57,7 +57,8 @@ navMobileIconClose.onclick = function () {
 
 // Highlight the active link in a navigation menu
 for (var i = 0; i < document.links.length; i++) {
-    if (document.links[i].href == document.URL) {
-        document.links[i].parentElement.classList.add("active");
+    if (document.links[i].href === document.URL) {
+        var parentLink = document.links[i].parentElement;
+        parentLink.classList.add("active");
     }
 }
