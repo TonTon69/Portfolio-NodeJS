@@ -32,13 +32,6 @@ window.onscroll = function () {
 const toTop = $(".to-top span");
 toTop.onclick = function scrollToTop() {
     window.scrollTo(0, { behavior: "smooth" });
-    // if (
-    //     document.body.scrollTop !== 0 ||
-    //     document.documentElement.scrollTop !== 0
-    // ) {
-    //     window.scrollBy(0, -100);
-    //     requestAnimationFrame(scrollToTop);
-    // }
 };
 
 // When header mobile clicked
@@ -61,3 +54,10 @@ navMobileIconClose.onclick = function () {
     nav.classList.remove("nav-mobile");
     navOverlay.classList.remove("nav-overlay-mobile");
 };
+
+// Highlight the active link in a navigation menu
+for (var i = 0; i < document.links.length; i++) {
+    if (document.links[i].href == document.URL) {
+        document.links[i].parentElement.classList.add("active");
+    }
+}

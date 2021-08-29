@@ -281,6 +281,9 @@ body {
         body .app .header .nav-item {
           margin-left: 0;
           margin-bottom: 20px; } }
+      body .app .header .nav-item.active .nav-link::after {
+        transform: scaleX(1);
+        transform-origin: center left; }
     body .app .header .nav-link {
       color: black;
       display: inline-block;
