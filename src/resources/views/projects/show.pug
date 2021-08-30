@@ -16,9 +16,12 @@ block content
                 .project-show__main-visit
                     a.visit-link(href=project.urlWeb, target="_blank") Visit Website
                         img.ms-2(src="/img/right.svg", width=20)
+            .project-show__main-description.mt-5
+                span.project-show__main-description--title Description
+                div.mt-4 !{project.description}
             .is-devider-100
             .project-show__main-nextproject
-                .col-md-7
+                .col-md-8
                     a.card.bg-dark(href="/projects/" + nextProject.slug)
                         img.card-img(src=nextProject.banner, alt=nextProject.name)
                         .card-img-overlay

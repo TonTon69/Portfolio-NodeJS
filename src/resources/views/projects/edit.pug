@@ -19,7 +19,7 @@ block content
                 .mb-3.row.align-items-center
                     label.col-sm-2.col-form-label(for='description') Description
                     .col-sm-10
-                        input#description.form-control(type='text', name='description', placeholder='Enter project description' value=project.description)
+                        textarea#description.form-control(type='text', name='description', rows='5', placeholder='Enter project description')=project.description
                 .is-devider-20 
                 .mb-3.row.align-items-center
                     label.col-sm-2.col-form-label(for='urlWeb') Url Website
@@ -41,3 +41,5 @@ block content
                     .col-sm-10
                         a.btn.btn-primary.me-4(href='/me/stored/projects') Close
                         button.btn.btn-primary(type='submit') Save
+    script.
+        CKEDITOR.replace('description');

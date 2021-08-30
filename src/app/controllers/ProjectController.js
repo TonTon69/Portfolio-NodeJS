@@ -1,4 +1,5 @@
 const Project = require("../models/Project");
+const User = require("../models/User");
 
 class ProjectController {
     // [GET]/projects/:slug
@@ -8,14 +9,23 @@ class ProjectController {
             Project.findOne({ slug: { $gt: req.params.slug } }).sort({
                 location: 1,
             }),
+            User.findOne({ _id: req.signedCookies.userId }),
         ])
 
-            .then(([project, nextProject]) =>
-                res.render("projects/show", {
-                    project,
-                    nextProject,
-                })
-            )
+            .then(([project, nextProject, user]) => {
+                if (user) {
+                    res.locals.user = user;
+                    res.render("projects/show", {
+                        project,
+                        nextProject,
+                    });
+                } else {
+                    res.render("projects/show", {
+                        project,
+                        nextProject,
+                    });
+                }
+            })
             .catch(next);
     }
 
