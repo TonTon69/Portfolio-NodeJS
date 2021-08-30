@@ -742,12 +742,20 @@ body {
                             transform-origin: center left;
                         }
                     }
+
+                    @include mobile {
+                        font-size: 1.1rem;
+                    }
                 }
 
                 &-description {
                     font-family: "Source Serif Pro", serif;
                     font-size: 1.3125rem;
                     font-weight: weight(medium);
+
+                    @include mobile {
+                        font-size: 1.1rem;
+                    }
 
                     &--title {
                         position: relative;
@@ -798,6 +806,11 @@ body {
                             transition: all 0.5s ease;
                             object-fit: cover;
                             border-radius: 0;
+
+                            @include mobile {
+                                height: 300px;
+                                transform: scale(0.9);
+                            }
                         }
 
                         &-img-overlay {
@@ -820,6 +833,11 @@ body {
                             line-height: 0.9;
                             font-size: 4rem;
                             transition: all 0.5s ease;
+
+                            @include mobile {
+                                font-size: 2.6rem;
+                                letter-spacing: 4px;
+                            }
                         }
                     }
                 }

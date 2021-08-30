@@ -2020,6 +2020,35 @@ body {
       body .app .about__main-visit:hover .visit-link::after {
         transform: scaleX(1);
         transform-origin: center left; }
+      @media (max-width: 768px) {
+        body .app .stored-system-info__main-visit,
+        body .app .system-info-create__main-visit,
+        body .app .system-info-edit__main-visit,
+        body .app .stored-expertises__main-visit,
+        body .app .expertises-create__main-visit,
+        body .app .expertises-edit__main-visit,
+        body .app .stored-expertises-categories__main-visit,
+        body .app .expertises-category-create__main-visit,
+        body .app .expertises-category-edit__main-visit,
+        body .app .stored-experiences__main-visit,
+        body .app .experience-create__main-visit,
+        body .app .experience-edit__main-visit,
+        body .app .stored-educations__main-visit,
+        body .app .education-create__main-visit,
+        body .app .education-edit__main-visit,
+        body .app .stored-projects__main-visit,
+        body .app .project-show__main-visit,
+        body .app .project-create__main-visit,
+        body .app .project-edit__main-visit,
+        body .app .stored-contacts__main-visit,
+        body .app .contact-create__main-visit,
+        body .app .contact-edit__main-visit,
+        body .app .stored-awards__main-visit,
+        body .app .award-create__main-visit,
+        body .app .award-edit__main-visit,
+        body .app .portfolio__main-visit,
+        body .app .about__main-visit {
+          font-size: 1.1rem; } }
       body .app .stored-system-info__main-description,
       body .app .system-info-create__main-description,
       body .app .system-info-edit__main-description,
@@ -2050,6 +2079,35 @@ body {
         font-family: "Source Serif Pro", serif;
         font-size: 1.3125rem;
         font-weight: 500; }
+        @media (max-width: 768px) {
+          body .app .stored-system-info__main-description,
+          body .app .system-info-create__main-description,
+          body .app .system-info-edit__main-description,
+          body .app .stored-expertises__main-description,
+          body .app .expertises-create__main-description,
+          body .app .expertises-edit__main-description,
+          body .app .stored-expertises-categories__main-description,
+          body .app .expertises-category-create__main-description,
+          body .app .expertises-category-edit__main-description,
+          body .app .stored-experiences__main-description,
+          body .app .experience-create__main-description,
+          body .app .experience-edit__main-description,
+          body .app .stored-educations__main-description,
+          body .app .education-create__main-description,
+          body .app .education-edit__main-description,
+          body .app .stored-projects__main-description,
+          body .app .project-show__main-description,
+          body .app .project-create__main-description,
+          body .app .project-edit__main-description,
+          body .app .stored-contacts__main-description,
+          body .app .contact-create__main-description,
+          body .app .contact-edit__main-description,
+          body .app .stored-awards__main-description,
+          body .app .award-create__main-description,
+          body .app .award-edit__main-description,
+          body .app .portfolio__main-description,
+          body .app .about__main-description {
+            font-size: 1.1rem; } }
         body .app .stored-system-info__main-description--title,
         body .app .system-info-create__main-description--title,
         body .app .system-info-edit__main-description--title,
@@ -2293,6 +2351,36 @@ body {
             transition: all 0.5s ease;
             object-fit: cover;
             border-radius: 0; }
+            @media (max-width: 768px) {
+              body .app .stored-system-info__main-nextproject .card-img,
+              body .app .system-info-create__main-nextproject .card-img,
+              body .app .system-info-edit__main-nextproject .card-img,
+              body .app .stored-expertises__main-nextproject .card-img,
+              body .app .expertises-create__main-nextproject .card-img,
+              body .app .expertises-edit__main-nextproject .card-img,
+              body .app .stored-expertises-categories__main-nextproject .card-img,
+              body .app .expertises-category-create__main-nextproject .card-img,
+              body .app .expertises-category-edit__main-nextproject .card-img,
+              body .app .stored-experiences__main-nextproject .card-img,
+              body .app .experience-create__main-nextproject .card-img,
+              body .app .experience-edit__main-nextproject .card-img,
+              body .app .stored-educations__main-nextproject .card-img,
+              body .app .education-create__main-nextproject .card-img,
+              body .app .education-edit__main-nextproject .card-img,
+              body .app .stored-projects__main-nextproject .card-img,
+              body .app .project-show__main-nextproject .card-img,
+              body .app .project-create__main-nextproject .card-img,
+              body .app .project-edit__main-nextproject .card-img,
+              body .app .stored-contacts__main-nextproject .card-img,
+              body .app .contact-create__main-nextproject .card-img,
+              body .app .contact-edit__main-nextproject .card-img,
+              body .app .stored-awards__main-nextproject .card-img,
+              body .app .award-create__main-nextproject .card-img,
+              body .app .award-edit__main-nextproject .card-img,
+              body .app .portfolio__main-nextproject .card-img,
+              body .app .about__main-nextproject .card-img {
+                height: 300px;
+                transform: scale(0.9); } }
           body .app .stored-system-info__main-nextproject .card-img-overlay,
           body .app .system-info-create__main-nextproject .card-img-overlay,
           body .app .system-info-edit__main-nextproject .card-img-overlay,
@@ -2388,6 +2476,36 @@ body {
             line-height: 0.9;
             font-size: 4rem;
             transition: all 0.5s ease; }
+            @media (max-width: 768px) {
+              body .app .stored-system-info__main-nextproject .card-title,
+              body .app .system-info-create__main-nextproject .card-title,
+              body .app .system-info-edit__main-nextproject .card-title,
+              body .app .stored-expertises__main-nextproject .card-title,
+              body .app .expertises-create__main-nextproject .card-title,
+              body .app .expertises-edit__main-nextproject .card-title,
+              body .app .stored-expertises-categories__main-nextproject .card-title,
+              body .app .expertises-category-create__main-nextproject .card-title,
+              body .app .expertises-category-edit__main-nextproject .card-title,
+              body .app .stored-experiences__main-nextproject .card-title,
+              body .app .experience-create__main-nextproject .card-title,
+              body .app .experience-edit__main-nextproject .card-title,
+              body .app .stored-educations__main-nextproject .card-title,
+              body .app .education-create__main-nextproject .card-title,
+              body .app .education-edit__main-nextproject .card-title,
+              body .app .stored-projects__main-nextproject .card-title,
+              body .app .project-show__main-nextproject .card-title,
+              body .app .project-create__main-nextproject .card-title,
+              body .app .project-edit__main-nextproject .card-title,
+              body .app .stored-contacts__main-nextproject .card-title,
+              body .app .contact-create__main-nextproject .card-title,
+              body .app .contact-edit__main-nextproject .card-title,
+              body .app .stored-awards__main-nextproject .card-title,
+              body .app .award-create__main-nextproject .card-title,
+              body .app .award-edit__main-nextproject .card-title,
+              body .app .portfolio__main-nextproject .card-title,
+              body .app .about__main-nextproject .card-title {
+                font-size: 2.6rem;
+                letter-spacing: 4px; } }
       body .app .stored-system-info__main .about__main-content,
       body .app .system-info-create__main .about__main-content,
       body .app .system-info-edit__main .about__main-content,

@@ -20,9 +20,9 @@ block content
                 span.project-show__main-description--title Description
                 div.mt-4 !{project.description}
             .is-devider-100
-            .project-show__main-nextproject
+            .row.project-show__main-nextproject
                 .col-md-8
-                    a.card.bg-dark(href="/projects/" + nextProject.slug)
+                    a.card.bg-dark(href=`/projects/${nextProject.slug}`)
                         img.card-img(src=nextProject.banner, alt=nextProject.name)
                         .card-img-overlay
                             .text-white
