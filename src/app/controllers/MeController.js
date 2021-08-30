@@ -10,14 +10,7 @@ const SystemInfo = require("../models/SystemInfo");
 class MeController {
     // [GET]/me/strored/projects
     storedProjects(req, res, next) {
-        let projectQuery = Project.find({});
-        if (req.query.hasOwnProperty("_sort")) {
-            projectQuery = projectQuery.sort({
-                [req.params.column]: req.query.type,
-            });
-        }
-
-        Promise.all([projectQuery, Project.countDocumentsDeleted()])
+        Promise.all([Project.find({}), Project.countDocumentsDeleted()])
             .then(([projects, deletedCount]) => {
                 res.render("me/stored-projects", {
                     projects,
