@@ -14,12 +14,7 @@ const authMiddleware = require("../app/middlewares/AuthMiddleware");
 
 function route(app) {
     app.use("/", siteRouter);
-    app.use(
-        "/projects",
-        authMiddleware.requireAuth,
-        authMiddleware.checkAdmin,
-        projectsRouter
-    );
+    app.use("/projects", projectsRouter);
     app.use(
         "/contacts",
         authMiddleware.requireAuth,

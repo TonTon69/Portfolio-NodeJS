@@ -7,7 +7,7 @@ const Expertise = new Schema(
     {
         name: { type: String },
         location: { type: Number },
-        expertiseCategoryId: { type: Number },
+        expertiseCategoryId: { type: Number, ref: "Expertise-Category" },
     },
     {
         timestamps: true,
