@@ -66,6 +66,12 @@ app.use(function (req, res) {
     res.status(404).render("error");
 });
 
+if (app.settings.env === "production") {
+    app.use(function (req, res) {
+        res.status(500).render("error");
+    });
+}
+
 let port = process.env.PORT || 3000;
 var listener = app.listen(port, function () {
     console.log("Listening on port " + listener.address().port);
