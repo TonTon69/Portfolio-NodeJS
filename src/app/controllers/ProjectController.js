@@ -5,8 +5,12 @@ class ProjectController {
     // [GET]/projects/:slug
     async show(req, res, next) {
         const project = await Project.findOne({ slug: req.params.slug });
-        var nextLocation = project.location + 1;
-        const nextProject = await Project.findOne({ location: nextLocation });
+        let nextLocation = project.location + 1;
+        let nextProject;
+        nextProject = await Project.findOne({ location: nextLocation });
+        if (!nextProject) {
+            nextProject = await Project.findOne({ location: 1 });
+        }
         const userId = req.signedCookies.userId;
         const user = await User.findById(userId);
         res.render("projects/show", {
@@ -14,29 +18,6 @@ class ProjectController {
             nextProject,
             user,
         });
-        // Promise.all([
-        //     Project.findOne({ slug: req.params.slug }),
-        //     Project.findOne({ slug: { $gt: req.params.slug } }).sort({
-        //         location: 1,
-        //     }),
-        //     User.findOne({ _id: req.signedCookies.userId }),
-        // ])
-
-        //     .then(([project, nextProject, user]) => {
-        //         if (user) {
-        //             res.locals.user = user;
-        //             res.render("projects/show", {
-        //                 project,
-        //                 nextProject,
-        //             });
-        //         } else {
-        //             res.render("projects/show", {
-        //                 project,
-        //                 nextProject,
-        //             });
-        //         }
-        //     })
-        //     .catch(next);
     }
 
     // [GET]/projects/create
