@@ -55,6 +55,14 @@ module.exports = {
             });
             return;
         }
+        if (password.length < 6) {
+            req.flash("error", "Your password must be at least 6 characters!");
+            res.render("auth/login", {
+                errors: req.flash("error"),
+                values: req.body,
+            });
+            return;
+        }
         next();
     },
 };

@@ -19,13 +19,38 @@ setTimeout(function () {
     });
 }, 1000);
 
+// var isInViewport = function (elem) {
+//     var bounding = elem.getBoundingClientRect();
+//     return (
+//         bounding.top >= 0 &&
+//         bounding.left >= 0 &&
+//         bounding.bottom <=
+//             (window.innerHeight || document.documentElement.clientHeight) &&
+//         bounding.right <=
+//             (window.innerWidth || document.documentElement.clientWidth)
+//     );
+// };
+
 // When scroll, body add background black
 window.onscroll = function () {
     if (this.scrollY > 20) {
         document.body.classList.add("show");
-    } else {
+    }
+
+    if (this.scrollY <= 20) {
         document.body.classList.remove("show");
     }
+
+    // var bgLight = $(".bg-light");
+    // var windowHeight =
+    //     window.innerHeight || document.documentElement.clientHeight;
+    // var bgLightTop = bgLight.getBoundingClientRect().top;
+
+    // if (bgLightTop < windowHeight) {
+    //     bgLight.classList.add("active");
+    // } else {
+    //     bgLight.classList.remove("active");
+    // }
 };
 
 // When to top clicked
