@@ -41,15 +41,17 @@ window.onscroll = function () {
         document.body.classList.remove("show");
     }
 
+    // var header = $(".header");
     // var bgLight = $(".bg-light");
-    // var windowHeight =
-    //     window.innerHeight || document.documentElement.clientHeight;
-    // var bgLightTop = bgLight.getBoundingClientRect().top;
+    // var bounding = bgLight.getBoundingClientRect();
+    // console.log(bounding);
+    // console.log(this.scrollY);
+    // console.log(bounding.top);
 
-    // if (bgLightTop < windowHeight) {
-    //     bgLight.classList.add("active");
+    // if (this.scrollY >= bounding.top * 100) {
+    //     header.classList.add("text-dark");
     // } else {
-    //     bgLight.classList.remove("active");
+    //     header.classList.remove("active");
     // }
 };
 

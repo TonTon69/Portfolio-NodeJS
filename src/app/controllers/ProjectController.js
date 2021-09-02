@@ -8,7 +8,7 @@ class ProjectController {
         let nextLocation = project.location + 1;
         let nextProject;
         nextProject = await Project.findOne({ location: nextLocation });
-        if (!nextProject) {
+        if (nextProject === null) {
             nextProject = await Project.findOne({ location: 1 });
         }
         const userId = req.signedCookies.userId;
