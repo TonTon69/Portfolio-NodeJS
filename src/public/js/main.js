@@ -19,39 +19,21 @@ setTimeout(function () {
     });
 }, 1000);
 
-// var isInViewport = function (elem) {
-//     var bounding = elem.getBoundingClientRect();
-//     return (
-//         bounding.top >= 0 &&
-//         bounding.left >= 0 &&
-//         bounding.bottom <=
-//             (window.innerHeight || document.documentElement.clientHeight) &&
-//         bounding.right <=
-//             (window.innerWidth || document.documentElement.clientWidth)
-//     );
-// };
-
 // When scroll, body add background black
 window.onscroll = function () {
     if (this.scrollY > 20) {
         document.body.classList.add("show");
-    }
-
-    if (this.scrollY <= 20) {
+    } else {
         document.body.classList.remove("show");
     }
 
-    var header = $(".header");
-    var bgLight = $(".bg-light");
-    var bounding = bgLight.getBoundingClientRect();
-    console.log(bounding);
-    console.log(this.scrollY);
-    console.log(bounding.top);
-
-    if (this.scrollY >= bounding.top * 100) {
-        header.classList.add("text-dark");
+    const bgLight = $(".bg-light");
+    const bounding = bgLight.getBoundingClientRect();
+    const header = $(".header");
+    if (bounding.top < 20 && bounding.top > -bounding.height + 20) {
+        header.classList.add("dark");
     } else {
-        header.classList.remove("text-dark");
+        header.classList.remove("dark");
     }
 };
 

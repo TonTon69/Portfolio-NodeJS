@@ -24,6 +24,17 @@ body {
   font-family: "Sequel", sans-serif;
   font-weight: 800;
   transition: all 0.9s ease; }
+  body.show {
+    background: black;
+    color: white;
+    transition: all 0.9s ease; }
+    body.show .header__logo img {
+      transition: all 0.9s ease;
+      filter: brightness(0) invert(1); }
+    body.show .header__brand,
+    body.show .nav-link,
+    body.show #dropdownMenuUser {
+      color: white !important; }
   body::-webkit-scrollbar {
     width: 12px; }
   body::-webkit-scrollbar-thumb {
@@ -229,6 +240,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    body .app .header.dark .header__logo img {
+      filter: unset; }
+    body .app .header.dark .header__brand,
+    body .app .header.dark .nav-link,
+    body .app .header.dark #dropdownMenuUser {
+      color: black !important; }
     body .app .header__logo {
       display: flex;
       align-items: center; }
@@ -5038,19 +5055,6 @@ body {
 @keyframes textclip {
   to {
     background-position: -200% center; } }
-
-body.show {
-  background: black;
-  color: white;
-  transition: all 0.9s ease; }
-  body.show .header__logo img {
-    transition: all 0.9s ease;
-    filter: brightness(0) invert(1); }
-  body.show .header__brand {
-    color: white; }
-  body.show .nav-link,
-  body.show .nav #dropdownMenuUser {
-    color: white !important; }
 
 .login {
   font-family: "Source Serif Pro", serif;

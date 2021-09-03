@@ -59,6 +59,25 @@ body {
     font-weight: weight(bold);
     transition: all 0.9s ease;
 
+    &.show {
+        background: $black-background-color;
+        color: $white-color;
+        transition: all 0.9s ease;
+
+        .header__logo {
+            img {
+                transition: all 0.9s ease;
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        .header__brand,
+        .nav-link,
+        #dropdownMenuUser {
+            color: $white-color !important;
+        }
+    }
+
     &::-webkit-scrollbar {
         width: 12px;
     }
@@ -169,6 +188,18 @@ body {
             padding: 1.875rem 1.875rem;
             @include flexCenter;
             justify-content: space-between;
+
+            &.dark {
+                .header__logo img {
+                    filter: unset;
+                }
+
+                .header__brand,
+                .nav-link,
+                #dropdownMenuUser {
+                    color: $black-color !important;
+                }
+            }
 
             &__logo {
                 @include flexCenter;
@@ -1617,30 +1648,6 @@ body {
 @keyframes textclip {
     to {
         background-position: -200% center;
-    }
-}
-
-body.show {
-    background: $black-background-color;
-    color: $white-color;
-    transition: all 0.9s ease;
-
-    .header__logo {
-        img {
-            transition: all 0.9s ease;
-            filter: brightness(0) invert(1);
-        }
-    }
-
-    .header__brand {
-        color: $white-color;
-    }
-
-    .nav {
-        &-link,
-        #dropdownMenuUser {
-            color: $white-color !important;
-        }
     }
 }
 
