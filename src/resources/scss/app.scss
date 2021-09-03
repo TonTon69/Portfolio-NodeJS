@@ -472,7 +472,7 @@ body {
                         }
 
                         @include mobile {
-                            font-size: 2.6rem;
+                            font-size: 1.8rem;
                             letter-spacing: 0;
                             line-height: 0.9;
                         }
@@ -1058,6 +1058,27 @@ body {
                                 border-color: #dc3545;
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        .about {
+            &__header {
+                background-image: url(../img/minhhoang.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-attachment: fixed;
+                background-position: right;
+
+                @include mobile {
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                &-title {
+                    @include mobile {
+                        margin-top: 6rem;
                     }
                 }
             }

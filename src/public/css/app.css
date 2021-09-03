@@ -708,7 +708,7 @@ body {
             body .app .award-edit__header-title h1,
             body .app .portfolio__header-title h1,
             body .app .about__header-title h1 {
-              font-size: 2.6rem;
+              font-size: 1.8rem;
               letter-spacing: 0;
               line-height: 0.9; } }
     body .app .stored-system-info__main,
@@ -4357,6 +4357,19 @@ body {
           body .app .about__main .pagination .page-item.active .page-link {
             background: #dc3545;
             border-color: #dc3545; }
+  body .app .about__header {
+    background-image: url(../img/minhhoang.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: right; }
+    @media (max-width: 768px) {
+      body .app .about__header {
+        background-size: cover;
+        background-position: center; } }
+    @media (max-width: 768px) {
+      body .app .about__header-title {
+        margin-top: 6rem; } }
   body .app .stored-system-info__table,
   body .app .stored-expertises__table,
   body .app .stored-expertises-categories__table,
