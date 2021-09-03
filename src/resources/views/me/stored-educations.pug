@@ -43,7 +43,9 @@ block content
                                     th(scope='row')
                                         input(type='checkbox', name='educationIds[]', value=education._id)
                                     th(scope='row') #{count}
-                                    td=education.school
+                                    td
+                                        span.education-school-name=education.school
+                                            img.education-school-logo(src=education.schoolLogo)
                                     td=education.degree
                                     td=education.startYear
                                     td=education.endYear

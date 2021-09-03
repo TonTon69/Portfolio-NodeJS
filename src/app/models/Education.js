@@ -6,6 +6,7 @@ const mongooseDelete = require("mongoose-delete");
 const Education = new Schema(
     {
         school: { type: String },
+        schoolLogo: { type: String },
         degree: { type: String },
         startYear: { type: Number },
         endYear: { type: Number },

@@ -24,7 +24,8 @@ block content
                             .education__title education
                             .education__content
                                 each education in educations
-                                    span=education.school
+                                    span.education-school-name=education.school
+                                        img.education-school-logo(src=education.schoolLogo)
                                     span , 
                                     span=education.startYear
                                     span -

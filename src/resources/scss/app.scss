@@ -151,6 +151,14 @@ body {
         height: 20px;
     }
 
+    .table-responsive {
+        overflow-x: unset !important;
+
+        @include mobile {
+            overflow-x: auto !important;
+        }
+    }
+
     .app {
         .header {
             position: fixed;
@@ -891,6 +899,32 @@ body {
                         @include mobile {
                             margin-top: 60px;
                         }
+
+                        &-school-name {
+                            text-transform: uppercase;
+                            position: relative;
+                            cursor: pointer;
+
+                            &:hover {
+                                .education-school-logo {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+
+                        &-school-logo {
+                            width: 200px;
+                            height: 200px;
+                            object-fit: cover;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all 0.3s ease;
+                            z-index: 9999;
+                        }
                     }
 
                     .education,
@@ -1058,25 +1092,31 @@ body {
                         }
                     }
 
-                    .project-name {
+                    .project-name,
+                    .education-school-name {
                         text-transform: uppercase;
                         position: relative;
                         cursor: pointer;
 
-                        .project-banner {
+                        .project-banner,
+                        .education-school-logo {
                             width: 200px;
                             height: 120px;
                             object-fit: cover;
                             position: absolute;
                             top: 50%;
                             left: 50%;
-                            display: none;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all 0.3s ease;
                             z-index: 9999;
                         }
 
                         &:hover {
-                            .project-banner {
-                                display: block;
+                            .project-banner,
+                            .education-school-logo {
+                                opacity: 1;
+                                visibility: visible;
                             }
                         }
                     }

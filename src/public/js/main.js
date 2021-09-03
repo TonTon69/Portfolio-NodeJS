@@ -41,18 +41,18 @@ window.onscroll = function () {
         document.body.classList.remove("show");
     }
 
-    // var header = $(".header");
-    // var bgLight = $(".bg-light");
-    // var bounding = bgLight.getBoundingClientRect();
-    // console.log(bounding);
-    // console.log(this.scrollY);
-    // console.log(bounding.top);
+    var header = $(".header");
+    var bgLight = $(".bg-light");
+    var bounding = bgLight.getBoundingClientRect();
+    console.log(bounding);
+    console.log(this.scrollY);
+    console.log(bounding.top);
 
-    // if (this.scrollY >= bounding.top * 100) {
-    //     header.classList.add("text-dark");
-    // } else {
-    //     header.classList.remove("active");
-    // }
+    if (this.scrollY >= bounding.top * 100) {
+        header.classList.add("text-dark");
+    } else {
+        header.classList.remove("text-dark");
+    }
 };
 
 // When to top clicked

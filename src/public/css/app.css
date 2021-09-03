@@ -214,6 +214,11 @@ body {
     height: 40px; }
   body .is-devider-20 {
     height: 20px; }
+  body .table-responsive {
+    overflow-x: unset !important; }
+    @media (max-width: 768px) {
+      body .table-responsive {
+        overflow-x: auto !important; } }
   body .app .header {
     position: fixed;
     top: 0;
@@ -2749,6 +2754,102 @@ body {
           body .app .portfolio__main .about__main-content .education,
           body .app .about__main .about__main-content .education {
             margin-top: 60px; } }
+        body .app .stored-system-info__main .about__main-content .education-school-name,
+        body .app .system-info-create__main .about__main-content .education-school-name,
+        body .app .system-info-edit__main .about__main-content .education-school-name,
+        body .app .stored-expertises__main .about__main-content .education-school-name,
+        body .app .expertises-create__main .about__main-content .education-school-name,
+        body .app .expertises-edit__main .about__main-content .education-school-name,
+        body .app .stored-expertises-categories__main .about__main-content .education-school-name,
+        body .app .expertises-category-create__main .about__main-content .education-school-name,
+        body .app .expertises-category-edit__main .about__main-content .education-school-name,
+        body .app .stored-experiences__main .about__main-content .education-school-name,
+        body .app .experience-create__main .about__main-content .education-school-name,
+        body .app .experience-edit__main .about__main-content .education-school-name,
+        body .app .stored-educations__main .about__main-content .education-school-name,
+        body .app .education-create__main .about__main-content .education-school-name,
+        body .app .education-edit__main .about__main-content .education-school-name,
+        body .app .stored-projects__main .about__main-content .education-school-name,
+        body .app .project-show__main .about__main-content .education-school-name,
+        body .app .project-create__main .about__main-content .education-school-name,
+        body .app .project-edit__main .about__main-content .education-school-name,
+        body .app .stored-contacts__main .about__main-content .education-school-name,
+        body .app .contact-create__main .about__main-content .education-school-name,
+        body .app .contact-edit__main .about__main-content .education-school-name,
+        body .app .stored-awards__main .about__main-content .education-school-name,
+        body .app .award-create__main .about__main-content .education-school-name,
+        body .app .award-edit__main .about__main-content .education-school-name,
+        body .app .portfolio__main .about__main-content .education-school-name,
+        body .app .about__main .about__main-content .education-school-name {
+          text-transform: uppercase;
+          position: relative;
+          cursor: pointer; }
+          body .app .stored-system-info__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .system-info-create__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .system-info-edit__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .stored-expertises__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .expertises-create__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .expertises-edit__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .stored-expertises-categories__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .expertises-category-create__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .expertises-category-edit__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .stored-experiences__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .experience-create__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .experience-edit__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .stored-educations__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .education-create__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .education-edit__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .stored-projects__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .project-show__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .project-create__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .project-edit__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .stored-contacts__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .contact-create__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .contact-edit__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .stored-awards__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .award-create__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .award-edit__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .portfolio__main .about__main-content .education-school-name:hover .education-school-logo,
+          body .app .about__main .about__main-content .education-school-name:hover .education-school-logo {
+            opacity: 1;
+            visibility: visible; }
+        body .app .stored-system-info__main .about__main-content .education-school-logo,
+        body .app .system-info-create__main .about__main-content .education-school-logo,
+        body .app .system-info-edit__main .about__main-content .education-school-logo,
+        body .app .stored-expertises__main .about__main-content .education-school-logo,
+        body .app .expertises-create__main .about__main-content .education-school-logo,
+        body .app .expertises-edit__main .about__main-content .education-school-logo,
+        body .app .stored-expertises-categories__main .about__main-content .education-school-logo,
+        body .app .expertises-category-create__main .about__main-content .education-school-logo,
+        body .app .expertises-category-edit__main .about__main-content .education-school-logo,
+        body .app .stored-experiences__main .about__main-content .education-school-logo,
+        body .app .experience-create__main .about__main-content .education-school-logo,
+        body .app .experience-edit__main .about__main-content .education-school-logo,
+        body .app .stored-educations__main .about__main-content .education-school-logo,
+        body .app .education-create__main .about__main-content .education-school-logo,
+        body .app .education-edit__main .about__main-content .education-school-logo,
+        body .app .stored-projects__main .about__main-content .education-school-logo,
+        body .app .project-show__main .about__main-content .education-school-logo,
+        body .app .project-create__main .about__main-content .education-school-logo,
+        body .app .project-edit__main .about__main-content .education-school-logo,
+        body .app .stored-contacts__main .about__main-content .education-school-logo,
+        body .app .contact-create__main .about__main-content .education-school-logo,
+        body .app .contact-edit__main .about__main-content .education-school-logo,
+        body .app .stored-awards__main .about__main-content .education-school-logo,
+        body .app .award-create__main .about__main-content .education-school-logo,
+        body .app .award-edit__main .about__main-content .education-school-logo,
+        body .app .portfolio__main .about__main-content .education-school-logo,
+        body .app .about__main .about__main-content .education-school-logo {
+          width: 200px;
+          height: 200px;
+          object-fit: cover;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+          z-index: 9999; }
         body .app .stored-system-info__main .about__main-content .education,
         body .app .stored-system-info__main .about__main-content .experience,
         body .app .stored-system-info__main .about__main-content .contact,
@@ -4299,41 +4400,100 @@ body {
       body .app .stored-contacts__table tbody tr td {
         padding: 1.5rem 0.5rem; }
     body .app .stored-system-info__table tbody .project-name,
+    body .app .stored-system-info__table tbody .education-school-name,
     body .app .stored-expertises__table tbody .project-name,
+    body .app .stored-expertises__table tbody .education-school-name,
     body .app .stored-expertises-categories__table tbody .project-name,
+    body .app .stored-expertises-categories__table tbody .education-school-name,
     body .app .stored-experiences__table tbody .project-name,
+    body .app .stored-experiences__table tbody .education-school-name,
     body .app .stored-educations__table tbody .project-name,
+    body .app .stored-educations__table tbody .education-school-name,
     body .app .stored-projects__table tbody .project-name,
+    body .app .stored-projects__table tbody .education-school-name,
     body .app .stored-awards__table tbody .project-name,
-    body .app .stored-contacts__table tbody .project-name {
+    body .app .stored-awards__table tbody .education-school-name,
+    body .app .stored-contacts__table tbody .project-name,
+    body .app .stored-contacts__table tbody .education-school-name {
       text-transform: uppercase;
       position: relative;
       cursor: pointer; }
       body .app .stored-system-info__table tbody .project-name .project-banner,
+      body .app .stored-system-info__table tbody .project-name .education-school-logo,
+      body .app .stored-system-info__table tbody .education-school-name .project-banner,
+      body .app .stored-system-info__table tbody .education-school-name .education-school-logo,
       body .app .stored-expertises__table tbody .project-name .project-banner,
+      body .app .stored-expertises__table tbody .project-name .education-school-logo,
+      body .app .stored-expertises__table tbody .education-school-name .project-banner,
+      body .app .stored-expertises__table tbody .education-school-name .education-school-logo,
       body .app .stored-expertises-categories__table tbody .project-name .project-banner,
+      body .app .stored-expertises-categories__table tbody .project-name .education-school-logo,
+      body .app .stored-expertises-categories__table tbody .education-school-name .project-banner,
+      body .app .stored-expertises-categories__table tbody .education-school-name .education-school-logo,
       body .app .stored-experiences__table tbody .project-name .project-banner,
+      body .app .stored-experiences__table tbody .project-name .education-school-logo,
+      body .app .stored-experiences__table tbody .education-school-name .project-banner,
+      body .app .stored-experiences__table tbody .education-school-name .education-school-logo,
       body .app .stored-educations__table tbody .project-name .project-banner,
+      body .app .stored-educations__table tbody .project-name .education-school-logo,
+      body .app .stored-educations__table tbody .education-school-name .project-banner,
+      body .app .stored-educations__table tbody .education-school-name .education-school-logo,
       body .app .stored-projects__table tbody .project-name .project-banner,
+      body .app .stored-projects__table tbody .project-name .education-school-logo,
+      body .app .stored-projects__table tbody .education-school-name .project-banner,
+      body .app .stored-projects__table tbody .education-school-name .education-school-logo,
       body .app .stored-awards__table tbody .project-name .project-banner,
-      body .app .stored-contacts__table tbody .project-name .project-banner {
+      body .app .stored-awards__table tbody .project-name .education-school-logo,
+      body .app .stored-awards__table tbody .education-school-name .project-banner,
+      body .app .stored-awards__table tbody .education-school-name .education-school-logo,
+      body .app .stored-contacts__table tbody .project-name .project-banner,
+      body .app .stored-contacts__table tbody .project-name .education-school-logo,
+      body .app .stored-contacts__table tbody .education-school-name .project-banner,
+      body .app .stored-contacts__table tbody .education-school-name .education-school-logo {
         width: 200px;
         height: 120px;
         object-fit: cover;
         position: absolute;
         top: 50%;
         left: 50%;
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
         z-index: 9999; }
       body .app .stored-system-info__table tbody .project-name:hover .project-banner,
+      body .app .stored-system-info__table tbody .project-name:hover .education-school-logo,
+      body .app .stored-system-info__table tbody .education-school-name:hover .project-banner,
+      body .app .stored-system-info__table tbody .education-school-name:hover .education-school-logo,
       body .app .stored-expertises__table tbody .project-name:hover .project-banner,
+      body .app .stored-expertises__table tbody .project-name:hover .education-school-logo,
+      body .app .stored-expertises__table tbody .education-school-name:hover .project-banner,
+      body .app .stored-expertises__table tbody .education-school-name:hover .education-school-logo,
       body .app .stored-expertises-categories__table tbody .project-name:hover .project-banner,
+      body .app .stored-expertises-categories__table tbody .project-name:hover .education-school-logo,
+      body .app .stored-expertises-categories__table tbody .education-school-name:hover .project-banner,
+      body .app .stored-expertises-categories__table tbody .education-school-name:hover .education-school-logo,
       body .app .stored-experiences__table tbody .project-name:hover .project-banner,
+      body .app .stored-experiences__table tbody .project-name:hover .education-school-logo,
+      body .app .stored-experiences__table tbody .education-school-name:hover .project-banner,
+      body .app .stored-experiences__table tbody .education-school-name:hover .education-school-logo,
       body .app .stored-educations__table tbody .project-name:hover .project-banner,
+      body .app .stored-educations__table tbody .project-name:hover .education-school-logo,
+      body .app .stored-educations__table tbody .education-school-name:hover .project-banner,
+      body .app .stored-educations__table tbody .education-school-name:hover .education-school-logo,
       body .app .stored-projects__table tbody .project-name:hover .project-banner,
+      body .app .stored-projects__table tbody .project-name:hover .education-school-logo,
+      body .app .stored-projects__table tbody .education-school-name:hover .project-banner,
+      body .app .stored-projects__table tbody .education-school-name:hover .education-school-logo,
       body .app .stored-awards__table tbody .project-name:hover .project-banner,
-      body .app .stored-contacts__table tbody .project-name:hover .project-banner {
-        display: block; }
+      body .app .stored-awards__table tbody .project-name:hover .education-school-logo,
+      body .app .stored-awards__table tbody .education-school-name:hover .project-banner,
+      body .app .stored-awards__table tbody .education-school-name:hover .education-school-logo,
+      body .app .stored-contacts__table tbody .project-name:hover .project-banner,
+      body .app .stored-contacts__table tbody .project-name:hover .education-school-logo,
+      body .app .stored-contacts__table tbody .education-school-name:hover .project-banner,
+      body .app .stored-contacts__table tbody .education-school-name:hover .education-school-logo {
+        opacity: 1;
+        visibility: visible; }
   body .app .stored-system-info__link,
   body .app .stored-expertises__link,
   body .app .stored-expertises-categories__link,
