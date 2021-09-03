@@ -6,6 +6,7 @@ const mongooseDelete = require("mongoose-delete");
 const Expertise = new Schema(
     {
         name: { type: String },
+        image: { type: String },
         location: { type: Number },
         expertiseCategoryId: { type: Number, ref: "Expertise-Category" },
     },

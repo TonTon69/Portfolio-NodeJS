@@ -73,6 +73,7 @@ block content
                             each expertise in expertises
                                 if expertise.expertiseCategoryId === category._id
                                     .about__expertise-skill
+                                        img.about__expertise-skill--img.me-3(src=expertise.image)
                                         span.about__expertise-skill--item=expertise.name
             .is-devider-200
         .bg-dark

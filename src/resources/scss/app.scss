@@ -1209,7 +1209,7 @@ body {
 
                 #expertise {
                     position: absolute;
-                    top: -19%;
+                    top: -18%;
                     left: 1.6%;
                     font-weight: weight(bold);
                     font-size: 10rem;
@@ -1317,11 +1317,12 @@ body {
                 }
 
                 &-skill {
+                    @include flexCenter;
                     font-family: "Source Serif Pro", serif;
                     font-size: 1.3rem;
                     font-weight: weight(bold);
                     text-transform: uppercase;
-                    line-height: 2.5;
+                    line-height: 3;
 
                     @include laptop {
                         font-size: 1.2rem;
@@ -1329,6 +1330,13 @@ body {
 
                     @include mobile {
                         font-size: 1rem;
+                    }
+
+                    &--img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
                     }
 
                     &--item {

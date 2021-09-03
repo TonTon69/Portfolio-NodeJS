@@ -29,6 +29,7 @@ block content
                                     input#checkbox-all(type='checkbox')
                                 th(scope='col') #
                                 th(scope='col') Name
+                                th(scope='col') Logo
                                 th(scope='col') Location
                                 th(scope='col') Expertise Category
                                 th(scope='col') Deleted At
@@ -42,6 +43,8 @@ block content
                                         input(type='checkbox', name='expertiseIds[]', value=expertise._id)
                                     th(scope='row') #{count}
                                     td=expertise.name
+                                    td
+                                        img.rounded-circle(src=expertise.image, width=40, height=40)
                                     td=expertise.location
                                     each category in expertisesCategories
                                         if expertise.expertiseCategoryId === category._id
@@ -53,7 +56,7 @@ block content
                                     
                             else
                                 tr
-                                    td.text-center(colspan='7') Empty trash can?
+                                    td.text-center(colspan='8') Empty trash can?
                                         a(href="/me/stored/expertises/1").ms-2.text-warning Stored expertises
     
             form(name="delete-expertise-form", method="POST")
