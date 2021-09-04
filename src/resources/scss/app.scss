@@ -266,6 +266,12 @@ body {
                 font-weight: weight(bold);
                 letter-spacing: 0.2em;
                 animation: fadeLeft ease 0.3s, fadeOut linear 0.3s 1s forwards;
+                -webkit-animation: fadeLeft ease 0.3s,
+                    fadeOut linear 0.3s 1s forwards;
+                -moz-animation: fadeLeft ease 0.3s,
+                    fadeOut linear 0.3s 1s forwards;
+                -o-animation: fadeLeft ease 0.3s,
+                    fadeOut linear 0.3s 1s forwards;
 
                 @include mobile {
                     font-size: 1.2rem;
@@ -1127,10 +1133,16 @@ body {
                     h1 {
                         p:first-child {
                             animation: fadeUp 0.3s ease;
+                            -webkit-animation: fadeUp 0.3s ease;
+                            -moz-animation: fadeUp 0.3s ease;
+                            -o-animation: fadeUp 0.3s ease;
                         }
 
                         p:last-child {
                             animation: fadeUp 0.5s ease;
+                            -webkit-animation: fadeUp 0.5s ease;
+                            -moz-animation: fadeUp 0.5s ease;
+                            -o-animation: fadeUp 0.5s ease;
                         }
                     }
                 }
@@ -1155,6 +1167,9 @@ body {
                 background-attachment: fixed;
                 background-position: right;
                 animation: animatedBackgroundFadeLeft 0.3s ease;
+                -webkit-animation: animatedBackgroundFadeLeft 0.3s ease;
+                -moz-animation: animatedBackgroundFadeLeft 0.3s ease;
+                -o-animation: animatedBackgroundFadeLeft 0.3s ease;
 
                 @include mobile {
                     background-size: cover;
@@ -1173,18 +1188,30 @@ body {
                     h1 {
                         p:nth-child(1) {
                             animation: fadeUp 0.3s ease;
+                            -webkit-animation: fadeUp 0.3s ease;
+                            -moz-animation: fadeUp 0.3s ease;
+                            -o-animation: fadeUp 0.3s ease;
                         }
 
                         p:nth-child(2) {
                             animation: fadeUp 0.5s ease;
+                            -webkit-animation: fadeUp 0.5s ease;
+                            -moz-animation: fadeUp 0.5s ease;
+                            -o-animation: fadeUp 0.5s ease;
                         }
 
                         p:nth-child(3) {
                             animation: fadeUp 0.7s ease;
+                            -webkit-animation: fadeUp 0.7s ease;
+                            -moz-animation: fadeUp 0.7s ease;
+                            -o-animation: fadeUp 0.7s ease;
                         }
 
                         p:nth-child(4) {
                             animation: fadeUp 0.9s ease;
+                            -webkit-animation: fadeUp 0.9s ease;
+                            -moz-animation: fadeUp 0.9s ease;
+                            -o-animation: fadeUp 0.9s ease;
                         }
                     }
                 }
@@ -1900,7 +1927,10 @@ body {
     overflow: hidden;
 
     h2 {
-        animation: fadeIn 0.3s ease;
+        animation: fadeIn 0.3s ease; /* IE 10+, Fx 29+ */
+        -webkit-animation: fadeIn 0.3s ease; /* Safari 4+ */
+        -moz-animation: fadeIn 0.3s ease; /* Fx 5+ */
+        -o-animation: fadeIn 0.3s ease; /* Opera 12+ */
     }
 
     p {
@@ -1912,6 +1942,9 @@ body {
 
     img {
         animation: fadeIn 0.3s ease;
+        -webkit-animation: fadeIn 0.3s ease;
+        -moz-animation: fadeIn 0.3s ease;
+        -o-animation: fadeIn 0.3s ease;
 
         @include mobile {
             width: 300px;
