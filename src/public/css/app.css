@@ -4420,12 +4420,21 @@ body {
     animation: fadeUp 0.3s ease; }
   body .app .portfolio__header-title h1 p:last-child {
     animation: fadeUp 0.5s ease; }
+
+@keyframes animatedBackgroundFadeLeft {
+  from {
+    opacity: 0;
+    background-position: 150% 0; }
+  to {
+    opacity: 1;
+    background-position: 100% 0; } }
   body .app .about__header {
     background-image: url(../img/minhhoang.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-attachment: fixed;
-    background-position: right; }
+    background-position: right;
+    animation: animatedBackgroundFadeLeft 0.3s ease; }
     @media (max-width: 768px) {
       body .app .about__header {
         background-size: cover;
@@ -5214,6 +5223,12 @@ body {
       @media (max-width: 768px) {
         .login .card-body form .fs-5 {
           font-size: 1.1rem !important; } }
+
+.eggy {
+  font-family: "Source Serif Pro", serif; }
+  .eggy .title,
+  .eggy .message {
+    font-size: 1rem !important; }
 
 #page-not-found {
   font-family: "Source Serif Pro", serif;
