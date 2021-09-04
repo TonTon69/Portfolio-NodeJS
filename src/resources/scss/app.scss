@@ -10,11 +10,10 @@
 }
 
 @font-face {
-    font-family: "Sequel";
+    font-family: "Soulmaze";
     font-style: normal;
-    font-weight: weight(bold);
-    src: local("Sequel"),
-        url("../fonts/Sequel-Sans-Black-Body.otf") format("otf");
+    font-weight: normal;
+    src: local("Soulmaze"), url("../fonts/Soulmaze.woff") format("woff");
 }
 
 @mixin mobile {
@@ -95,8 +94,7 @@ body {
     background: $white-background-color;
     color: $black-color;
     font-size: 16px;
-    font-family: "Sequel", sans-serif;
-    font-weight: weight(bold);
+    font-family: "Soulmaze", sans-serif;
     transition: all 0.9s ease;
 
     &.show {
@@ -519,10 +517,8 @@ body {
 
                     h1 {
                         font-size: 5.575rem;
-                        font-weight: weight(bold);
                         text-transform: uppercase;
                         line-height: 0.7;
-                        letter-spacing: -4px;
 
                         p {
                             @include laptop {
@@ -538,13 +534,11 @@ body {
 
                         @include laptop {
                             font-size: 3.8rem;
-                            letter-spacing: 0;
                             line-height: 0.9;
                         }
 
                         @include mobile {
                             font-size: 1.8rem;
-                            letter-spacing: 0;
                             line-height: 0.9;
                         }
                     }
@@ -568,7 +562,6 @@ body {
                         position: absolute;
                         bottom: 98%;
                         left: -2.4%;
-                        font-weight: weight(bold);
                         font-size: 10rem;
                         line-height: 0.9;
                         text-transform: uppercase;
@@ -645,7 +638,6 @@ body {
                             .card-title {
                                 text-align: center;
                                 text-transform: uppercase;
-                                letter-spacing: 6px;
                                 transition: all 0.5s ease;
 
                                 @include laptop {
@@ -673,7 +665,6 @@ body {
                         position: absolute;
                         top: -26%;
                         left: -2.4%;
-                        font-weight: weight(bold);
                         font-size: 10rem;
                         line-height: 0.9;
                         text-transform: uppercase;
@@ -709,10 +700,8 @@ body {
 
                             .card-title {
                                 font-size: 5.575rem;
-                                font-weight: weight(bold);
                                 margin: 0 0.875rem;
                                 text-transform: uppercase;
-                                letter-spacing: -4px;
                                 line-height: 0.9;
 
                                 @include laptop {
@@ -723,7 +712,6 @@ body {
                                     position: absolute;
                                     top: 30px;
                                     font-size: 2.6rem;
-                                    letter-spacing: 0;
                                 }
 
                                 span {
@@ -1011,8 +999,7 @@ body {
 
                         &__content {
                             font-size: 1.2rem;
-                            font-family: "Sequel", sans-serif;
-                            font-weight: weight(bold);
+                            font-family: "Soulmaze", sans-serif;
                             text-transform: uppercase;
                             line-height: 1.5;
 
@@ -1341,7 +1328,6 @@ body {
                     position: absolute;
                     top: -18%;
                     left: 1.6%;
-                    font-weight: weight(bold);
                     font-size: 10rem;
                     line-height: 0.9;
                     text-transform: uppercase;
@@ -1410,20 +1396,16 @@ body {
                 }
 
                 &-title {
-                    font-weight: weight(bold);
                     font-size: 3rem;
                     line-height: 1;
                     text-transform: uppercase;
-                    letter-spacing: -2px;
 
                     @include laptop {
                         font-size: 2.2rem;
-                        letter-spacing: 0;
                     }
 
                     @include mobile {
                         font-size: 1.8rem;
-                        letter-spacing: 0;
                     }
                 }
 
@@ -1448,9 +1430,7 @@ body {
 
                 &-skill {
                     @include flexCenter;
-                    font-family: "Source Serif Pro", serif;
                     font-size: 1.3rem;
-                    font-weight: weight(bold);
                     text-transform: uppercase;
                     line-height: 3;
 
@@ -1467,10 +1447,6 @@ body {
                         height: 40px;
                         border-radius: 50%;
                         object-fit: cover;
-                    }
-
-                    &--item {
-                        letter-spacing: 1px;
                     }
                 }
             }
@@ -1491,7 +1467,6 @@ body {
 
                 &-title {
                     margin-left: -30px;
-                    font-weight: weight(bold);
                     font-size: 10rem;
                     line-height: 0.9;
                     text-transform: uppercase;
@@ -1528,8 +1503,7 @@ body {
                                 padding: 20px 0;
 
                                 span {
-                                    font-family: "Sequel", sans-serif;
-                                    font-weight: weight(bold);
+                                    font-family: "Soulmaze", sans-serif;
                                     text-transform: uppercase;
                                 }
                             }
@@ -1600,7 +1574,6 @@ body {
                 &-socials {
                     text-transform: uppercase;
                     font-size: 3rem;
-                    font-weight: weight(bold);
 
                     @include laptop {
                         font-size: 2.4rem;
@@ -1669,7 +1642,6 @@ body {
                 &-more {
                     text-transform: uppercase;
                     font-size: 3rem;
-                    font-weight: weight(bold);
                     line-height: 0.9;
 
                     @include laptop {
@@ -1703,7 +1675,6 @@ body {
         .to-top {
             @extend .develop-note;
             margin-right: 15px;
-            opacity: 0.4;
 
             @include mobile {
                 text-align: left !important;
@@ -1711,9 +1682,14 @@ body {
             }
 
             span {
+                opacity: 0.4;
                 padding: 2.5rem;
                 cursor: url("../img/to-top.svg"), auto;
-                transition: all 0.3s ease 0s;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    opacity: 0.2;
+                }
 
                 @include mobile {
                     padding-left: 1.25rem;

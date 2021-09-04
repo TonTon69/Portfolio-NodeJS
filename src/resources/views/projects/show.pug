@@ -3,7 +3,7 @@ block content
     seaction#project-show.project-show
         header.project-show__header.justify-content-center
             .project-show__header-title.text-center
-                h5.mb-4.fw-bold.text-uppercase(style="letter-spacing: 8px") showcase
+                h5.mb-4.text-uppercase(style="letter-spacing: 8px") showcase
                 h1=project.name
         main.project-show__main
             .project-show__main-banner
@@ -26,5 +26,5 @@ block content
                         img.card-img(src=nextProject.banner, alt=nextProject.name)
                         .card-img-overlay
                             .text-white
-                                h5.card-text.mb-4.fw-bold.text-uppercase(style="letter-spacing: 8px") next project
-                                h1.card-title.fw-bold.text-uppercase=nextProject.name
+                                h5.card-text.mb-4.text-uppercase(style="letter-spacing: 8px") next project
+                                h1.card-title.text-uppercase=nextProject.name

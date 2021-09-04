@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "Sequel";
+  font-family: "Soulmaze";
   font-style: normal;
-  font-weight: 800;
-  src: local("Sequel"), url("../fonts/Sequel-Sans-Black-Body.otf") format("otf"); }
+  font-weight: normal;
+  src: local("Soulmaze"), url("../fonts/Soulmaze.woff") format("woff"); }
 
 @keyframes fadeLeft {
   from {
@@ -50,8 +50,7 @@ body {
   background: white;
   color: black;
   font-size: 16px;
-  font-family: "Sequel", sans-serif;
-  font-weight: 800;
+  font-family: "Soulmaze", sans-serif;
   transition: all 0.9s ease; }
   body.show {
     background: black;
@@ -656,10 +655,8 @@ body {
         body .app .portfolio__header-title h1,
         body .app .about__header-title h1 {
           font-size: 5.575rem;
-          font-weight: 800;
           text-transform: uppercase;
-          line-height: 0.7;
-          letter-spacing: -4px; }
+          line-height: 0.7; }
           @media (max-width: 1224px) {
             body .app .stored-system-info__header-title h1 p,
             body .app .system-info-create__header-title h1 p,
@@ -749,7 +746,6 @@ body {
             body .app .portfolio__header-title h1,
             body .app .about__header-title h1 {
               font-size: 3.8rem;
-              letter-spacing: 0;
               line-height: 0.9; } }
           @media (max-width: 768px) {
             body .app .stored-system-info__header-title h1,
@@ -780,7 +776,6 @@ body {
             body .app .portfolio__header-title h1,
             body .app .about__header-title h1 {
               font-size: 1.8rem;
-              letter-spacing: 0;
               line-height: 0.9; } }
     body .app .stored-system-info__main,
     body .app .system-info-create__main,
@@ -900,7 +895,6 @@ body {
           position: absolute;
           bottom: 98%;
           left: -2.4%;
-          font-weight: 800;
           font-size: 10rem;
           line-height: 0.9;
           text-transform: uppercase;
@@ -1272,7 +1266,6 @@ body {
             body .app .about__main-project .card-img-overlay .card-title {
               text-align: center;
               text-transform: uppercase;
-              letter-spacing: 6px;
               transition: all 0.5s ease; }
               @media (max-width: 1224px) {
                 body .app .stored-system-info__main-project .card-img-overlay .card-title,
@@ -1421,7 +1414,6 @@ body {
           position: absolute;
           top: -26%;
           left: -2.4%;
-          font-weight: 800;
           font-size: 10rem;
           line-height: 0.9;
           text-transform: uppercase;
@@ -1631,10 +1623,8 @@ body {
             body .app .portfolio__main-brand .card-img-overlay .card-title,
             body .app .about__main-brand .card-img-overlay .card-title {
               font-size: 5.575rem;
-              font-weight: 800;
               margin: 0 0.875rem;
               text-transform: uppercase;
-              letter-spacing: -4px;
               line-height: 0.9; }
               @media (max-width: 1224px) {
                 body .app .stored-system-info__main-brand .card-img-overlay .card-title,
@@ -1695,8 +1685,7 @@ body {
                 body .app .about__main-brand .card-img-overlay .card-title {
                   position: absolute;
                   top: 30px;
-                  font-size: 2.6rem;
-                  letter-spacing: 0; } }
+                  font-size: 2.6rem; } }
               body .app .stored-system-info__main-brand .card-img-overlay .card-title span,
               body .app .system-info-create__main-brand .card-img-overlay .card-title span,
               body .app .system-info-edit__main-brand .card-img-overlay .card-title span,
@@ -3168,8 +3157,7 @@ body {
           body .app .about__main .about__main-content .experience__content,
           body .app .about__main .about__main-content .contact__content {
             font-size: 1.2rem;
-            font-family: "Sequel", sans-serif;
-            font-weight: 800;
+            font-family: "Soulmaze", sans-serif;
             text-transform: uppercase;
             line-height: 1.5; }
             @media (max-width: 768px) {
@@ -4726,7 +4714,6 @@ body {
       position: absolute;
       top: -18%;
       left: 1.6%;
-      font-weight: 800;
       font-size: 10rem;
       line-height: 0.9;
       text-transform: uppercase;
@@ -4774,19 +4761,15 @@ body {
         body .app .bg-light .about__expertise-categories:last-child {
           padding-left: unset !important; } }
     body .app .bg-light .about__expertise-title {
-      font-weight: 800;
       font-size: 3rem;
       line-height: 1;
-      text-transform: uppercase;
-      letter-spacing: -2px; }
+      text-transform: uppercase; }
       @media (max-width: 1224px) {
         body .app .bg-light .about__expertise-title {
-          font-size: 2.2rem;
-          letter-spacing: 0; } }
+          font-size: 2.2rem; } }
       @media (max-width: 768px) {
         body .app .bg-light .about__expertise-title {
-          font-size: 1.8rem;
-          letter-spacing: 0; } }
+          font-size: 1.8rem; } }
     body .app .bg-light .about__expertise-description {
       font-family: "Source Serif Pro", serif;
       font-size: 1.3125rem;
@@ -4804,9 +4787,7 @@ body {
     body .app .bg-light .about__expertise-skill {
       display: flex;
       align-items: center;
-      font-family: "Source Serif Pro", serif;
       font-size: 1.3rem;
-      font-weight: 800;
       text-transform: uppercase;
       line-height: 3; }
       @media (max-width: 1224px) {
@@ -4820,8 +4801,6 @@ body {
         height: 40px;
         border-radius: 50%;
         object-fit: cover; }
-      body .app .bg-light .about__expertise-skill--item {
-        letter-spacing: 1px; }
   body .app .bg-dark {
     background: black !important; }
     body .app .bg-dark .about__awards {
@@ -4834,7 +4813,6 @@ body {
           padding-left: 1.25rem; } }
       body .app .bg-dark .about__awards-title {
         margin-left: -30px;
-        font-weight: 800;
         font-size: 10rem;
         line-height: 0.9;
         text-transform: uppercase;
@@ -4862,8 +4840,7 @@ body {
           body .app .bg-dark .about__awards-table tbody tr td {
             padding: 20px 0; }
             body .app .bg-dark .about__awards-table tbody tr td span {
-              font-family: "Sequel", sans-serif;
-              font-weight: 800;
+              font-family: "Soulmaze", sans-serif;
               text-transform: uppercase; }
   body .app .system-info-create__main form,
   body .app .system-info-edit__main form,
@@ -5046,8 +5023,7 @@ body {
         padding-left: 1.25rem; } }
     body .app .footer__contact-socials {
       text-transform: uppercase;
-      font-size: 3rem;
-      font-weight: 800; }
+      font-size: 3rem; }
       @media (max-width: 1224px) {
         body .app .footer__contact-socials {
           font-size: 2.4rem; } }
@@ -5085,7 +5061,6 @@ body {
     body .app .footer__contact-more {
       text-transform: uppercase;
       font-size: 3rem;
-      font-weight: 800;
       line-height: 0.9; }
       @media (max-width: 1224px) {
         body .app .footer__contact-more {
@@ -5107,16 +5082,18 @@ body {
           background: currentcolor;
           opacity: 0.4; }
   body .app .to-top {
-    margin-right: 15px;
-    opacity: 0.4; }
+    margin-right: 15px; }
     @media (max-width: 768px) {
       body .app .to-top {
         text-align: left !important;
         margin-top: 50px; } }
     body .app .to-top span {
+      opacity: 0.4;
       padding: 2.5rem;
       cursor: url("../img/to-top.svg"), auto;
-      transition: all 0.3s ease 0s; }
+      transition: all 0.3s ease; }
+      body .app .to-top span:hover {
+        opacity: 0.2; }
       @media (max-width: 768px) {
         body .app .to-top span {
           padding-left: 1.25rem; } }
