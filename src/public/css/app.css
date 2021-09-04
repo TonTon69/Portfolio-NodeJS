@@ -4,6 +4,27 @@
   font-weight: 800;
   src: local("Sequel"), url("../fonts/Sequel-Sans-Black-Body.otf") format("otf"); }
 
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(50px); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(50px); } }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
 * {
   margin: 0;
   padding: 0;
@@ -244,6 +265,7 @@ body {
       filter: unset; }
     body .app .header.dark .header__brand,
     body .app .header.dark .nav-link,
+    body .app .header.dark .nav-mobile-icon,
     body .app .header.dark #dropdownMenuUser {
       color: black !important; }
     body .app .header__logo {
@@ -256,19 +278,15 @@ body {
             margin-right: 0;
             margin-left: -12px; } }
       body .app .header__logo:hover .header__brand {
-        opacity: 1 !important;
-        visibility: visible !important;
-        transform: translateX(0) !important; }
+        animation: fadeLeft ease 0.3s; }
     body .app .header__brand {
       color: black;
       font-family: "Rouge Script", cursive;
       font-size: 1.6rem;
       font-weight: 800;
       letter-spacing: 0.2em;
-      transform: translateX(50px);
-      transition: all 0.5s ease;
-      opacity: 0;
-      visibility: hidden; }
+      animation: fadeLeft ease 0.3s, fadeOut linear 0.3s 1s forwards;
+      transition: all 0.5s linear; }
       @media (max-width: 768px) {
         body .app .header__brand {
           font-size: 1.2rem; } }
@@ -485,6 +503,35 @@ body {
         body .app .portfolio__header,
         body .app .about__header {
           min-height: 550px; } }
+      @media (min-width: 768px) and (max-width: 1024px) {
+        body .app .stored-system-info__header,
+        body .app .system-info-create__header,
+        body .app .system-info-edit__header,
+        body .app .stored-expertises__header,
+        body .app .expertises-create__header,
+        body .app .expertises-edit__header,
+        body .app .stored-expertises-categories__header,
+        body .app .expertises-category-create__header,
+        body .app .expertises-category-edit__header,
+        body .app .stored-experiences__header,
+        body .app .experience-create__header,
+        body .app .experience-edit__header,
+        body .app .stored-educations__header,
+        body .app .education-create__header,
+        body .app .education-edit__header,
+        body .app .stored-projects__header,
+        body .app .project-show__header,
+        body .app .project-create__header,
+        body .app .project-edit__header,
+        body .app .stored-contacts__header,
+        body .app .contact-create__header,
+        body .app .contact-edit__header,
+        body .app .stored-awards__header,
+        body .app .award-create__header,
+        body .app .award-edit__header,
+        body .app .portfolio__header,
+        body .app .about__header {
+          min-height: 550px !important; } }
       @media (max-width: 768px) {
         body .app .stored-system-info__header,
         body .app .system-info-create__header,
@@ -606,66 +653,94 @@ body {
           text-transform: uppercase;
           line-height: 0.7;
           letter-spacing: -4px; }
-          @media (max-width: 1224px) {
-            body .app .stored-system-info__header-title h1 p,
-            body .app .system-info-create__header-title h1 p,
-            body .app .system-info-edit__header-title h1 p,
-            body .app .stored-expertises__header-title h1 p,
-            body .app .expertises-create__header-title h1 p,
-            body .app .expertises-edit__header-title h1 p,
-            body .app .stored-expertises-categories__header-title h1 p,
-            body .app .expertises-category-create__header-title h1 p,
-            body .app .expertises-category-edit__header-title h1 p,
-            body .app .stored-experiences__header-title h1 p,
-            body .app .experience-create__header-title h1 p,
-            body .app .experience-edit__header-title h1 p,
-            body .app .stored-educations__header-title h1 p,
-            body .app .education-create__header-title h1 p,
-            body .app .education-edit__header-title h1 p,
-            body .app .stored-projects__header-title h1 p,
-            body .app .project-show__header-title h1 p,
-            body .app .project-create__header-title h1 p,
-            body .app .project-edit__header-title h1 p,
-            body .app .stored-contacts__header-title h1 p,
-            body .app .contact-create__header-title h1 p,
-            body .app .contact-edit__header-title h1 p,
-            body .app .stored-awards__header-title h1 p,
-            body .app .award-create__header-title h1 p,
-            body .app .award-edit__header-title h1 p,
-            body .app .portfolio__header-title h1 p,
-            body .app .about__header-title h1 p {
-              line-height: 0.9;
-              margin-bottom: 0; } }
-          @media (max-width: 768px) {
-            body .app .stored-system-info__header-title h1 p,
-            body .app .system-info-create__header-title h1 p,
-            body .app .system-info-edit__header-title h1 p,
-            body .app .stored-expertises__header-title h1 p,
-            body .app .expertises-create__header-title h1 p,
-            body .app .expertises-edit__header-title h1 p,
-            body .app .stored-expertises-categories__header-title h1 p,
-            body .app .expertises-category-create__header-title h1 p,
-            body .app .expertises-category-edit__header-title h1 p,
-            body .app .stored-experiences__header-title h1 p,
-            body .app .experience-create__header-title h1 p,
-            body .app .experience-edit__header-title h1 p,
-            body .app .stored-educations__header-title h1 p,
-            body .app .education-create__header-title h1 p,
-            body .app .education-edit__header-title h1 p,
-            body .app .stored-projects__header-title h1 p,
-            body .app .project-show__header-title h1 p,
-            body .app .project-create__header-title h1 p,
-            body .app .project-edit__header-title h1 p,
-            body .app .stored-contacts__header-title h1 p,
-            body .app .contact-create__header-title h1 p,
-            body .app .contact-edit__header-title h1 p,
-            body .app .stored-awards__header-title h1 p,
-            body .app .award-create__header-title h1 p,
-            body .app .award-edit__header-title h1 p,
-            body .app .portfolio__header-title h1 p,
-            body .app .about__header-title h1 p {
-              line-height: 0.9;
-              margin-bottom: 0; } }
+          body .app .stored-system-info__header-title h1 p,
+          body .app .system-info-create__header-title h1 p,
+          body .app .system-info-edit__header-title h1 p,
+          body .app .stored-expertises__header-title h1 p,
+          body .app .expertises-create__header-title h1 p,
+          body .app .expertises-edit__header-title h1 p,
+          body .app .stored-expertises-categories__header-title h1 p,
+          body .app .expertises-category-create__header-title h1 p,
+          body .app .expertises-category-edit__header-title h1 p,
+          body .app .stored-experiences__header-title h1 p,
+          body .app .experience-create__header-title h1 p,
+          body .app .experience-edit__header-title h1 p,
+          body .app .stored-educations__header-title h1 p,
+          body .app .education-create__header-title h1 p,
+          body .app .education-edit__header-title h1 p,
+          body .app .stored-projects__header-title h1 p,
+          body .app .project-show__header-title h1 p,
+          body .app .project-create__header-title h1 p,
+          body .app .project-edit__header-title h1 p,
+          body .app .stored-contacts__header-title h1 p,
+          body .app .contact-create__header-title h1 p,
+          body .app .contact-edit__header-title h1 p,
+          body .app .stored-awards__header-title h1 p,
+          body .app .award-create__header-title h1 p,
+          body .app .award-edit__header-title h1 p,
+          body .app .portfolio__header-title h1 p,
+          body .app .about__header-title h1 p {
+            transition: all 0.5s linear; }
+            @media (max-width: 1224px) {
+              body .app .stored-system-info__header-title h1 p,
+              body .app .system-info-create__header-title h1 p,
+              body .app .system-info-edit__header-title h1 p,
+              body .app .stored-expertises__header-title h1 p,
+              body .app .expertises-create__header-title h1 p,
+              body .app .expertises-edit__header-title h1 p,
+              body .app .stored-expertises-categories__header-title h1 p,
+              body .app .expertises-category-create__header-title h1 p,
+              body .app .expertises-category-edit__header-title h1 p,
+              body .app .stored-experiences__header-title h1 p,
+              body .app .experience-create__header-title h1 p,
+              body .app .experience-edit__header-title h1 p,
+              body .app .stored-educations__header-title h1 p,
+              body .app .education-create__header-title h1 p,
+              body .app .education-edit__header-title h1 p,
+              body .app .stored-projects__header-title h1 p,
+              body .app .project-show__header-title h1 p,
+              body .app .project-create__header-title h1 p,
+              body .app .project-edit__header-title h1 p,
+              body .app .stored-contacts__header-title h1 p,
+              body .app .contact-create__header-title h1 p,
+              body .app .contact-edit__header-title h1 p,
+              body .app .stored-awards__header-title h1 p,
+              body .app .award-create__header-title h1 p,
+              body .app .award-edit__header-title h1 p,
+              body .app .portfolio__header-title h1 p,
+              body .app .about__header-title h1 p {
+                line-height: 0.9;
+                margin-bottom: 0; } }
+            @media (max-width: 768px) {
+              body .app .stored-system-info__header-title h1 p,
+              body .app .system-info-create__header-title h1 p,
+              body .app .system-info-edit__header-title h1 p,
+              body .app .stored-expertises__header-title h1 p,
+              body .app .expertises-create__header-title h1 p,
+              body .app .expertises-edit__header-title h1 p,
+              body .app .stored-expertises-categories__header-title h1 p,
+              body .app .expertises-category-create__header-title h1 p,
+              body .app .expertises-category-edit__header-title h1 p,
+              body .app .stored-experiences__header-title h1 p,
+              body .app .experience-create__header-title h1 p,
+              body .app .experience-edit__header-title h1 p,
+              body .app .stored-educations__header-title h1 p,
+              body .app .education-create__header-title h1 p,
+              body .app .education-edit__header-title h1 p,
+              body .app .stored-projects__header-title h1 p,
+              body .app .project-show__header-title h1 p,
+              body .app .project-create__header-title h1 p,
+              body .app .project-edit__header-title h1 p,
+              body .app .stored-contacts__header-title h1 p,
+              body .app .contact-create__header-title h1 p,
+              body .app .contact-edit__header-title h1 p,
+              body .app .stored-awards__header-title h1 p,
+              body .app .award-create__header-title h1 p,
+              body .app .award-edit__header-title h1 p,
+              body .app .portfolio__header-title h1 p,
+              body .app .about__header-title h1 p {
+                line-height: 0.9;
+                margin-bottom: 0; } }
           @media (max-width: 1224px) {
             body .app .stored-system-info__header-title h1,
             body .app .system-info-create__header-title h1,
@@ -977,7 +1052,7 @@ body {
               width: 100%;
               height: 272px;
               margin-bottom: 24px; } }
-          @media (max-width: 1024px) and (min-width: 768px) {
+          @media (min-width: 768px) and (max-width: 1024px) {
             body .app .stored-system-info__main-project .card,
             body .app .system-info-create__main-project .card,
             body .app .system-info-edit__main-project .card,
@@ -1249,7 +1324,7 @@ body {
                 body .app .portfolio__main-project .card-img-overlay .card-title,
                 body .app .about__main-project .card-img-overlay .card-title {
                   font-size: 1.6rem; } }
-              @media (max-width: 1024px) and (min-width: 768px) {
+              @media (min-width: 768px) and (max-width: 1024px) {
                 body .app .stored-system-info__main-project .card-img-overlay .card-title,
                 body .app .system-info-create__main-project .card-img-overlay .card-title,
                 body .app .system-info-edit__main-project .card-img-overlay .card-title,
@@ -2713,7 +2788,7 @@ body {
             left: 0px;
             background: currentcolor;
             opacity: 0.4; }
-        @media (max-width: 1024px) and (min-width: 768px) {
+        @media (min-width: 768px) and (max-width: 1024px) {
           body .app .stored-system-info__main .about__main-content .education,
           body .app .system-info-create__main .about__main-content .education,
           body .app .system-info-edit__main .about__main-content .education,
@@ -4374,6 +4449,10 @@ body {
           body .app .about__main .pagination .page-item.active .page-link {
             background: #dc3545;
             border-color: #dc3545; }
+  body .app .portfolio__header-title h1 p:first-child {
+    animation: fadeUp 0.3s ease; }
+  body .app .portfolio__header-title h1 p:last-child {
+    animation: fadeUp 0.5s ease; }
   body .app .about__header {
     background-image: url(../img/minhhoang.png);
     background-repeat: no-repeat;
@@ -4384,9 +4463,20 @@ body {
       body .app .about__header {
         background-size: cover;
         background-position: center; } }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      body .app .about__header-title {
+        margin-top: 0 !important; } }
     @media (max-width: 768px) {
       body .app .about__header-title {
         margin-top: 6rem; } }
+    body .app .about__header-title h1 p:nth-child(1) {
+      animation: fadeUp 0.3s ease; }
+    body .app .about__header-title h1 p:nth-child(2) {
+      animation: fadeUp 0.5s ease; }
+    body .app .about__header-title h1 p:nth-child(3) {
+      animation: fadeUp 0.7s ease; }
+    body .app .about__header-title h1 p:nth-child(4) {
+      animation: fadeUp 0.9s ease; }
   body .app .stored-system-info__table,
   body .app .stored-expertises__table,
   body .app .stored-expertises-categories__table,
@@ -4667,14 +4757,14 @@ body {
         body .app .bg-light .about__expertise #expertise {
           top: -13%;
           font-size: 8rem; } }
-      @media (max-width: 1024px) and (min-width: 768px) {
+      @media (min-width: 768px) and (max-width: 1024px) {
         body .app .bg-light .about__expertise #expertise {
           top: -5.5% !important; } }
       @media (max-width: 768px) {
         body .app .bg-light .about__expertise #expertise {
           top: -2%;
           font-size: 3rem; } }
-    @media (max-width: 1024px) and (min-width: 768px) {
+    @media (min-width: 768px) and (max-width: 1024px) {
       body .app .bg-light .about__expertise-categories {
         margin-bottom: 0; } }
     @media (max-width: 768px) {
@@ -4682,7 +4772,7 @@ body {
         margin-bottom: 40px; } }
     body .app .bg-light .about__expertise-categories:first-child {
       padding-right: 4rem !important; }
-      @media (max-width: 1024px) and (min-width: 768px) {
+      @media (min-width: 768px) and (max-width: 1024px) {
         body .app .bg-light .about__expertise-categories:first-child {
           padding-right: 2rem !important; } }
       @media (max-width: 768px) {
@@ -4690,7 +4780,7 @@ body {
           padding-right: unset !important; } }
     body .app .bg-light .about__expertise-categories:nth-child(2) {
       padding: 0 2rem !important; }
-      @media (max-width: 1024px) and (min-width: 768px) {
+      @media (min-width: 768px) and (max-width: 1024px) {
         body .app .bg-light .about__expertise-categories:nth-child(2) {
           padding: 0 1rem !important; } }
       @media (max-width: 768px) {
@@ -4698,7 +4788,7 @@ body {
           padding: unset !important; } }
     body .app .bg-light .about__expertise-categories:last-child {
       padding-left: 4rem !important; }
-      @media (max-width: 1024px) and (min-width: 768px) {
+      @media (min-width: 768px) and (max-width: 1024px) {
         body .app .bg-light .about__expertise-categories:last-child {
           padding-left: 2rem !important; } }
       @media (max-width: 768px) {
@@ -4726,7 +4816,7 @@ body {
       @media (max-width: 1224px) {
         body .app .bg-light .about__expertise-description {
           font-size: 1.2rem; } }
-      @media (max-width: 1024px) and (min-width: 768px) {
+      @media (min-width: 768px) and (max-width: 1024px) {
         body .app .bg-light .about__expertise-description {
           padding-right: 1rem; } }
       @media (max-width: 768px) {

@@ -1,24 +1,6 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-// Show 1s brand when loaded page
-const brand = $(".header__brand");
-window.onload = function () {
-    Object.assign(brand.style, {
-        opacity: 1,
-        visibility: "visible",
-        transform: "translateX(0)",
-    });
-};
-
-setTimeout(function () {
-    Object.assign(brand.style, {
-        opacity: 0,
-        visibility: "hidden",
-        transform: "translateX(50px)",
-    });
-}, 1000);
-
 // When scroll, body add background black
 window.onscroll = function () {
     if (this.scrollY > 20) {
@@ -28,12 +10,14 @@ window.onscroll = function () {
     }
 
     const bgLight = $(".bg-light");
-    const bounding = bgLight.getBoundingClientRect();
-    const header = $(".header");
-    if (bounding.top < 20 && bounding.top > -bounding.height + 20) {
-        header.classList.add("dark");
-    } else {
-        header.classList.remove("dark");
+    if (bgLight) {
+        const bounding = bgLight.getBoundingClientRect();
+        const header = $(".header");
+        if (bounding.top < 20 && bounding.top > -bounding.height + 20) {
+            header.classList.add("dark");
+        } else {
+            header.classList.remove("dark");
+        }
     }
 };
 

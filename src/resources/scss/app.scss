@@ -24,7 +24,7 @@
 }
 
 @mixin tablet {
-    @media (max-width: $tablet) and (min-width: $mobile) {
+    @media (min-width: $mobile) and (max-width: $tablet) {
         @content;
     }
 }
@@ -32,6 +32,35 @@
 @mixin laptop {
     @media (max-width: $laptop) {
         @content;
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -196,6 +225,7 @@ body {
 
                 .header__brand,
                 .nav-link,
+                .nav-mobile-icon,
                 #dropdownMenuUser {
                     color: $black-color !important;
                 }
@@ -215,9 +245,7 @@ body {
 
                 &:hover {
                     .header__brand {
-                        opacity: 1 !important;
-                        visibility: visible !important;
-                        transform: translateX(0) !important;
+                        animation: fadeLeft ease 0.3s;
                     }
                 }
             }
@@ -228,10 +256,8 @@ body {
                 font-size: 1.6rem;
                 font-weight: weight(bold);
                 letter-spacing: 0.2em;
-                transform: translateX(50px);
-                transition: all 0.5s ease;
-                opacity: 0;
-                visibility: hidden;
+                animation: fadeLeft ease 0.3s, fadeOut linear 0.3s 1s forwards;
+                transition: all 0.5s linear;
 
                 @include mobile {
                     font-size: 1.2rem;
@@ -463,6 +489,10 @@ body {
                     min-height: 550px;
                 }
 
+                @include tablet {
+                    min-height: 550px !important;
+                }
+
                 @include mobile {
                     min-height: 450px;
                 }
@@ -485,6 +515,8 @@ body {
                         letter-spacing: -4px;
 
                         p {
+                            transition: all 0.5s linear;
+
                             @include laptop {
                                 line-height: 0.9;
                                 margin-bottom: 0;
@@ -1094,6 +1126,22 @@ body {
             }
         }
 
+        .portfolio {
+            &__header {
+                &-title {
+                    h1 {
+                        p:first-child {
+                            animation: fadeUp 0.3s ease;
+                        }
+
+                        p:last-child {
+                            animation: fadeUp 0.5s ease;
+                        }
+                    }
+                }
+            }
+        }
+
         .about {
             &__header {
                 background-image: url(../img/minhhoang.png);
@@ -1108,8 +1156,30 @@ body {
                 }
 
                 &-title {
+                    @include tablet {
+                        margin-top: 0 !important;
+                    }
+
                     @include mobile {
                         margin-top: 6rem;
+                    }
+
+                    h1 {
+                        p:nth-child(1) {
+                            animation: fadeUp 0.3s ease;
+                        }
+
+                        p:nth-child(2) {
+                            animation: fadeUp 0.5s ease;
+                        }
+
+                        p:nth-child(3) {
+                            animation: fadeUp 0.7s ease;
+                        }
+
+                        p:nth-child(4) {
+                            animation: fadeUp 0.9s ease;
+                        }
                     }
                 }
             }
