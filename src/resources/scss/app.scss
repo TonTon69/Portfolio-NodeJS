@@ -63,7 +63,7 @@
     }
 }
 
-@keyframes fadeIn {
+@keyframes zoomIn {
     from {
         opacity: 0;
         transform: scale(0);
@@ -71,6 +71,15 @@
     to {
         opacity: 1;
         transform: scale(1.1);
+    }
+}
+
+@keyframes animatedBackgroundFadeLeft {
+    from {
+        background-position: 150% 0;
+    }
+    to {
+        background-position: 100% 0;
     }
 }
 
@@ -503,12 +512,8 @@ body {
                     min-height: 550px;
                 }
 
-                @include tablet {
-                    min-height: 550px !important;
-                }
-
                 @include mobile {
-                    min-height: 450px;
+                    min-height: 450px !important;
                 }
 
                 &-title {
@@ -619,6 +624,13 @@ body {
 
                             .card-img {
                                 transform: scale(1);
+                            }
+
+                            .card-title {
+                                animation: zoomIn 0.5s ease;
+                                -webkit-animation: zoomIn 0.5s ease;
+                                -moz-animation: zoomIn 0.5s ease;
+                                -o-animation: zoomIn 0.5s ease;
                             }
                         }
 
@@ -870,6 +882,10 @@ body {
                             .card-text {
                                 opacity: 0;
                                 visibility: hidden;
+                            }
+
+                            .card-title {
+                                animation: zoomIn 0.5s ease;
                             }
                         }
 
@@ -1129,6 +1145,8 @@ body {
 
         .portfolio {
             &__header {
+                min-height: 550px;
+
                 &-title {
                     h1 {
                         p:first-child {
@@ -1150,16 +1168,6 @@ body {
         }
 
         .about {
-            @keyframes animatedBackgroundFadeLeft {
-                from {
-                    opacity: 0;
-                    background-position: 150% 0;
-                }
-                to {
-                    opacity: 1;
-                    background-position: 100% 0;
-                }
-            }
             &__header {
                 background-image: url(../img/minhhoang.png);
                 background-repeat: no-repeat;
@@ -1927,10 +1935,10 @@ body {
     overflow: hidden;
 
     h2 {
-        animation: fadeIn 0.3s ease; /* IE 10+, Fx 29+ */
-        -webkit-animation: fadeIn 0.3s ease; /* Safari 4+ */
-        -moz-animation: fadeIn 0.3s ease; /* Fx 5+ */
-        -o-animation: fadeIn 0.3s ease; /* Opera 12+ */
+        animation: zoomIn 0.3s ease; /* IE 10+, Fx 29+ */
+        -webkit-animation: zoomIn 0.3s ease; /* Safari 4+ */
+        -moz-animation: zoomIn 0.3s ease; /* Fx 5+ */
+        -o-animation: zoomIn 0.3s ease; /* Opera 12+ */
     }
 
     p {
@@ -1941,10 +1949,10 @@ body {
     }
 
     img {
-        animation: fadeIn 0.3s ease;
-        -webkit-animation: fadeIn 0.3s ease;
-        -moz-animation: fadeIn 0.3s ease;
-        -o-animation: fadeIn 0.3s ease;
+        animation: zoomIn 0.3s ease;
+        -webkit-animation: zoomIn 0.3s ease;
+        -moz-animation: zoomIn 0.3s ease;
+        -o-animation: zoomIn 0.3s ease;
 
         @include mobile {
             width: 300px;

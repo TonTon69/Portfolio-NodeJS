@@ -25,13 +25,19 @@
     opacity: 1;
     transform: translateX(0); } }
 
-@keyframes fadeIn {
+@keyframes zoomIn {
   from {
     opacity: 0;
     transform: scale(0); }
   to {
     opacity: 1;
     transform: scale(1.1); } }
+
+@keyframes animatedBackgroundFadeLeft {
+  from {
+    background-position: 150% 0; }
+  to {
+    background-position: 100% 0; } }
 
 * {
   margin: 0;
@@ -512,35 +518,6 @@ body {
         body .app .portfolio__header,
         body .app .about__header {
           min-height: 550px; } }
-      @media (min-width: 768px) and (max-width: 1024px) {
-        body .app .stored-system-info__header,
-        body .app .system-info-create__header,
-        body .app .system-info-edit__header,
-        body .app .stored-expertises__header,
-        body .app .expertises-create__header,
-        body .app .expertises-edit__header,
-        body .app .stored-expertises-categories__header,
-        body .app .expertises-category-create__header,
-        body .app .expertises-category-edit__header,
-        body .app .stored-experiences__header,
-        body .app .experience-create__header,
-        body .app .experience-edit__header,
-        body .app .stored-educations__header,
-        body .app .education-create__header,
-        body .app .education-edit__header,
-        body .app .stored-projects__header,
-        body .app .project-show__header,
-        body .app .project-create__header,
-        body .app .project-edit__header,
-        body .app .stored-contacts__header,
-        body .app .contact-create__header,
-        body .app .contact-edit__header,
-        body .app .stored-awards__header,
-        body .app .award-create__header,
-        body .app .award-edit__header,
-        body .app .portfolio__header,
-        body .app .about__header {
-          min-height: 550px !important; } }
       @media (max-width: 768px) {
         body .app .stored-system-info__header,
         body .app .system-info-create__header,
@@ -569,7 +546,7 @@ body {
         body .app .award-edit__header,
         body .app .portfolio__header,
         body .app .about__header {
-          min-height: 450px; } }
+          min-height: 450px !important; } }
       body .app .stored-system-info__header-title,
       body .app .system-info-create__header-title,
       body .app .system-info-edit__header-title,
@@ -1146,6 +1123,37 @@ body {
           body .app .portfolio__main-project .card:hover .card-img,
           body .app .about__main-project .card:hover .card-img {
             transform: scale(1); }
+          body .app .stored-system-info__main-project .card:hover .card-title,
+          body .app .system-info-create__main-project .card:hover .card-title,
+          body .app .system-info-edit__main-project .card:hover .card-title,
+          body .app .stored-expertises__main-project .card:hover .card-title,
+          body .app .expertises-create__main-project .card:hover .card-title,
+          body .app .expertises-edit__main-project .card:hover .card-title,
+          body .app .stored-expertises-categories__main-project .card:hover .card-title,
+          body .app .expertises-category-create__main-project .card:hover .card-title,
+          body .app .expertises-category-edit__main-project .card:hover .card-title,
+          body .app .stored-experiences__main-project .card:hover .card-title,
+          body .app .experience-create__main-project .card:hover .card-title,
+          body .app .experience-edit__main-project .card:hover .card-title,
+          body .app .stored-educations__main-project .card:hover .card-title,
+          body .app .education-create__main-project .card:hover .card-title,
+          body .app .education-edit__main-project .card:hover .card-title,
+          body .app .stored-projects__main-project .card:hover .card-title,
+          body .app .project-show__main-project .card:hover .card-title,
+          body .app .project-create__main-project .card:hover .card-title,
+          body .app .project-edit__main-project .card:hover .card-title,
+          body .app .stored-contacts__main-project .card:hover .card-title,
+          body .app .contact-create__main-project .card:hover .card-title,
+          body .app .contact-edit__main-project .card:hover .card-title,
+          body .app .stored-awards__main-project .card:hover .card-title,
+          body .app .award-create__main-project .card:hover .card-title,
+          body .app .award-edit__main-project .card:hover .card-title,
+          body .app .portfolio__main-project .card:hover .card-title,
+          body .app .about__main-project .card:hover .card-title {
+            animation: zoomIn 0.5s ease;
+            -webkit-animation: zoomIn 0.5s ease;
+            -moz-animation: zoomIn 0.5s ease;
+            -o-animation: zoomIn 0.5s ease; }
           body .app .stored-system-info__main-project .card-img,
           body .app .system-info-create__main-project .card-img,
           body .app .system-info-edit__main-project .card-img,
@@ -2387,6 +2395,34 @@ body {
           body .app .about__main-nextproject .card:hover .card-text {
             opacity: 0;
             visibility: hidden; }
+          body .app .stored-system-info__main-nextproject .card:hover .card-title,
+          body .app .system-info-create__main-nextproject .card:hover .card-title,
+          body .app .system-info-edit__main-nextproject .card:hover .card-title,
+          body .app .stored-expertises__main-nextproject .card:hover .card-title,
+          body .app .expertises-create__main-nextproject .card:hover .card-title,
+          body .app .expertises-edit__main-nextproject .card:hover .card-title,
+          body .app .stored-expertises-categories__main-nextproject .card:hover .card-title,
+          body .app .expertises-category-create__main-nextproject .card:hover .card-title,
+          body .app .expertises-category-edit__main-nextproject .card:hover .card-title,
+          body .app .stored-experiences__main-nextproject .card:hover .card-title,
+          body .app .experience-create__main-nextproject .card:hover .card-title,
+          body .app .experience-edit__main-nextproject .card:hover .card-title,
+          body .app .stored-educations__main-nextproject .card:hover .card-title,
+          body .app .education-create__main-nextproject .card:hover .card-title,
+          body .app .education-edit__main-nextproject .card:hover .card-title,
+          body .app .stored-projects__main-nextproject .card:hover .card-title,
+          body .app .project-show__main-nextproject .card:hover .card-title,
+          body .app .project-create__main-nextproject .card:hover .card-title,
+          body .app .project-edit__main-nextproject .card:hover .card-title,
+          body .app .stored-contacts__main-nextproject .card:hover .card-title,
+          body .app .contact-create__main-nextproject .card:hover .card-title,
+          body .app .contact-edit__main-nextproject .card:hover .card-title,
+          body .app .stored-awards__main-nextproject .card:hover .card-title,
+          body .app .award-create__main-nextproject .card:hover .card-title,
+          body .app .award-edit__main-nextproject .card:hover .card-title,
+          body .app .portfolio__main-nextproject .card:hover .card-title,
+          body .app .about__main-nextproject .card:hover .card-title {
+            animation: zoomIn 0.5s ease; }
           body .app .stored-system-info__main-nextproject .card-img,
           body .app .system-info-create__main-nextproject .card-img,
           body .app .system-info-edit__main-nextproject .card-img,
@@ -4419,24 +4455,18 @@ body {
           body .app .about__main .pagination .page-item.active .page-link {
             background: #dc3545;
             border-color: #dc3545; }
-  body .app .portfolio__header-title h1 p:first-child {
-    animation: fadeUp 0.3s ease;
-    -webkit-animation: fadeUp 0.3s ease;
-    -moz-animation: fadeUp 0.3s ease;
-    -o-animation: fadeUp 0.3s ease; }
-  body .app .portfolio__header-title h1 p:last-child {
-    animation: fadeUp 0.5s ease;
-    -webkit-animation: fadeUp 0.5s ease;
-    -moz-animation: fadeUp 0.5s ease;
-    -o-animation: fadeUp 0.5s ease; }
-
-@keyframes animatedBackgroundFadeLeft {
-  from {
-    opacity: 0;
-    background-position: 150% 0; }
-  to {
-    opacity: 1;
-    background-position: 100% 0; } }
+  body .app .portfolio__header {
+    min-height: 550px; }
+    body .app .portfolio__header-title h1 p:first-child {
+      animation: fadeUp 0.3s ease;
+      -webkit-animation: fadeUp 0.3s ease;
+      -moz-animation: fadeUp 0.3s ease;
+      -o-animation: fadeUp 0.3s ease; }
+    body .app .portfolio__header-title h1 p:last-child {
+      animation: fadeUp 0.5s ease;
+      -webkit-animation: fadeUp 0.5s ease;
+      -moz-animation: fadeUp 0.5s ease;
+      -o-animation: fadeUp 0.5s ease; }
   body .app .about__header {
     background-image: url(../img/minhhoang.png);
     background-repeat: no-repeat;
@@ -5262,23 +5292,23 @@ body {
   height: 100%;
   overflow: hidden; }
   #page-not-found h2 {
-    animation: fadeIn 0.3s ease;
+    animation: zoomIn 0.3s ease;
     /* IE 10+, Fx 29+ */
-    -webkit-animation: fadeIn 0.3s ease;
+    -webkit-animation: zoomIn 0.3s ease;
     /* Safari 4+ */
-    -moz-animation: fadeIn 0.3s ease;
+    -moz-animation: zoomIn 0.3s ease;
     /* Fx 5+ */
-    -o-animation: fadeIn 0.3s ease;
+    -o-animation: zoomIn 0.3s ease;
     /* Opera 12+ */ }
   @media (max-width: 768px) {
     #page-not-found p {
       padding: 0 1rem;
       text-align: justify; } }
   #page-not-found img {
-    animation: fadeIn 0.3s ease;
-    -webkit-animation: fadeIn 0.3s ease;
-    -moz-animation: fadeIn 0.3s ease;
-    -o-animation: fadeIn 0.3s ease; }
+    animation: zoomIn 0.3s ease;
+    -webkit-animation: zoomIn 0.3s ease;
+    -moz-animation: zoomIn 0.3s ease;
+    -o-animation: zoomIn 0.3s ease; }
     @media (max-width: 768px) {
       #page-not-found img {
         width: 300px; } }
