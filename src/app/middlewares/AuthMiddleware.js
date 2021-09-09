@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const Token = require("../models/Token");
 
 module.exports = {
     requireAuth: function (req, res, next) {
@@ -47,6 +48,15 @@ module.exports = {
             });
             return;
         }
+        const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!email.match(regexEmail)) {
+            req.flash("error", "Please enter a valid email address!");
+            res.render("auth/login", {
+                errors: req.flash("error"),
+                values: req.body,
+            });
+            return;
+        }
         if (!password) {
             req.flash("error", "Please enter your password!");
             res.render("auth/login", {
@@ -63,6 +73,62 @@ module.exports = {
             });
             return;
         }
+        next();
+    },
+    resetPasswordValidate: function (req, res, next) {
+        const { token } = req.params;
+        const { password, passwordConfirm } = req.body;
+        if (!password && !passwordConfirm) {
+            req.flash(
+                "error",
+                "Please enter the information below to reset password your account!"
+            );
+            res.render("auth/reset-confirm", {
+                token,
+                errors: req.flash("error"),
+            });
+            return;
+        }
+        if (!password) {
+            req.flash("error", "Please create new password your account!");
+            res.render("auth/reset-confirm", {
+                token,
+                errors: req.flash("error"),
+                values: req.body,
+            });
+            return;
+        }
+        if (password.length < 6) {
+            req.flash(
+                "error",
+                "Your new password must be at least 6 characters!"
+            );
+            res.render("auth/reset-confirm", {
+                token,
+                errors: req.flash("error"),
+                values: req.body,
+            });
+            return;
+        }
+        if (!passwordConfirm) {
+            req.flash("error", "Please confirm new password your account!");
+            res.render("auth/reset-confirm", {
+                token,
+                errors: req.flash("error"),
+                values: req.body,
+            });
+            return;
+        }
+        if (passwordConfirm !== password) {
+            req.flash("error", "Confirm new password does not match!");
+            res.render("auth/reset-confirm", {
+                token,
+                errors: req.flash("error"),
+                values: req.body,
+            });
+            return;
+        }
+
         next();
     },
 };

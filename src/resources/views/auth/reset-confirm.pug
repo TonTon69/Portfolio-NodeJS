@@ -26,10 +26,10 @@ html
                         
                         form#form-login(action=`/auth/reset/confirm/${token}`, method='POST')
                             .material-textfield
-                                input#password(placeholder=' ', type='password', name='password', required)
+                                input#password(placeholder=' ', type='password', name='password', value=values ? values.password : '')
                                 label Create new password
                             .material-textfield
-                                input#password-confirm(placeholder=' ', type='password', name='password-confirm', required)
+                                input#passwordConfirm(placeholder=' ', type='password', name='passwordConfirm', value=values ? values.passwordConfirm : '')
                                 label Confirm new password
                             button.btn.btn-success.mt-4(type='submit') Reset Password
                             div.text-center.mt-4.fs-5

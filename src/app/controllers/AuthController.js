@@ -117,14 +117,17 @@ class AuthController {
     // [GET]/auth/reset/confirm/:token
     async resetConfirm(req, res, next) {
         const token = req.params.token;
-        const passwordReset = await Token.findOne({ token });
-
-        res.render("auth/reset-confirm", {
-            token: token,
-            valid: passwordReset ? true : false,
-            errors: req.flash("error"),
-            success: req.flash("success"),
-        });
+        const passwordReset = await Token.findOne({ token: token });
+        if (passwordReset !== null) {
+            res.render("auth/reset-confirm", {
+                token: token,
+                // valid: passwordReset ? true : false,
+                errors: req.flash("error"),
+                success: req.flash("success"),
+            });
+        } else {
+            res.status(404).render("error");
+        }
     }
 
     // [POST]/auth/reset/confirm/:token
@@ -147,7 +150,7 @@ class AuthController {
             })
             .catch((error) => {
                 req.flash("error", "Failed to reset password please try again");
-                return res.redirect(`/auth/reset-confirm/${token}`);
+                return res.redirect(`/auth/reset/confirm/${token}`);
             });
     }
 }
