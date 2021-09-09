@@ -97,7 +97,6 @@ class AuthController {
                     "Check your email address for the password reset link!"
                 );
                 res.render("auth/password-reset", {
-                    values: req.body,
                     errors: req.flash("error"),
                     success: req.flash("success"),
                 });
