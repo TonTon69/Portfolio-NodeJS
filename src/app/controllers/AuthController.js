@@ -33,7 +33,7 @@ class AuthController {
                 values: req.body,
                 errors: req.flash("error"),
             });
-            retrun;
+            return;
         }
 
         const isVerified = user.verified;
